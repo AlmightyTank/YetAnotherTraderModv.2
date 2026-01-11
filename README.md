@@ -44,6 +44,15 @@ After copy, the folder should contain:
 
 3) Start the SPT server.
 
+## Packaged layout (Priscilu_Origins_v2)
+The release ZIP uses the full SPT path so you can extract it directly into your game root:
+
+```
+SPT\user\mods\Priscilu_Origins_v2\
+```
+
+Contents are the same as the normal install, just nested under the full SPT path.
+
 ## Troubleshooting
 - If the server logs show missing soft armor inserts, ensure the assort.json uses the exact slot names from the SPT item templates (case-sensitive):
   - Soft_armor_front
