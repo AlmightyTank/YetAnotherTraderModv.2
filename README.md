@@ -59,6 +59,7 @@ Contents are the same as the normal install, just nested under the full SPT path
   - Soft_armor_back
   - Soft_armor_left
   - soft_armor_right
+note for later
 
 ## Credits
 - Original author: Reis
