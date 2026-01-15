@@ -32,18 +32,11 @@ public class AddCustomTraderHelper(
         traderConfig.UpdateTime.Add(traderRefreshRecord);
     }
 
-    public void AddTraderWithEmptyAssortToDb(TraderBase traderDetailsToAdd)
+    public void AddTraderToDb(TraderBase traderDetailsToAdd, TraderAssort assort)
     {
-        var emptyTraderItemAssortObject = new TraderAssort
-        {
-            Items = [],
-            BarterScheme = new Dictionary<MongoId, List<List<BarterScheme>>>(),
-            LoyalLevelItems = new Dictionary<MongoId, int>()
-        };
-
         var traderDataToAdd = new Trader
         {
-            Assort = emptyTraderItemAssortObject,
+            Assort = assort,
             Base = cloner.Clone(traderDetailsToAdd),
             QuestAssort = new()
             {

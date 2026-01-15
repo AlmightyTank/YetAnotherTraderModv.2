@@ -14,11 +14,11 @@ namespace PrisciluOrigins;
 
 public record ModMetadata : AbstractModMetadata
 {
-    public override string ModGuid { get; init; } = "com.priscilu.origins";
-    public override string Name { get; init; } = "Priscilu_Origins";
-    public override string Author { get; init; } = "Reis | Update: CyberByteCraft";
-    public override List<string>? Contributors { get; init; } = ["CyberByteCraft"];
-    public override SemanticVersioning.Version Version { get; init; } = new("6.1.1");
+    public override string ModGuid { get; init; } = "com.anigx.priscilu_origins_v2";
+    public override string Name { get; init; } = "Priscilu_Origins_v2";
+    public override string Author { get; init; } = "Reis | Update/Contributor: Anigx";
+    public override List<string>? Contributors { get; init; } = ["Anigx"];
+    public override SemanticVersioning.Version Version { get; init; } = new("6.1.3");
     public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.11");
     public override List<string>? Incompatibilities { get; init; } = [];
     public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; } = null;
@@ -54,19 +54,19 @@ public class PrisciluOriginsMod(
         addCustomTraderHelper.SetTraderUpdateTime(
             _traderConfig,
             traderBase,
-            timeUtil.GetHoursAsSeconds(1),
-            timeUtil.GetHoursAsSeconds(2));
+            20,
+            20);
 
         _ragfairConfig.Traders.TryAdd(traderBase.Id, true);
-        addCustomTraderHelper.AddTraderWithEmptyAssortToDb(traderBase);
+        addCustomTraderHelper.AddTraderToDb(traderBase, assort);
 
         var localeFirstName = traderBase.Nickname ?? traderBase.Name ?? "Priscilu";
         var localeDescription = string.Empty;
         addCustomTraderHelper.AddTraderToLocales(traderBase, localeFirstName, localeDescription);
 
-        addCustomTraderHelper.OverwriteTraderAssort(traderBase.Id, assort);
+        // Assort is now added directly during creation, no need to overwrite
+        // addCustomTraderHelper.OverwriteTraderAssort(traderBase.Id, assort);
 
-        addCustomTraderHelper.LogInfo("[Priscilu_Origins] Contributors: CyberByteCraft");
         return Task.CompletedTask;
     }
 }
