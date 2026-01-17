@@ -64,8 +64,8 @@ public class PrisciluOriginsMod(
             // Find item by TPL
             foreach (var item in assort.Items)
             {
-               var tpl = (string)((dynamic)item)._tpl;
-               if (tpl == priceConfig.TplId && item.ParentId == "hideout")
+               var tpl = PrisciluOrigins.Config.PrisciluConfig.GetTemplateId(item);
+               if (!string.IsNullOrEmpty(tpl) && tpl == priceConfig.TplId && item.ParentId == "hideout")
                {
                    // Found the item, update its price in BarterScheme
                    if (assort.BarterScheme.ContainsKey(item.Id))

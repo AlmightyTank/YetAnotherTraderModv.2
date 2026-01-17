@@ -1,3 +1,4 @@
+using System.Reflection; // [NEW] For reflection
 using System.Text.Json;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
 using SPTarkov.Server.Core.Models.Eft.Common;
@@ -25,6 +26,43 @@ public class PrisciluConfig
         _configDir = Path.Combine(_modPath, "config");
         _settingsPath = Path.Combine(_configDir, "settings.json");
         _pricesPath = Path.Combine(_configDir, "prices.json");
+    }
+
+    // Helper to find Template ID robustly
+    public static string GetTemplateId(object item)
+    {
+        try 
+        {
+            var type = item.GetType();
+            
+            // Try properties
+            var props = new[] { "Tpl", "_tpl", "TemplateId" };
+            foreach (var propName in props)
+            {
+                var prop = type.GetProperty(propName, BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
+                if (prop != null) return prop.GetValue(item)?.ToString();
+            }
+
+            // Try fields
+            var fields = new[] { "Tpl", "_tpl", "TemplateId" };
+            foreach (var fieldName in fields)
+            {
+                var field = type.GetField(fieldName, BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
+                if (field != null) return field.GetValue(item)?.ToString();
+            }
+
+            // Fallback: If absolutely nothing matches, try getting ANY property that has the value matching ID for simple checks, or dump properties (debug)
+            // Debug Log (Consoles only visible in server window)
+            Console.WriteLine($"[Priscilu] COULD NOT FIND TEMPLATE ID FOR ITEM TYPE: {type.FullName}");
+            //Console.WriteLine($"[Priscilu] Available Properties: {string.Join(", ", type.GetProperties().Select(p => p.Name))}"); // Commented out to reduce spam unless needed
+
+            return ((dynamic)item).Id; 
+        }
+        catch (Exception ex)
+        {
+             // Console.WriteLine($"[Priscilu] Error getting template id: {ex.Message}");
+             return null;
+        }
     }
 
     public void LoadOrGenerate(TraderBase baseJson, TraderAssort assortJson)
@@ -81,8 +119,6 @@ public class PrisciluConfig
         else
         {
             Prices = new List<PriceConfigItem>();
-            // [FIX] Locale handling might be complex with LazyLoad. Skip names for now to ensure build stability.
-            // var locales = _databaseServer.GetTables().Locales.Global["en"]; 
 
             foreach (var item in assortJson.Items)
             {
@@ -96,9 +132,14 @@ public class PrisciluConfig
                     
                     var scheme = schemeList[0][0]; // Assuming first scheme, first component
 
-                    // [FIX] Use dynamic to bypass missing member error, assume _tpl matches JSON
-                    var tpl = (string)((dynamic)item)._tpl; 
-                    var name = tpl; // Fallback to ID since locale lookup is disabled for stability
+                    // [FIX] Use Reflection Helper
+                    var tpl = GetTemplateId(item);
+                    if (string.IsNullOrEmpty(tpl)) 
+                    {
+                        continue;
+                    }
+
+                    var name = tpl; 
 
                     Prices.Add(new PriceConfigItem
                     {
