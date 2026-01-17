@@ -10,6 +10,9 @@
         "instantComplete": false,
         "secretQuest": false,
         "canShowNotificationsInGame": true,
+        "name": "67890abcdef01234567890ab",
+        "description": "67890abcdef01234567890ab",
+        "side": "Pmc",
         "rewards": {
             "Started": [],
             "Success": [
