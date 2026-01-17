@@ -36,7 +36,7 @@ public class PrisciluConfig
             var type = item.GetType();
             
             // Try properties
-            var props = new[] { "Tpl", "_tpl", "TemplateId" };
+            var props = new[] { "Template", "Tpl", "_tpl", "TemplateId" }; // [FIX] Added "Template"
             foreach (var propName in props)
             {
                 var prop = type.GetProperty(propName, BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
@@ -44,7 +44,7 @@ public class PrisciluConfig
             }
 
             // Try fields
-            var fields = new[] { "Tpl", "_tpl", "TemplateId" };
+            var fields = new[] { "Template", "Tpl", "_tpl", "TemplateId" };
             foreach (var fieldName in fields)
             {
                 var field = type.GetField(fieldName, BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
@@ -53,9 +53,9 @@ public class PrisciluConfig
 
             // Fallback: If absolutely nothing matches, try getting ANY property that has the value matching ID for simple checks, or dump properties (debug)
             // Debug Log (Consoles only visible in server window)
-            Console.WriteLine($"[Priscilu] COULD NOT FIND TEMPLATE ID FOR ITEM TYPE: {type.FullName}");
-            Console.WriteLine($"[Priscilu] Available Properties: {string.Join(", ", type.GetProperties().Select(p => p.Name))}");
-            Console.WriteLine($"[Priscilu] Available Fields: {string.Join(", ", type.GetFields().Select(f => f.Name))}");
+            // Console.WriteLine($"[Priscilu] COULD NOT FIND TEMPLATE ID FOR ITEM TYPE: {type.FullName}");
+            // Console.WriteLine($"[Priscilu] Available Properties: {string.Join(", ", type.GetProperties().Select(p => p.Name))}");
+            // Console.WriteLine($"[Priscilu] Available Fields: {string.Join(", ", type.GetFields().Select(f => f.Name))}");
 
             return ((dynamic)item).Id; 
         }
