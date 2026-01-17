@@ -1,0 +1,13 @@
+  Wiederherzustellende Projekte werden ermittelt...
+  Alle Projekte sind f├╝r die Wiederherstellung auf dem neuesten Stand.
+D:\Antiygravity\projects\eft_spt\mod\server\Priscilu_Origins_v2\TraderUnlockCallback.cs(18,37): error CS0246: Der Typ- oder Namespacename "IOnSaveLoadCallback" wurde nicht gefunden (m├╢glicherweise fehlt eine using-Direktive oder ein Assemblyverweis). [D:\Antiygravity\projects\eft_spt\mod\server\Priscilu_Origins_v2\Priscilu_Origins.csproj]
+D:\Antiygravity\projects\eft_spt\mod\server\Priscilu_Origins_v2\PrisciluOrigins.cs(34,5): warning CS0618: "ConfigServer" ist veraltet: "This class will be removed in SPT 4.2 in favor for directly injecting the configuration into classes" [D:\Antiygravity\projects\eft_spt\mod\server\Priscilu_Origins_v2\Priscilu_Origins.csproj]
+
+Fehler beim Buildvorgang.
+
+D:\Antiygravity\projects\eft_spt\mod\server\Priscilu_Origins_v2\PrisciluOrigins.cs(34,5): warning CS0618: "ConfigServer" ist veraltet: "This class will be removed in SPT 4.2 in favor for directly injecting the configuration into classes" [D:\Antiygravity\projects\eft_spt\mod\server\Priscilu_Origins_v2\Priscilu_Origins.csproj]
+D:\Antiygravity\projects\eft_spt\mod\server\Priscilu_Origins_v2\TraderUnlockCallback.cs(18,37): error CS0246: Der Typ- oder Namespacename "IOnSaveLoadCallback" wurde nicht gefunden (m├╢glicherweise fehlt eine using-Direktive oder ein Assemblyverweis). [D:\Antiygravity\projects\eft_spt\mod\server\Priscilu_Origins_v2\Priscilu_Origins.csproj]
+    1 Warnung(en)
+    1 Fehler
+
+Verstrichene Zeit 00:00:02.63

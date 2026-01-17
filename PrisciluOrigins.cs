@@ -58,57 +58,17 @@ public class PrisciluOriginsMod(
             traderBase.LoyaltyLevels[0].MinLevel = config.Settings.MinLevel;
         }
 
-        // [NEW] Load and Inject Quest
-        var questPath = Path.Combine(pathToMod, "Data/quest.json");
-        var questTempPath = Path.Combine(pathToMod, "Data/quest_temp.json");
-        
-        if (!config.Settings.UnlockedByDefault && System.IO.File.Exists(questPath))
+        // [LEVEL-BASED UNLOCK] Configure the service to check player level on save/load
+        if (!config.Settings.UnlockedByDefault)
         {
-            Console.WriteLine("[PrisciluOrigins] Loading unlock quest...");
-            var jsonText = System.IO.File.ReadAllText(questPath);
-            // Replace placeholder level "15" with actual config level
-            jsonText = jsonText.Replace("\"value\": \"15\"", $"\"value\": \"{config.Settings.MinLevel}\"");
-            
-            try 
-            {
-                System.IO.File.WriteAllText(questTempPath, jsonText);
-                var quests = modHelper.GetJsonDataFromFile<List<SPTarkov.Server.Core.Models.Eft.Common.Tables.Quest>>(pathToMod, "Data/quest_temp.json");
-                Console.WriteLine($"[PrisciluOrigins] Loaded {quests?.Count ?? 0} quests from JSON.");
-                
-                if (quests != null && quests.Count > 0)
-                {
-                    addCustomTraderHelper.AddQuest(quests);
-                    Console.WriteLine("[PrisciluOrigins] Quest added to database.");
-                    
-                    // Inject Quest Locales
-                    addCustomTraderHelper.AddQuestLocales(
-                        "67890abcdef01234567890ab",
-                        "Unlock Priscilu Origins",
-                        $"Reach level {config.Settings.MinLevel} to unlock Priscilu Origins trader.",
-                        $"Reach level {config.Settings.MinLevel}"
-                    );
-                    Console.WriteLine("[PrisciluOrigins] Quest locales added.");
-                }
-                else
-                {
-                    Console.WriteLine("[PrisciluOrigins] WARNING: No quests loaded from JSON!");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"[PrisciluOrigins] ERROR loading quest: {ex.Message}");
-            }
-            finally
-            {
-                if (System.IO.File.Exists(questTempPath))
-                {
-                    System.IO.File.Delete(questTempPath);
-                }
-            }
+            TraderUnlockService.EnableLevelLock = true;
+            TraderUnlockService.MinLevelRequired = config.Settings.MinLevel;
+            Console.WriteLine($"[PrisciluOrigins] Level-based unlock enabled. Required level: {config.Settings.MinLevel}");
         }
         else
         {
-            Console.WriteLine($"[PrisciluOrigins] Quest not loaded. UnlockedByDefault={config.Settings.UnlockedByDefault}, QuestExists={System.IO.File.Exists(questPath)}");
+            TraderUnlockService.EnableLevelLock = false;
+            Console.WriteLine("[PrisciluOrigins] Trader unlocked by default.");
         }
 
         // [NEW] Apply Price Overrides
