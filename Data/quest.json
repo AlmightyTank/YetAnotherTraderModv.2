@@ -27,15 +27,12 @@
             "AvailableForStart": [],
             "AvailableForFinish": [
                 {
-                    "_parent": "Level",
-                    "_props": {
-                        "compareMethod": ">=",
-                        "value": "15",
-                        "index": 0,
-                        "parentId": "",
-                        "id": "67890abcdef01234567890ad",
-                        "dynamicLocale": false
-                    }
+                    "id": "67890abcdef01234567890ad",
+                    "dynamicLocale": false,
+                    "conditionType": "Level",
+                    "compareMethod": ">=",
+                    "value": 15,
+                    "index": 0
                 }
             ],
             "Fail": []
