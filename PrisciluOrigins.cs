@@ -31,9 +31,10 @@ public record ModMetadata : AbstractModMetadata
 public class PrisciluOriginsMod(
     ModHelper modHelper,
     ImageRouter imageRouter,
-    ConfigServer configServer, // [FIX] Revert to ConfigServer
+    ConfigServer configServer,
     DatabaseServer databaseServer,
-    AddCustomTraderHelper addCustomTraderHelper)
+    AddCustomTraderHelper addCustomTraderHelper,
+    TraderUnlockService traderUnlockService)
     : IOnLoad
 {
     private readonly TraderConfig _traderConfig = configServer.GetConfig<TraderConfig>();
@@ -64,6 +65,9 @@ public class PrisciluOriginsMod(
             // Configure service for level-based unlock checks
             TraderUnlockService.EnableLevelLock = true;
             TraderUnlockService.MinLevelRequired = config.Settings.MinLevel;
+            
+            // Register execution of checks on server start
+            traderUnlockService.OnLoad();
             
             Console.WriteLine($"[PrisciluOrigins] Level-based unlock enabled. Required level: {config.Settings.MinLevel}");
         }

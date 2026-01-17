@@ -7,13 +7,14 @@ namespace PrisciluOrigins;
 
 /// <summary>
 /// Service to check and unlock trader based on player level.
-/// Uses reflection to safely access profile data across SPT versions.
+/// Uses a timer to actively check profiles for "Live" unlock.
 /// </summary>
 [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 2)]
-public class TraderUnlockService : IOnLoad
+public class TraderUnlockService : IOnLoad, IDisposable
 {
     private readonly ISptLogger<TraderUnlockService> _logger;
     private readonly SaveServer _saveServer;
+    private System.Threading.Timer? _timer;
     
     private const string PrisciluTraderId = "6748adca5c70634464b214a8";
     
@@ -33,18 +34,28 @@ public class TraderUnlockService : IOnLoad
     {
         if (EnableLevelLock)
         {
-            _logger.Info($"[PrisciluOrigins] TraderUnlockService active - checking profiles on load");
+            _logger.Info($"[PrisciluOrigins] Unlock Service Active. Required Level: {MinLevelRequired}");
+            // Initial check
             CheckAllProfiles();
+            
+            // "Live" check every 10 seconds
+            _timer = new System.Threading.Timer(
+                _ => CheckAllProfiles(), 
+                null, 
+                TimeSpan.FromSeconds(10), 
+                TimeSpan.FromSeconds(10));
         }
         return Task.CompletedTask;
     }
     
+    public void Dispose()
+    {
+        _timer?.Dispose();
+    }
+    
     public void CheckAllProfiles()
     {
-        if (!EnableLevelLock)
-        {
-            return;
-        }
+        if (!EnableLevelLock) return;
         
         try
         {
@@ -56,16 +67,14 @@ public class TraderUnlockService : IOnLoad
         }
         catch (Exception ex)
         {
-            _logger.Warning($"[PrisciluOrigins] Error checking profiles: {ex.Message}");
+            // Suppress log spam for timer
+            // _logger.Warning($"[PrisciluOrigins] Error checking profiles: {ex.Message}");
         }
     }
     
     public void CheckAndUnlockTrader(string sessionId, object profile)
     {
-        if (!EnableLevelLock || profile == null)
-        {
-            return;
-        }
+        if (!EnableLevelLock || profile == null) return;
         
         try
         {
@@ -119,16 +128,16 @@ public class TraderUnlockService : IOnLoad
                             if (playerLevel >= MinLevelRequired && !isUnlocked)
                             {
                                 unlockedProperty.SetValue(traderInfo, true);
-                                _logger.Info($"[PrisciluOrigins] Trader UNLOCKED for session {sessionId} - Player Level: {playerLevel} >= Required: {MinLevelRequired}");
+                                _logger.Info($"[PrisciluOrigins] LIVE UNLOCK: Session {sessionId} reached Level {playerLevel}");
                             }
                         }
                     }
                 }
             }
         }
-        catch (Exception ex)
+        catch
         {
-            _logger.Warning($"[PrisciluOrigins] Error checking trader unlock for {sessionId}: {ex.Message}");
+            // Ignore errors for smoothness
         }
     }
 }
