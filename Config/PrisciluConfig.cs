@@ -54,7 +54,8 @@ public class PrisciluConfig
             // Fallback: If absolutely nothing matches, try getting ANY property that has the value matching ID for simple checks, or dump properties (debug)
             // Debug Log (Consoles only visible in server window)
             Console.WriteLine($"[Priscilu] COULD NOT FIND TEMPLATE ID FOR ITEM TYPE: {type.FullName}");
-            //Console.WriteLine($"[Priscilu] Available Properties: {string.Join(", ", type.GetProperties().Select(p => p.Name))}"); // Commented out to reduce spam unless needed
+            Console.WriteLine($"[Priscilu] Available Properties: {string.Join(", ", type.GetProperties().Select(p => p.Name))}");
+            Console.WriteLine($"[Priscilu] Available Fields: {string.Join(", ", type.GetFields().Select(f => f.Name))}");
 
             return ((dynamic)item).Id; 
         }
