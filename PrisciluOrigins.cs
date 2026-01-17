@@ -62,7 +62,7 @@ public class PrisciluOriginsMod(
         var questPath = Path.Combine(pathToMod, "Data/quest.json");
         var questTempPath = Path.Combine(pathToMod, "Data/quest_temp.json");
         
-        if (System.IO.File.Exists(questPath))
+        if (!config.Settings.UnlockedByDefault && System.IO.File.Exists(questPath))
         {
             var jsonText = System.IO.File.ReadAllText(questPath);
             // Replace placeholder level "15" with actual config level
