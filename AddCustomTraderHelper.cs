@@ -23,6 +23,9 @@ public class AddCustomTraderHelper(
 
     public void SetTraderUpdateTime(TraderConfig traderConfig, TraderBase baseJson, int refreshTimeSecondsMin, int refreshTimeSecondsMax)
     {
+        // Remove any existing entry for this trader to avoid duplicates
+        traderConfig.UpdateTime.RemoveAll(x => x.TraderId == baseJson.Id);
+        
         var traderRefreshRecord = new UpdateTime
         {
             TraderId = baseJson.Id,

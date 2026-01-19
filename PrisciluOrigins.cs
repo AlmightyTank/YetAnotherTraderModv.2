@@ -14,11 +14,11 @@ namespace PrisciluOrigins;
 
 public record ModMetadata : AbstractModMetadata
 {
-    public override string ModGuid { get; init; } = "com.anigx.priscilu_origins_v2";
+    public override string ModGuid { get; init; } = "com.priscilu.origins";
     public override string Name { get; init; } = "Priscilu_Origins_v2";
     public override string Author { get; init; } = "Reis | Update/Contributor: Anigx";
     public override List<string>? Contributors { get; init; } = ["Anigx"];
-    public override SemanticVersioning.Version Version { get; init; } = new("6.1.3");
+    public override SemanticVersioning.Version Version { get; init; } = new("6.2.0");
     public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.11");
     public override List<string>? Incompatibilities { get; init; } = [];
     public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; } = null;
@@ -106,12 +106,23 @@ public class PrisciluOriginsMod(
         avatarRoute = avatarRoute.Replace(".png", "").Replace(".jpg", "").Replace(".jpeg", "");
         imageRouter.AddRoute(avatarRoute, traderImagePath);
 
-        // [NEW] Use Configured Timer
+        // [NEW] Use Configured Timer with validation
+        const int MinRestockSeconds = 60;
+        const int DefaultRestockSeconds = 3600;
+        
+        var restockTimerSeconds = config.Settings.RestockTimerSeconds;
+        if (restockTimerSeconds < MinRestockSeconds)
+        {
+            PrisciluLogger.Log($"WARNING: RestockTimerSeconds ({restockTimerSeconds}) is below minimum ({MinRestockSeconds}). Defaulting to {DefaultRestockSeconds}s.");
+            restockTimerSeconds = DefaultRestockSeconds;
+        }
+        
+        PrisciluLogger.Log($"Setting trader restock timer to {restockTimerSeconds} seconds ({restockTimerSeconds / 60} minutes)");
         addCustomTraderHelper.SetTraderUpdateTime(
             _traderConfig,
             traderBase,
-            config.Settings.RestockTimerSeconds,
-            config.Settings.RestockTimerSeconds);
+            restockTimerSeconds,
+            restockTimerSeconds);
 
         _ragfairConfig.Traders.TryAdd(traderBase.Id, true);
         addCustomTraderHelper.AddTraderToDb(traderBase, assort);
