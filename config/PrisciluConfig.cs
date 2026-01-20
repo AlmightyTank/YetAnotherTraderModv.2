@@ -98,7 +98,7 @@ public class PrisciluConfig
             {
                 MinLevel = baseJson.LoyaltyLevels.FirstOrDefault()?.MinLevel ?? 1,
                 UnlockedByDefault = baseJson.UnlockedByDefault ?? false,
-                RestockTimerSeconds = 3600
+
             };
             SaveJson(_settingsPath, Settings);
         }

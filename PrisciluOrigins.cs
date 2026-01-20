@@ -19,7 +19,7 @@ public record ModMetadata : AbstractModMetadata
     public override string Name { get; init; } = "Priscilu_Origins_v2";
     public override string Author { get; init; } = "Reis | Update/Contributor: Anigx";
     public override List<string>? Contributors { get; init; } = ["Anigx"];
-    public override SemanticVersioning.Version Version { get; init; } = new("6.2.4");
+    public override SemanticVersioning.Version Version { get; init; } = new("6.2.5");
     public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.11");
     public override List<string>? Incompatibilities { get; init; } = [];
     public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; } = null;
@@ -111,27 +111,18 @@ public class PrisciluOriginsMod(
         avatarRoute = avatarRoute.Replace(".png", "").Replace(".jpg", "").Replace(".jpeg", "");
         imageRouter.AddRoute(avatarRoute, traderImagePath);
 
-        // [TIMER CONFIG]
-        const int MinRestockSeconds = 60;
-        const int DefaultRestockSeconds = 3600;
+        // [TIMER] Hardcoded to 1 hour (3600s) as dynamic config caused issues
+        const int HardcodedRestockSeconds = 3600;
         
-        var restockTimerSeconds = config.Settings.RestockTimerSeconds;
-        if (restockTimerSeconds < MinRestockSeconds)
-        {
-            PrisciluLogger.Log($"WARNING: RestockTimerSeconds ({restockTimerSeconds}) is below minimum ({MinRestockSeconds}). Defaulting to {DefaultRestockSeconds}s.");
-            restockTimerSeconds = DefaultRestockSeconds;
-        }
-        
-        PrisciluLogger.Log($"Setting trader restock timer to {restockTimerSeconds} seconds.");
+        PrisciluLogger.Log($"Setting trader restock timer to {HardcodedRestockSeconds} seconds.");
         addCustomTraderHelper.SetTraderUpdateTime(
             _traderConfig,
             traderBase,
-            restockTimerSeconds,
-            restockTimerSeconds);
-            
-        // FORCE NextResupply to current time + interval
-        // This ensures the initial value is valid and in the future
-        traderBase.NextResupply = (int)(DateTimeOffset.UtcNow.ToUnixTimeSeconds() + restockTimerSeconds);
+            HardcodedRestockSeconds,
+            HardcodedRestockSeconds);
+
+        // Ensure NextResupply is set to something valid
+        traderBase.NextResupply = (int)(DateTimeOffset.UtcNow.ToUnixTimeSeconds() + HardcodedRestockSeconds);
 
         _ragfairConfig.Traders.TryAdd(traderBase.Id, true);
         addCustomTraderHelper.AddTraderToDb(traderBase, assort);
