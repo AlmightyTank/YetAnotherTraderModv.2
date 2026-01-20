@@ -19,7 +19,7 @@ public record ModMetadata : AbstractModMetadata
     public override string Name { get; init; } = "Priscilu_Origins_v2";
     public override string Author { get; init; } = "Reis | Update/Contributor: Anigx";
     public override List<string>? Contributors { get; init; } = ["Anigx"];
-    public override SemanticVersioning.Version Version { get; init; } = new("6.2.3");
+    public override SemanticVersioning.Version Version { get; init; } = new("6.2.4");
     public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.11");
     public override List<string>? Incompatibilities { get; init; } = [];
     public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; } = null;
@@ -28,7 +28,7 @@ public record ModMetadata : AbstractModMetadata
     public override string License { get; init; } = "MIT";
 }
 
-[Injectable(TypePriority = OnLoadOrder.TraderRegistration + 99)]
+[Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 1)]
 public class PrisciluOriginsMod(
     ModHelper modHelper,
     ImageRouter imageRouter,
@@ -47,7 +47,7 @@ public class PrisciluOriginsMod(
         
         // [DEBUG LOG] Initialize Logger
         PrisciluLogger.Init(pathToMod);
-        PrisciluLogger.Log("Mod OnLoad started (Priority: TraderRegistration + 99).");
+        PrisciluLogger.Log("Mod OnLoad started.");
 
         var traderBase = modHelper.GetJsonDataFromFile<TraderBase>(pathToMod, "data/base.json");
         var assort = modHelper.GetJsonDataFromFile<TraderAssort>(pathToMod, "data/assort.json");
@@ -59,26 +59,22 @@ public class PrisciluOriginsMod(
 
         // [NEW] Apply Settings (Level & Unlock)
         traderBase.UnlockedByDefault = config.Settings.UnlockedByDefault;
+        
         if (traderBase.LoyaltyLevels.Count > 0)
         {
             traderBase.LoyaltyLevels[0].MinLevel = config.Settings.MinLevel;
         }
 
-        // [LEVEL-BASED UNLOCK] Configure service to check player level
         if (!config.Settings.UnlockedByDefault)
         {
-            // Configure service for level-based unlock checks
             TraderUnlockService.EnableLevelLock = true;
             TraderUnlockService.MinLevelRequired = config.Settings.MinLevel;
-            
-            // Register execution of checks on server start
             traderUnlockService.OnLoad();
-            
             PrisciluLogger.Log($"Level-based unlock enabled. Required level: {config.Settings.MinLevel}");
         }
         else
         {
-            TraderUnlockService.EnableLevelLock = false; // Ensure it's disabled if config says so
+            TraderUnlockService.EnableLevelLock = false;
             PrisciluLogger.Log("Trader unlocked by default.");
         }
 
@@ -86,38 +82,26 @@ public class PrisciluOriginsMod(
         if (string.IsNullOrEmpty(traderBase.Id))
         {
              PrisciluLogger.Log("CRITICAL ERROR: traderBase.Id is null or empty! Hardcoding ID to ensure stability.");
-             traderBase.Id = "6748adca5c70634464b214a8"; // Use ID from base.json
+             traderBase.Id = "6748adca5c70634464b214a8"; 
         }
 
-        if (traderBase.ItemsBuy == null)
-        {
-           traderBase.ItemsBuy = new() { Category = [], IdList = [] };
-        }
-         if (traderBase.ItemsBuyProhibited == null)
-        {
-           traderBase.ItemsBuyProhibited = new() { Category = [], IdList = [] };
-        }
-         if (traderBase.ItemsSell == null)
-        {
-           traderBase.ItemsSell = [];
-        }
+        // Ensure non-null collections
+        if (traderBase.ItemsBuy == null) traderBase.ItemsBuy = new() { Category = [], IdList = [] };
+        if (traderBase.ItemsBuyProhibited == null) traderBase.ItemsBuyProhibited = new() { Category = [], IdList = [] };
+        if (traderBase.ItemsSell == null) traderBase.ItemsSell = [];
 
-        // [NEW] Apply Price Overrides
+        // Apply Price Overrides
         foreach (var priceConfig in config.Prices)
         {
-            // Find item by TPL
             foreach (var item in assort.Items)
             {
                var tpl = PrisciluOrigins.Config.PrisciluConfig.GetTemplateId(item);
                if (!string.IsNullOrEmpty(tpl) && tpl == priceConfig.TplId && item.ParentId == "hideout")
                {
-                   // Found the item, update its price in BarterScheme
                    if (assort.BarterScheme.ContainsKey(item.Id))
                    {
                         var scheme = assort.BarterScheme[item.Id][0][0];
                         scheme.Count = priceConfig.Price;
-                        // Map config currency string to ID if needed, simplified for now assuming RUB mostly
-                        // (You could expand this to switch currency completely if requested)
                    }
                }
             }
@@ -127,7 +111,7 @@ public class PrisciluOriginsMod(
         avatarRoute = avatarRoute.Replace(".png", "").Replace(".jpg", "").Replace(".jpeg", "");
         imageRouter.AddRoute(avatarRoute, traderImagePath);
 
-        // [NEW] Use Configured Timer with validation
+        // [TIMER CONFIG]
         const int MinRestockSeconds = 60;
         const int DefaultRestockSeconds = 3600;
         
@@ -138,45 +122,26 @@ public class PrisciluOriginsMod(
             restockTimerSeconds = DefaultRestockSeconds;
         }
         
-        PrisciluLogger.Log($"Setting trader restock timer to {restockTimerSeconds} seconds ({restockTimerSeconds / 60} minutes)");
+        PrisciluLogger.Log($"Setting trader restock timer to {restockTimerSeconds} seconds.");
         addCustomTraderHelper.SetTraderUpdateTime(
             _traderConfig,
             traderBase,
             restockTimerSeconds,
             restockTimerSeconds);
+            
+        // FORCE NextResupply to current time + interval
+        // This ensures the initial value is valid and in the future
+        traderBase.NextResupply = (int)(DateTimeOffset.UtcNow.ToUnixTimeSeconds() + restockTimerSeconds);
 
         _ragfairConfig.Traders.TryAdd(traderBase.Id, true);
         addCustomTraderHelper.AddTraderToDb(traderBase, assort);
-
-        // [FIX] Set nextResupply on the DB reference AFTER registration (fixes 0:0:0:0 timer bug)
-        var registeredTrader = databaseServer.GetTables().Traders[traderBase.Id];
-        if (registeredTrader?.Base != null)
-        {
-            registeredTrader.Base.NextResupply = (int)(DateTimeOffset.UtcNow.ToUnixTimeSeconds() + restockTimerSeconds);
-            PrisciluLogger.Log($"NextResupply set to: {registeredTrader.Base.NextResupply} (in {restockTimerSeconds}s)");
-        }
-        else
-        {
-            PrisciluLogger.Log("ERROR: Could not find registered trader to set NextResupply!");
-        }
+        
+        // Log verification
+        PrisciluLogger.Log($"Trader initialized with NextResupply: {traderBase.NextResupply}");
 
         var localeFirstName = traderBase.Nickname ?? traderBase.Name ?? "Priscilu";
         var localeDescription = string.Empty;
         addCustomTraderHelper.AddTraderToLocales(traderBase, localeFirstName, localeDescription);
-
-        // [DEBUG] Final State Check
-        PrisciluLogger.Log("--- Final State Check ---");
-        var finalTrader = databaseServer.GetTables().Traders[traderBase.Id];
-        PrisciluLogger.Log($"DB Trader Exists: {finalTrader != null}");
-        PrisciluLogger.Log($"DB NextResupply: {finalTrader?.Base?.NextResupply}");
-        
-        var updateTimeEntry = _traderConfig.UpdateTime.FirstOrDefault(x => x.TraderId == traderBase.Id);
-        PrisciluLogger.Log($"Config UpdateTime Exists: {updateTimeEntry != null}");
-        if (updateTimeEntry != null)
-        {
-             PrisciluLogger.Log($"Config UpdateTime: Min={updateTimeEntry.Seconds.Min}, Max={updateTimeEntry.Seconds.Max}");
-        }
-        PrisciluLogger.Log("-------------------------");
 
         return Task.CompletedTask;
     }

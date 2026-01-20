@@ -69,7 +69,6 @@
     "discount_end": 0,
     "buyer_up": true,
     "currency": "RUB",
-    "nextResupply": 1615141448,
     "repair": {
         "availability": true,
         "quality": "0",
