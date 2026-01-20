@@ -88,34 +88,4 @@ public class AddCustomTraderHelper(
 
         traderToEdit.Assort = newAssorts;
     }
-
-    public void AddQuest(List<Quest> quests)
-    {
-        var questDb = databaseService.GetTables().Templates.Quests;
-        foreach (var quest in quests)
-        {
-            if (!questDb.TryAdd(quest.Id, quest))
-            {
-                logger.Warning($"Quest already exists in DB: {quest.Id}");
-            }
-        }
-    }
-
-    public void AddQuestLocales(string questId, string name, string description, string conditionDescription)
-    {
-        var locales = databaseService.GetTables().Locales.Global;
-        foreach (var (_, localeKvP) in locales)
-        {
-            localeKvP.AddTransformer(lazyloadedLocaleData =>
-            {
-                lazyloadedLocaleData.TryAdd($"{questId} name", name);
-                lazyloadedLocaleData.TryAdd($"{questId} description", description);
-                lazyloadedLocaleData.TryAdd($"{questId} successMessageText", "Congratulations! You have unlocked Priscilu Origins.");
-                lazyloadedLocaleData.TryAdd($"{questId} failMessageText", "You failed to unlock Priscilu Origins.");
-                // Condition locales
-                lazyloadedLocaleData.TryAdd("67890abcdef01234567890ad", conditionDescription);
-                return lazyloadedLocaleData;
-            });
-        }
-    }
 }

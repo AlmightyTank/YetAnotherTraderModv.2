@@ -48,9 +48,9 @@ public class PrisciluOriginsMod(
         PrisciluLogger.Init(pathToMod);
         PrisciluLogger.Log("Mod OnLoad started.");
 
-        var traderBase = modHelper.GetJsonDataFromFile<TraderBase>(pathToMod, "Data/base.json");
-        var assort = modHelper.GetJsonDataFromFile<TraderAssort>(pathToMod, "Data/assort.json");
-        var traderImagePath = Path.Combine(pathToMod, "Data/Priscilu_Origins.jpg");
+        var traderBase = modHelper.GetJsonDataFromFile<TraderBase>(pathToMod, "data/base.json");
+        var assort = modHelper.GetJsonDataFromFile<TraderAssort>(pathToMod, "data/assort.json");
+        var traderImagePath = Path.Combine(pathToMod, "data/Priscilu_Origins.jpg");
 
         // [NEW] Load Configuration
         var config = new PrisciluOrigins.Config.PrisciluConfig(pathToMod, databaseServer);
