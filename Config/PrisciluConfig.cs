@@ -25,7 +25,7 @@ public class PrisciluConfig
         _databaseServer = databaseServer;
         _configDir = Path.Combine(_modPath, "config");
         _settingsPath = Path.Combine(_configDir, "settings.json");
-        _pricesPath = Path.Combine(_configDir, "prices.json");
+        _pricesPath = Path.Combine(_configDir, "items.json");
     }
 
     // Helper to find Template ID robustly
@@ -114,7 +114,7 @@ public class PrisciluConfig
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"[Priscilu] Error loading prices.json: {ex.Message}");
+                Console.WriteLine($"[Priscilu] Error loading items.json: {ex.Message}");
             }
         }
         else
