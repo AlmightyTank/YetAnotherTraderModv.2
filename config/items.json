@@ -798,6 +798,12 @@
         "Currency": "RUB"
     },
     {
+        "TplId": "6768c25aa7b238f14a08d3f6",
+        "ItemName": "7.62x51mm M80A1",
+        "Price": 140000,
+        "Currency": "RUB"
+    },
+    {
         "TplId": "5bf3e03b0db834001d2c4a9c",
         "ItemName": "5bf3e03b0db834001d2c4a9c",
         "Price": 300000,

@@ -11196,7 +11196,17 @@
                 "StackObjectsCount": 999999,
                 "UnlimitedCount": true
             }
-        }
+        },
+        {
+            "_id": "6768c25aa7b238f14a08d3f6",
+            "_tpl": "6768c25aa7b238f14a08d3f6",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 999999,
+                "UnlimitedCount": true
+            }
+        },
     ],
     "barter_scheme": {
         "690a06bc6c65be6d001b4cd1": [
@@ -12137,6 +12147,14 @@
                 {
                     "_tpl": "5449016a4bdc2d6f028b456f",
                     "count": 135000
+                }
+            ]
+        ],
+        "6768c25aa7b238f14a08d3f6": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 140000
                 }
             ]
         ],
@@ -13983,6 +14001,7 @@
         "5df8a42886f77412640e2e75": 1,
         "baeeacb536c0c4ca4b9d0768": 1,
         "a8908ccc3dfc9d3f4c227bf1": 1,
-        "78fb2a8beba9abea868e83bb": 1
+        "78fb2a8beba9abea868e83bb": 1,
+        "6768c25aa7b238f14a08d3f6": 1
     }
 }
