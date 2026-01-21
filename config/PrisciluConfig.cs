@@ -112,29 +112,6 @@ public class PrisciluConfig
             {
                 var json = File.ReadAllText(_pricesPath);
                 Prices = JsonSerializer.Deserialize<List<PriceConfigItem>>(json) ?? new List<PriceConfigItem>();
-
-                // [NEW] Attempt to fix missing/incorrect names on load
-                var locales = _databaseServer.GetTables().Locales.Global["en"];
-                bool changesMade = false;
-
-                foreach (var priceItem in Prices)
-                {
-                    // If name is missing or equals the ID, try to revolve it
-                    if (string.IsNullOrEmpty(priceItem.ItemName) || priceItem.ItemName == priceItem.TplId)
-                    {
-                         if (locales.Value != null && locales.Value.TryGetValue($"{priceItem.TplId} Name", out var nameVal))
-                        {
-                            priceItem.ItemName = nameVal.ToString();
-                            changesMade = true;
-                        }
-                    }
-                }
-
-                if (changesMade)
-                {
-                    SaveJson(_pricesPath, Prices);
-                    // Console.WriteLine("[Priscilu] Updated item names in config.");
-                }
             }
             catch (Exception ex)
             {
