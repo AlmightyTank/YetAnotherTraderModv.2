@@ -43,7 +43,7 @@ public class AddCustomTraderHelper(
         var traderDataToAdd = new Trader
         {
             Assort = assort,
-            Base = cloner.Clone(traderDetailsToAdd),
+            Base = traderDetailsToAdd,
             QuestAssort = new()
             {
                 { "Started", new() },

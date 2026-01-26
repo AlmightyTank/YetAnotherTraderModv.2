@@ -7,6 +7,9 @@ public static class PrisciluLogger
 {
     private static string? _logPath;
     private static bool _initialized = false;
+    
+    // [NEW] Global Debug Flag
+    public static bool IsDebugEnabled { get; set; } = false;
 
     public static void Init(string modPath)
     {
@@ -28,11 +31,28 @@ public static class PrisciluLogger
         if (!_initialized || _logPath == null) return;
         try
         {
-             File.AppendAllText(_logPath, $"[{DateTime.Now:HH:mm:ss}] {message}\n");
+             var formatted = $"[{DateTime.Now:HH:mm:ss}] {message}";
+             File.AppendAllText(_logPath, formatted + "\n");
         }
         catch 
         {
             // Fail silently to avoid console spam
         }
+    }
+
+    // [NEW] Detailed Debug Log
+    public static void LogDebug(string message)
+    {
+        if (!IsDebugEnabled) return;
+        if (!_initialized || _logPath == null) return;
+
+        try 
+        {
+            var formatted = $"[DEBUG] [{DateTime.Now:HH:mm:ss}] {message}";
+            File.AppendAllText(_logPath, formatted + "\n");
+            // Also print to server console for immediate visibility if debug is ON
+            Console.WriteLine($"[Priscilu-DEBUG] {message}");
+        }
+        catch { }
     }
 }

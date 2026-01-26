@@ -1,27 +1,14 @@
 {
-    // [Level Requirement] The minimum level required to access the trader's level 1 loyalty.
-    "MinLevel": 2,
-    // [Unlock] If true, the trader is unlocked immediately regardless of level.
-    "UnlockedByDefault": false,
-    // [Restock Timer] Minimum and Maximum time (in seconds) for trader restock.
-    // 1800s = 30 min, 3600s = 60 min. The system picks a random time between these two.
-    "TraderRefreshMin": 1800,
-    "TraderRefreshMax": 3600,
-    // [Flea Market] If true, Priscilu's offers appear on the Flea Market search.
-    "AddTraderToFleaMarket": true,
-    // [Insurance] Price multiplier for insurance. 25 = 25%. Higher is more expensive.
-    "InsurancePriceCoef": 25,
-    // [Repair] Quality of repairs (0.0 to 1.0). 0.8 is High Quality (loss accumulation is lower).
-    "RepairQuality": 0.8,
-    // [Stock] If true, some items will randomly be out of stock each reset.
-    "RandomizeStockAvailable": true,
-    // [Stock] The percentage chance (0-100) that an item is out of stock (if Randomize is true).
-    "OutOfStockChance": 15,
-    // [Stock] If true, all items have infinite stock. Overrides randomization.
-    // Note: Refilling issues are currently being patched by auto-clearing BuyRestrictions.
-    "UnlimitedStock": false,
-    // [Pricing] Global multiplier for all item prices. 1.0 = standard price. 1.0127 = +1.27%.
-    "PriceMultiplier": 1.0127,
-    // [Debug] Enables detailed logs in the server console for troubleshooting.
-    "DebugLogging": false
+    "MinLevel": 2, // [Level Requirement] The minimum level required to access the trader's level 1 loyalty.   
+    "UnlockedByDefault": false, // [Unlock] If true, the trader is unlocked immediately regardless of level.
+    "TraderRefreshMin": 30, // [Restock Timer] Minimum and Maximum time (in seconds) for trader restock. 1800s = 30 min, 3600s = 60 min. The system picks a random time between these two.
+    "TraderRefreshMax": 60,
+    "AddTraderToFleaMarket": false, //WORKING [Flea Market] If true, Priscilu's offers appear on the Flea Market search.
+    "InsurancePriceCoef": 250, // [Insurance] Price multiplier for insurance. 25 = 25%. Higher is more expensive.
+    "RepairQuality": 0.8, // [Repair] Quality of repairs (0.0 to 1.0). 0.8 is High Quality (loss accumulation is lower).
+    "RandomizeStockAvailable": true, // [Stock] If true, some items will randomly be out of stock each reset.
+    "OutOfStockChance": 15, // [Stock] The percentage chance (0-100) that an item is out of stock (if Randomize is true).
+    "UnlimitedStock": true, //WORKING [Stock] If true, all items have infinite stock. Overrides randomization. Note: Refilling issues are currently being patched by auto-clearing BuyRestrictions.    
+    "PriceMultiplier": 1.0127, //WORKING [Pricing] Global multiplier for all item prices. 1.0 = standard price. 1.0127 = +1.27%.    
+    "DebugLogging": true //WORKING [Debug] Enables detailed logs in the server console for troubleshooting.
 }

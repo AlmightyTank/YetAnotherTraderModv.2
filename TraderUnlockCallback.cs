@@ -23,7 +23,8 @@ public class TraderUnlockService : IOnLoad, IDisposable
     // Static config set by main mod
     public static int MinLevelRequired { get; set; } = 1;
     public static bool EnableLevelLock { get; set; } = false;
-    
+    public static bool ForceUnlock { get; set; } = false; // [NEW] Force unlock if enabled by default
+
     public TraderUnlockService(
         ISptLogger<TraderUnlockService> logger,
         SaveServer saveServer)
@@ -47,6 +48,12 @@ public class TraderUnlockService : IOnLoad, IDisposable
                 TimeSpan.FromSeconds(10), 
                 TimeSpan.FromSeconds(10));
         }
+        else if (ForceUnlock)
+        {
+             PrisciluLogger.Log("Forcing Unlock for all profiles (UnlockedByDefault).");
+             CheckAllProfiles();
+        }
+
         return Task.CompletedTask;
     }
     
@@ -57,7 +64,10 @@ public class TraderUnlockService : IOnLoad, IDisposable
     
     public void CheckAllProfiles()
     {
-        if (!EnableLevelLock) return;
+        // If Logic: 
+        // 1. If LevelLock enabled -> Check level
+        // 2. If ForceUnlock -> Just unlock
+        if (!EnableLevelLock && !ForceUnlock) return;
         
         try
         {

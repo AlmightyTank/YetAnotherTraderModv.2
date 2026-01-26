@@ -132,17 +132,21 @@ public class PrisciluConfig
             {
                 var json = File.ReadAllText(_pricesPath);
                 Prices = JsonSerializer.Deserialize<List<PriceConfigItem>>(json) ?? new List<PriceConfigItem>();
+                PrisciluLogger.LogDebug($"Loaded {Prices.Count} custom price entries from items.json");
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"[Priscilu] Error loading items.json: {ex.Message}");
+                PrisciluLogger.Log($"Error loading items.json: {ex.Message}");
             }
         }
         else
         {
+            PrisciluLogger.LogDebug("items.json not found. Generating default prices from assort...");
             Prices = new List<PriceConfigItem>();
             // [FIX] Locale handling re-enabled for "en"
             var locales = _databaseServer.GetTables().Locales.Global["en"]; 
+            int generatedCount = 0;
 
             foreach (var item in assortJson.Items)
             {
@@ -179,12 +183,14 @@ public class PrisciluConfig
                                    scheme.Template == "5696686a4bdc2da3298b456a" ? "USD" : 
                                    scheme.Template == "569668774bdc2da2298b4568" ? "EUR" : "OTHER"
                     });
+                    generatedCount++;
                 }
             }
             
             Prices = Prices.OrderBy(x => x.ItemName).ToList();
 
             SaveJson(_pricesPath, Prices);
+            PrisciluLogger.Log($"Generated items.json with {generatedCount} entries.");
         }
     }
 

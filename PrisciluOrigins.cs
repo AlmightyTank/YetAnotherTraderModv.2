@@ -7,11 +7,12 @@ using SPTarkov.Server.Core.Models.Spt.Mod;
 using SPTarkov.Server.Core.Routers;
 using SPTarkov.Server.Core.Servers;
 using SPTarkov.Server.Core.Utils;
-using System; // [FIX] Added System
-using System.Collections.Generic; // [FIX] Added Collections
-using System.Threading.Tasks; // [FIX] Added Tasks
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Reflection;
 using System.Linq;
+using System.Collections; // Added for IDictionary support
 using Path = System.IO.Path;
 
 namespace PrisciluOrigins;
@@ -60,6 +61,18 @@ public class PrisciluOriginsMod(
         var config = new PrisciluOrigins.Config.PrisciluConfig(pathToMod, databaseServer);
         config.LoadOrGenerate(traderBase, assort);
 
+        // [LOG] Set Debug Flag
+        PrisciluLogger.IsDebugEnabled = config.Settings.DebugLogging;
+        if (PrisciluLogger.IsDebugEnabled)
+        {
+             PrisciluLogger.LogDebug($"Debug Mode Enabled. Config Loaded.");
+             PrisciluLogger.LogDebug($"  MinLevel: {config.Settings.MinLevel}");
+             PrisciluLogger.LogDebug($"  UnlockedByDefault: {config.Settings.UnlockedByDefault}");
+             PrisciluLogger.LogDebug($"  UnlimitedStock: {config.Settings.UnlimitedStock}");
+             PrisciluLogger.LogDebug($"  RandomizeStock: {config.Settings.RandomizeStockAvailable} (Chance: {config.Settings.OutOfStockChance}%)");
+             PrisciluLogger.LogDebug($"  PriceMultiplier: {config.Settings.PriceMultiplier}");
+        }
+
         // [NEW] Apply Settings (Level & Unlock)
         traderBase.UnlockedByDefault = config.Settings.UnlockedByDefault;
         
@@ -69,10 +82,43 @@ public class PrisciluOriginsMod(
         }
 
         // [NEW] Apply Configurable Services
+        // [FIX] Apply Insurance Coefficient to Loyalty Levels (Correct Place!)
+        if (traderBase.LoyaltyLevels != null)
+        {
+            foreach (var level in traderBase.LoyaltyLevels)
+            {
+                try 
+                {
+                    // InsurancePriceCoefficient might be int? or double?
+                    // We use reflection to set it safely
+                    var prop = level.GetType().GetProperty("InsurancePriceCoefficient");
+                    if (prop != null && prop.CanWrite)
+                    {
+                        var targetType = Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType;
+                        object val = Convert.ChangeType(config.Settings.InsurancePriceCoef, targetType);
+                        prop.SetValue(level, val);
+                        PrisciluLogger.LogDebug($"[Insurance] Set Level {level.MinLevel} Coef to: {val}");
+                    }
+                    else
+                    {
+                         // Fallback to ExtensionData if property missing?
+                         // But Inspector confirmed property exists.
+                         PrisciluLogger.LogDebug($"[Insurance] Warning: InsurancePriceCoefficient property not found on LoyaltyLevel.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    PrisciluLogger.Log($"[Insurance] Error settingcoef for level: {ex.Message}");
+                }
+            }
+        }
+        
+        // [OLD] Global Insurance setting (likely ineffective but kept for safety/legacy if core uses it)
         if (traderBase.Insurance != null)
         {
-            // [TODO] InsurancePriceCoef seems to be missing in the new SDK or renamed.
-            // traderBase.Insurance.InsurancePriceCoef = config.Settings.InsurancePriceCoef;
+             // Try valid ExtensionData injection just in case
+             if (traderBase.Insurance.ExtensionData == null) traderBase.Insurance.ExtensionData = new Dictionary<string, object>();
+             traderBase.Insurance.ExtensionData["insurance_price_coef"] = config.Settings.InsurancePriceCoef;
         }
         
         if (traderBase.Repair != null)
@@ -91,7 +137,8 @@ public class PrisciluOriginsMod(
         else
         {
             TraderUnlockService.EnableLevelLock = false;
-            PrisciluLogger.Log("Trader unlocked by default.");
+            TraderUnlockService.ForceUnlock = true; // [FIX] Force unlock for existing profiles
+            PrisciluLogger.Log("Trader unlocked by default (ForceUnlock active).");
         }
 
         // [FIX] Ensure ID consistency
@@ -148,20 +195,23 @@ public class PrisciluOriginsMod(
         }
         else
         {
-             // Ensure it's removed if false (though usually default is hidden for custom traders unless added)
              _ragfairConfig.Traders.Remove(traderBase.Id);
         }
 
         // [LOGIC] Stock Manipulation (Randomization & Unlimited)
         if (config.Settings.RandomizeStockAvailable || config.Settings.UnlimitedStock)
         {
+            PrisciluLogger.LogDebug("Starting Stock Manipulation...");
             var itemsToRemove = new List<string>();
+            var itemsToRemoveNames = new List<string>(); // [NEW] Track names
             var random = new Random();
+            int modifiedCount = 0;
+            
+            // [NEW] Get Locales for Name Resolution
+            var locales = databaseServer.GetTables().Locales.Global["en"];
 
             foreach (var item in assort.Items)
             {
-                 // Skip non-root items (attachments/children should stay if parent stays, technically)
-                 // However, simple randomization usually just hits the main offers (parentId = hideout)
                  if (item.ParentId == "hideout")
                  {
                      // Randomize Availability
@@ -171,61 +221,111 @@ public class PrisciluOriginsMod(
                          {
                              // Mark for removal
                              itemsToRemove.Add(item.Id);
+                             
+                             // [NEW] Resolve Name
+                             string itemName = item.Id;
+                             var tpl = PrisciluOrigins.Config.PrisciluConfig.GetTemplateId(item);
+                             if (!string.IsNullOrEmpty(tpl) && locales.Value != null && locales.Value.TryGetValue($"{tpl} Name", out var nameVal))
+                             {
+                                 itemName = nameVal.ToString();
+                             }
+                             itemsToRemoveNames.Add($"{itemName} ({item.Id})");
+
+                             PrisciluLogger.LogDebug($"[Random Stock] removing: {itemName} ({item.Id})");
                              continue;
                          }
                      }
 
                      // Unlimited Stock Override
-                     if (config.Settings.UnlimitedStock && item.Upd != null)
+                     if (item.Upd != null)
                      {
-                         item.Upd.UnlimitedCount = true;
-                         item.Upd.StackObjectsCount = 999999;
-                         // Enhanced Logic: Clear purchase restrictions
-                         if (item.Upd.BuyRestrictionMax > 0) 
+                         if (config.Settings.UnlimitedStock)
                          {
-                            item.Upd.BuyRestrictionMax = 9999;
-                            item.Upd.BuyRestrictionCurrent = 0;
+                             item.Upd.UnlimitedCount = true;
+                             item.Upd.StackObjectsCount = 999999;
+                             if (item.Upd.BuyRestrictionMax > 0) 
+                             {
+                                item.Upd.BuyRestrictionMax = 9999;
+                                item.Upd.BuyRestrictionCurrent = 0;
+                             }
+                             modifiedCount++;
+                         }
+                         else
+                         {
+                             item.Upd.UnlimitedCount = false;
+                             item.Upd.StackObjectsCount = 100; 
+                             modifiedCount++;
                          }
                      }
                  }
             }
 
+            PrisciluLogger.LogDebug($"Total items modified for Stock setting: {modifiedCount}");
+
             // Perform Removals
             if (itemsToRemove.Count > 0)
             {
                 assort.Items.RemoveAll(x => itemsToRemove.Contains(x.Id) || itemsToRemove.Contains(x.ParentId)); 
-                // Also remove from barter_scheme and loyal_level_items
                 foreach (var id in itemsToRemove)
                 {
                     assort.BarterScheme.Remove(id);
                     assort.LoyalLevelItems.Remove(id);
                 }
                 PrisciluLogger.Log($"[Stock] Removed {itemsToRemove.Count} offers due to randomization.");
+                PrisciluLogger.LogDebug($"Removed Items:\n  {string.Join("\n  ", itemsToRemoveNames)}");
+            }
+            else 
+            {
+                 PrisciluLogger.LogDebug("No items removed by randomization this turn.");
             }
         }
 
         // [LOGIC] Price Multiplier
-        // We apply this ON TOP of existing prices or Config prices
         if (Math.Abs(config.Settings.PriceMultiplier - 1.0) > 0.001)
         {
-             foreach (var schemeList in assort.BarterScheme.Values)
+             PrisciluLogger.LogDebug($"Applying Price Multiplier {config.Settings.PriceMultiplier}...");
+             int changedCount = 0;
+             
+             // [NEW] Dictionary for quick item lookup to resolve names
+             var itemMap = assort.Items.ToDictionary(x => x.Id, x => x);
+             // Ensure locales are fetched (might be fetched above, but fetch here to be safe/local)
+             var localesForPrice = databaseServer.GetTables().Locales.Global["en"];
+
+             foreach (var itemSchemePair in assort.BarterScheme)
              {
+                 var itemId = itemSchemePair.Key;
+                 var schemeList = itemSchemePair.Value;
+
                  foreach (var schemeSubList in schemeList)
                  {
                      foreach (var component in schemeSubList)
                      {
                          if (component.Count.HasValue)
                          {
+                             var oldPrice = component.Count.Value;
                              component.Count = (double)Math.Round(component.Count.Value * config.Settings.PriceMultiplier);
+                             
+                             // [NEW] Resolve Name for logging
+                             string itemName = itemId;
+                             if (itemMap.TryGetValue(itemId, out var item))
+                             {
+                                 var tpl = PrisciluOrigins.Config.PrisciluConfig.GetTemplateId(item);
+                                 if (!string.IsNullOrEmpty(tpl) && localesForPrice.Value != null && localesForPrice.Value.TryGetValue($"{tpl} Name", out var nameVal))
+                                 {
+                                     itemName = nameVal.ToString();
+                                 }
+                             }
+
+                             PrisciluLogger.LogDebug($"  Price adjust: {oldPrice} -> {component.Count} | {itemName} ({itemId})");
+                             changedCount++;
                          }
                      }
                  }
              }
-             PrisciluLogger.Log($"[Pricing] Applied Global Price Multiplier: {config.Settings.PriceMultiplier}");
+             PrisciluLogger.Log($"[Pricing] Applied Global Price Multiplier: {config.Settings.PriceMultiplier} to {changedCount} items.");
         }
 
         // [TIMER] Configurable Refresh Time
-        // Use random between min/max or static
         var timerRandom = new Random();
         int restockTime = timerRandom.Next(config.Settings.TraderRefreshMin, config.Settings.TraderRefreshMax);
         
@@ -236,12 +336,10 @@ public class PrisciluOriginsMod(
             restockTime,
             restockTime);
 
-        // Ensure NextResupply is set
         traderBase.NextResupply = (int)(DateTimeOffset.UtcNow.ToUnixTimeSeconds() + restockTime);
 
         addCustomTraderHelper.AddTraderToDb(traderBase, assort);
         
-        // Log verification
         if (config.Settings.DebugLogging)
         {
              PrisciluLogger.Log($"Trader initialized. Debug Enabled.");
