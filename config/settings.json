@@ -1,18 +1,4 @@
 {
-<<<<<<< HEAD
-    "MinLevel": 5,
-    "UnlockedByDefault": false,
-    "TraderRefreshMin": 1800,
-    "TraderRefreshMax": 3600,
-    "AddTraderToFleaMarket": true,
-    "InsurancePriceCoef": 50,
-    "RepairQuality": 0.8,
-    "RandomizeStockAvailable": false,
-    "OutOfStockChance": 15,
-    "UnlimitedStock": true,
-    "PriceMultiplier": 1.0127,
-    "DebugLogging": false
-=======
     "MinLevel": 5, //[Level Requirement] The minimum level required to access the trader's level 1 loyalty.   
     "UnlockedByDefault": false, //[Unlock] If true, the trader is unlocked immediately regardless of level.
     "TraderRefreshMin": 1800, //[Restock Timer] Minimum and Maximum time (in seconds) for trader restock. 1800s = 30 min, 3600s = 60 min. The system picks a random time between these two.
@@ -25,5 +11,4 @@
     "UnlimitedStock": true, //[Stock] If true, all items have infinite stock. Overrides randomization. Note: Refilling issues are currently being patched by auto-clearing BuyRestrictions.    
     "PriceMultiplier": 1.0127, //[Pricing] Global multiplier for all item prices. 1.0 = standard price. 1.0127 = +1.27%.    
     "DebugLogging": false //[Debug] Enables detailed logs in the server console for troubleshooting.
->>>>>>> main
 }
