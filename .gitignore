@@ -13,3 +13,5 @@ obj/
 .DS_Store
 Thumbs.db
 /.vs
+config/items.json.report.txt
+config/tarkovdev_items_cache.json
