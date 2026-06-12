@@ -29,6 +29,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="tools\tarkovdev_items_cache.json" />
+  </ItemGroup>
 
 	<PropertyGroup>
 		<!-- Change this to your test SPT server folder -->
@@ -41,15 +44,12 @@
 		<DeployToTestSpt>true</DeployToTestSpt>
 	</PropertyGroup>
 
-	<Target Name="DeployTonyToTestSpt"
-			AfterTargets="Build"
-			Condition="'$(DeployToTestSpt)' == 'true' and '$(Configuration)' == 'Debug' and '$(TestSptServerPath)' != ''">
+	<Target Name="DeployTonyToTestSpt" AfterTargets="Build" Condition="'$(DeployToTestSpt)' == 'true' and '$(Configuration)' == 'Debug' and '$(TestSptServerPath)' != ''">
 
 		<Message Text="Deploying $(AssemblyName) to $(TestSptModDeployPath)" Importance="high" />
 
 		<!-- Clean old deployed copy so removed files do not stay behind -->
-		<RemoveDir Directories="$(TestSptModDeployPath)"
-				   Condition="Exists('$(TestSptModDeployPath)')" />
+		<RemoveDir Directories="$(TestSptModDeployPath)" Condition="Exists('$(TestSptModDeployPath)')" />
 
 		<MakeDir Directories="$(TestSptModDeployPath)" />
 
@@ -57,8 +57,6 @@
 			<TonyDeployFiles Include="$(TargetDir)**\*.*" />
 		</ItemGroup>
 
-		<Copy SourceFiles="@(TonyDeployFiles)"
-			  DestinationFiles="@(TonyDeployFiles->'$(TestSptModDeployPath)%(RecursiveDir)%(Filename)%(Extension)')"
-			  SkipUnchangedFiles="false" />
+		<Copy SourceFiles="@(TonyDeployFiles)" DestinationFiles="@(TonyDeployFiles->'$(TestSptModDeployPath)%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" />
 	</Target>
 </Project>

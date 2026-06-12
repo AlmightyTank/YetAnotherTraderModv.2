@@ -1,1844 +1,1398 @@
 [
     {
-        "TplId": "5447a9cd4bdc2dbd208b4567",
-        "ItemName": "Colt M4A1 5.56x45 assault rifle",
-        "Price": 500000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5447a9cd4bdc2dbd208b4567",
-        "ItemName": "Colt M4A1 5.56x45 assault rifle",
-        "Price": 450000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5447a9cd4bdc2dbd208b4567",
-        "ItemName": "Colt M4A1 5.56x45 assault rifle",
-        "Price": 450000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5447a9cd4bdc2dbd208b4567",
-        "ItemName": "Colt M4A1 5.56x45 assault rifle",
-        "Price": 450000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5448ba0b4bdc2d02308b456c",
-        "ItemName": "Factory emergency exit key",
-        "Price": 95000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5448be9a4bdc2dfd2f8b456a",
-        "ItemName": "RGD-5 hand grenade",
-        "Price": 11500,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "54527ac44bdc2d36668b4567",
-        "ItemName": "5.56x45mm M855A1",
-        "Price": 450,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "545cdb794bdc2d3a198b456a",
-        "ItemName": "6B43 Zabralo-Sh body armor (EMR)",
-        "Price": 250000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "557ff21e4bdc2d89578b4586",
-        "ItemName": "Tactical glasses",
-        "Price": 1800,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "55801eed4bdc2d89578b4588",
-        "ItemName": "SV-98 7.62x54R bolt-action sniper rifle",
-        "Price": 500000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "559ba5b34bdc2d1f1a8b4582",
-        "ItemName": "SV-98 7.62x54R 10-round magazine",
-        "Price": 4200,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "55d482194bdc2d1d4e8b456b",
-        "ItemName": "AK-74 5.45x39 6L31 60-round magazine",
-        "Price": 28000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "560d61e84bdc2da74d8b4571",
-        "ItemName": "7.62x54mm R SNB gzh",
-        "Price": 450,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5648a69d4bdc2ded0b8b457b",
-        "ItemName": "BlackRock chest rig (Gray)",
-        "Price": 40000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5656eb674bdc2d35148b457c",
-        "ItemName": "40mm VOG-25 grenade",
-        "Price": 51000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "56dff026d2720bb8668b4567",
-        "ItemName": "5.45x39mm BS gs",
-        "Price": 550,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "570fd721d2720bc5458b4596",
-        "ItemName": "Walther MRS reflex sight",
-        "Price": 13000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "570fd79bd2720bc7458b4583",
-        "ItemName": "OKP-7 reflex sight",
-        "Price": 16000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "573719df2459775a626ccbc2",
-        "ItemName": "9x18mm PM PBM gzh",
-        "Price": 120,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "57371aab2459775a77142f22",
-        "ItemName": "9x18mm PMM PstM gzh",
-        "Price": 150,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "57372140245977611f70ee91",
-        "ItemName": "9x18mm PM SP7 gzh",
-        "Price": 160,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "57486e672459770abd687134",
-        "ItemName": "OKP-7 reflex sight (Dovetail)",
-        "Price": 18000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5751a25924597722c463c472",
-        "ItemName": "Army bandage",
-        "Price": 3000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5751a89d24597722aa0e8db0",
-        "ItemName": "Golden Star balm",
-        "Price": 90000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "576165642459773c7a400233",
-        "ItemName": "Saiga-12K ver.10 12ga semi-automatic shotgun",
-        "Price": 400000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5780cf7f2459777de4559322",
-        "ItemName": "Dorm room 314 marked key",
-        "Price": 30000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5780cf942459777df90dcb72",
-        "ItemName": "Dorm room 214 key",
-        "Price": 26000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5780d0532459777a5108b9a2",
-        "ItemName": "Tarcone Director's office key",
-        "Price": 12000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5780d0652459777df90dcb74",
-        "ItemName": "Gas station office key",
-        "Price": 10000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "57a0e5022459774d1673f889",
-        "ItemName": "9x39mm SP-6 gs",
-        "Price": 650,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "57ae0171245977343c27bfcf",
-        "ItemName": "BelOMO PK-06 reflex sight",
-        "Price": 6000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "57c44b372459772d2b39b8ce",
-        "ItemName": "AS VAL 9x39 special assault rifle",
-        "Price": 300000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "583990e32459771419544dd2",
-        "ItemName": "Kalashnikov AKS-74UN 5.45x39 assault rifle",
-        "Price": 250000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "584924ec24597768f12ae244",
-        "ItemName": "EOTech XPS3-2 holographic sight",
-        "Price": 32000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "58820d1224597753c90aeb13",
-        "ItemName": "12/70 lead slug",
-        "Price": 58,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "58948c8e86f77409493f7266",
-        "ItemName": "SIG MPX 9x19 submachine gun",
-        "Price": 270000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "58948c8e86f77409493f7266",
-        "ItemName": "SIG MPX 9x19 submachine gun",
-        "Price": 280000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "58948c8e86f77409493f7266",
-        "ItemName": "SIG MPX 9x19 submachine gun",
-        "Price": 250000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "58948c8e86f77409493f7266",
-        "ItemName": "SIG MPX 9x19 submachine gun",
-        "Price": 270000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "58dd3ad986f77403051cba8f",
-        "ItemName": "7.62x51mm M80",
-        "Price": 200,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "590c5f0d86f77413997acfab",
-        "ItemName": "MRE ration pack",
-        "Price": 17000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "590c60fc86f77412b13fddcf",
-        "ItemName": "Documents case",
-        "Price": 410000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "590c657e86f77412b013051d",
-        "ItemName": "Grizzly medical kit",
-        "Price": 40000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "591094e086f7747caa7bb2ef",
-        "ItemName": "Body armor repair kit",
-        "Price": 290000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5910968f86f77425cf569c32",
-        "ItemName": "Weapon repair kit",
-        "Price": 95000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "59136e1e86f774432f15d133",
-        "ItemName": "Dorm room 110 key",
-        "Price": 20000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "591382d986f774465a6413a7",
-        "ItemName": "Dorm room 105 key",
-        "Price": 9000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5913877a86f774432f15d444",
-        "ItemName": "Gas station storage room key",
-        "Price": 12000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "59148c8a86f774197930e983",
-        "ItemName": "Dorm room 204 key",
-        "Price": 18000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "591ae8f986f77406f854be45",
-        "ItemName": "Yotota car key",
-        "Price": 7000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "591afe0186f77431bd616a11",
-        "ItemName": "ZB-014 key",
-        "Price": 14000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5926bb2186f7744b1c6c6e60",
-        "ItemName": "HK MP5 9x19 submachine gun (Navy 3 Round Burst)",
-        "Price": 270000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "59387a4986f77401cc236e62",
-        "ItemName": "Dorm room 114 key",
-        "Price": 70000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "59c1383d86f774290a37e0ca",
-        "ItemName": "AR-15 5.56x45 Magpul PMAG D-60 STANAG 60-round magazine",
-        "Price": 40000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "59d6272486f77466146386ff",
-        "ItemName": "AK 7.62x39 Magpul PMAG 30 GEN M3 30-round magazine",
-        "Price": 4400,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "59e0d99486f7744a32234762",
-        "ItemName": "7.62x39mm BP gzh",
+        "OfferId": "e439d5a033d3685e2ed8a6a5",
+        "TplId": "59e6542b86f77411dc52a77a",
+        "ItemName": ".366 TKM FMJ",
         "Price": 850,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "59e4d24686f7741776641ac7",
-        "ItemName": "7.62x39mm US gzh",
-        "Price": 150,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "59e6152586f77473dc057aa1",
-        "ItemName": "Molot Arms VPO-136 Vepr-KM 7.62x39 carbine",
-        "Price": 400000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "59e655cb86f77411dc52a77b",
-        "ItemName": ".366 TKM EKO",
-        "Price": 65,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "59e6687d86f77411d949b251",
-        "ItemName": "Molot Arms VPO-209 .366 TKM carbine",
-        "Price": 400000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "59e690b686f7746c9f75e848",
-        "ItemName": "5.56x45mm M995",
-        "Price": 850,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "59f8a37386f7747af3328f06",
-        "ItemName": "Fortis Shift tactical foregrip",
-        "Price": 41000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "59fafc5086f7740dbe19f6c3",
-        "ItemName": "AK 7.62x39 US Palm \"AK30\" 30-round magazine (Black)",
-        "Price": 5300,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "59fafd4b86f7745ca07e1232",
-        "ItemName": "Key tool",
-        "Price": 840000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a0eb6ac86f7743124037a28",
-        "ItemName": "Cottage back door key",
-        "Price": 170000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a0ee30786f774023b6ee08f",
-        "ItemName": "Health Resort west wing room 216 key",
-        "Price": 238000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a0eec9686f77402ac5c39f2",
-        "ItemName": "Health Resort east wing room 310 key",
-        "Price": 67000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a0f068686f7745b0d4ea242",
-        "ItemName": "Cottage safe key",
-        "Price": 74000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a13ef7e86f7741290491063",
-        "ItemName": "Health Resort west wing room 301 key",
-        "Price": 240000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a13f24186f77410e57c5626",
-        "ItemName": "Health Resort east wing room 222 key",
-        "Price": 59000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a16b672fcdbcb001912fa83",
-        "ItemName": "Ops-Core FAST Visor",
-        "Price": 12000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a16b7e1fcdbcb00165aa6c9",
-        "ItemName": "Ops-Core FAST multi-hit ballistic face shield",
-        "Price": 40000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a16b8a9fcdbcb00165aa6ca",
-        "ItemName": "Norotos Titanium Advanced Tactical Mount",
-        "Price": 33000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a16b9fffcdbcb0176308b34",
-        "ItemName": "Ops-Core FAST RAC Headset",
-        "Price": 33000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a16ba61fcdbcb098008728a",
-        "ItemName": "Ops-Core FAST Gunsight Mandible",
-        "Price": 17000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a16badafcdbcb001865f72d",
-        "ItemName": "Ops-Core FAST Side Armor",
-        "Price": 35000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a1eaa87fcdbcb001865f75e",
-        "ItemName": "Trijicon REAP-IR thermal scope",
-        "Price": 400000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a1eacb3fcdbcb09800872be",
-        "ItemName": "Trijicon REAP-IR scope eyecup",
-        "Price": 15000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a1ead28fcdbcb001912fa9f",
-        "ItemName": "UNV DLOC-IRD sight mount",
-        "Price": 70000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a26ac06c4a282000c5a90a8",
-        "ItemName": "9x21mm PE gzh",
-        "Price": 150,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a26ac0ec4a28200741e1e18",
-        "ItemName": "9x21mm BT gzh",
-        "Price": 680,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a3501acc4a282000d72293a",
-        "ItemName": "AR-10 7.62x51 Magpul PMAG 20 SR-LR GEN M3 20-round magazine",
-        "Price": 4300,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a351711c4a282000b1521a4",
-        "ItemName": "HK MP5 9x19 X Products X-5 50-round drum magazine",
-        "Price": 33000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a367e5dc4a282000e49738f",
-        "ItemName": "Remington R11 RSASS 7.62x51 marksman rifle",
-        "Price": 350000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a367e5dc4a282000e49738f",
-        "ItemName": "Remington R11 RSASS 7.62x51 marksman rifle",
-        "Price": 400000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a398ab9c4a282000c5a9842",
-        "ItemName": "Ops-Core Single Clamp Rail Adapter mount",
-        "Price": 27000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a398b75c4a282000a51a266",
-        "ItemName": "Ops-Core Picatinny Rail Adapter mount",
-        "Price": 15000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a6086ea4f39f99cd479502f",
-        "ItemName": "7.62x51mm M61",
-        "Price": 1100,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a608bf24f39f98ffc77720e",
-        "ItemName": "7.62x51mm M62 Tracer",
-        "Price": 780,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a718f958dc32e00094b97e7",
-        "ItemName": "Glock 9x19 SGM Tactical 50-round drum magazine",
-        "Price": 12900,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a7ad2e851dfba0016153692",
-        "ItemName": "Glock 9x19 \"Big Stick\" 33-round magazine",
-        "Price": 3300,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a7ae0c351dfba0017554310",
-        "ItemName": "Glock 17 9x19 pistol",
-        "Price": 180000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a7dbfc1159bd40016548fde",
-        "ItemName": "Hera Arms CQR tactical foregrip",
-        "Price": 35000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a800961159bd4315e3a1657",
-        "ItemName": "Glock GTL 21 tactical flashlight with laser",
-        "Price": 16000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a966f51a2750c00156aacf6",
-        "ItemName": "SOK-12 12ga SAI-02 10-round magazine",
-        "Price": 3880,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5a9e81fba2750c00164f6b11",
-        "ItemName": "VSS/VAL 9x39 SR3M.130 30-round magazine",
-        "Price": 39000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5aa2ba71e5b5b000137b758f",
-        "ItemName": "MSA Sordin Supreme PRO-X/L headset",
-        "Price": 40000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5aaa4194e5b5b055d06310a5",
-        "ItemName": "AK-74 5.45x39 Magpul PMAG 30 GEN M3 30-round magazine",
-        "Price": 3300,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5aafa857e5b5b00018480968",
-        "ItemName": "Springfield Armory M1A 7.62x51 rifle",
-        "Price": 500000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5aafbde786f774389d0cbc0f",
-        "ItemName": "Ammunition case",
-        "Price": 180000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5ab8e79e86f7742d8b372e78",
-        "ItemName": "BNTI Gzhel-K body armor",
-        "Price": 250000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5ab8f39486f7745cd93a1cca",
-        "ItemName": "Cold Fear infrared balaclava",
-        "Price": 8000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5ab8f85d86f7745cd93a1cf5",
-        "ItemName": "Shemagh (Green)",
-        "Price": 8000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5ac66cb05acfc40198510a10",
-        "ItemName": "Kalashnikov AK-101 5.56x45 assault rifle",
-        "Price": 270000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5ac66cb05acfc40198510a10",
-        "ItemName": "Kalashnikov AK-101 5.56x45 assault rifle",
-        "Price": 300000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5ad5d64486f774079b080af8",
-        "ItemName": "NecrusPharm pharmacy key",
-        "Price": 50000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5ad5d7d286f77450166e0a89",
-        "ItemName": "Kiba Arms outer door key",
-        "Price": 75000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5addaffe86f77470b455f900",
-        "ItemName": "Kiba Arms inner grate door key",
-        "Price": 93000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5addccf45acfc400185c2989",
-        "ItemName": "M14 7.62x51 X Products X-14 50-round drum magazine",
-        "Price": 45000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5af0454c86f7746bf20992e8",
-        "ItemName": "Aluminum splint",
-        "Price": 19000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5af0548586f7743a532b7e99",
-        "ItemName": "Ibuprofen painkillers",
-        "Price": 70000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5b057b4f5acfc4771e1bd3e9",
-        "ItemName": "Stark SE-5 Express Forward foregrip",
-        "Price": 15000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5b0bbe4e5acfc40dc528a72d",
-        "ItemName": "DS Arms SA58 7.62x51 assault rifle",
-        "Price": 500000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5b0bbe4e5acfc40dc528a72d",
-        "ItemName": "DS Arms SA58 7.62x51 assault rifle",
-        "Price": 500000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5b1fa9b25acfc40018633c01",
-        "ItemName": "Glock 18C 9x19 machine pistol",
-        "Price": 200000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5b2389515acfc4771e1be0c0",
-        "ItemName": "Burris AR-P.E.P.R. 30mm ring scope mount",
-        "Price": 250000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5b3b99265acfc4704b4a1afb",
-        "ItemName": "Nightforce Magmount 30mm ring scope mount",
-        "Price": 250000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5b4329f05acfc47a86086aa1",
-        "ItemName": "DevTac Ronin Respirator",
-        "Price": 35000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5b44cd8b86f774503d30cba2",
-        "ItemName": "IOTV Gen4 body armor (Full Protection Kit, MultiCam)",
-        "Price": 400000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5b6d9ce188a4501afc1b2b25",
-        "ItemName": "T H I C C Weapon case",
-        "Price": 1800000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5b7bef9c5acfc43d102852ec",
-        "ItemName": "SA58/FAL 7.62x51 X Products X-FAL 50-round drum magazine",
-        "Price": 40000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5b7d37845acfc400170e2f87",
-        "ItemName": "SA58/FAL/SLR 7.62x51 30-round magazine",
-        "Price": 30000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5ba26586d4351e44f824b340",
-        "ItemName": "HK MP7 4.6x30 40-round magazine",
-        "Price": 12000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5ba26835d4351e0035628ff5",
-        "ItemName": "4.6x30mm AP SX",
-        "Price": 720,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5ba26844d4351e00334c9475",
-        "ItemName": "4.6x30mm Subsonic SX",
-        "Price": 120,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5bb2475ed4351e00853264e3",
-        "ItemName": "HK 416A5 5.56x45 assault rifle",
-        "Price": 500000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5bc09a18d4351e003562b68e",
-        "ItemName": "Magpul MBUS Gen2 flip-up rear sight",
-        "Price": 20000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5bc09a30d4351e00367fb7c8",
-        "ItemName": "Magpul MBUS Gen2 flip-up front sight",
-        "Price": 15000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5bd70322209c4d00d7167b8f",
-        "ItemName": "HK MP7A2 4.6x30 submachine gun",
-        "Price": 120000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5bd70322209c4d00d7167b8f",
-        "ItemName": "HK MP7A2 4.6x30 submachine gun",
-        "Price": 270000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5beed0f50db834001c062b12",
-        "ItemName": "RPK-16 5.45x39 light machine gun",
-        "Price": 250000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5bf3e03b0db834001d2c4a9c",
-        "ItemName": "Kalashnikov AK-74 5.45x39 assault rifle",
-        "Price": 500000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5bf3e03b0db834001d2c4a9c",
-        "ItemName": "Kalashnikov AK-74 5.45x39 assault rifle",
-        "Price": 270000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "6768c25aa7b238f14a08d3f6",
-        "ItemName": "7.62x51mm M80A1",
-        "Price": 1180,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5bf3e03b0db834001d2c4a9c",
-        "ItemName": "Kalashnikov AK-74 5.45x39 assault rifle",
-        "Price": 300000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c0126f40db834002a125382",
-        "ItemName": "Red Rebel ice pick",
-        "Price": 3000000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c052e6986f7746b207bc3c9",
-        "ItemName": "Portable defibrillator",
-        "Price": 200000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c0548ae0db834001966a3c2",
-        "ItemName": "SLR-106/AK 5.56x45 Circle 10 30-round magazine",
-        "Price": 3000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c0558060db834001b735271",
-        "ItemName": "L3Harris GPNVG-18 night vision goggles",
-        "Price": 190000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c07dd120db834001c39092d",
-        "ItemName": "EOTech HHS-1 hybrid sight",
-        "Price": 41000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c093ca986f7740a1867ab12",
-        "ItemName": "Secure container Kappa",
-        "Price": 30000000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c093e3486f77430cb02e593",
-        "ItemName": "Dogtag case",
-        "Price": 330000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c0a840b86f7742ffa4f2482",
-        "ItemName": "T H I C C item case",
-        "Price": 4500000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c0d5e4486f77478390952fe",
-        "ItemName": "5.45x39mm PPBS gs Igolnik",
-        "Price": 1020,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c0d668f86f7747ccb7f13b2",
-        "ItemName": "9x39mm SPP gs",
-        "Price": 420,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c0d688c86f77413ae3407b2",
-        "ItemName": "9x39mm BP gs",
-        "Price": 850,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c0e530286f7747fa1419862",
-        "ItemName": "Propital regenerative stimulant injector",
-        "Price": 25000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c0e534186f7747fa1419867",
-        "ItemName": "eTG-change regenerative stimulant injector",
-        "Price": 120000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c0e53c886f7747fa54205c7",
-        "ItemName": "6B13 assault armor (EMR)",
-        "Price": 150000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c0e541586f7747fa54205c9",
-        "ItemName": "6B13 M assault armor (Killa Edition)",
-        "Price": 250000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c0e625a86f7742d77340f62",
-        "ItemName": "BNTI Zhuk body armor (EMR)",
-        "Price": 300000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c0e66e2d174af02a96252f4",
-        "ItemName": "Ops-Core SLAAP armor helmet plate (Tan)",
-        "Price": 100000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c0fa877d174af02a012e1cf",
-        "ItemName": "Aquamari water bottle with filter",
-        "Price": 27000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c11046cd174af02a012e42b",
-        "ItemName": "PVS-7 Wilcox Adapter",
-        "Price": 33000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c110624d174af029e69734c",
-        "ItemName": "T-7 Thermal Goggles with a Night Vision mount",
-        "Price": 1000000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c12688486f77426843c7d32",
-        "ItemName": "Paracord",
-        "Price": 23000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c127c4486f7745625356c13",
-        "ItemName": "Magazine case",
-        "Price": 145000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c1bc5af2e221602b412949b",
-        "ItemName": "Zenit RK-2 tactical foregrip",
-        "Price": 26000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c1cd46f2e22164bef5cfedb",
-        "ItemName": "Zenit RK-1 tactical foregrip on B-25U mount",
-        "Price": 48000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c1d0efb86f7744baf2e7b7b",
-        "ItemName": "TerraGroup Labs keycard (Red)",
-        "Price": 5000000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c1e2a1e86f77431ea0ea84c",
-        "ItemName": "TerraGroup Labs manager's office room key",
-        "Price": 43000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c46fbd72e2216398b5a8c9c",
-        "ItemName": "SVDS 7.62x54R sniper rifle",
-        "Price": 300000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c46fbd72e2216398b5a8c9c",
-        "ItemName": "SVDS 7.62x54R sniper rifle",
-        "Price": 350000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c46fbd72e2216398b5a8c9c",
-        "ItemName": "SVDS 7.62x54R sniper rifle",
-        "Price": 400000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c488a752e221602b412af63",
-        "ItemName": "Desert Tech MDR 5.56x45 assault rifle",
-        "Price": 300000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c5db6742e2216000f1b2852",
-        "ItemName": "MPX 9x19 F5 MFG 50-round drum magazine",
-        "Price": 34000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c6d450c2e221600114c997d",
-        "ItemName": "AR-15 5.56x45 HK PM Gen.2 STANAG 30-round magazine",
-        "Price": 4000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c6d46132e221601da357d56",
-        "ItemName": "AR-15 5.56x45 TROY BattleMag STANAG 30-round magazine",
-        "Price": 5000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c791e872e2216001219c40a",
-        "ItemName": "Strike Industries Cobra Tactical foregrip",
-        "Price": 11000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c88f24b2e22160bc12c69a6",
-        "ItemName": "SVD 7.62x54R 20-round magazine",
-        "Price": 10000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c925fa22e221601da359b7b",
-        "ItemName": "9x19mm AP 6.3",
-        "Price": 250,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5c94bbff86f7747ee735c08f",
-        "ItemName": "TerraGroup Labs access keycard",
-        "Price": 150000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5cadf6ddae9215051e1c23b2",
-        "ItemName": "12.7x55mm PS12",
-        "Price": 500,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5cadf6eeae921500134b2799",
-        "ItemName": "12.7x55mm PS12B",
-        "Price": 1300,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5cadfbf7ae92152ac412eeef",
-        "ItemName": "ASh-12 12.7x55 assault rifle",
-        "Price": 500000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5caf1109ae9215753c44119f",
-        "ItemName": "ASh-12 12.7x55 20-round magazine",
-        "Price": 24000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5cc70093e4a949033c734312",
-        "ItemName": "FN P90 5.7x28 50-round magazine",
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 850
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "4794a63e23db8000ce2e0175",
+        "TplId": "560d5e524bdc2d25448b4571",
+        "ItemName": "12/70 7mm buckshot",
+        "Price": 32,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 32
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "9bb2cd352436b6c406e8b0be",
+        "TplId": "56dfef82d2720bbd668b4567",
+        "ItemName": "5.45x39mm BP gs",
+        "Price": 2400,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 2400
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "ba26f5d9fe8ab4dee69e7f0f",
+        "TplId": "56dff061d2720bb5668b4567",
+        "ItemName": "5.45x39mm BT gs",
+        "Price": 589,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 589
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "5706e145a94278fa597ce8c8",
+        "TplId": "56dff3afd2720bba668b4567",
+        "ItemName": "5.45x39mm PS gs",
+        "Price": 215,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 215
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "be34ef392486c281915992a5",
+        "TplId": "56dff421d2720b5f5a8b4567",
+        "ItemName": "5.45x39mm SP",
+        "Price": 1700,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 1700
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "7cdb82eafe1a5bdab637f207",
+        "TplId": "56dff4a2d2720bbd668b456a",
+        "ItemName": "5.45x39mm T gs",
+        "Price": 950,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 950
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "92c625a05c753d80bf7e80b4",
+        "TplId": "5c0e5bab86f77461f55ed1f3",
+        "ItemName": "6B23-1 body armor (EMR)",
         "Price": 42000,
-        "Currency": "RUB"
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 42000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5cc80f38e4a949001152b560",
-        "ItemName": "5.7x28mm SS190",
-        "Price": 300,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5cc80f53e4a949000e1ea4f8",
-        "ItemName": "5.7x28mm L191",
-        "Price": 200,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5cc80f67e4a949035e43bbba",
-        "ItemName": "5.7x28mm SB193",
-        "Price": 250,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5cc82d76e24e8d00134b4b83",
-        "ItemName": "FN P90 5.7x28 submachine gun",
-        "Price": 270000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5cc9c20cd7f00c001336c65d",
-        "ItemName": "NcSTAR Tactical Blue Laser",
-        "Price": 5000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5cf8f3b0d7f00c00217872ef",
-        "ItemName": "SOK-12 12ga MaxRounds Powermag 20-round drum magazine",
-        "Price": 55000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5cfe8010d7ad1a59283b14c6",
-        "ItemName": "AK 7.62x39 X Products X-47 50-round drum magazine",
-        "Price": 33000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5d02797c86f774203f38e30a",
-        "ItemName": "Surv12 field surgical kit",
-        "Price": 46000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5d08d21286f774736e7c94c3",
-        "ItemName": "Shturman's stash key",
-        "Price": 235000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5d1b5e94d7ad1a2b865a96b0",
-        "ItemName": "FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope",
-        "Price": 170000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5d235bb686f77443f4331278",
-        "ItemName": "S I C C organizational pouch",
-        "Price": 620000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5d2369418abbc306c62e0c80",
-        "ItemName": "Steiner DBAL-PL tactical device",
-        "Price": 26000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5d3eb3b0a4b93615055e84d2",
-        "ItemName": "FN Five-seveN MK2 5.7x28 pistol",
-        "Price": 160000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5d3eb5eca4b9363b1f22f8e4",
-        "ItemName": "FN Five-seveN 5.7x28 20-round magazine",
-        "Price": 17000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5d5e9c74a4b9364855191c40",
-        "ItemName": "MSA ACH TC-2002 MICH Series helmet (Olive Drab)",
-        "Price": 50000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5d5fca1ea4b93635fd598c07",
-        "ItemName": "ESS Crossbow tactical glasses",
-        "Price": 3800,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5d6e68a8a4b9360b6c0d54e2",
-        "ItemName": "12/70 AP-20 armor-piercing slug",
-        "Price": 200,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5d6e6911a4b9361bd5780d52",
-        "ItemName": "12/70 flechette",
-        "Price": 130,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5d80c60f86f77440373c4ece",
-        "ItemName": "RB-BK marked key",
-        "Price": 260000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5d80c62a86f7744036212b3f",
-        "ItemName": "RB-VO marked key",
-        "Price": 135000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5d80c6fc86f774403a401e3c",
-        "ItemName": "RB-TB key",
+        "OfferId": "246bc407516b799c0e709a25",
+        "TplId": "5d5d646386f7742797261fd9",
+        "ItemName": "6B3TM-01 armored rig (Khaki)",
         "Price": 52000,
-        "Currency": "RUB"
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "573474f924597738002c6174",
+                    "ItemName": "UNKNOWN_ITEM_573474f924597738002c6174",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 52000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5d80c88d86f77440556dbf07",
-        "ItemName": "RB-AM key",
-        "Price": 50000,
-        "Currency": "RUB"
+        "OfferId": "48b3c84341225a19cac9e8ad",
+        "TplId": "5aa7cfc0e5b5b00015693143",
+        "ItemName": "6B47 Ratnik-BSh helmet (Digital Flora cover)",
+        "Price": 59000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 59000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5d80cb3886f77440556dbf09",
-        "ItemName": "RB-PSP1 key",
-        "Price": 75000,
-        "Currency": "RUB"
+        "OfferId": "6c6da34d9dc8e53bdb1ed465",
+        "TplId": "5a7c4850e899ef00150be885",
+        "ItemName": "6B47 Ratnik-BSh helmet (Olive Drab)",
+        "Price": 54000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 54000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5d8e0e0e86f774321140eb56",
-        "ItemName": "RB-KPRL key",
-        "Price": 200000,
-        "Currency": "RUB"
+        "OfferId": "d037695ca99b1aee7675ce40",
+        "TplId": "5656d7c34bdc2d9d198b4587",
+        "ItemName": "7.62x39mm PS gzh",
+        "Price": 350,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 350
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5d8e15b686f774445103b190",
-        "ItemName": "HEP station storage room key",
-        "Price": 50000,
-        "Currency": "RUB"
+        "OfferId": "f5ae93779ef2b1a224f2b595",
+        "TplId": "59e4cf5286f7741778269d8a",
+        "ItemName": "7.62x39mm T-45M1 gzh",
+        "Price": 1700,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 1700
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5d947d3886f774447b415893",
-        "ItemName": "RB-SMP key",
-        "Price": 375000,
-        "Currency": "RUB"
+        "OfferId": "4a42807ed0d6a80446dcb692",
+        "TplId": "56d59d3ad2720bdb418b4577",
+        "ItemName": "9x19mm Pst gzh",
+        "Price": 60,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 60
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5d95d6fa86f77424484aa5e9",
-        "ItemName": "RB-PSP2 key",
-        "Price": 83000,
-        "Currency": "RUB"
+        "OfferId": "a328d82e46317f00f8e7ee62",
+        "TplId": "57a0dfb82459774d3078b56c",
+        "ItemName": "9x39mm SP-5 gs",
+        "Price": 2600,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 2600
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5d9f1fa686f774726974a992",
-        "ItemName": "RB-ST key",
-        "Price": 90000,
-        "Currency": "RUB"
+        "OfferId": "95fd8fbcd1982195d09236ab",
+        "TplId": "5755356824597772cb798962",
+        "ItemName": "AI-2 medkit",
+        "Price": 4500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 4500
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5da743f586f7744014504f72",
-        "ItemName": "USEC stash key",
-        "Price": 60000,
-        "Currency": "RUB"
+        "OfferId": "f5698faec1a7edeb48245a3d",
+        "TplId": "544fb37f4bdc2dee738b4567",
+        "ItemName": "Analgin painkillers",
+        "Price": 6200,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 6200
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5dcbd56fdbd3d91b3e5468d5",
-        "ItemName": "Desert Tech MDR 7.62x51 assault rifle",
-        "Price": 250000,
-        "Currency": "RUB"
+        "OfferId": "17430374fc1f2fb818d0a0af",
+        "TplId": "544fb25a4bdc2dfb738b4567",
+        "ItemName": "Aseptic bandage",
+        "Price": 2400,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 2400
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5df8a42886f77412640e2e75",
-        "ItemName": "Velocity Systems MPPV Multi-Purpose Patrol Vest (Wolf Grey)",
-        "Price": 42000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5df8a4d786f77412672a1e3b",
-        "ItemName": "6Sh118 raid backpack (EMR)",
-        "Price": 140000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5e00c1ad86f774747333222c",
-        "ItemName": "Team Wendy EXFIL Ballistic Helmet (Black)",
-        "Price": 25000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5e023d48186a883be655e551",
-        "ItemName": "7.62x54mm R BS gs",
-        "Price": 1480,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5e32f56fcb6d5863cc5e5ee4",
-        "ItemName": "VOG-17 Khattabka improvised hand grenade",
-        "Price": 16000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5e340dcdcb6d5863cc5e5efb",
-        "ItemName": "VOG-25 Khattabka improvised hand grenade",
-        "Price": 20000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5e42c71586f7747f245e1343",
-        "ItemName": "ULTRA medical storage key",
-        "Price": 104000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5e42c83786f7742a021fdf3c",
-        "ItemName": "Object #21WS keycard",
-        "Price": 60000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5e81ebcd8e146c7080625e15",
-        "ItemName": "FN40GL Mk2 40mm grenade launcher",
-        "Price": 270000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5e81f423763d9f754677bf2e",
-        "ItemName": ".45 ACP Match FMJ",
-        "Price": 100,
-        "Currency": "RUB"
-    },
-    {
+        "OfferId": "6a2a2501339aae85cffe58d2",
         "TplId": "5e8488fa988a8701445df1e4",
         "ItemName": "CALOK-B hemostatic applicator",
-        "Price": 13000,
-        "Currency": "RUB"
+        "Price": 11200,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 11200
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5e848cc2988a8701445df1e8",
-        "ItemName": "TOZ KS-23M 23x75mm pump-action shotgun",
-        "Price": 250000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5e848d2eea0a7c419c2f9bfd",
-        "ItemName": "KS-23 23x75 700mm barrel",
-        "Price": 50000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5e848db4681bea2ada00daa9",
-        "ItemName": "KS-23 wooden stock",
-        "Price": 50000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5e85a9a6eacf8c039e4e2ac1",
-        "ItemName": "23x75mm Shrapnel-10 buckshot",
-        "Price": 1100,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5e85a9f4add9fe03027d9bf1",
-        "ItemName": "23x75mm Zvezda flashbang round",
-        "Price": 10000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5e85aa1a988a8701445df1f5",
-        "ItemName": "23x75mm Barrikada slug",
-        "Price": 1000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5ea058e01dbce517f324b3e2",
-        "ItemName": "Tac-Kek Heavy Trooper mask for Ops-Core-type helmets",
-        "Price": 90000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5ed51652f6c34d2cc26336a1",
-        "ItemName": "M.U.L.E. stimulant injector",
-        "Price": 70000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5ede47405b097655935d7d16",
-        "ItemName": "40x46mm M441 (HE) grenade",
+        "OfferId": "f61c30e94cb50995a818094b",
+        "TplId": "590c661e86f7741e566b646a",
+        "ItemName": "Car first aid kit",
         "Price": 11000,
-        "Currency": "RUB"
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 11000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5ede475339ee016e8c534742",
-        "ItemName": "40x46mm M576 (MP-APERS) grenade",
-        "Price": 19000,
-        "Currency": "RUB"
+        "OfferId": "5e7aa3feaefa22cae39fbfde",
+        "TplId": "60098af40accd37ef2175f27",
+        "ItemName": "CAT hemostatic tourniquet",
+        "Price": 5200,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 5200
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5ede7b0c6d23e5473e6e8c66",
-        "ItemName": "RB-RLSA key",
+        "OfferId": "fbfd1b503fe5959b15b03953",
+        "TplId": "5d02778e86f774203e7dedbe",
+        "ItemName": "CMS surgical kit",
+        "Price": 38000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 38000
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a2a24be339aae85cffe58d1",
+        "TplId": "5e831507ea0a7c419c2f9bd9",
+        "ItemName": "Esmarch tourniquet",
+        "Price": 5200,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 5200
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "1ffeffcd9ba0f19c84c81877",
+        "TplId": "544fb3364bdc2d34748b456a",
+        "ItemName": "Immobilizing splint",
+        "Price": 2600,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 2600
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "be6566659f0630b2fd7a628f",
+        "TplId": "59fb042886f7746c5005a7b2",
+        "ItemName": "Item case",
+        "Price": 400000,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "59faff1d86f7746c51718c9c",
+                    "ItemName": "UNKNOWN_ITEM_59faff1d86f7746c51718c9c",
+                    "Count": 2
+                },
+                {
+                    "TplId": "573474f924597738002c6174",
+                    "ItemName": "UNKNOWN_ITEM_573474f924597738002c6174",
+                    "Count": 6
+                },
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 400000
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "e56928c20a89840662f492cc",
+        "TplId": "5ac66d2e5acfc43b321d4b53",
+        "ItemName": "Kalashnikov AK-103 7.62x39 assault rifle",
         "Price": 50000,
-        "Currency": "RUB"
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 50000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5efb0c1bd79ff02a1f5e68d9",
-        "ItemName": "7.62x51mm M993",
-        "Price": 1270,
-        "Currency": "RUB"
+        "OfferId": "30c507e4a3aa8333fe6c6439",
+        "TplId": "5ac66d9b5acfc4001633997a",
+        "ItemName": "Kalashnikov AK-105 5.45x39 assault rifle",
+        "Price": 64000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 64000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5efb0cabfb3e451d70735af5",
-        "ItemName": ".45 ACP AP",
-        "Price": 410,
-        "Currency": "RUB"
+        "OfferId": "07a95f0540c6ff88058a88a1",
+        "TplId": "5644bd2b4bdc2d3b4c8b4572",
+        "ItemName": "Kalashnikov AK-74N 5.45x39 assault rifle",
+        "Price": 42000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 42000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5efb0da7a29a85116f6ea05f",
-        "ItemName": "9x19mm PBP gzh",
-        "Price": 500,
-        "Currency": "RUB"
+        "OfferId": "dde80e6c7c9581303ad955e1",
+        "TplId": "59d6088586f774275f37482f",
+        "ItemName": "Kalashnikov AKM 7.62x39 assault rifle",
+        "Price": 56000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 56000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5eff09cd30a7dc22fd1ddfed",
-        "ItemName": "Health Resort office key with a blue tape",
-        "Price": 61000,
-        "Currency": "RUB"
+        "OfferId": "8f2ab562faf9231110f1d627",
+        "TplId": "57dc2fa62459775949412633",
+        "ItemName": "Kalashnikov AKS-74U 5.45x39 assault rifle",
+        "Price": 56500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 56500
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5f0596629e22f464da6bbdd9",
-        "ItemName": ".366 TKM AP-M",
-        "Price": 500,
-        "Currency": "RUB"
+        "OfferId": "086037a44bd5c52d0890b9f4",
+        "TplId": "5448bd6b4bdc2dfc2f8b4569",
+        "ItemName": "Makarov PM 9x18PM pistol",
+        "Price": 27500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 27500
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5f0c892565703e5c461894e9",
-        "ItemName": "40x46mm M433 (HEDP) grenade",
-        "Price": 14000,
-        "Currency": "RUB"
+        "OfferId": "a150419a0e11c1c88956c84a",
+        "TplId": "54491c4f4bdc2db1078b4568",
+        "ItemName": "MP-133 12ga pump-action shotgun",
+        "Price": 36500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 36500
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5f4f9eb969cdc30ff33f09db",
-        "ItemName": "EYE MK.2 professional hand-held compass",
-        "Price": 45000,
-        "Currency": "RUB"
+        "OfferId": "b39b9ba299d34b4d9508f49f",
+        "TplId": "5991b51486f77447b112d44f",
+        "ItemName": "MS2000 Marker",
+        "Price": 260000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 260000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "5f60b85bbdb8e27dee3dc985",
-        "ItemName": "Galvion Caiman Hybrid Ballistic Applique",
-        "Price": 35000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5f60bf4558eff926626a60f2",
-        "ItemName": "Galvion Caiman Fixed Arm Visor",
-        "Price": 20000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5f60c076f2bcbb675b00dac2",
-        "ItemName": "Galvion Caiman Hybrid Ballistic Mandible Guard",
-        "Price": 40000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5f60c85b58eff926626a60f7",
-        "ItemName": "Rys-T face shield",
-        "Price": 100000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5fb64bc92b1b027b1f50bcf2",
-        "ItemName": "TDI KRISS Vector Gen.2 .45 ACP submachine gun",
-        "Price": 280000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5fb64bc92b1b027b1f50bcf2",
-        "ItemName": "TDI KRISS Vector Gen.2 .45 ACP submachine gun",
-        "Price": 320000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5fb651dc85f90547f674b6f4",
-        "ItemName": "Glock .45 ACP KRISS G30 MagEx 30-round magazine",
-        "Price": 4500,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5fb6564947ce63734e3fa1da",
-        "ItemName": "KRISS Defiance low profile flip-up rear sight",
-        "Price": 15000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5fb6567747ce63734e3fa1dc",
-        "ItemName": "KRISS Defiance low profile flip-up front sight",
-        "Price": 15000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5fbcc1d9016cce60e8341ab3",
-        "ItemName": "SIG MCX .300 Blackout assault rifle",
-        "Price": 300000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5fbe3ffdf8b6a877a729ea82",
-        "ItemName": ".300 Blackout BCP FMJ",
-        "Price": 150,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5fc382a9d724d907e2077dab",
-        "ItemName": ".338 Lapua Magnum AP",
-        "Price": 3720,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5fc3e272f8b6a877a729eac5",
-        "ItemName": "HK UMP .45 ACP submachine gun",
-        "Price": 200000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5fc3e466187fea44d52eda90",
-        "ItemName": "HK UMP .45 ACP 25-round magazine",
-        "Price": 2800,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5fc3f2d5900b1d5091531e57",
-        "ItemName": "TDI KRISS Vector Gen.2 9x19 submachine gun",
-        "Price": 270000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5fc3f2d5900b1d5091531e57",
-        "ItemName": "TDI KRISS Vector Gen.2 9x19 submachine gun",
-        "Price": 270000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5fd20ff893a8961fc660a954",
-        "ItemName": ".300 Blackout AP",
-        "Price": 690,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "5fd4c474dd870108a754b241",
-        "ItemName": "5.11 Tactical Hexgrid plate carrier",
-        "Price": 250000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "60098ad7c2240c0fe85c570a",
-        "ItemName": "AFAK tactical individual first aid kit",
-        "Price": 35000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "601949593ae8f707c4608daa",
-        "ItemName": "5.56x45mm SSA AP",
-        "Price": 970,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "601aa3d2b2bcb34913271e6d",
-        "ItemName": "7.62x39mm MAI AP",
-        "Price": 1460,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "603409c80ca681766b6a0fb2",
-        "ItemName": "NPP KlASS Condor glasses",
+        "OfferId": "16599af70d7e00d1fbc5463d",
+        "TplId": "5648a7494bdc2d9d488b4583",
+        "ItemName": "PACA Soft Armor",
         "Price": 16000,
-        "Currency": "RUB"
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5d40419286f774318526545f",
+                    "ItemName": "UNKNOWN_ITEM_5d40419286f774318526545f",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 16000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "606587252535c57a13424cfd",
-        "ItemName": "CMMG Mk47 Mutant 7.62x39 assault rifle",
-        "Price": 300000,
-        "Currency": "RUB"
+        "OfferId": "bada638f0e367890a8caa176",
+        "TplId": "59984ab886f7743e98271174",
+        "ItemName": "PP-19-01 Vityaz 9x19 submachine gun",
+        "Price": 42000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 42000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "606587252535c57a13424cfd",
-        "ItemName": "CMMG Mk47 Mutant 7.62x39 assault rifle",
-        "Price": 230000,
-        "Currency": "RUB"
+        "OfferId": "8f07327c6cd86ad713ad1768",
+        "TplId": "544fb45d4bdc2dee738b4568",
+        "ItemName": "Salewa first aid kit",
+        "Price": 17500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 17500
+                }
+            ]
+        ]
     },
     {
-        "TplId": "606dae0ab0e443224b421bb7",
-        "ItemName": "MP-155 12ga semi-automatic shotgun",
-        "Price": 300000,
-        "Currency": "RUB"
+        "OfferId": "002f2adc318bfde1268d2407",
+        "TplId": "60339954d62c9b14ed777c06",
+        "ItemName": "Soyuz-TM STM-9 Gen.2 9x19 carbine",
+        "Price": 84500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 84500
+                }
+            ]
+        ]
     },
     {
-        "TplId": "606dae0ab0e443224b421bb7",
-        "ItemName": "MP-155 12ga semi-automatic shotgun",
-        "Price": 300000,
-        "Currency": "RUB"
+        "OfferId": "c00ea76a2ab6bd994315680d",
+        "TplId": "5e4abfed86f77406a2713cf7",
+        "ItemName": "Splav Tarzan M22 chest rig (Smog)",
+        "Price": 10500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 10500
+                }
+            ]
+        ]
     },
     {
-        "TplId": "61605e13ffa6e502ac5e7eef",
-        "ItemName": "Vortex Ranger 1500 rangefinder",
-        "Price": 9400,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "617fd91e5539a84ec44ce155",
-        "ItemName": "RGN hand grenade",
-        "Price": 15000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "618168dc8004cc50514c34fc",
-        "ItemName": "FN SCAR-H 7.62x51 20-round magazine",
+        "OfferId": "b35d6414733155e09db9dab1",
+        "TplId": "5c06c6a80db834001b735491",
+        "ItemName": "SSh-68 steel helmet (Olive Drab)",
         "Price": 22000,
-        "Currency": "RUB"
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 22000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "6183afd850224f204c1da514",
-        "ItemName": "FN SCAR-H 7.62x51 assault rifle",
-        "Price": 300000,
-        "Currency": "RUB"
+        "OfferId": "02b595523e3ece8ef86e1fa6",
+        "TplId": "590c2e1186f77425357b6124",
+        "ItemName": "Toolset",
+        "Price": 75000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 75000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "6183afd850224f204c1da514",
-        "ItemName": "FN SCAR-H 7.62x51 assault rifle",
-        "Price": 300000,
-        "Currency": "RUB"
+        "OfferId": "803fbf8a83aef8382c3542c2",
+        "TplId": "5648a69d4bdc2ded0b8b457b",
+        "ItemName": "UNKNOWN_ITEM_5648a69d4bdc2ded0b8b457b",
+        "Price": 24000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 24000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "6184055050224f204c1da540",
-        "ItemName": "FN SCAR-L 5.56x45 assault rifle",
-        "Price": 300000,
-        "Currency": "RUB"
+        "OfferId": "a1ce9f2e791828226120cfac",
+        "TplId": "56dff026d2720bb8668b4567",
+        "ItemName": "UNKNOWN_ITEM_56dff026d2720bb8668b4567",
+        "Price": 6200,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 6200
+                }
+            ]
+        ]
     },
     {
-        "TplId": "6184055050224f204c1da540",
-        "ItemName": "FN SCAR-L 5.56x45 assault rifle",
-        "Price": 300000,
-        "Currency": "RUB"
+        "OfferId": "faf51b3d87e0eb55086869b5",
+        "TplId": "57372140245977611f70ee91",
+        "ItemName": "UNKNOWN_ITEM_57372140245977611f70ee91",
+        "Price": 950,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 950
+                }
+            ]
+        ]
     },
     {
-        "TplId": "618a431df1eb8e24b8741deb",
-        "ItemName": "RGO hand grenade",
-        "Price": 12000,
-        "Currency": "RUB"
+        "OfferId": "76c991e7f4d6a8617d4fd0fe",
+        "TplId": "5751a25924597722c463c472",
+        "ItemName": "UNKNOWN_ITEM_5751a25924597722c463c472",
+        "Price": 3600,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 3600
+                }
+            ]
+        ]
     },
     {
-        "TplId": "61962b617c6c7b169525f168",
-        "ItemName": "5.45x39mm 7N40",
-        "Price": 1200,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "61962d879bb3d20b0946d385",
-        "ItemName": "9x39mm PAB-9 gs",
-        "Price": 760,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "619cbf7d23893217ec30b689",
-        "ItemName": "Injector case",
-        "Price": 1400000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "61a64492ba05ef10d62adcc1",
-        "ItemName": "Rogue USEC stash key",
-        "Price": 58000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "61aa5b518f5e7a39b41416e2",
-        "ItemName": "Merin car trunk key",
+        "OfferId": "ea62c2cfcc9a2bbb0ef0f207",
+        "TplId": "576165642459773c7a400233",
+        "ItemName": "UNKNOWN_ITEM_576165642459773c7a400233",
         "Price": 43000,
-        "Currency": "RUB"
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 43000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "61aa5b7db225ac1ead7957c1",
-        "ItemName": "USEC cottage first safe key",
-        "Price": 35000,
-        "Currency": "RUB"
+        "OfferId": "20898c9c018c2ff7781b34c0",
+        "TplId": "57a0e5022459774d1673f889",
+        "ItemName": "UNKNOWN_ITEM_57a0e5022459774d1673f889",
+        "Price": 5200,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 5200
+                }
+            ]
+        ]
     },
     {
-        "TplId": "61aa5ba8018e9821b7368da9",
-        "ItemName": "USEC cottage second safe key",
-        "Price": 35000,
-        "Currency": "RUB"
+        "OfferId": "d6e012d90694517d94247e60",
+        "TplId": "57c44b372459772d2b39b8ce",
+        "ItemName": "UNKNOWN_ITEM_57c44b372459772d2b39b8ce",
+        "Price": 105000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 105000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "61aa81fcb225ac1ead7957c3",
-        "ItemName": "Rogue USEC workshop key",
-        "Price": 65000,
-        "Currency": "RUB"
+        "OfferId": "f6f3cf77cf5009bf849cc082",
+        "TplId": "590c60fc86f77412b13fddcf",
+        "ItemName": "UNKNOWN_ITEM_590c60fc86f77412b13fddcf",
+        "Price": 90000,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "573474f924597738002c6174",
+                    "ItemName": "UNKNOWN_ITEM_573474f924597738002c6174",
+                    "Count": 3
+                },
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 90000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "61c18d83b00456371a66814b",
-        "ItemName": "Gas welder safety goggles",
-        "Price": 20000,
-        "Currency": "RUB"
+        "OfferId": "f5ec52f3ec1f450f1e22971b",
+        "TplId": "5910968f86f77425cf569c32",
+        "ItemName": "UNKNOWN_ITEM_5910968f86f77425cf569c32",
+        "Price": 210000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 210000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "6217726288ed9f0845317459",
-        "ItemName": "RSP-30 reactive signal cartridge (Green)",
-        "Price": 20000,
-        "Currency": "RUB"
+        "OfferId": "eb63faeada5bf57ffb6dd578",
+        "TplId": "59e0d99486f7744a32234762",
+        "ItemName": "UNKNOWN_ITEM_59e0d99486f7744a32234762",
+        "Price": 7500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 7500
+                }
+            ]
+        ]
     },
     {
-        "TplId": "6272370ee4013c5d7e31f418",
-        "ItemName": "Olight Baldr Pro tactical flashlight with laser",
-        "Price": 27000,
-        "Currency": "RUB"
+        "OfferId": "68acdf260f513bf0b7381fff",
+        "TplId": "59e6152586f77473dc057aa1",
+        "ItemName": "UNKNOWN_ITEM_59e6152586f77473dc057aa1",
+        "Price": 82500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 82500
+                }
+            ]
+        ]
     },
     {
-        "TplId": "6275303a9f372d6ea97f9ec7",
-        "ItemName": "Milkor M32A1 MSGL 40mm grenade launcher",
-        "Price": 500000,
-        "Currency": "RUB"
+        "OfferId": "c2be5356d31ed6284acad384",
+        "TplId": "59e655cb86f77411dc52a77b",
+        "ItemName": "UNKNOWN_ITEM_59e655cb86f77411dc52a77b",
+        "Price": 1150,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 1150
+                }
+            ]
+        ]
     },
     {
-        "TplId": "627e14b21713922ded6f2c15",
-        "ItemName": "Accuracy International AXMC .338 LM bolt-action sniper rifle",
-        "Price": 500000,
-        "Currency": "RUB"
+        "OfferId": "62d8be85d0862f8271a88f02",
+        "TplId": "59e6687d86f77411d949b251",
+        "ItemName": "UNKNOWN_ITEM_59e6687d86f77411d949b251",
+        "Price": 89500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 89500
+                }
+            ]
+        ]
     },
     {
-        "TplId": "628a60ae6b1d481ff772e9c8",
-        "ItemName": "Rifle Dynamics RD-704 7.62x39 assault rifle",
-        "Price": 400000,
-        "Currency": "RUB"
+        "OfferId": "8447c8d78e2eb421b072c461",
+        "TplId": "59fafd4b86f7745ca07e1232",
+        "ItemName": "UNKNOWN_ITEM_59fafd4b86f7745ca07e1232",
+        "Price": 160000,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5d235a5986f77443f6329bc6",
+                    "ItemName": "UNKNOWN_ITEM_5d235a5986f77443f6329bc6",
+                    "Count": 2
+                },
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 160000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "628a60ae6b1d481ff772e9c8",
-        "ItemName": "Rifle Dynamics RD-704 7.62x39 assault rifle",
-        "Price": 330000,
-        "Currency": "RUB"
+        "OfferId": "b5a5b9eaddc1e8dee7ed2b12",
+        "TplId": "5a1eaa87fcdbcb001865f75e",
+        "ItemName": "UNKNOWN_ITEM_5a1eaa87fcdbcb001865f75e",
+        "Price": 0,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "59faff1d86f7746c51718c9c",
+                    "ItemName": "UNKNOWN_ITEM_59faff1d86f7746c51718c9c",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5d235b4d86f7742e017bc88a",
+                    "ItemName": "UNKNOWN_ITEM_5d235b4d86f7742e017bc88a",
+                    "Count": 3
+                }
+            ]
+        ]
     },
     {
-        "TplId": "628b5638ad252a16da6dd245",
-        "ItemName": "SAG AK-545 5.45x39 carbine",
-        "Price": 400000,
-        "Currency": "RUB"
+        "OfferId": "836e0a9c1820ceb5a8460fd4",
+        "TplId": "5aafbde786f774389d0cbc0f",
+        "ItemName": "UNKNOWN_ITEM_5aafbde786f774389d0cbc0f",
+        "Price": 120000,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5d235b4d86f7742e017bc88a",
+                    "ItemName": "UNKNOWN_ITEM_5d235b4d86f7742e017bc88a",
+                    "Count": 3
+                },
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 120000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "628e4e576d783146b124c64d",
-        "ItemName": "Peltor ComTac IV Hybrid headset (Coyote Brown)",
-        "Price": 80000,
-        "Currency": "RUB"
+        "OfferId": "da79caf3f65941d70541e2e7",
+        "TplId": "5ab8e79e86f7742d8b372e78",
+        "ItemName": "UNKNOWN_ITEM_5ab8e79e86f7742d8b372e78",
+        "Price": 170000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 170000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "62e7e7bbe6da9612f743f1e0",
-        "ItemName": "GP-25 Kostyor 40mm underbarrel grenade launcher",
-        "Price": 250000,
-        "Currency": "RUB"
+        "OfferId": "139e9149717eb5e4398bdaff",
+        "TplId": "5beed0f50db834001c062b12",
+        "ItemName": "UNKNOWN_ITEM_5beed0f50db834001c062b12",
+        "Price": 95000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 95000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "630e295c984633f1fb0e7c30",
-        "ItemName": "Steyr AUG 5.56x45 42-round magazine",
-        "Price": 32000,
-        "Currency": "RUB"
+        "OfferId": "02329a0a902578f0c4529f0b",
+        "TplId": "5c0a840b86f7742ffa4f2482",
+        "ItemName": "UNKNOWN_ITEM_5c0a840b86f7742ffa4f2482",
+        "Price": 0,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "59faff1d86f7746c51718c9c",
+                    "ItemName": "UNKNOWN_ITEM_59faff1d86f7746c51718c9c",
+                    "Count": 8
+                },
+                {
+                    "TplId": "5c12613b86f7743bbe2c3f76",
+                    "ItemName": "UNKNOWN_ITEM_5c12613b86f7743bbe2c3f76",
+                    "Count": 4
+                },
+                {
+                    "TplId": "5d1b376e86f774252519444e",
+                    "ItemName": "UNKNOWN_ITEM_5d1b376e86f774252519444e",
+                    "Count": 6
+                }
+            ]
+        ]
     },
     {
-        "TplId": "63171672192e68c5460cebc5",
-        "ItemName": "Steyr AUG A3 5.56x45 assault rifle",
-        "Price": 250000,
-        "Currency": "RUB"
+        "OfferId": "8e010b6637390ee63c0fd3f6",
+        "TplId": "5c0d56a986f774449d5de529",
+        "ItemName": "UNKNOWN_ITEM_5c0d56a986f774449d5de529",
+        "Price": 650,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 650
+                }
+            ]
+        ]
     },
     {
-        "TplId": "633ec7c2a6918cb895019c6c",
-        "ItemName": "RSh-12 12.7x55 revolver",
-        "Price": 200000,
-        "Currency": "RUB"
+        "OfferId": "57f997e48c0b0827202fdf94",
+        "TplId": "5c0d5e4486f77478390952fe",
+        "ItemName": "UNKNOWN_ITEM_5c0d5e4486f77478390952fe",
+        "Price": 11200,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 11200
+                }
+            ]
+        ]
     },
     {
-        "TplId": "6357c98711fb55120211f7e1",
-        "ItemName": "M203 40mm underbarrel grenade launcher",
-        "Price": 250000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "6499849fc93611967b034949",
-        "ItemName": "Kalashnikov AK-12 5.45x39 assault rifle",
-        "Price": 350000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "64afc71497cf3a403c01ff38",
-        "ItemName": "Granit Br5 ballistic plate",
-        "Price": 61000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "64afd81707e2cf40e903a316",
-        "ItemName": "Granit ballistic plate (Side)",
-        "Price": 14000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "654a4a964b446df1ad03f192",
-        "ItemName": "Granit 4RS ballistic plates (Back)",
-        "Price": 50000,
-        "Currency": "RUB"
-    },
-    {
-        "TplId": "6557458f83942d705f0c4962",
-        "ItemName": "SSAPI level III+ ballistic plate (Side)",
+        "OfferId": "980d9f1dc771863930ce6290",
+        "TplId": "5c0d668f86f7747ccb7f13b2",
+        "ItemName": "UNKNOWN_ITEM_5c0d668f86f7747ccb7f13b2",
         "Price": 8500,
-        "Currency": "RUB"
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 8500
+                }
+            ]
+        ]
     },
     {
-        "TplId": "655f13e0a246670fb0373245",
-        "ItemName": "Wilcox BOSS Xe reflex sight",
-        "Price": 32000,
-        "Currency": "RUB"
+        "OfferId": "42e90f03a525a0bf24006f14",
+        "TplId": "5c0d688c86f77413ae3407b2",
+        "ItemName": "UNKNOWN_ITEM_5c0d688c86f77413ae3407b2",
+        "Price": 15500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 15500
+                }
+            ]
+        ]
     },
     {
-        "TplId": "656efaf54772930db4031ff5",
-        "ItemName": "Granit 4 ballistic plates (Back)",
-        "Price": 34000,
-        "Currency": "RUB"
+        "OfferId": "be11cd34afe7faf2aae39ecf",
+        "TplId": "5c0e625a86f7742d77340f62",
+        "ItemName": "UNKNOWN_ITEM_5c0e625a86f7742d77340f62",
+        "Price": 90000,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "59faff1d86f7746c51718c9c",
+                    "ItemName": "UNKNOWN_ITEM_59faff1d86f7746c51718c9c",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 90000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "656f611f94b480b8a500c0db",
-        "ItemName": "Granit 4 ballistic plate (Front)",
-        "Price": 34000,
-        "Currency": "RUB"
+        "OfferId": "c59cd486dc7798bb741c5911",
+        "TplId": "5c46fbd72e2216398b5a8c9c",
+        "ItemName": "UNKNOWN_ITEM_5c46fbd72e2216398b5a8c9c",
+        "Price": 128000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 128000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "656f63c027aed95beb08f62c",
-        "ItemName": "Granit 4RS ballistic plate (Front)",
-        "Price": 51000,
-        "Currency": "RUB"
+        "OfferId": "f6434395a233ea45f8c88c30",
+        "TplId": "5c925fa22e221601da359b7b",
+        "ItemName": "UNKNOWN_ITEM_5c925fa22e221601da359b7b",
+        "Price": 4100,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 4100
+                }
+            ]
+        ]
     },
     {
-        "TplId": "656fa8d700d62bcd2e024084",
-        "ItemName": "Cult Locust ballistic plate",
-        "Price": 40000,
-        "Currency": "RUB"
+        "OfferId": "6a2abd18d2999bc7b9bba8bc",
+        "TplId": "5d02797c86f774203f38e30a",
+        "ItemName": "UNKNOWN_ITEM_5d02797c86f774203f38e30a",
+        "Price": 69000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 69000
+                }
+            ]
+        ]
     },
     {
-        "TplId": "67446fdd752be02c220f27b3",
-        "ItemName": "ShG-2 assault rocket",
-        "Price": 35000,
-        "Currency": "RUB"
+        "OfferId": "fd48681f08771d869fb06625",
+        "TplId": "5d1b5e94d7ad1a2b865a96b0",
+        "ItemName": "UNKNOWN_ITEM_5d1b5e94d7ad1a2b865a96b0",
+        "Price": 0,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "59faff1d86f7746c51718c9c",
+                    "ItemName": "UNKNOWN_ITEM_59faff1d86f7746c51718c9c",
+                    "Count": 1
+                },
+                {
+                    "TplId": "573474f924597738002c6174",
+                    "ItemName": "UNKNOWN_ITEM_573474f924597738002c6174",
+                    "Count": 4
+                }
+            ]
+        ]
     },
     {
-        "TplId": "676bf44c5539167c3603e869",
-        "ItemName": "RShG-2 72.5mm rocket launcher",
-        "Price": 5000000,
-        "Currency": "RUB"
+        "OfferId": "22a63335a6442da1d1c0f8a1",
+        "TplId": "5d6e68a8a4b9360b6c0d54e2",
+        "ItemName": "UNKNOWN_ITEM_5d6e68a8a4b9360b6c0d54e2",
+        "Price": 6200,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 6200
+                }
+            ]
+        ]
     },
     {
-        "TplId": "67d0576f29f580ebc10efd08",
-        "ItemName": "TheAKGuy AK-50 .50 BMG sniper rifle",
-        "Price": 5000000,
-        "Currency": "RUB"
+        "OfferId": "d98c3e790259b9bed102388f",
+        "TplId": "5d6e6911a4b9361bd5780d52",
+        "ItemName": "UNKNOWN_ITEM_5d6e6911a4b9361bd5780d52",
+        "Price": 3500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 3500
+                }
+            ]
+        ]
     },
     {
-        "TplId": "67d418d0ffb910d21f04720e",
-        "ItemName": "M82A1 .50 BMG 10-round magazine",
-        "Price": 10000,
-        "Currency": "RUB"
+        "OfferId": "42a483753ebc6ece30adec25",
+        "TplId": "5efb0da7a29a85116f6ea05f",
+        "ItemName": "UNKNOWN_ITEM_5efb0da7a29a85116f6ea05f",
+        "Price": 6400,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 6400
+                }
+            ]
+        ]
     },
     {
-        "TplId": "67dc2648ba5b79876906a166",
-        "ItemName": ".50 BMG M903 SLAP",
-        "Price": 50000,
-        "Currency": "RUB"
+        "OfferId": "4e6b3ec4f5217eb5cf733963",
+        "TplId": "5f0596629e22f464da6bbdd9",
+        "ItemName": "UNKNOWN_ITEM_5f0596629e22f464da6bbdd9",
+        "Price": 6800,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 6800
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "b1743896a4a5afdbf468b2b1",
+        "TplId": "601aa3d2b2bcb34913271e6d",
+        "ItemName": "UNKNOWN_ITEM_601aa3d2b2bcb34913271e6d",
+        "Price": 15500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 15500
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "4e296da5dae974649bf0e449",
+        "TplId": "61962d879bb3d20b0946d385",
+        "ItemName": "UNKNOWN_ITEM_61962d879bb3d20b0946d385",
+        "Price": 13200,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 13200
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "52479c2f389549b5f486badb",
+        "TplId": "628a60ae6b1d481ff772e9c8",
+        "ItemName": "UNKNOWN_ITEM_628a60ae6b1d481ff772e9c8",
+        "Price": 165000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 165000
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "d8a2ab74f7fa2bb749f732a7",
+        "TplId": "57838ad32459774a17445cd2",
+        "ItemName": "VSS Vintorez 9x39 special sniper rifle",
+        "Price": 118000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 118000
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "81cc04a88816a4f80c2e0b75",
+        "TplId": "59e7643b86f7742cbf2c109a",
+        "ItemName": "WARTECH TV-109 + TV-106 chest rig (A-TACS FG)",
+        "Price": 39000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 39000
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "9639bcba4c49b24da7cfdf4f",
+        "TplId": "59fb023c86f7746d0d4b423c",
+        "ItemName": "Weapon case",
+        "Price": 250000,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "59faff1d86f7746c51718c9c",
+                    "ItemName": "UNKNOWN_ITEM_59faff1d86f7746c51718c9c",
+                    "Count": 2
+                },
+                {
+                    "TplId": "5d235b4d86f7742e017bc88a",
+                    "ItemName": "UNKNOWN_ITEM_5d235b4d86f7742e017bc88a",
+                    "Count": 4
+                },
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 250000
+                }
+            ]
+        ]
     }
 ]
