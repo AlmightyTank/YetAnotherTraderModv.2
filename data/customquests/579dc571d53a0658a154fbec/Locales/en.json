@@ -1,0 +1,17 @@
+{
+    "685000000000000000000001 name": "A Friend of a Friend",
+    "685000000000000000000001 note": "Pay Fence, bring him useful information, and remove outsiders from Customs.",
+    "685000000000000000000001 description": "Hello, mercenary. I have been watching you for a little while. You listen, you return alive, and you do not ask too many questions. This is already more than most can manage.\n\nThere is a man in Tarkov who may have work for someone like you. Former BEAR. Old connections. Careful business. People call him Tony. He does not meet strangers, and I do not make introductions for nothing.\n\nFirst, bring me proper payment. Two watches. Clean enough to pass through many hands. Then bring me something worth reading, a folder with intelligence. After that, you will do a small thing for me on Customs. Too many outsiders are moving through places where they do not belong. Remove them and come back alive.\n\nDo this, and maybe I tell Tony your name. Fail, and there is no name worth passing along.",
+    "685000000000000000000001 acceptPlayerMessage": "I understand. I’ll bring what you asked for.",
+    "685000000000000000000001 declinePlayerMessage": "Maybe another time.",
+    "685000000000000000000001 startedMessageText": "Good. Start with the payment. Two watches. Do not make me wait.",
+    "685000000000000000000001 changeQuestMessageText": "Still working? People who wait too long become less interesting.",
+    "685000000000000000000001 completePlayerMessage": "The job is done. I have what you wanted.",
+    "685000000000000000000001 successMessageText": "Good. You paid, you listened, and you came back breathing. I will pass your name to Tony. What he does with it is his business.",
+    "685000000000000000000001 failMessageText": "Unfortunate. Some introductions are better left unmade.",
+
+    "685000000000000000000011": "Hand over 2 Roler Submariner gold wrist watches",
+    "685000000000000000000012": "Hand over 1 Folder with intelligence",
+    "685000000000000000000013": "Eliminate 5 PMCs on Customs",
+    "685000000000000000000014": "Survive and extract from Customs"
+}

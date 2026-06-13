@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <OutputType>Library</OutputType>
-    <Version>0.0.1</Version>
+    <Version>0.0.2</Version>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
@@ -17,9 +17,10 @@
     <StaticWebAssetsEnabled>false</StaticWebAssetsEnabled>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="SPTarkov.Common" Version="4.0.11" />
-    <PackageReference Include="SPTarkov.DI" Version="4.0.11" />
-    <PackageReference Include="SPTarkov.Server.Core" Version="4.0.11" />
+    <PackageReference Include="SPTarkov.Common" Version="4.0.13" />
+    <PackageReference Include="SPTarkov.DI" Version="4.0.13" />
+    <PackageReference Include="SPTarkov.Server.Core" Version="4.0.13" />
+	  <PackageReference Include="WTT-ServerCommonLib" Version="2.0.20" />
   </ItemGroup>
   <ItemGroup>
     <None Include="data\**">
@@ -31,6 +32,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="tools\tarkovdev_items_cache.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data\customquests\579dc571d53a0658a154fbec\Images\" />
+    <Folder Include="data\customquests\579dc571d53a0658a154fbec\Locales\" />
+    <Folder Include="data\customquests\579dc571d53a0658a154fbec\QuestAssort\" />
+    <Folder Include="data\customquests\579dc571d53a0658a154fbec\Quests\" />
+    <Folder Include="data\customquests\66a0f6b2c4d8e90123456789\Locales\" />
+    <Folder Include="data\customquests\66a0f6b2c4d8e90123456789\Images\" />
+    <Folder Include="data\customquests\66a0f6b2c4d8e90123456789\QuestAssort\" />
+    <Folder Include="data\customquests\66a0f6b2c4d8e90123456789\Quests\" />
   </ItemGroup>
 
 	<PropertyGroup>
