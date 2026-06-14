@@ -1,7 +1,7 @@
 {
     "sandbox": [
         {
-            "locationId": "(101.867, 13.360, 45.108)",
+            "locationId": "(103.433, 13.994, 48.555)",
             "probability": 1,
             "template": {
                 "Id": "tony_ledger_spawn",
@@ -9,9 +9,53 @@
                 "useGravity": false,
                 "randomRotation": false,
                 "Position": {
-                    "x": 102.007,
-                    "y": 13.460,
-                    "z": 45.108
+                    "x": 103.433,
+                    "y": 13.994,
+                    "z": 48.555
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "IsGroupPosition": false,
+                "GroupPositions": [],
+                "IsAlwaysSpawn": true,
+                "Root": "685000000000000000000202",
+                "Items": [
+                    {
+                        "_id": "685000000000000000000202",
+                        "_tpl": "685000000000000000000201",
+                        "upd": {
+                            "StackObjectsCount": 1,
+                            "SpawnedInSession": true
+                        }
+                    }
+                ]
+            },
+            "itemDistribution": [
+                {
+                    "composedKey": {
+                        "key": "685000000000000000000201"
+                    },
+                    "relativeProbability": 1
+                }
+            ]
+        }
+    ],
+    "sandbox_high": [
+        {
+            "locationId": "(103.433, 13.994, 48.555)",
+            "probability": 1,
+            "template": {
+                "Id": "tony_ledger_spawn_high",
+                "IsContainer": false,
+                "useGravity": false,
+                "randomRotation": false,
+                "Position": {
+                    "x": 103.433,
+                    "y": 13.994,
+                    "z": 48.555
                 },
                 "Rotation": {
                     "x": 0,

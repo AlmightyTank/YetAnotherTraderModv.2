@@ -40,7 +40,6 @@
     <Content Remove="db\CustomItems\tony_quest_items.json" />
     <Content Remove="db\CustomItems\volkovs_concordia_ledger.json" />
     <Content Remove="db\customlocales\en.json" />
-    <Content Remove="db\CustomLootSpawns\CustomSpawnpointsForced\sandbox_high_forced.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\questassort\assort.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\quests\back_room_etiquette.json" />
     <Content Remove="db\CustomQuestZones\BackRoomEtiquette.json" />
