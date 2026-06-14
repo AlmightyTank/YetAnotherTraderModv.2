@@ -826,6 +826,28 @@
         ]
     },
     {
+        "OfferId": "6a2e2072d2999bc7b9bba8dd",
+        "TplId": "6570aead4d84f81fd002a033",
+        "ItemName": "Death Shadow lightweight armored mask",
+        "Price": 52130,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5e54f62086f774219b0f1937",
+                    "ItemName": "Raven figurine",
+                    "Count": 1
+                },
+                {
+                    "TplId": "573476d324597737da2adc13",
+                    "ItemName": "Malboro Cigarettes",
+                    "Count": 2
+                }
+            ]
+        ]
+    },
+    {
         "OfferId": "f6f3cf77cf5009bf849cc082",
         "TplId": "590c60fc86f77412b13fddcf",
         "ItemName": "Documents case",
