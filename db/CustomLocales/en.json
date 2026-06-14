@@ -32,5 +32,21 @@
     "685000000000000000000034": "Locate the maintenance closet under the ramp on Ground Zero",
     "685000000000000000000045": "Find Tony's security ledger",
     "685000000000000000000038": "Survive and extract from Ground Zero",
-    "685000000000000000000047": "Hand over Tony's security ledger"
+    "685000000000000000000047": "Hand over Tony's security ledger",
+
+    "685000000000000000000004 name": "Army Leftovers",
+    "685000000000000000000004 description": "That envelope reached the right hands. Funny thing about frightened men, they remember things. One of Prapor's people just remembered an old Reserve parts cache that never made it onto the books. AK furniture, worn spares, magazines, cheap army scraps. I do not need you dragging metal across the base. Find the cache, mark it, and leave. My people will collect what Prapor forgot.",
+    "685000000000000000000004 note": "Tony wants you to mark a forgotten army parts cache on Reserve so his people can recover it later.",
+    "685000000000000000000004 startedMessageText": "Go to Reserve. Find the old army parts cache and mark it. Do not get greedy. Do not start opening crates.",
+    "685000000000000000000004 successMessageText": "Good. The cache is marked. Prapor's man gave us the memory, you gave us the location, and now the leftovers belong to me.",
+    "685000000000000000000004 failMessageText": "You either missed the cache or made too much noise near it. That is how useful things disappear.",
+    "685000000000000000000004 acceptPlayerMessage": "I'll mark the cache.",
+    "685000000000000000000004 declinePlayerMessage": "Not touching Prapor's leftovers yet.",
+    "685000000000000000000004 completePlayerMessage": "The cache is marked.",
+    "685000000000000000000004 changeQuestMessageText": "Tony wants the Reserve cache marked, not looted.",
+
+    "685000000000000000000412": "Forgotten army parts cache",
+    "685000000000000000000414": "Locate the forgotten army parts cache on Reserve",
+    "685000000000000000000415": "Mark the army parts cache for Tony",
+    "685000000000000000000420": "Survive and extract from Reserve"
 }

@@ -1,0 +1,312 @@
+{
+    "685000000000000000000004": {
+        "QuestName": "Army Leftovers",
+        "_id": "685000000000000000000004",
+        "acceptPlayerMessage": "685000000000000000000004 acceptPlayerMessage",
+        "acceptanceAndFinishingSource": "eft",
+        "arenaLocations": [],
+        "canShowNotificationsInGame": true,
+        "changeQuestMessageText": "685000000000000000000004 changeQuestMessageText",
+        "completePlayerMessage": "685000000000000000000004 completePlayerMessage",
+        "conditions": {
+            "AvailableForFinish": [
+                {
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "VisitPlace",
+                                "dynamicLocale": false,
+                                "id": "685000000000000000000412",
+                                "target": "visit_tony_reserve_army_leftovers_cache"
+                            }
+                        ],
+                        "id": "685000000000000000000413"
+                    },
+                    "completeInSeconds": 0,
+                    "doNotResetIfCounterCompleted": true,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "685000000000000000000414",
+                    "index": 0,
+                    "isNecessary": false,
+                    "isResetOnConditionFailed": false,
+                    "oneSessionOnly": false,
+                    "parentId": "",
+                    "type": "Exploration",
+                    "value": 1,
+                    "visibilityConditions": []
+                },
+                {
+                    "conditionType": "LeaveItemAtLocation",
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "685000000000000000000415",
+                    "index": 1,
+                    "isEncoded": false,
+                    "maxDurability": 100,
+                    "minDurability": 0,
+                    "onlyFoundInRaid": false,
+                    "parentId": "",
+                    "plantTime": 20,
+                    "target": [
+                        "5991b51486f77447b112d44f"
+                    ],
+                    "value": 1,
+                    "visibilityConditions": [
+                        {
+                            "conditionType": "CompleteCondition",
+                            "id": "685000000000000000000416",
+                            "target": "685000000000000000000414"
+                        }
+                    ],
+                    "zoneId": "place_tony_reserve_army_leftovers_cache_marker"
+                },
+                {
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "Location",
+                                "dynamicLocale": false,
+                                "id": "685000000000000000000417",
+                                "target": [
+                                    "rezervbase"
+                                ]
+                            },
+                            {
+                                "conditionType": "ExitStatus",
+                                "dynamicLocale": false,
+                                "id": "685000000000000000000418",
+                                "status": [
+                                    "Survived",
+                                    "Runner",
+                                    "Transit"
+                                ]
+                            }
+                        ],
+                        "id": "685000000000000000000419"
+                    },
+                    "completeInSeconds": 0,
+                    "doNotResetIfCounterCompleted": false,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "685000000000000000000420",
+                    "index": 2,
+                    "isNecessary": false,
+                    "isResetOnConditionFailed": false,
+                    "oneSessionOnly": false,
+                    "parentId": "",
+                    "type": "Completion",
+                    "value": 1,
+                    "visibilityConditions": [
+                        {
+                            "conditionType": "CompleteCondition",
+                            "id": "685000000000000000000421",
+                            "target": "685000000000000000000415"
+                        }
+                    ]
+                }
+            ],
+            "AvailableForStart": [
+                {
+                    "availableAfter": 0,
+                    "conditionType": "Quest",
+                    "dispersion": 0,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "685000000000000000000422",
+                    "index": 0,
+                    "parentId": "",
+                    "status": [
+                        4
+                    ],
+                    "target": "685000000000000000000003",
+                    "visibilityConditions": []
+                }
+            ],
+            "Fail": []
+        },
+        "declinePlayerMessage": "685000000000000000000004 declinePlayerMessage",
+        "description": "685000000000000000000004 description",
+        "failMessageText": "685000000000000000000004 failMessageText",
+        "gameModes": [],
+        "image": "/files/quest/icon/596b465486f77457ca186188.jpg",
+        "instantComplete": false,
+        "isKey": false,
+        "location": "5704e5fad2720bc05b8b4567",
+        "name": "685000000000000000000004 name",
+        "note": "685000000000000000000004 note",
+        "progressSource": "eft",
+        "rankingModes": [],
+        "restartable": false,
+        "rewards": {
+            "Fail": [],
+            "Started": [
+                {
+                    "availableInGameEditions": [],
+                    "findInRaid": false,
+                    "id": "685000000000000000000423",
+                    "index": 0,
+                    "items": [
+                        {
+                            "_id": "685000000000000000000424",
+                            "_tpl": "5991b51486f77447b112d44f",
+                            "upd": {
+                                "StackObjectsCount": 1
+                            }
+                        }
+                    ],
+                    "target": "685000000000000000000424",
+                    "type": "Item",
+                    "unknown": false,
+                    "value": 1
+                }
+            ],
+            "Success": [
+                {
+                    "availableInGameEditions": [],
+                    "id": "685000000000000000000425",
+                    "index": 0,
+                    "type": "Experience",
+                    "unknown": false,
+                    "value": 3000
+                },
+                {
+                    "availableInGameEditions": [],
+                    "id": "685000000000000000000426",
+                    "index": 1,
+                    "target": "66a0f6b2c4d8e90123456789",
+                    "type": "TraderStanding",
+                    "unknown": false,
+                    "value": 0.01
+                },
+                {
+                    "availableInGameEditions": [],
+                    "findInRaid": false,
+                    "id": "685000000000000000000427",
+                    "index": 2,
+                    "items": [
+                        {
+                            "_id": "685000000000000000000428",
+                            "_tpl": "5449016a4bdc2d6f028b456f",
+                            "upd": {
+                                "StackObjectsCount": 25000
+                            }
+                        }
+                    ],
+                    "target": "685000000000000000000428",
+                    "type": "Item",
+                    "unknown": false,
+                    "value": 25000
+                },
+                {
+                    "availableInGameEditions": [],
+                    "gameMode": [
+                        "regular",
+                        "pve"
+                    ],
+                    "id": "6a2f21edd2999bc7b9bba8e9",
+                    "isHidden": false,
+                    "items": [
+                        {
+                            "_id": "6a2f21edd2999bc7b9bba8ea",
+                            "_tpl": "676177df1f08ed5e8800b7ae"
+                        }
+                    ],
+                    "loyaltyLevel": 1,
+                    "target": "6a2f21edd2999bc7b9bba8ea",
+                    "traderId": "66a0f6b2c4d8e90123456789",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
+                },
+                {
+                    "availableInGameEditions": [],
+                    "gameMode": [
+                        "regular",
+                        "pve"
+                    ],
+                    "id": "6a2f21edd2999bc7b9bba8eb",
+                    "isHidden": false,
+                    "items": [
+                        {
+                            "_id": "6a2f21edd2999bc7b9bba8ec",
+                            "_tpl": "5a01ad4786f77450561fda02"
+                        }
+                    ],
+                    "loyaltyLevel": 2,
+                    "target": "6a2f21edd2999bc7b9bba8ec",
+                    "traderId": "66a0f6b2c4d8e90123456789",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
+                },
+                {
+                    "availableInGameEditions": [],
+                    "gameMode": [
+                        "regular",
+                        "pve"
+                    ],
+                    "id": "6a2f21edd2999bc7b9bba8ed",
+                    "isHidden": false,
+                    "items": [
+                        {
+                            "_id": "6a2f21edd2999bc7b9bba8ee",
+                            "_tpl": "59fb375986f7741b681b81a6"
+                        }
+                    ],
+                    "loyaltyLevel": 2,
+                    "target": "6a2f21edd2999bc7b9bba8ee",
+                    "traderId": "66a0f6b2c4d8e90123456789",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
+                },
+                {
+                    "availableInGameEditions": [],
+                    "gameMode": [
+                        "regular",
+                        "pve"
+                    ],
+                    "id": "6a2f21edd2999bc7b9bba8ef",
+                    "isHidden": false,
+                    "items": [
+                        {
+                            "_id": "6a2f21edd2999bc7b9bba8f0",
+                            "_tpl": "5e21ca18e4d47f0da15e77dd"
+                        }
+                    ],
+                    "loyaltyLevel": 2,
+                    "target": "6a2f21edd2999bc7b9bba8f0",
+                    "traderId": "66a0f6b2c4d8e90123456789",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
+                },
+                {
+                    "availableInGameEditions": [],
+                    "gameMode": [
+                        "regular",
+                        "pve"
+                    ],
+                    "id": "6a2f21edd2999bc7b9bba8f1",
+                    "isHidden": false,
+                    "items": [
+                        {
+                            "_id": "6a2f21edd2999bc7b9bba8f2",
+                            "_tpl": "5a0c59791526d8dba737bba7"
+                        }
+                    ],
+                    "loyaltyLevel": 2,
+                    "target": "6a2f21edd2999bc7b9bba8f2",
+                    "traderId": "66a0f6b2c4d8e90123456789",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
+                }
+            ]
+        },
+        "secretQuest": false,
+        "side": "Pmc",
+        "startedMessageText": "685000000000000000000004 startedMessageText",
+        "successMessageText": "685000000000000000000004 successMessageText",
+        "traderId": "66a0f6b2c4d8e90123456789",
+        "type": "Exploration"
+    }
+}
