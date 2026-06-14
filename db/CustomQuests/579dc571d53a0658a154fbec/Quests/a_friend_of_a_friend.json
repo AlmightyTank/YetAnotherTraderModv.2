@@ -153,19 +153,7 @@
             ]
         }
       ],
-      "AvailableForStart": [
-        {
-          "compareMethod": ">=",
-          "conditionType": "Level",
-          "dynamicLocale": false,
-          "globalQuestCounterId": "",
-          "id": "685000000000000000000018",
-          "index": 0,
-          "parentId": "",
-          "value": 5,
-          "visibilityConditions": []
-        }
-      ],
+      "AvailableForStart": [],
       "Fail": []
     },
     "declinePlayerMessage": "685000000000000000000001 declinePlayerMessage",
