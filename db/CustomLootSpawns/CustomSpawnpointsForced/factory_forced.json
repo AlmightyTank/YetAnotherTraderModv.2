@@ -1,7 +1,7 @@
 {
     "factory4_day": [
         {
-            "locationId": "tony_first_dead_drop_factory_day",
+            "locationId": "(30.80, 6.0, 43.08)",
             "probability": 1,
             "template": {
                 "Id": "tony_first_dead_drop_factory_day",
@@ -9,12 +9,12 @@
                 "useGravity": false,
                 "randomRotation": false,
                 "Position": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
+                    "x": 30.80,
+                    "y": 6.0,
+                    "z": 43.08
                 },
                 "Rotation": {
-                    "x": 0.0,
+                    "x": -90.0,
                     "y": 0.0,
                     "z": 0.0
                 },
@@ -45,7 +45,7 @@
     ],
     "factory4_night": [
         {
-            "locationId": "tony_first_dead_drop_factory_night",
+            "locationId": "(30.80, 6.0, 43.08)",
             "probability": 1,
             "template": {
                 "Id": "tony_first_dead_drop_factory_night",
@@ -53,12 +53,12 @@
                 "useGravity": false,
                 "randomRotation": false,
                 "Position": {
-                    "x": 0.0,
-                    "y": 0.0,
-                    "z": 0.0
+                    "x": 30.80,
+                    "y": 6.0,
+                    "z": 43.08
                 },
                 "Rotation": {
-                    "x": 0.0,
+                    "x": -90.0,
                     "y": 0.0,
                     "z": 0.0
                 },

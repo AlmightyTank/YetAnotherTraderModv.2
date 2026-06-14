@@ -43,14 +43,13 @@
     <Content Remove="db\customlootspawns\customspawnpointsforced\factory_forced.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\questassort\assort.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\quests\back_room_etiquette.json" />
-    <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\first_dead_drop.json" />
+    <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\quest.json" />
     <Content Remove="db\CustomQuestZones\back_room_etiquette.json" />
     <Content Remove="db\customquestzones\first_dead_drop.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="db\CustomQuests\579dc571d53a0658a154fbec\QuestAssort\assort.json" />
     <None Include="db\CustomQuests\579dc571d53a0658a154fbec\Quests\a_friend_of_a_friend.json" />
-    <None Include="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\back_room_etiquette.json" />
     <None Include="db\CustomTrader\Tony\assort.json" />
     <None Include="db\CustomTrader\Tony\base.json" />
     <None Include="tools\tarkovdev_items_cache.json" />
