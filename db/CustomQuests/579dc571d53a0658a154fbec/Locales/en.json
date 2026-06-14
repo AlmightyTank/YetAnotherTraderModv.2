@@ -1,16 +1,16 @@
 {
     "685000000000000000000001 name": "A Friend of a Friend",
-    "685000000000000000000001 description": "You want to meet Tony Volkov? That is not a man you walk up to. He does not trust clean hands, and he does not trust people who still think this place has rules. Bring me something worth his attention, then go to Customs dressed like one of my people. Kill PMCs while wearing scav colors. Show him you can work dirty and walk away alive.",
-    "685000000000000000000001 note": "Fence wants proof that you can blend in with Scavs and do ugly work without hesitation.",
-    "685000000000000000000001 startedMessageText": "Go to Customs. Wear the scav kit. Kill PMCs. Survive if you can. Tony will hear about it.",
-    "685000000000000000000001 successMessageText": "Good. You looked like trash, moved like trash, and still put PMCs in the ground. Tony respects that kind of work. He will speak with you now.",
+    "685000000000000000000001 description": "You want Volkov to open his door? Then you do not come empty-handed. Tony likes proof, and I like insurance. Bring me a Roler first. After that, go to Ground Zero dressed like one of my people. Scav vest, Ushanka, cheap weapon, dirty work. Kill PMCs while they are still trying to figure out who you are. Then leave alive. If you can do that, Tony may decide you are worth hearing.",
+    "685000000000000000000001 note": "Fence wants you to pay for the introduction, then prove you can pass for Scav trash while killing PMCs on Ground Zero.",
+    "685000000000000000000001 startedMessageText": "Start with the watch. Then put on the scav kit and go to Ground Zero. Kill PMCs. Walk out alive.",
+    "685000000000000000000001 successMessageText": "Good. You paid the price, wore the rags, and still made PMCs bleed. Tony heard enough. The door is open, for now.",
     "685000000000000000000001 failMessageText": "You made noise, but not the kind that opens doors.",
-    "685000000000000000000001 acceptPlayerMessage": "Fine. I’ll do it.",
+    "685000000000000000000001 acceptPlayerMessage": "Fine. I’ll get his attention.",
     "685000000000000000000001 declinePlayerMessage": "Not touching that yet.",
-    "685000000000000000000001 completePlayerMessage": "It’s done. Customs is cleaner now.",
-    "685000000000000000000001 changeQuestMessageText": "Fence is watching how you handle this.",
+    "685000000000000000000001 completePlayerMessage": "The watch is handed over. Ground Zero is handled.",
+    "685000000000000000000001 changeQuestMessageText": "Fence is watching how you handle the introduction.",
 
     "685000000000000000000011": "Hand over 1 Roler Submariner gold wrist watch",
-    "685000000000000000000012": "Eliminate 8 PMCs on Customs while wearing a Scav vest and Ushanka",
-    "685000000000000000000013": "Survive and extract from Customs"
+    "685000000000000000000012": "Eliminate 8 PMCs on Ground Zero while wearing a Scav vest and Ushanka",
+    "685000000000000000000013": "Survive and extract from Ground Zero"
 }
