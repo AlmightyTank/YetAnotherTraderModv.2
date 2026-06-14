@@ -2,7 +2,7 @@
     {
         "ZoneId": "visit_tony_backroom",
         "ZoneName": "visit_tony_backroom",
-        "ZoneLocation": "Sandbox",
+        "ZoneLocation": "Sandbox_high",
         "ZoneType": "visit",
         "FlareType": "",
         "Position": {

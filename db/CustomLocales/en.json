@@ -19,18 +19,18 @@
     "685000000000000000000013": "Survive and extract from Customs",
 
     "685000000000000000000002 name": "Back Room Etiquette",
-    "685000000000000000000002 description": "Concordia had security before it had ghosts. Cameras, guards, records, keys, people who looked the other way when paid. One of my old ledgers is still sitting in that security room. Names, routes, rooms, things that should not be read by strangers. Go to Streets, find the Concordia security room, recover the ledger, and leave alive. Do not make a scene.",
-    "685000000000000000000002 note": "Tony wants you to recover an old security ledger from the Concordia security room on Streets.",
-    "685000000000000000000002 startedMessageText": "Go to Streets. Concordia security room. Find my ledger and bring it back clean.",
+    "685000000000000000000002 description": "Concordia had security before it had ghosts. Cameras, guards, records, keys, people who looked the other way when paid. One of my old ledgers used to sit in that security room, until someone smart moved it before the wrong eyes found it. It is stashed now in a maintenance closet under the ramp on Ground Zero. Find it, recover it, and leave alive. Do not make a scene.",
+    "685000000000000000000002 note": "Tony wants you to recover an old security ledger hidden in a maintenance closet under the ramp on Ground Zero.",
+    "685000000000000000000002 startedMessageText": "Ground Zero. Maintenance closet under the ramp. My ledger is there now. Bring it back clean.",
     "685000000000000000000002 successMessageText": "Good. That ledger in the wrong hands would have made problems. You followed instructions and kept your head down. That matters.",
     "685000000000000000000002 failMessageText": "You either lost the trail or made too much noise following it.",
-    "685000000000000000000002 acceptPlayerMessage": "Ill get the ledger.",
-    "685000000000000000000002 declinePlayerMessage": "Not going into Concordia for that yet.",
-    "685000000000000000000002 completePlayerMessage": "Heres your ledger.",
-    "685000000000000000000002 changeQuestMessageText": "Tony wants the Concordia ledger recovered quietly.",
+    "685000000000000000000002 acceptPlayerMessage": "I'll get the ledger.",
+    "685000000000000000000002 declinePlayerMessage": "Not going into Ground Zero for that yet.",
+    "685000000000000000000002 completePlayerMessage": "Here's your ledger.",
+    "685000000000000000000002 changeQuestMessageText": "Tony wants the relocated ledger recovered quietly from Ground Zero.",
 
-    "685000000000000000000034": "Locate the Concordia security room",
+    "685000000000000000000034": "Locate the maintenance closet under the ramp on Ground Zero",
     "685000000000000000000045": "Find Tony's security ledger",
-    "685000000000000000000038": "Survive and extract from Streets",
+    "685000000000000000000038": "Survive and extract from Ground Zero",
     "685000000000000000000047": "Hand over Tony's security ledger"
 }

@@ -1,17 +1,17 @@
 {
-    "tarkovstreets": [
+    "sandbox": [
         {
-            "locationId": "(209.260, -0.413, 407.727)",
+            "locationId": "(101.867, 13.360, 45.108)",
             "probability": 1,
             "template": {
-                "Id": "tony_concordia_security_ledger_spawn",
+                "Id": "tony_ledger_spawn",
                 "IsContainer": false,
                 "useGravity": false,
                 "randomRotation": false,
                 "Position": {
-                    "x": 209.260,
-                    "y": -0.413,
-                    "z": 407.727
+                    "x": 102.007,
+                    "y": 13.460,
+                    "z": 45.108
                 },
                 "Rotation": {
                     "x": 0,

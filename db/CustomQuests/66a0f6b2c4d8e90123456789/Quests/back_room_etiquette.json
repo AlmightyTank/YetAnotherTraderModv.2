@@ -18,7 +18,7 @@
                                 "conditionType": "VisitPlace",
                                 "dynamicLocale": false,
                                 "id": "685000000000000000000032",
-                                "target": "visit_tony_backroom_streets",
+                                "target": "visit_tony_backroom",
                                 "value": 1
                             }
                         ],
@@ -66,7 +66,8 @@
                                 "dynamicLocale": false,
                                 "id": "685000000000000000000035",
                                 "target": [
-                                    "tarkovstreets"
+                                    "Sandbox_high",
+                                    "Sandbox"
                                 ]
                             },
                             {
@@ -201,6 +202,26 @@
                     "type": "Item",
                     "unknown": false,
                     "value": 35000
+                },
+                {
+                    "availableInGameEditions": [],
+                    "gameMode": [
+                        "regular",
+                        "pve"
+                    ],
+                    "id": "6a2e2072d2999bc7b9bba8db",
+                    "isHidden": false,
+                    "items": [
+                        {
+                            "_id": "6a2e2072d2999bc7b9bba8dc",
+                            "_tpl": "5c0e57ba86f7747fa141986d"
+                        }
+                    ],
+                    "loyaltyLevel": 1,
+                    "target": "6a2e2072d2999bc7b9bba8dc",
+                    "traderId": "66a0f6b2c4d8e90123456789",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
                 }
             ]
         },

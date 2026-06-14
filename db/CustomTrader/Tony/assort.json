@@ -1013,7 +1013,7 @@
         },
         {
             "_id": "92c625a05c753d80bf7e80b4",
-            "_tpl": "5c0e5bab86f77461f55ed1f3",
+            "_tpl": "5c0e57ba86f7747fa141986d",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -1067,7 +1067,7 @@
         },
         {
             "_id": "6a2a21b3ab517fe6d88040a9",
-            "_tpl": "654a4dea7c17dec2f50cc86a",
+            "_tpl": "656f603f94b480b8a500c0d6",
             "parentId": "92c625a05c753d80bf7e80b4",
             "slotId": "Front_plate"
         },
@@ -2199,6 +2199,18 @@
             }
         },
         {
+            "_id": "6a2e2072d2999bc7b9bba8dd",
+            "_tpl": "6570aead4d84f81fd002a033",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 30,
+                "UnlimitedCount": false,
+                "BuyRestrictionMax": 2,
+                "BuyRestrictionCurrent": 0
+            }
+        },
+        {
             "_id": "139e9149717eb5e4398bdaff",
             "_tpl": "5beed0f50db834001c062b12",
             "parentId": "hideout",
@@ -3154,7 +3166,7 @@
         "92c625a05c753d80bf7e80b4": [
             [
                 {
-                    "_tpl": "5d40419286f774318526545f",
+                    "_tpl": "5d40407c86f774318526545a",
                     "count": 1
                 }
             ]
@@ -3543,6 +3555,22 @@
                 }
             ]
         ],
+        "6a2e2072d2999bc7b9bba8dd": [
+            [
+                {
+                    "_tpl": "5734758f24597738025ee253",
+                    "count": 1
+                },
+                {
+                    "_tpl": "5e54f62086f774219b0f1937",
+                    "count": 1
+                },
+                {
+                    "_tpl": "573476d324597737da2adc13",
+                    "count": 2
+                }
+            ]
+        ],
         "139e9149717eb5e4398bdaff": [
             [
                 {
@@ -3815,6 +3843,7 @@
         "980d9f1dc771863930ce6290": 3,
         "4e6b3ec4f5217eb5cf733963": 3,
         "22a63335a6442da1d1c0f8a1": 3,
+        "6a2e2072d2999bc7b9bba8dd": 2,
         "139e9149717eb5e4398bdaff": 3,
         "d6e012d90694517d94247e60": 4,
         "d8a2ab74f7fa2bb749f732a7": 3,

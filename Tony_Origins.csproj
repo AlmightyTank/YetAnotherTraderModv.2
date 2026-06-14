@@ -36,13 +36,17 @@
 		</None>
 	</ItemGroup>
   <ItemGroup>
+    <Content Remove="db\customitems\dead-drop_package.json" />
     <Content Remove="db\CustomItems\tony_quest_items.json" />
+    <Content Remove="db\CustomItems\volkovs_concordia_ledger.json" />
     <Content Remove="db\customlocales\en.json" />
+    <Content Remove="db\CustomLootSpawns\CustomSpawnpointsForced\sandbox_high_forced.json" />
+    <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\questassort\assort.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\quests\back_room_etiquette.json" />
-    <Content Remove="db\customquestzones\BackRoomEtiquette.json" />
+    <Content Remove="db\CustomQuestZones\BackRoomEtiquette.json" />
+    <Content Remove="db\CustomQuestZones\BackRoomEtiquette_High.json" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="db\CustomItems\tony_quest_items.json" />
     <None Include="db\CustomQuests\579dc571d53a0658a154fbec\QuestAssort\assort.json" />
     <None Include="db\CustomQuests\579dc571d53a0658a154fbec\Quests\a_friend_of_a_friend.json" />
     <None Include="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\back_room_etiquette.json" />
@@ -54,7 +58,6 @@
     <Folder Include="db\CustomQuests\579dc571d53a0658a154fbec\Images\" />
     <Folder Include="db\CustomQuests\66a0f6b2c4d8e90123456789\Images\" />
     <Folder Include="db\CustomQuests\66a0f6b2c4d8e90123456789\QuestAssort\" />
-    <Folder Include="db\CustomQuestZones\" />
     <Folder Include="db\CustomLocales\" />
   </ItemGroup>
 
