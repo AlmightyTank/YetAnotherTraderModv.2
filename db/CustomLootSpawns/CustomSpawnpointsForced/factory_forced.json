@@ -1,31 +1,31 @@
 {
-    "sandbox": [
+    "factory4_day": [
         {
-            "locationId": "(100.966, 13.347, 49.843)",
+            "locationId": "tony_first_dead_drop_factory_day",
             "probability": 1,
             "template": {
-                "Id": "tony_ledger_spawn",
+                "Id": "tony_first_dead_drop_factory_day",
                 "IsContainer": false,
                 "useGravity": false,
                 "randomRotation": false,
                 "Position": {
-                    "x": 100.966,
-                    "y": 13.347,
-                    "z": 49.843
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
                 },
                 "Rotation": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
                 },
                 "IsGroupPosition": false,
                 "GroupPositions": [],
                 "IsAlwaysSpawn": true,
-                "Root": "685000000000000000000202",
+                "Root": "685000000000000000000302",
                 "Items": [
                     {
-                        "_id": "685000000000000000000202",
-                        "_tpl": "685000000000000000000201",
+                        "_id": "685000000000000000000302",
+                        "_tpl": "685000000000000000000301",
                         "upd": {
                             "StackObjectsCount": 1,
                             "SpawnedInSession": true
@@ -36,40 +36,40 @@
             "itemDistribution": [
                 {
                     "composedKey": {
-                        "key": "685000000000000000000201"
+                        "key": "685000000000000000000301"
                     },
                     "relativeProbability": 1
                 }
             ]
         }
     ],
-    "sandbox_high": [
+    "factory4_night": [
         {
-            "locationId": "(100.966, 13.347, 49.843)",
+            "locationId": "tony_first_dead_drop_factory_night",
             "probability": 1,
             "template": {
-                "Id": "tony_ledger_spawn_high",
+                "Id": "tony_first_dead_drop_factory_night",
                 "IsContainer": false,
                 "useGravity": false,
                 "randomRotation": false,
                 "Position": {
-                    "x": 100.966,
-                    "y": 13.347,
-                    "z": 49.843
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
                 },
                 "Rotation": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0
+                    "x": 0.0,
+                    "y": 0.0,
+                    "z": 0.0
                 },
                 "IsGroupPosition": false,
                 "GroupPositions": [],
                 "IsAlwaysSpawn": true,
-                "Root": "685000000000000000000202",
+                "Root": "685000000000000000000303",
                 "Items": [
                     {
-                        "_id": "685000000000000000000202",
-                        "_tpl": "685000000000000000000201",
+                        "_id": "685000000000000000000303",
+                        "_tpl": "685000000000000000000301",
                         "upd": {
                             "StackObjectsCount": 1,
                             "SpawnedInSession": true
@@ -80,7 +80,7 @@
             "itemDistribution": [
                 {
                     "composedKey": {
-                        "key": "685000000000000000000201"
+                        "key": "685000000000000000000301"
                     },
                     "relativeProbability": 1
                 }
@@ -88,3 +88,4 @@
         }
     ]
 }
+
