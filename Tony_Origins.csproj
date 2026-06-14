@@ -30,10 +30,6 @@
 		<None Include="db\**\*.*" Exclude="db\**\*.cs">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
-
-		<None Include="tools\**\*.*" Exclude="tools\**\*.cs">
-			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		</None>
 	</ItemGroup>
   <ItemGroup>
     <Content Remove="db\customitems\dead-drop_package.json" />
@@ -52,7 +48,6 @@
     <None Include="db\CustomQuests\579dc571d53a0658a154fbec\Quests\a_friend_of_a_friend.json" />
     <None Include="db\CustomTrader\Tony\assort.json" />
     <None Include="db\CustomTrader\Tony\base.json" />
-    <None Include="tools\tarkovdev_items_cache.json" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="db\CustomQuests\579dc571d53a0658a154fbec\Images\" />
@@ -62,29 +57,80 @@
   </ItemGroup>
 
 	<PropertyGroup>
-		<!-- Change this to your test SPT server folder -->
+		<!-- Change this to your SPT server root folder -->
 		<TestSptServerPath>C:\RealSPT</TestSptServerPath>
 
-		<!-- SPT 4.x server mods go in /mods -->
+		<!-- Local test deploy path -->
 		<TestSptModDeployPath>$(TestSptServerPath)\SPT\user\mods\$(AssemblyName)\</TestSptModDeployPath>
 
-		<!-- Set to false if you want to build without deploying -->
+		<!-- Build switches -->
 		<DeployToTestSpt>true</DeployToTestSpt>
+		<CreateModZip>true</CreateModZip>
+
+		<!-- Full install zip output -->
+		<DistPath>$(MSBuildProjectDirectory)\dist\</DistPath>
+		<PackageStageRoot>$(DistPath)package\</PackageStageRoot>
+
+		<!-- This creates: package/SPT/user/mods/Tony_Origins/ -->
+		<PackageModRoot>$(PackageStageRoot)SPT\user\mods\$(AssemblyName)\</PackageModRoot>
+
+		<!-- Final zip -->
+		<ModZipPath>$(DistPath)$(AssemblyName)-v$(Version).zip</ModZipPath>
 	</PropertyGroup>
 
-	<Target Name="DeployTonyToTestSpt" AfterTargets="Build" Condition="'$(DeployToTestSpt)' == 'true' and '$(Configuration)' == 'Debug' and '$(TestSptServerPath)' != ''">
+	<Target Name="DeployTonyToTestSpt"
+			AfterTargets="Build"
+			Condition="'$(DeployToTestSpt)' == 'true' and '$(Configuration)' == 'Debug' and '$(TestSptServerPath)' != ''">
 
 		<Message Text="Deploying $(AssemblyName) to $(TestSptModDeployPath)" Importance="high" />
 
-		<!-- Clean old deployed copy so removed files do not stay behind -->
 		<RemoveDir Directories="$(TestSptModDeployPath)" Condition="Exists('$(TestSptModDeployPath)')" />
-
 		<MakeDir Directories="$(TestSptModDeployPath)" />
 
 		<ItemGroup>
-			<TonyDeployFiles Include="$(TargetDir)**\*.*" />
+			<TonyDeployFiles
+				Include="$(TargetDir)**\*.*"
+				Exclude="$(TargetDir)tools\**\*.*;$(TargetDir)**\*.pdb" />
 		</ItemGroup>
 
-		<Copy SourceFiles="@(TonyDeployFiles)" DestinationFiles="@(TonyDeployFiles->'$(TestSptModDeployPath)%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" />
+		<Copy
+			SourceFiles="@(TonyDeployFiles)"
+			DestinationFiles="@(TonyDeployFiles->'$(TestSptModDeployPath)%(RecursiveDir)%(Filename)%(Extension)')"
+			SkipUnchangedFiles="false" />
+	</Target>
+
+	<Target Name="CreateTonyFullInstallZip"
+			AfterTargets="Build"
+			Condition="'$(CreateModZip)' == 'true'">
+
+		<Message Text="Creating full install zip: $(ModZipPath)" Importance="high" />
+
+		<!-- Clean old package staging folder -->
+		<RemoveDir Directories="$(PackageStageRoot)" Condition="Exists('$(PackageStageRoot)')" />
+
+		<!-- Make full install path: dist/package/SPT/user/mods/Tony_Origins/ -->
+		<MakeDir Directories="$(PackageModRoot)" />
+
+		<ItemGroup>
+			<TonyPackageFiles
+				Include="$(TargetDir)**\*.*"
+				Exclude="$(TargetDir)tools\**\*.*;$(TargetDir)**\*.pdb" />
+		</ItemGroup>
+
+		<Copy
+			SourceFiles="@(TonyPackageFiles)"
+			DestinationFiles="@(TonyPackageFiles->'$(PackageModRoot)%(RecursiveDir)%(Filename)%(Extension)')"
+			SkipUnchangedFiles="false" />
+
+		<!-- Remove old zip -->
+		<Delete Files="$(ModZipPath)" Condition="Exists('$(ModZipPath)')" />
+
+		<!-- Zip package root so the zip contains /SPT/user/mods/Tony_Origins/... -->
+		<ZipDirectory
+			SourceDirectory="$(PackageStageRoot)"
+			DestinationFile="$(ModZipPath)"
+			Overwrite="true" />
+
+		<Message Text="Created full install zip: $(ModZipPath)" Importance="high" />
 	</Target>
 </Project>
