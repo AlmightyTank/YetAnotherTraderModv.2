@@ -38,28 +38,18 @@
                     "visibilityConditions": []
                 },
                 {
-                    "conditionType": "LeaveItemAtLocation",
+                    "conditionType": "PlaceBeacon",
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
                     "id": "685000000000000000000415",
                     "index": 1,
-                    "isEncoded": false,
-                    "maxDurability": 100,
-                    "minDurability": 0,
-                    "onlyFoundInRaid": false,
                     "parentId": "",
                     "plantTime": 20,
                     "target": [
                         "5991b51486f77447b112d44f"
                     ],
                     "value": 1,
-                    "visibilityConditions": [
-                        {
-                            "conditionType": "CompleteCondition",
-                            "id": "685000000000000000000416",
-                            "target": "685000000000000000000414"
-                        }
-                    ],
+                    "visibilityConditions": [],
                     "zoneId": "place_tony_reserve_army_leftovers_cache_marker"
                 },
                 {
@@ -71,7 +61,7 @@
                                 "dynamicLocale": false,
                                 "id": "685000000000000000000417",
                                 "target": [
-                                    "rezervbase"
+                                    "RezervBase"
                                 ]
                             },
                             {

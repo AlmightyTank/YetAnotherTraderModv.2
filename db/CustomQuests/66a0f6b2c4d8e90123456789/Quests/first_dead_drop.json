@@ -274,6 +274,66 @@
                     "traderId": "66a0f6b2c4d8e90123456789",
                     "type": "AssortmentUnlock",
                     "unknown": false
+                },
+                {
+                    "availableInGameEditions": [],
+                    "gameMode": [
+                        "regular",
+                        "pve"
+                    ],
+                    "id": "6a2f53ccd2999bc7b9bba900",
+                    "isHidden": false,
+                    "items": [
+                        {
+                            "_id": "6a2f53ccd2999bc7b9bba901",
+                            "_tpl": "5ab8f85d86f7745cd93a1cf5"
+                        }
+                    ],
+                    "loyaltyLevel": 1,
+                    "target": "6a2f53ccd2999bc7b9bba901",
+                    "traderId": "66a0f6b2c4d8e90123456789",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
+                },
+                {
+                    "availableInGameEditions": [],
+                    "gameMode": [
+                        "regular",
+                        "pve"
+                    ],
+                    "id": "6a2f53ccd2999bc7b9bba902",
+                    "isHidden": false,
+                    "items": [
+                        {
+                            "_id": "6a2f53ccd2999bc7b9bba903",
+                            "_tpl": "5ab8f4ff86f77431c60d91ba"
+                        }
+                    ],
+                    "loyaltyLevel": 2,
+                    "target": "6a2f53ccd2999bc7b9bba903",
+                    "traderId": "66a0f6b2c4d8e90123456789",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
+                },
+                {
+                    "availableInGameEditions": [],
+                    "gameMode": [
+                        "regular",
+                        "pve"
+                    ],
+                    "id": "6a2f53ccd2999bc7b9bba904",
+                    "isHidden": false,
+                    "items": [
+                        {
+                            "_id": "6a2f53ccd2999bc7b9bba905",
+                            "_tpl": "63626d904aa74b8fe30ab426"
+                        }
+                    ],
+                    "loyaltyLevel": 3,
+                    "target": "6a2f53ccd2999bc7b9bba905",
+                    "traderId": "66a0f6b2c4d8e90123456789",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
                 }
             ]
         },
