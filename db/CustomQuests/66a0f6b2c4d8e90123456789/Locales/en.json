@@ -1,6 +1,6 @@
 {
     "6a300025d2999bc7b9bba916 name": "Back Room Etiquette",
-    "6a300025d2999bc7b9bba916 description": "Concordia had security before it had ghosts. Cameras, guards, records, keys, people who looked the other way when paid. One of my old ledgers used to sit in that security room, until someone smart moved it before the wrong eyes found it. It is stashed now in a maintenance closet under the ramp on Ground Zero. Find it, recover it, and leave alive. Do not make a scene.",
+    "6a300025d2999bc7b9bba916 description": "Concordia had security before it had ghosts. Cameras, guards, records, keys, people who looked the other way when paid. One of my old ledgers used to sit in that security room, until someone smart moved it before the wrong eyes found it. Now it is stashed in a maintenance closet under the ramp on Ground Zero. Find it, recover it, and leave alive. Do not make a scene.",
     "6a300025d2999bc7b9bba916 note": "Tony wants you to recover an old security ledger hidden in a maintenance closet under the ramp on Ground Zero.",
     "6a300025d2999bc7b9bba916 startedMessageText": "Ground Zero. Maintenance closet under the ramp. My ledger is there now. Bring it back clean.",
     "6a300025d2999bc7b9bba916 successMessageText": "Good. That ledger in the wrong hands would have made problems. You followed instructions and kept your head down. That matters.",
@@ -16,7 +16,7 @@
     "6a300025d2999bc7b9bba91a": "Hand over Tony's security ledger",
 
     "6a300025d2999bc7b9bba91b name": "First Dead Drop",
-    "6a300025d2999bc7b9bba91b description": "The ledger you pulled from Concordia still has a useful name in it. One of my people left a sealed envelope in the Factory office building, second-floor locker room. You will move it to Ground Zero. Underground level, meat truck, far back. The man collecting it works for Prapor. He must not know where it came from or who carried it. Do not open it. Do not lose it. Do not bring it back to me.",
+    "6a300025d2999bc7b9bba91b description": "The Concordia ledger you recovered still has a useful name in it. One of my people left a sealed envelope in the Factory office building, second-floor locker room. You will move it to Ground Zero. Underground level, meat truck, far back. The man collecting it works for Prapor. He must not know where it came from or who carried it. Do not open it. Do not lose it. Do not bring it back to me.",
     "6a300025d2999bc7b9bba91b note": "Move Tony's sealed envelope from the second-floor Factory office locker room to the far back of the underground meat truck on Ground Zero.",
     "6a300025d2999bc7b9bba91b startedMessageText": "Factory office, second-floor locker room. Get the envelope. Then Ground Zero, underground meat truck, far back. Leave it there and walk away.",
     "6a300025d2999bc7b9bba91b successMessageText": "Good. The envelope is where it needs to be. Prapor's man will remember what he owes and who still has the paper to prove it.",
@@ -49,7 +49,7 @@
     "6a300025d2999bc7b9bba925": "Survive and extract from Reserve",
 
     "6a300025d2999bc7b9bba926 name": "No Names Spoken",
-    "6a300025d2999bc7b9bba926 description": "Names are dangerous. Symbols last longer. Take my card to Factory and leave it in the third-floor office, on the desk where people will see it. No signatures, no speeches, no bodies in scav jackets. Fence opened the first door for you, and I do not repay useful men with dead workers. Plant the card, leave alive, and say nothing.",
+    "6a300025d2999bc7b9bba926 description": "Names are dangerous. Symbols last longer. Take my card to Factory and leave it in the third-floor office, on the desk where people will see it. No signatures, no speeches, no bodies in Scav jackets. Fence opened the first door for you, and I do not repay useful men with dead workers. Plant the card, leave alive, and say nothing.",
     "6a300025d2999bc7b9bba926 note": "Tony wants you to plant his calling card on the third-floor office desk in Factory without killing Scavs.",
     "6a300025d2999bc7b9bba926 startedMessageText": "Factory. Third-floor office. Put the card on the desk. Do not kill Scavs.",
     "6a300025d2999bc7b9bba926 successMessageText": "Good. The card is on the desk, and the Scavs are still breathing. The right people will see the mark and understand without hearing my name.",
@@ -59,6 +59,7 @@
     "6a300025d2999bc7b9bba926 completePlayerMessage": "The card is planted.",
     "6a300025d2999bc7b9bba926 changeQuestMessageText": "Tony wants his calling card planted on the Factory third-floor office desk without Scav blood on it.",
 
+    "6a3007dfd2999bc7b9bba9b3": "Locate the Third-Floor Office in Factory",
     "6a300025d2999bc7b9bba927": "Plant Tony's calling card on the third-floor office desk in Factory",
     "6a300025d2999bc7b9bba928": "Survive and extract from Factory",
     "6a300025d2999bc7b9bba929": "Do not kill any Scavs on Factory"
