@@ -552,15 +552,15 @@
         "OfferId": "6a2f1c3bd2999bc7b9bba8e4",
         "TplId": "5e21ca18e4d47f0da15e77dd",
         "ItemName": "AK CNC Warrior 5.56x45 muzzle device adapter",
-        "Price": 15000,
+        "Price": 2615,
         "Currency": "RUB",
-        "CashOnly": true,
+        "CashOnly": false,
         "BarterScheme": [
             [
                 {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 15000
+                    "TplId": "57347b8b24597737dd42e192",
+                    "ItemName": "Classic matches",
+                    "Count": 1
                 }
             ]
         ]
@@ -569,15 +569,15 @@
         "OfferId": "6a2f2001d2999bc7b9bba8e5",
         "TplId": "5a0c59791526d8dba737bba7",
         "ItemName": "AK GP-25 accessory kit recoil pad",
-        "Price": 20000,
+        "Price": 3231,
         "Currency": "RUB",
-        "CashOnly": true,
+        "CashOnly": false,
         "BarterScheme": [
             [
                 {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 20000
+                    "TplId": "57347d7224597744596b4e72",
+                    "ItemName": "Can of beef stew (Small)",
+                    "Count": 1
                 }
             ]
         ]
@@ -586,15 +586,15 @@
         "OfferId": "6a2f1c3bd2999bc7b9bba8e2",
         "TplId": "5a01ad4786f77450561fda02",
         "ItemName": "AK Kiba Arms VDM CS gas tube",
-        "Price": 14500,
+        "Price": 2904,
         "Currency": "RUB",
-        "CashOnly": true,
+        "CashOnly": false,
         "BarterScheme": [
             [
                 {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 14500
+                    "TplId": "575062b524597720a31c09a1",
+                    "ItemName": "Can of Ice Green tea",
+                    "Count": 1
                 }
             ]
         ]
@@ -603,15 +603,15 @@
         "OfferId": "6a2f1c3bd2999bc7b9bba8e3",
         "TplId": "59fb375986f7741b681b81a6",
         "ItemName": "AK Krebs Custom UFM KeyMod handguard",
-        "Price": 22500,
+        "Price": 20355,
         "Currency": "RUB",
-        "CashOnly": true,
+        "CashOnly": false,
         "BarterScheme": [
             [
                 {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 22500
+                    "TplId": "5e2af2bc86f7746d3f3c33fc",
+                    "ItemName": "Hunting matches",
+                    "Count": 2
                 }
             ]
         ]
@@ -1223,15 +1223,15 @@
         "OfferId": "6a2b83fcd2999bc7b9bba8c4",
         "TplId": "5ed51652f6c34d2cc26336a1",
         "ItemName": "M.U.L.E. stimulant injector",
-        "Price": 200000,
+        "Price": 43550,
         "Currency": "RUB",
-        "CashOnly": true,
+        "CashOnly": false,
         "BarterScheme": [
             [
                 {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 200000
+                    "TplId": "5c1267ee86f77416ec610f72",
+                    "ItemName": "Chain with Prokill medallion",
+                    "Count": 1
                 }
             ]
         ]
@@ -1376,15 +1376,15 @@
         "OfferId": "6a2b82bed2999bc7b9bba8c2",
         "TplId": "637b6251104668754b72f8f9",
         "ItemName": "Perfotoran (Blue Blood) stimulant injector",
-        "Price": 110000,
+        "Price": 66000,
         "Currency": "RUB",
-        "CashOnly": true,
+        "CashOnly": false,
         "BarterScheme": [
             [
                 {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 110000
+                    "TplId": "62a09f32621468534a797acb",
+                    "ItemName": "Bottle of Pevko Light beer",
+                    "Count": 2
                 }
             ]
         ]
@@ -1556,15 +1556,15 @@
         "OfferId": "6a2b8279d2999bc7b9bba8c0",
         "TplId": "637b612fb7afa97bfc3d7005",
         "ItemName": "SJ12 TGLabs combat stimulant injector",
-        "Price": 98000,
+        "Price": 41000,
         "Currency": "RUB",
-        "CashOnly": true,
+        "CashOnly": false,
         "BarterScheme": [
             [
                 {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 98000
+                    "TplId": "5d1b32c186f774252167a530",
+                    "ItemName": "Analog thermometer",
+                    "Count": 1
                 }
             ]
         ]
@@ -1641,15 +1641,15 @@
         "OfferId": "6a2abd18d2999bc7b9bba8bc",
         "TplId": "5d02797c86f774203f38e30a",
         "ItemName": "Surv12 field surgical kit",
-        "Price": 69000,
+        "Price": 57600,
         "Currency": "RUB",
-        "CashOnly": true,
+        "CashOnly": false,
         "BarterScheme": [
             [
                 {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 69000
+                    "TplId": "5751435d24597720a27126d1",
+                    "ItemName": "Can of Max Energy energy drink",
+                    "Count": 3
                 }
             ]
         ]
