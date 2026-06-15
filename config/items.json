@@ -617,6 +617,50 @@
         ]
     },
     {
+        "OfferId": "6a3007dfd2999bc7b9bba9b4",
+        "TplId": "5a0d63621526d8dba31fe3bf",
+        "ItemName": "AKM PBS-1 7.62x39 sound suppressor",
+        "Price": 48176,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5d1c819a86f774771b0acd6c",
+                    "ItemName": "Weapon parts",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5734795124597738002c6176",
+                    "ItemName": "Insulating tape",
+                    "Count": 1
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a3007dfd2999bc7b9bba9b5",
+        "TplId": "57ffb0e42459777d047111c5",
+        "ItemName": "AKS-74U PBS-4 5.45x39 sound suppressor",
+        "Price": 32991,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5d1c819a86f774771b0acd6c",
+                    "ItemName": "Weapon parts",
+                    "Count": 1
+                },
+                {
+                    "TplId": "590c2d8786f774245b1f03f3",
+                    "ItemName": "Screwdriver",
+                    "Count": 1
+                }
+            ]
+        ]
+    },
+    {
         "OfferId": "6a3007dfd2999bc7b9bba98d",
         "TplId": "5aafbde786f774389d0cbc0f",
         "ItemName": "Ammunition case",
@@ -1346,6 +1390,28 @@
         ]
     },
     {
+        "OfferId": "6a3007dfd2999bc7b9bba9b6",
+        "TplId": "59bfc5c886f7743bf6794e62",
+        "ItemName": "PP-19-01 Vityaz 9x19 sound suppressor",
+        "Price": 20343,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5672cb124bdc2d1a0f8b4568",
+                    "ItemName": "AA Battery",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5e2af29386f7746d4159f077",
+                    "ItemName": "KEKTAPE duct tape",
+                    "Count": 1
+                }
+            ]
+        ]
+    },
+    {
         "OfferId": "6a2b78b1ea367e8be8e51ab7",
         "TplId": "59984ab886f7743e98271174",
         "ItemName": "PP-19-01 Vityaz 9x19 submachine gun",
@@ -1731,7 +1797,7 @@
         "OfferId": "6a3007dfd2999bc7b9bba979",
         "TplId": "59e7643b86f7742cbf2c109a",
         "ItemName": "WARTECH TV-109 + TV-106 chest rig (A-TACS FG)",
-        "Price": 39000,
+        "Price": 18000,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -1739,7 +1805,7 @@
                 {
                     "TplId": "5449016a4bdc2d6f028b456f",
                     "ItemName": "Roubles",
-                    "Count": 39000
+                    "Count": 18000
                 }
             ]
         ]
