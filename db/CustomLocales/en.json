@@ -34,6 +34,23 @@
     "685000000000000000000038": "Survive and extract from Ground Zero",
     "685000000000000000000047": "Hand over Tony's security ledger",
 
+    "685000000000000000000003 name": "First Dead Drop",
+    "685000000000000000000003 description": "The ledger you pulled from Concordia still has a useful name in it. One of my people left a sealed envelope in the Factory office building, second-floor locker room. You will move it to Ground Zero. Underground level, meat truck, far back. The man collecting it works for Prapor. He must not know where it came from or who carried it. Do not open it. Do not lose it. Do not bring it back to me.",
+    "685000000000000000000003 note": "Move Tony's sealed envelope from the second-floor Factory office locker room to the far back of the underground meat truck on Ground Zero.",
+    "685000000000000000000003 startedMessageText": "Factory office, second-floor locker room. Get the envelope. Then Ground Zero, underground meat truck, far back. Leave it there and walk away.",
+    "685000000000000000000003 successMessageText": "Good. The envelope is where it needs to be. Prapor's man will remember what he owes and who still has the paper to prove it.",
+    "685000000000000000000003 failMessageText": "You lost the envelope, lost the route, or lost your nerve.",
+    "685000000000000000000003 acceptPlayerMessage": "I'll move the envelope.",
+    "685000000000000000000003 declinePlayerMessage": "I'm not running dead drops.",
+    "685000000000000000000003 completePlayerMessage": "The envelope is planted.",
+    "685000000000000000000003 changeQuestMessageText": "Tony wants the sealed envelope moved through an old courier route.",
+
+    "685000000000000000000314": "Locate the sealed envelope in the Factory office locker room",
+    "685000000000000000000315": "Obtain Tony's sealed envelope",
+    "685000000000000000000320": "Survive and extract from Factory",
+    "685000000000000000000322": "Stash Tony's sealed envelope in the Ground Zero meat truck",
+    "685000000000000000000327": "Survive and extract from Ground Zero",
+
     "685000000000000000000004 name": "Army Leftovers",
     "685000000000000000000004 description": "That envelope reached the right hands. Funny thing about frightened men, they remember things. One of Prapor's people just remembered an old Reserve parts cache that never made it onto the books. AK furniture, worn spares, magazines, cheap army scraps. I do not need you dragging metal across the base. Find the cache, mark it, and leave. My people will collect what Prapor forgot.",
     "685000000000000000000004 note": "Tony wants you to mark a forgotten army parts cache on Reserve so his people can recover it later.",
@@ -48,5 +65,20 @@
     "685000000000000000000412": "Forgotten army parts cache",
     "685000000000000000000414": "Locate the forgotten army parts cache on Reserve",
     "685000000000000000000415": "Mark the army parts cache for Tony",
-    "685000000000000000000420": "Survive and extract from Reserve"
+    "685000000000000000000420": "Survive and extract from Reserve",
+
+    "685000000000000000000005 name": "No Names Spoken",
+    "685000000000000000000005 description": "Names are dangerous. Symbols last longer. Take my card to Factory and leave it where people will see it. No signatures, no speeches, no bodies in scav jackets. Fence opened the first door for you, and I do not repay useful men with dead workers. Plant the card, leave alive, and say nothing.",
+    "685000000000000000000005 note": "Tony wants you to plant his calling card in Factory without killing Scavs.",
+    "685000000000000000000005 startedMessageText": "Factory. Office area. Leave the card where it will be found. Do not kill Scavs.",
+    "685000000000000000000005 successMessageText": "Good. The card is in place, and the Scavs are still breathing. The right people will see the mark and understand without hearing my name.",
+    "685000000000000000000005 failMessageText": "You made noise where I asked for silence. A dead Scav carries the wrong message.",
+    "685000000000000000000005 acceptPlayerMessage": "I'll plant the card.",
+    "685000000000000000000005 declinePlayerMessage": "Not going quiet into Factory yet.",
+    "685000000000000000000005 completePlayerMessage": "The card is planted.",
+    "685000000000000000000005 changeQuestMessageText": "Tony wants his calling card planted without Scav blood on it.",
+
+    "685000000000000000000515": "Plant Tony's calling card in the Factory office area",
+    "685000000000000000000520": "Survive and extract from Factory",
+    "685000000000000000000525": "Do not kill any Scavs on Factory"
 }

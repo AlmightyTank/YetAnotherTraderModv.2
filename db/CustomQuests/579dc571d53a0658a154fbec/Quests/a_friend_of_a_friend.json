@@ -1,13 +1,13 @@
 {
-    "685000000000000000000001": {
+    "6a300025d2999bc7b9bba906": {
         "QuestName": "A Friend of a Friend",
-        "_id": "685000000000000000000001",
-        "acceptPlayerMessage": "685000000000000000000001 acceptPlayerMessage",
+        "_id": "6a300025d2999bc7b9bba906",
+        "acceptPlayerMessage": "6a300025d2999bc7b9bba906 acceptPlayerMessage",
         "acceptanceAndFinishingSource": "eft",
         "arenaLocations": [],
         "canShowNotificationsInGame": true,
-        "changeQuestMessageText": "685000000000000000000001 changeQuestMessageText",
-        "completePlayerMessage": "685000000000000000000001 completePlayerMessage",
+        "changeQuestMessageText": "6a300025d2999bc7b9bba906 changeQuestMessageText",
+        "completePlayerMessage": "6a300025d2999bc7b9bba906 completePlayerMessage",
         "conditions": {
             "AvailableForFinish": [
                 {
@@ -15,7 +15,7 @@
                     "dogtagLevel": 0,
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
-                    "id": "685000000000000000000011",
+                    "id": "6a300025d2999bc7b9bba907",
                     "index": 0,
                     "isEncoded": false,
                     "maxDurability": 100,
@@ -49,7 +49,7 @@
                                 "enemyEquipmentExclusive": [],
                                 "enemyEquipmentInclusive": [],
                                 "enemyHealthEffects": [],
-                                "id": "5c12360186f7745ac71d1fb4",
+                                "id": "6a300025d2999bc7b9bba90a",
                                 "resetOnSessionEnd": false,
                                 "savageRole": [],
                                 "target": "AnyPmc",
@@ -77,7 +77,7 @@
                                         "59e7708286f7742cbd762753"
                                     ]
                                 ],
-                                "id": "5c12363286f7745c8b0203f4"
+                                "id": "6a300025d2999bc7b9bba90c"
                             },
                             {
                                 "conditionType": "Location",
@@ -89,12 +89,12 @@
                                 ]
                             }
                         ],
-                        "id": "5c12359086f77437bd20fecc"
+                        "id": "6a300025d2999bc7b9bba90d"
                     },
                     "doNotResetIfCounterCompleted": false,
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
-                    "id": "685000000000000000000012",
+                    "id": "6a300025d2999bc7b9bba908",
                     "index": 0,
                     "isNecessary": false,
                     "isResetOnConditionFailed": false,
@@ -106,7 +106,7 @@
                         {
                             "conditionType": "CompleteCondition",
                             "id": "6a2d51ccd2999bc7b9bba8d8",
-                            "target": "685000000000000000000011"
+                            "target": "6a300025d2999bc7b9bba907"
                         }
                     ]
                 },
@@ -118,7 +118,7 @@
                             {
                                 "conditionType": "Location",
                                 "dynamicLocale": false,
-                                "id": "685000000000000000000018",
+                                "id": "6a300025d2999bc7b9bba90e",
                                 "target": [
                                     "Sandbox",
                                     "Sandbox_high"
@@ -127,7 +127,7 @@
                             {
                                 "conditionType": "ExitStatus",
                                 "dynamicLocale": false,
-                                "id": "685000000000000000000019",
+                                "id": "6a300025d2999bc7b9bba90f",
                                 "status": [
                                     "Survived",
                                     "Runner",
@@ -135,12 +135,12 @@
                                 ]
                             }
                         ],
-                        "id": "685000000000000000000020"
+                        "id": "6a300025d2999bc7b9bba910"
                     },
                     "doNotResetIfCounterCompleted": false,
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
-                    "id": "685000000000000000000013",
+                    "id": "6a300025d2999bc7b9bba909",
                     "index": 3,
                     "isNecessary": false,
                     "isResetOnConditionFailed": false,
@@ -152,7 +152,7 @@
                         {
                             "conditionType": "CompleteCondition",
                             "id": "6a2cccddd2999bc7b9bba8d5",
-                            "target": "685000000000000000000012"
+                            "target": "6a300025d2999bc7b9bba908"
                         }
                     ]
                 }
@@ -160,16 +160,16 @@
             "AvailableForStart": [],
             "Fail": []
         },
-        "declinePlayerMessage": "685000000000000000000001 declinePlayerMessage",
-        "description": "685000000000000000000001 description",
-        "failMessageText": "685000000000000000000001 failMessageText",
+        "declinePlayerMessage": "6a300025d2999bc7b9bba906 declinePlayerMessage",
+        "description": "6a300025d2999bc7b9bba906 description",
+        "failMessageText": "6a300025d2999bc7b9bba906 failMessageText",
         "gameModes": [],
         "image": "/files/quest/icon/596b465486f77457ca186188.jpg",
         "instantComplete": false,
         "isKey": false,
         "location": "653e6760052c01c1c805532f",
-        "name": "685000000000000000000001 name",
-        "note": "685000000000000000000001 note",
+        "name": "6a300025d2999bc7b9bba906 name",
+        "note": "6a300025d2999bc7b9bba906 note",
         "progressSource": "eft",
         "rankingModes": [],
         "restartable": false,
@@ -179,7 +179,7 @@
             "Success": [
                 {
                     "availableInGameEditions": [],
-                    "id": "685000000000000000000021",
+                    "id": "6a300025d2999bc7b9bba911",
                     "index": 0,
                     "type": "Experience",
                     "unknown": false,
@@ -187,7 +187,7 @@
                 },
                 {
                     "availableInGameEditions": [],
-                    "id": "685000000000000000000022",
+                    "id": "6a300025d2999bc7b9bba912",
                     "index": 1,
                     "target": "579dc571d53a0658a154fbec",
                     "type": "TraderStanding",
@@ -197,18 +197,18 @@
                 {
                     "availableInGameEditions": [],
                     "findInRaid": false,
-                    "id": "685000000000000000000023",
+                    "id": "6a300025d2999bc7b9bba913",
                     "index": 2,
                     "items": [
                         {
-                            "_id": "685000000000000000000024",
+                            "_id": "6a300025d2999bc7b9bba914",
                             "_tpl": "5449016a4bdc2d6f028b456f",
                             "upd": {
                                 "StackObjectsCount": 25000
                             }
                         }
                     ],
-                    "target": "685000000000000000000024",
+                    "target": "6a300025d2999bc7b9bba914",
                     "type": "Item",
                     "unknown": false,
                     "value": 25000
@@ -219,7 +219,7 @@
                         "regular",
                         "pve"
                     ],
-                    "id": "685000000000000000000025",
+                    "id": "6a300025d2999bc7b9bba915",
                     "isHidden": false,
                     "target": "66a0f6b2c4d8e90123456789",
                     "type": "TraderUnlock",
@@ -229,8 +229,8 @@
         },
         "secretQuest": false,
         "side": "Pmc",
-        "startedMessageText": "685000000000000000000001 startedMessageText",
-        "successMessageText": "685000000000000000000001 successMessageText",
+        "startedMessageText": "6a300025d2999bc7b9bba906 startedMessageText",
+        "successMessageText": "6a300025d2999bc7b9bba906 successMessageText",
         "traderId": "579dc571d53a0658a154fbec",
         "type": "Elimination"
     }

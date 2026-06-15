@@ -33,15 +33,18 @@
 	</ItemGroup>
   <ItemGroup>
     <Content Remove="db\customitems\dead-drop_package.json" />
+    <Content Remove="db\customitems\tony_calling_card.json" />
     <Content Remove="db\CustomItems\tony_quest_items.json" />
     <Content Remove="db\CustomItems\volkovs_concordia_ledger.json" />
     <Content Remove="db\customlocales\en.json" />
     <Content Remove="db\customlootspawns\customspawnpointsforced\factory_forced.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\questassort\assort.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\quests\back_room_etiquette.json" />
+    <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\no_names_spoken.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\quest.json" />
     <Content Remove="db\CustomQuestZones\back_room_etiquette.json" />
     <Content Remove="db\customquestzones\first_dead_drop.json" />
+    <Content Remove="db\customquestzones\no_names_spoken.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="db\CustomQuests\579dc571d53a0658a154fbec\QuestAssort\assort.json" />
@@ -78,9 +81,7 @@
 		<ModZipPath>$(DistPath)$(AssemblyName)-v$(Version).zip</ModZipPath>
 	</PropertyGroup>
 
-	<Target Name="DeployTonyToTestSpt"
-			AfterTargets="Build"
-			Condition="'$(DeployToTestSpt)' == 'true' and '$(Configuration)' == 'Debug' and '$(TestSptServerPath)' != ''">
+	<Target Name="DeployTonyToTestSpt" AfterTargets="Build" Condition="'$(DeployToTestSpt)' == 'true' and '$(Configuration)' == 'Debug' and '$(TestSptServerPath)' != ''">
 
 		<Message Text="Deploying $(AssemblyName) to $(TestSptModDeployPath)" Importance="high" />
 
@@ -88,20 +89,13 @@
 		<MakeDir Directories="$(TestSptModDeployPath)" />
 
 		<ItemGroup>
-			<TonyDeployFiles
-				Include="$(TargetDir)**\*.*"
-				Exclude="$(TargetDir)tools\**\*.*;$(TargetDir)**\*.pdb" />
+			<TonyDeployFiles Include="$(TargetDir)**\*.*" Exclude="$(TargetDir)tools\**\*.*;$(TargetDir)**\*.pdb" />
 		</ItemGroup>
 
-		<Copy
-			SourceFiles="@(TonyDeployFiles)"
-			DestinationFiles="@(TonyDeployFiles->'$(TestSptModDeployPath)%(RecursiveDir)%(Filename)%(Extension)')"
-			SkipUnchangedFiles="false" />
+		<Copy SourceFiles="@(TonyDeployFiles)" DestinationFiles="@(TonyDeployFiles->'$(TestSptModDeployPath)%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" />
 	</Target>
 
-	<Target Name="CreateTonyFullInstallZip"
-			AfterTargets="Build"
-			Condition="'$(CreateModZip)' == 'true'">
+	<Target Name="CreateTonyFullInstallZip" AfterTargets="Build" Condition="'$(CreateModZip)' == 'true'">
 
 		<Message Text="Creating full install zip: $(ModZipPath)" Importance="high" />
 
@@ -112,24 +106,16 @@
 		<MakeDir Directories="$(PackageModRoot)" />
 
 		<ItemGroup>
-			<TonyPackageFiles
-				Include="$(TargetDir)**\*.*"
-				Exclude="$(TargetDir)tools\**\*.*;$(TargetDir)**\*.pdb" />
+			<TonyPackageFiles Include="$(TargetDir)**\*.*" Exclude="$(TargetDir)tools\**\*.*;$(TargetDir)**\*.pdb" />
 		</ItemGroup>
 
-		<Copy
-			SourceFiles="@(TonyPackageFiles)"
-			DestinationFiles="@(TonyPackageFiles->'$(PackageModRoot)%(RecursiveDir)%(Filename)%(Extension)')"
-			SkipUnchangedFiles="false" />
+		<Copy SourceFiles="@(TonyPackageFiles)" DestinationFiles="@(TonyPackageFiles->'$(PackageModRoot)%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" />
 
 		<!-- Remove old zip -->
 		<Delete Files="$(ModZipPath)" Condition="Exists('$(ModZipPath)')" />
 
 		<!-- Zip package root so the zip contains /SPT/user/mods/Tony_Origins/... -->
-		<ZipDirectory
-			SourceDirectory="$(PackageStageRoot)"
-			DestinationFile="$(ModZipPath)"
-			Overwrite="true" />
+		<ZipDirectory SourceDirectory="$(PackageStageRoot)" DestinationFile="$(ModZipPath)" Overwrite="true" />
 
 		<Message Text="Created full install zip: $(ModZipPath)" Importance="high" />
 	</Target>

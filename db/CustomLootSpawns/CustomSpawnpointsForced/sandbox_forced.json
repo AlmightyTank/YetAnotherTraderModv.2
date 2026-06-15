@@ -21,11 +21,11 @@
                 "IsGroupPosition": false,
                 "GroupPositions": [],
                 "IsAlwaysSpawn": true,
-                "Root": "685000000000000000000202",
+                "Root": "6a3007dfd2999bc7b9bba9ae",
                 "Items": [
                     {
-                        "_id": "685000000000000000000202",
-                        "_tpl": "685000000000000000000201",
+                        "_id": "6a3007dfd2999bc7b9bba9ae",
+                        "_tpl": "6a300025d2999bc7b9bba952",
                         "upd": {
                             "StackObjectsCount": 1,
                             "SpawnedInSession": true
@@ -36,7 +36,7 @@
             "itemDistribution": [
                 {
                     "composedKey": {
-                        "key": "685000000000000000000201"
+                        "key": "6a300025d2999bc7b9bba952"
                     },
                     "relativeProbability": 1
                 }
@@ -65,11 +65,11 @@
                 "IsGroupPosition": false,
                 "GroupPositions": [],
                 "IsAlwaysSpawn": true,
-                "Root": "685000000000000000000202",
+                "Root": "6a3007dfd2999bc7b9bba9ae",
                 "Items": [
                     {
-                        "_id": "685000000000000000000202",
-                        "_tpl": "685000000000000000000201",
+                        "_id": "6a3007dfd2999bc7b9bba9ae",
+                        "_tpl": "6a300025d2999bc7b9bba952",
                         "upd": {
                             "StackObjectsCount": 1,
                             "SpawnedInSession": true
@@ -80,7 +80,7 @@
             "itemDistribution": [
                 {
                     "composedKey": {
-                        "key": "685000000000000000000201"
+                        "key": "6a300025d2999bc7b9bba952"
                     },
                     "relativeProbability": 1
                 }
