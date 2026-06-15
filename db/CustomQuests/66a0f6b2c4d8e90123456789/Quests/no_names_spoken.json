@@ -11,6 +11,42 @@
         "conditions": {
             "AvailableForFinish": [
                 {
+                    "conditionType": "CounterCreator",
+                    "counter": {
+                        "conditions": [
+                            {
+                                "conditionType": "Location",
+                                "dynamicLocale": false,
+                                "id": "6a3007dfd2999bc7b9bba9b0",
+                                "target": [
+                                    "factory4_day",
+                                    "factory4_night"
+                                ]
+                            },
+                            {
+                                "conditionType": "VisitPlace",
+                                "dynamicLocale": false,
+                                "id": "6a3007dfd2999bc7b9bba9b1",
+                                "target": "visit_tony_factory_calling_card"
+                            }
+                        ],
+                        "id": "6a3007dfd2999bc7b9bba9b2"
+                    },
+                    "completeInSeconds": 0,
+                    "doNotResetIfCounterCompleted": true,
+                    "dynamicLocale": false,
+                    "globalQuestCounterId": "",
+                    "id": "6a3007dfd2999bc7b9bba9b3",
+                    "index": 0,
+                    "isNecessary": false,
+                    "isResetOnConditionFailed": false,
+                    "oneSessionOnly": false,
+                    "parentId": "",
+                    "type": "Exploration",
+                    "value": 1,
+                    "visibilityConditions": []
+                },
+                {
                     "conditionType": "LeaveItemAtLocation",
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
@@ -158,7 +194,7 @@
         "image": "/files/quest/icon/596b465486f77457ca186188.jpg",
         "instantComplete": false,
         "isKey": false,
-        "location": "any",
+        "location": "55f2d3fd4bdc2d5f408b4567",
         "name": "6a300025d2999bc7b9bba926 name",
         "note": "6a300025d2999bc7b9bba926 note",
         "progressSource": "eft",
@@ -223,6 +259,66 @@
                     "type": "Item",
                     "unknown": false,
                     "value": 45000
+                },
+                {
+                    "availableInGameEditions": [],
+                    "gameMode": [
+                        "regular",
+                        "pve"
+                    ],
+                    "id": "6a3007dfd2999bc7b9bba9b7",
+                    "isHidden": false,
+                    "items": [
+                        {
+                            "_id": "6a3007dfd2999bc7b9bba9b8",
+                            "_tpl": "5a0d63621526d8dba31fe3bf"
+                        }
+                    ],
+                    "loyaltyLevel": 2,
+                    "target": "6a3007dfd2999bc7b9bba9b8",
+                    "traderId": "66a0f6b2c4d8e90123456789",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
+                },
+                {
+                    "availableInGameEditions": [],
+                    "gameMode": [
+                        "regular",
+                        "pve"
+                    ],
+                    "id": "6a3007dfd2999bc7b9bba9b9",
+                    "isHidden": false,
+                    "items": [
+                        {
+                            "_id": "6a3007dfd2999bc7b9bba9ba",
+                            "_tpl": "57ffb0e42459777d047111c5"
+                        }
+                    ],
+                    "loyaltyLevel": 2,
+                    "target": "6a3007dfd2999bc7b9bba9ba",
+                    "traderId": "66a0f6b2c4d8e90123456789",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
+                },
+                {
+                    "availableInGameEditions": [],
+                    "gameMode": [
+                        "regular",
+                        "pve"
+                    ],
+                    "id": "6a3007dfd2999bc7b9bba9bb",
+                    "isHidden": false,
+                    "items": [
+                        {
+                            "_id": "6a3007dfd2999bc7b9bba9bc",
+                            "_tpl": "59bfc5c886f7743bf6794e62"
+                        }
+                    ],
+                    "loyaltyLevel": 1,
+                    "target": "6a3007dfd2999bc7b9bba9bc",
+                    "traderId": "66a0f6b2c4d8e90123456789",
+                    "type": "AssortmentUnlock",
+                    "unknown": false
                 }
             ]
         },
