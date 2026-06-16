@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <OutputType>Library</OutputType>
-    <Version>0.0.2</Version>
+    <Version>0.0.3</Version>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
@@ -42,9 +42,11 @@
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\quests\back_room_etiquette.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\no_names_spoken.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\quest.json" />
+    <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\street_tax.json" />
     <Content Remove="db\CustomQuestZones\back_room_etiquette.json" />
     <Content Remove="db\customquestzones\first_dead_drop.json" />
     <Content Remove="db\customquestzones\no_names_spoken.json" />
+    <Content Remove="db\customquestzones\street_tax.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="db\CustomQuests\579dc571d53a0658a154fbec\QuestAssort\assort.json" />
