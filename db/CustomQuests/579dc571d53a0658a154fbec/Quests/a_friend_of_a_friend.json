@@ -54,14 +54,7 @@
                                 "savageRole": [],
                                 "target": "AnyPmc",
                                 "value": 1,
-                                "weapon": [
-                                    "54491c4f4bdc2db1078b4568",
-                                    "56dee2bdd2720bc8328b4567",
-                                    "606dae0ab0e443224b421bb7",
-                                    "5580223e4bdc2d1c128b457f",
-                                    "64748cb8de82c85eaf0a273a",
-                                    "61f7c9e189e6fb1a5e3ea78d"
-                                ],
+                                "weapon": [],
                                 "weaponCaliber": [],
                                 "weaponModsExclusive": [],
                                 "weaponModsInclusive": []
@@ -215,21 +208,9 @@
                 },
                 {
                     "availableInGameEditions": [],
-                    "gameMode": [
-                        "regular",
-                        "pve"
-                    ],
-                    "id": "6a300025d2999bc7b9bba915",
-                    "isHidden": false,
-                    "target": "66a0f6b2c4d8e90123456789",
-                    "type": "TraderUnlock",
-                    "unknown": false
-                },
-                {
-                    "availableInGameEditions": [],
                     "findInRaid": false,
                     "id": "6a30b2fbd2999bc7b9bbaad3",
-                    "index": 4,
+                    "index": 3,
                     "items": [
                         {
                             "_id": "6a30b2fbd2999bc7b9bbaad4",
@@ -252,6 +233,18 @@
                     "type": "Item",
                     "unknown": false,
                     "value": 2
+                },
+                {
+                    "availableInGameEditions": [],
+                    "gameMode": [
+                        "regular",
+                        "pve"
+                    ],
+                    "id": "6a300025d2999bc7b9bba915",
+                    "isHidden": false,
+                    "target": "66a0f6b2c4d8e90123456789",
+                    "type": "TraderUnlock",
+                    "unknown": false
                 }
             ]
         },
