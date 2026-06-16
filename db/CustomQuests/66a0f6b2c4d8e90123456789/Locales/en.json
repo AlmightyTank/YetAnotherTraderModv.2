@@ -62,5 +62,27 @@
     "6a3007dfd2999bc7b9bba9b3": "Locate the Third-Floor Office in Factory",
     "6a300025d2999bc7b9bba927": "Plant Tony's calling card on the third-floor office desk in Factory",
     "6a300025d2999bc7b9bba928": "Survive and extract from Factory",
-    "6a300025d2999bc7b9bba929": "Do not kill any Scavs on Factory"
+    "6a300025d2999bc7b9bba929": "Do not kill any Scavs on Factory",
+
+    "6a30a341d2999bc7b9bbaa32 name": "Street Tax",
+    "6a30a341d2999bc7b9bbaa32 description": "The card was seen. Now comes the bill. Customs has roads for men who do not like checkpoints, offices for goods with no paperwork, dorm rooms where cash changes hands, and gas stations where deals get settled behind locked doors. Big Red keeps the paper. Three-story Dorms keeps the dirty money. New Gas keeps the route moving. Go there, collect what is owed, and leave alive. Bring me my cut. You keep the collector's fee.",
+    "6a30a341d2999bc7b9bbaa32 note": "Tony wants you to collect valuables from Big Red, three-story Dorms, and New Gas on Customs, then bring him his cut.",
+    "6a30a341d2999bc7b9bbaa32 startedMessageText": "Customs. Big Red upstairs office, three-story Dorms near marked room, then New Gas office. Collect the street tax and come back alive.",
+    "6a30a341d2999bc7b9bbaa32 successMessageText": "Good. Big Red, Dorms, New Gas, cash, gold. The route remembers who owns it now. Keep your collector's fee. You earned that much.",
+    "6a30a341d2999bc7b9bbaa32 failMessageText": "You lost the route, lost the money, or forgot whose tax you were collecting.",
+    "6a30a341d2999bc7b9bbaa32 acceptPlayerMessage": "I'll collect the tax.",
+    "6a30a341d2999bc7b9bbaa32 declinePlayerMessage": "Not collecting from Customs yet.",
+    "6a30a341d2999bc7b9bbaa32 completePlayerMessage": "Here's your cut.",
+    "6a30a341d2999bc7b9bbaa32 changeQuestMessageText": "Tony wants his cut collected from Big Red, Dorms, and New Gas.",
+
+    "6a30a341d2999bc7b9bbaa33": "Locate the upstairs Big Red office collection point",
+    "6a30a341d2999bc7b9bbaa34": "Locate the three-story Dorms marked room collection point",
+    "6a30a341d2999bc7b9bbaa35": "Locate the New Gas office collection point",
+    "6a30a341d2999bc7b9bbaa36": "Find 60,000 RUB in raid",
+    "6a30a341d2999bc7b9bbaa37": "Find 1 golden rooster in raid",
+    "6a30a341d2999bc7b9bbaa38": "Find 2 gold chains in raid",
+    "6a30a341d2999bc7b9bbaa39": "Survive and extract from Customs",
+    "6a30a341d2999bc7b9bbaa3a": "Hand over 30,000 RUB to Tony",
+    "6a30a341d2999bc7b9bbaa3b": "Hand over 1 golden rooster to Tony",
+    "6a30a341d2999bc7b9bbaa3c": "Hand over 1 gold chain to Tony"
 }

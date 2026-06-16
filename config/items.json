@@ -230,13 +230,13 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "573474f924597738002c6174",
-                    "ItemName": "Chainlet",
+                    "TplId": "5734758f24597738025ee253",
+                    "ItemName": "Golden neck chain",
                     "Count": 1
                 },
                 {
-                    "TplId": "590c2b4386f77425357b6123",
-                    "ItemName": "Pliers",
+                    "TplId": "59faf7ca86f7740dbe19f6c2",
+                    "ItemName": "Roler Submariner gold wrist watch",
                     "Count": 1
                 }
             ]
@@ -969,9 +969,14 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "573474f924597738002c6174",
-                    "ItemName": "Chainlet",
-                    "Count": 3
+                    "TplId": "5734758f24597738025ee253",
+                    "ItemName": "Golden neck chain",
+                    "Count": 2
+                },
+                {
+                    "TplId": "590c651286f7741e566b6461",
+                    "ItemName": "Slim diary",
+                    "Count": 1
                 }
             ]
         ]
@@ -1088,14 +1093,29 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "59faff1d86f7746c51718c9c",
-                    "ItemName": "Physical Bitcoin",
+                    "TplId": "5734758f24597738025ee253",
+                    "ItemName": "Golden neck chain",
+                    "Count": 3
+                },
+                {
+                    "TplId": "5d235a5986f77443f6329bc6",
+                    "ItemName": "Gold skull ring",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5d40407c86f774318526545a",
+                    "ItemName": "Bottle of Tarkovskaya vodka",
                     "Count": 2
                 },
                 {
-                    "TplId": "5a7c2eca46aef81a7ca2145d",
-                    "ItemName": "UNKNOWN_ITEM_5a7c2eca46aef81a7ca2145d",
-                    "Count": 2
+                    "TplId": "5d1b376e86f774252519444e",
+                    "ItemName": "Bottle of Fierce Hatchling moonshine",
+                    "Count": 1
+                },
+                {
+                    "TplId": "590de71386f774347051a052",
+                    "ItemName": "Antique teapot",
+                    "Count": 1
                 }
             ]
         ]
@@ -1729,15 +1749,30 @@
         "OfferId": "6a3007dfd2999bc7b9bba971",
         "TplId": "590c2e1186f77425357b6124",
         "ItemName": "Toolset",
-        "Price": 75000,
+        "Price": 31000,
         "Currency": "RUB",
-        "CashOnly": true,
+        "CashOnly": false,
         "BarterScheme": [
             [
                 {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 75000
+                    "TplId": "590c2b4386f77425357b6123",
+                    "ItemName": "Pliers",
+                    "Count": 1
+                },
+                {
+                    "TplId": "590c2d8786f774245b1f03f3",
+                    "ItemName": "Screwdriver",
+                    "Count": 1
+                },
+                {
+                    "TplId": "590c31c586f774245e3141b2",
+                    "ItemName": "Pack of nails",
+                    "Count": 1
+                },
+                {
+                    "TplId": "57347c1124597737fb1379e3",
+                    "ItemName": "Duct tape",
+                    "Count": 1
                 }
             ]
         ]
@@ -1820,14 +1855,24 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "59faff1d86f7746c51718c9c",
-                    "ItemName": "Physical Bitcoin",
+                    "TplId": "5d1c819a86f774771b0acd6c",
+                    "ItemName": "Weapon parts",
+                    "Count": 6
+                },
+                {
+                    "TplId": "5d0375ff86f774186372f685",
+                    "ItemName": "Military cable",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5d6fc78386f77449d825f9dc",
+                    "ItemName": "Gunpowder \"Eagle\"",
                     "Count": 2
                 },
                 {
-                    "TplId": "5a7c2eca46aef81a7ca2145d",
-                    "ItemName": "UNKNOWN_ITEM_5a7c2eca46aef81a7ca2145d",
-                    "Count": 2
+                    "TplId": "590c2e1186f77425357b6124",
+                    "ItemName": "Toolset",
+                    "Count": 1
                 }
             ]
         ]
