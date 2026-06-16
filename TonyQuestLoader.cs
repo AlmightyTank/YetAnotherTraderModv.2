@@ -5,7 +5,7 @@ using SPTarkov.Server.Core.Models.Spt.Mod;
 using WTTServerCommonLib;
 using Path = System.IO.Path;
 
-namespace Tony.Loaders;
+namespace Tony;
 
 [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 3)]
 public class TonyQuestLoader(WTTServerCommonLib.WTTServerCommonLib wttCommon) : IOnLoad
