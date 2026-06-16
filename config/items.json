@@ -280,7 +280,7 @@
         "OfferId": "6a30b2fbd2999bc7b9bbaab4",
         "TplId": "5c0e446786f7742013381639",
         "ItemName": "6B5-15 Zh-86 Uley armored rig (Flora)",
-        "Price": 11000,
+        "Price": 39890,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -288,7 +288,7 @@
                 {
                     "TplId": "5449016a4bdc2d6f028b456f",
                     "ItemName": "Roubles",
-                    "Count": 11000
+                    "Count": 39890
                 }
             ]
         ]

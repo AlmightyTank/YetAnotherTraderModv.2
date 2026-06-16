@@ -96,9 +96,25 @@
     "6a30b2fbd2999bc7b9bbaa96 declinePlayerMessage": "Not walking old BEAR trails yet.",
     "6a30b2fbd2999bc7b9bbaa96 completePlayerMessage": "The routes are marked.",
     "6a30b2fbd2999bc7b9bbaa96 changeQuestMessageText": "Tony wants the old BEAR routes marked on Woods.",
-    
+
     "6a30b2fbd2999bc7b9bbaa97": "Mark the old BEAR route near Old Station",
     "6a30b2fbd2999bc7b9bbaa98": "Mark the old BEAR route near Scav bunker",
     "6a30b2fbd2999bc7b9bbaa99": "Mark the old BEAR route near Abandoned Village",
-    "6a30b2fbd2999bc7b9bbaa9a": "Survive and extract from Woods"
+    "6a30b2fbd2999bc7b9bbaa9a": "Survive and extract from Woods",
+
+    "6a30b2fbd2999bc7b9bbaab5 name": "Buried Steel",
+    "6a30b2fbd2999bc7b9bbaab5 description": "The old trails are open. That means people can move again. One of mine already did his part and left two sealed military weapon crates in the E2 bunkers on Reserve. He does not know your name, and you do not know his. That is how this works. Find the buried cache, recover both crates, and bring them to me sealed. If the wire is cut or one crate is missing, do not bother making excuses.",
+    "6a30b2fbd2999bc7b9bbaab5 note": "Tony wants you to recover two sealed military weapon crates from the E2 bunkers on Reserve.",
+    "6a30b2fbd2999bc7b9bbaab5 startedMessageText": "Reserve. E2 bunkers. Two sealed crates were left for us. Recover them and leave alive.",
+    "6a30b2fbd2999bc7b9bbaab5 successMessageText": "Good. Both crates are sealed. That means my people can move product, and you can carry it without asking questions. I pulled a little loose steel from another box for you. Do not mistake it for generosity.",
+    "6a30b2fbd2999bc7b9bbaab5 failMessageText": "A missing crate, a broken seal, or a dead courier. None of those help me.",
+    "6a30b2fbd2999bc7b9bbaab5 acceptPlayerMessage": "I'll recover the crates.",
+    "6a30b2fbd2999bc7b9bbaab5 declinePlayerMessage": "Not going into E2 for crates yet.",
+    "6a30b2fbd2999bc7b9bbaab5 completePlayerMessage": "The crates are here.",
+    "6a30b2fbd2999bc7b9bbaab5 changeQuestMessageText": "Tony wants both sealed crates recovered from the Reserve E2 bunkers.",
+
+    "6a30b2fbd2999bc7b9bbaab6": "Locate the buried weapons cache in the Reserve E2 bunkers",
+    "6a30b2fbd2999bc7b9bbaab7": "Recover 2 sealed military weapon crates",
+    "6a30b2fbd2999bc7b9bbaab8": "Survive and extract from Reserve",
+    "6a30b2fbd2999bc7b9bbaab9": "Hand over 2 sealed military weapon crates to Tony"
 }
