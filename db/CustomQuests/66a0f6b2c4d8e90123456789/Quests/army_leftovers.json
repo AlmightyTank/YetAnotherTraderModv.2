@@ -192,6 +192,25 @@
                 },
                 {
                     "availableInGameEditions": [],
+                    "findInRaid": false,
+                    "id": "6a30b2fbd2999bc7b9bbaae1",
+                    "index": 3,
+                    "items": [
+                        {
+                            "_id": "6a30b2fbd2999bc7b9bbaae2",
+                            "_tpl": "5c12613b86f7743bbe2c3f76",
+                            "upd": {
+                                "StackObjectsCount": 1
+                            }
+                        }
+                    ],
+                    "target": "6a30b2fbd2999bc7b9bbaae2",
+                    "type": "Item",
+                    "unknown": false,
+                    "value": 1
+                },
+                {
+                    "availableInGameEditions": [],
                     "gameMode": [
                         "regular",
                         "pve"

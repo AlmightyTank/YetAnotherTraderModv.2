@@ -224,6 +224,34 @@
                     "target": "66a0f6b2c4d8e90123456789",
                     "type": "TraderUnlock",
                     "unknown": false
+                },
+                {
+                    "availableInGameEditions": [],
+                    "findInRaid": false,
+                    "id": "6a30b2fbd2999bc7b9bbaad3",
+                    "index": 4,
+                    "items": [
+                        {
+                            "_id": "6a30b2fbd2999bc7b9bbaad4",
+                            "_tpl": "544fb45d4bdc2dee738b4568",
+                            "upd": {
+                                "SpawnedInSession": true,
+                                "StackObjectsCount": 1
+                            }
+                        },
+                        {
+                            "_id": "6a30b2fbd2999bc7b9bbaad5",
+                            "_tpl": "544fb45d4bdc2dee738b4568",
+                            "upd": {
+                                "SpawnedInSession": true,
+                                "StackObjectsCount": 1
+                            }
+                        }
+                    ],
+                    "target": "6a30b2fbd2999bc7b9bbaad5",
+                    "type": "Item",
+                    "unknown": false,
+                    "value": 2
                 }
             ]
         },

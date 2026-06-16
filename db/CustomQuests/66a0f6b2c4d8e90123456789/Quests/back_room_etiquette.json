@@ -213,6 +213,50 @@
                 },
                 {
                     "availableInGameEditions": [],
+                    "findInRaid": false,
+                    "id": "6a30b2fbd2999bc7b9bbaad9",
+                    "index": 0,
+                    "items": [
+                        {
+                            "_id": "6a30b2fbd2999bc7b9bbaada",
+                            "_tpl": "590a3cd386f77436f20848cb",
+                            "upd": {
+                                "SpawnedInSession": true,
+                                "StackObjectsCount": 1
+                            }
+                        },
+                        {
+                            "_id": "6a30b2fbd2999bc7b9bbaadb",
+                            "_tpl": "590a3cd386f77436f20848cb",
+                            "upd": {
+                                "SpawnedInSession": true,
+                                "StackObjectsCount": 1
+                            }
+                        },
+                        {
+                            "_id": "6a30b2fbd2999bc7b9bbaadc",
+                            "_tpl": "590a3cd386f77436f20848cb",
+                            "upd": {
+                                "SpawnedInSession": true,
+                                "StackObjectsCount": 1
+                            }
+                        },
+                        {
+                            "_id": "6a30b2fbd2999bc7b9bbaadd",
+                            "_tpl": "590a3cd386f77436f20848cb",
+                            "upd": {
+                                "SpawnedInSession": true,
+                                "StackObjectsCount": 1
+                            }
+                        }
+                    ],
+                    "target": "6a30b2fbd2999bc7b9bbaadd",
+                    "type": "Item",
+                    "unknown": false,
+                    "value": 4
+                },
+                {
+                    "availableInGameEditions": [],
                     "gameMode": [
                         "regular",
                         "pve"

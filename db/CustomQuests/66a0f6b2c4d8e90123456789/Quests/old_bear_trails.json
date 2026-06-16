@@ -213,6 +213,34 @@
                 {
                     "availableInGameEditions": [],
                     "findInRaid": false,
+                    "id": "6a30b2fbd2999bc7b9bbaad6",
+                    "index": 0,
+                    "items": [
+                        {
+                            "_id": "6a30b2fbd2999bc7b9bbaad7",
+                            "_tpl": "5d0379a886f77420407aa271",
+                            "upd": {
+                                "SpawnedInSession": true,
+                                "StackObjectsCount": 1
+                            }
+                        },
+                        {
+                            "_id": "6a30b2fbd2999bc7b9bbaad8",
+                            "_tpl": "5d0379a886f77420407aa271",
+                            "upd": {
+                                "SpawnedInSession": true,
+                                "StackObjectsCount": 1
+                            }
+                        }
+                    ],
+                    "target": "6a30b2fbd2999bc7b9bbaad8",
+                    "type": "Item",
+                    "unknown": false,
+                    "value": 3
+                },
+                {
+                    "availableInGameEditions": [],
+                    "findInRaid": false,
                     "id": "6a30b2fbd2999bc7b9bbaaaa",
                     "index": 3,
                     "items": [

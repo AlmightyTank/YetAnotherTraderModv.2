@@ -262,6 +262,32 @@
                 },
                 {
                     "availableInGameEditions": [],
+                    "findInRaid": false,
+                    "id": "6a30b2fbd2999bc7b9bbaae3",
+                    "index": 3,
+                    "items": [
+                        {
+                            "_id": "6a30b2fbd2999bc7b9bbaae4",
+                            "_tpl": "5733279d245977289b77ec24",
+                            "upd": {
+                                "StackObjectsCount": 1
+                            }
+                        },
+                        {
+                            "_id": "6a30b2fbd2999bc7b9bbaae5",
+                            "_tpl": "5733279d245977289b77ec24",
+                            "upd": {
+                                "StackObjectsCount": 1
+                            }
+                        }
+                    ],
+                    "target": "6a30b2fbd2999bc7b9bbaae5",
+                    "type": "Item",
+                    "unknown": false,
+                    "value": 2
+                },
+                {
+                    "availableInGameEditions": [],
                     "gameMode": [
                         "regular",
                         "pve"
