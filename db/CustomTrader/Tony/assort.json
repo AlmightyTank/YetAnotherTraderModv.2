@@ -3120,6 +3120,114 @@
             "_tpl": "657bc2e7b30eca976305118d",
             "parentId": "6a2c1a18d2999bc7b9bba8d0",
             "slotId": "Helmet_ears"
+        },
+        {
+            "_id": "6a30b2fbd2999bc7b9bbaaea",
+            "_tpl": "6033fa48ffd42c541047f728",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 30,
+                "UnlimitedCount": false,
+                "BuyRestrictionMax": 3,
+                "BuyRestrictionCurrent": 0
+            }
+        },
+        {
+            "_id": "6a30b2fbd2999bc7b9bbaaeb",
+            "_tpl": "628e4e576d783146b124c64d",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 30,
+                "UnlimitedCount": false,
+                "BuyRestrictionMax": 2,
+                "BuyRestrictionCurrent": 0
+            }
+        },
+        {
+            "_id": "6a30b2fbd2999bc7b9bbaaec",
+            "_tpl": "66b5f693acff495a294927e3",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 30,
+                "UnlimitedCount": false,
+                "BuyRestrictionMax": 2,
+                "BuyRestrictionCurrent": 0
+            }
+        },
+        {
+            "_id": "6a30b2fbd2999bc7b9bbaaed",
+            "_tpl": "66b5f6985891c84aab75ca76",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 30,
+                "UnlimitedCount": false,
+                "BuyRestrictionMax": 1,
+                "BuyRestrictionCurrent": 0
+            }
+        },
+        {
+            "_id": "6a30b2fbd2999bc7b9bbaaee",
+            "_tpl": "5448be9a4bdc2dfd2f8b456a",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 30,
+                "UnlimitedCount": false,
+                "BuyRestrictionMax": 4,
+                "BuyRestrictionCurrent": 0
+            }
+        },
+        {
+            "_id": "6a30b2fbd2999bc7b9bbaaef",
+            "_tpl": "5710c24ad2720bc3458b45a3",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 30,
+                "UnlimitedCount": false,
+                "BuyRestrictionMax": 4,
+                "BuyRestrictionCurrent": 0
+            }
+        },
+        {
+            "_id": "6a30b2fbd2999bc7b9bbaaf0",
+            "_tpl": "5e32f56fcb6d5863cc5e5ee4",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 30,
+                "UnlimitedCount": false,
+                "BuyRestrictionMax": 3,
+                "BuyRestrictionCurrent": 0
+            }
+        },
+        {
+            "_id": "6a30b2fbd2999bc7b9bbaaf1",
+            "_tpl": "617fd91e5539a84ec44ce155",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 30,
+                "UnlimitedCount": false,
+                "BuyRestrictionMax": 2,
+                "BuyRestrictionCurrent": 0
+            }
+        },
+        {
+            "_id": "6a30b2fbd2999bc7b9bbaaf2",
+            "_tpl": "618a431df1eb8e24b8741deb",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 30,
+                "UnlimitedCount": false,
+                "BuyRestrictionMax": 2,
+                "BuyRestrictionCurrent": 0
+            }
         }
     ],
     "barter_scheme": {
@@ -4074,6 +4182,78 @@
                     "count": 1
                 }
             ]
+        ],
+        "6a30b2fbd2999bc7b9bbaaea": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 27500
+                }
+            ]
+        ],
+        "6a30b2fbd2999bc7b9bbaaeb": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 45000
+                }
+            ]
+        ],
+        "6a30b2fbd2999bc7b9bbaaec": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 40000
+                }
+            ]
+        ],
+        "6a30b2fbd2999bc7b9bbaaed": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 65000
+                }
+            ]
+        ],
+        "6a30b2fbd2999bc7b9bbaaee": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 10200
+                }
+            ]
+        ],
+        "6a30b2fbd2999bc7b9bbaaef": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 8800
+                }
+            ]
+        ],
+        "6a30b2fbd2999bc7b9bbaaf0": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 22000
+                }
+            ]
+        ],
+        "6a30b2fbd2999bc7b9bbaaf1": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 32000
+                }
+            ]
+        ],
+        "6a30b2fbd2999bc7b9bbaaf2": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 32000
+                }
+            ]
         ]
     },
     "loyal_level_items": {
@@ -4184,6 +4364,15 @@
         "6a3007dfd2999bc7b9bba998": 4,
         "6a3007dfd2999bc7b9bba999": 4,
         "6a2c15ff0ad81c90c80166df": 3,
-        "6a2c1a18d2999bc7b9bba8d0": 4
+        "6a2c1a18d2999bc7b9bba8d0": 4,
+        "6a30b2fbd2999bc7b9bbaaea": 1,
+        "6a30b2fbd2999bc7b9bbaaeb": 2,
+        "6a30b2fbd2999bc7b9bbaaec": 3,
+        "6a30b2fbd2999bc7b9bbaaed": 4,
+        "6a30b2fbd2999bc7b9bbaaee": 1,
+        "6a30b2fbd2999bc7b9bbaaef": 1,
+        "6a30b2fbd2999bc7b9bbaaf0": 2,
+        "6a30b2fbd2999bc7b9bbaaf1": 3,
+        "6a30b2fbd2999bc7b9bbaaf2": 3
     }
 }

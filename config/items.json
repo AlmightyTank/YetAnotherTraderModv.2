@@ -1016,6 +1016,23 @@
         ]
     },
     {
+        "OfferId": "6a30b2fbd2999bc7b9bbaaef",
+        "TplId": "5710c24ad2720bc3458b45a3",
+        "ItemName": "F-1 hand grenade",
+        "Price": 8800,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 8800
+                }
+            ]
+        ]
+    },
+    {
         "OfferId": "6a3007dfd2999bc7b9bba999",
         "TplId": "5d1b5e94d7ad1a2b865a96b0",
         "ItemName": "FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope",
@@ -1393,6 +1410,23 @@
         ]
     },
     {
+        "OfferId": "6a30b2fbd2999bc7b9bbaaea",
+        "TplId": "6033fa48ffd42c541047f728",
+        "ItemName": "OPSMEN Earmor M32 headset",
+        "Price": 27500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 27500
+                }
+            ]
+        ]
+    },
+    {
         "OfferId": "6a3007dfd2999bc7b9bba96a",
         "TplId": "5648a7494bdc2d9d488b4583",
         "ItemName": "PACA Soft Armor",
@@ -1405,6 +1439,57 @@
                     "TplId": "5449016a4bdc2d6f028b456f",
                     "ItemName": "Roubles",
                     "Count": 16000
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a30b2fbd2999bc7b9bbaaeb",
+        "TplId": "628e4e576d783146b124c64d",
+        "ItemName": "Peltor ComTac IV Hybrid headset (Coyote Brown)",
+        "Price": 45000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 45000
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a30b2fbd2999bc7b9bbaaec",
+        "TplId": "66b5f693acff495a294927e3",
+        "ItemName": "Peltor ComTac V headset (OD Green)",
+        "Price": 40000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 40000
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a30b2fbd2999bc7b9bbaaed",
+        "TplId": "66b5f6985891c84aab75ca76",
+        "ItemName": "Peltor ComTac VI headset (Coyote Brown)",
+        "Price": 65000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 65000
                 }
             ]
         ]
@@ -1495,6 +1580,57 @@
                     "TplId": "62a0a043cf4a99369e2624a5",
                     "ItemName": "Bottle of OLOLO Multivitamins",
                     "Count": 1
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a30b2fbd2999bc7b9bbaaee",
+        "TplId": "5448be9a4bdc2dfd2f8b456a",
+        "ItemName": "RGD-5 hand grenade",
+        "Price": 10200,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 10200
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a30b2fbd2999bc7b9bbaaf1",
+        "TplId": "617fd91e5539a84ec44ce155",
+        "ItemName": "RGN hand grenade",
+        "Price": 32000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 32000
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a30b2fbd2999bc7b9bbaaf2",
+        "TplId": "618a431df1eb8e24b8741deb",
+        "ItemName": "RGO hand grenade",
+        "Price": 32000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 32000
                 }
             ]
         ]
@@ -1807,6 +1943,23 @@
                     "TplId": "5d1b376e86f774252519444e",
                     "ItemName": "Bottle of Fierce Hatchling moonshine",
                     "Count": 1
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a30b2fbd2999bc7b9bbaaf0",
+        "TplId": "5e32f56fcb6d5863cc5e5ee4",
+        "ItemName": "VOG-17 Khattabka improvised hand grenade",
+        "Price": 22000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 22000
                 }
             ]
         ]
