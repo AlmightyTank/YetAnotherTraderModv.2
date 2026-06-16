@@ -2139,6 +2139,42 @@
             }
         },
         {
+            "_id": "6a30b8317afe718f5c2d4702",
+            "_tpl": "657087577f6d4590ac0d2109",
+            "parentId": "6a30b2fbd2999bc7b9bbaab4",
+            "slotId": "Soft_armor_front"
+        },
+        {
+            "_id": "6a30b8317afe718f5c2d4703",
+            "_tpl": "6570880f4a747dbb63005ee5",
+            "parentId": "6a30b2fbd2999bc7b9bbaab4",
+            "slotId": "Soft_armor_back"
+        },
+        {
+            "_id": "6a30b8317afe718f5c2d4704",
+            "_tpl": "65708afe4a747dbb63005eee",
+            "parentId": "6a30b2fbd2999bc7b9bbaab4",
+            "slotId": "Collar"
+        },
+        {
+            "_id": "6a30b8317afe718f5c2d4705",
+            "_tpl": "65708b4c4a747dbb63005ef3",
+            "parentId": "6a30b2fbd2999bc7b9bbaab4",
+            "slotId": "Groin"
+        },
+        {
+            "_id": "6a30b2fbd2999bc7b9bbaab4",
+            "_tpl": "5c0e446786f7742013381639",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 30,
+                "UnlimitedCount": false,
+                "BuyRestrictionMax": 5,
+                "BuyRestrictionCurrent": 0
+            }
+        },
+        {
             "_id": "6a3007dfd2999bc7b9bba97d",
             "_tpl": "60098af40accd37ef2175f27",
             "parentId": "hideout",
@@ -3667,6 +3703,14 @@
                 }
             ]
         ],
+        "6a30b2fbd2999bc7b9bbaab4": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 11000
+                }
+            ]
+        ],
         "6a3007dfd2999bc7b9bba97d": [
             [
                 {
@@ -4101,7 +4145,8 @@
         "6a3007dfd2999bc7b9bba97a": 2,
         "6a3007dfd2999bc7b9bba97b": 2,
         "6a2bf72e8a12b7b0a0b622bc": 1,
-        "6a3007dfd2999bc7b9bba97c": 2,
+        "6a3007dfd2999bc7b9bba97c": 1,
+        "6a30b2fbd2999bc7b9bbaab4": 2,
         "6a3007dfd2999bc7b9bba97d": 1,
         "6a2a24be339aae85cffe58d1": 1,
         "6a2a2501339aae85cffe58d2": 2,

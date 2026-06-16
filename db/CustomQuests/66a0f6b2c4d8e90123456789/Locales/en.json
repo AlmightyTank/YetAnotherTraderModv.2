@@ -82,7 +82,23 @@
     "6a30a341d2999bc7b9bbaa37": "Find 1 golden rooster in raid",
     "6a30a341d2999bc7b9bbaa38": "Find 2 gold chains in raid",
     "6a30a341d2999bc7b9bbaa39": "Survive and extract from Customs",
-    "6a30a341d2999bc7b9bbaa3a": "Hand over 30,000 RUB to Tony",
-    "6a30a341d2999bc7b9bbaa3b": "Hand over 1 golden rooster to Tony",
-    "6a30a341d2999bc7b9bbaa3c": "Hand over 1 gold chain to Tony"
+    "6a30a341d2999bc7b9bbaa3a": "Hand over 30,000 RUB",
+    "6a30a341d2999bc7b9bbaa3b": "Hand over 1 golden rooster",
+    "6a30a341d2999bc7b9bbaa3c": "Hand over 1 gold chain",
+
+    "6a30b2fbd2999bc7b9bbaa96 name": "Old BEAR Trails",
+    "6a30b2fbd2999bc7b9bbaa96 description": "The Customs route pays again. Good. But money is useless if every road is watched. Before Tarkov broke open, BEAR teams used paths through Woods that never touched the main roads. Old Station, Scav bunker, Abandoned Village. Those routes were quiet once. I want to know if they still are. Mark them, leave alive, and do not waste time looking for souvenirs. I am not sending you for supplies. I am seeing if you can follow ghosts.",
+    "6a30b2fbd2999bc7b9bbaa96 note": "Tony wants you to mark three old BEAR route points on Woods and survive.",
+    "6a30b2fbd2999bc7b9bbaa96 startedMessageText": "Woods. Old Station, Scav bunker, Abandoned Village. Mark the old BEAR routes and leave alive.",
+    "6a30b2fbd2999bc7b9bbaa96 successMessageText": "Good. The old marks have new teeth. Those trails can still be walked, and now I know you can walk them.",
+    "6a30b2fbd2999bc7b9bbaa96 failMessageText": "You lost the trail. That is how men disappear in Woods.",
+    "6a30b2fbd2999bc7b9bbaa96 acceptPlayerMessage": "I'll mark the routes.",
+    "6a30b2fbd2999bc7b9bbaa96 declinePlayerMessage": "Not walking old BEAR trails yet.",
+    "6a30b2fbd2999bc7b9bbaa96 completePlayerMessage": "The routes are marked.",
+    "6a30b2fbd2999bc7b9bbaa96 changeQuestMessageText": "Tony wants the old BEAR routes marked on Woods.",
+    
+    "6a30b2fbd2999bc7b9bbaa97": "Mark the old BEAR route near Old Station",
+    "6a30b2fbd2999bc7b9bbaa98": "Mark the old BEAR route near Scav bunker",
+    "6a30b2fbd2999bc7b9bbaa99": "Mark the old BEAR route near Abandoned Village",
+    "6a30b2fbd2999bc7b9bbaa9a": "Survive and extract from Woods"
 }

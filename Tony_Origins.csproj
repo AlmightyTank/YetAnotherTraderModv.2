@@ -41,11 +41,13 @@
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\questassort\assort.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\quests\back_room_etiquette.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\no_names_spoken.json" />
+    <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\old_bear_trails.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\quest.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\street_tax.json" />
     <Content Remove="db\CustomQuestZones\back_room_etiquette.json" />
     <Content Remove="db\customquestzones\first_dead_drop.json" />
     <Content Remove="db\customquestzones\no_names_spoken.json" />
+    <Content Remove="db\customquestzones\old_bear_trails.json" />
     <Content Remove="db\customquestzones\street_tax.json" />
   </ItemGroup>
   <ItemGroup>
