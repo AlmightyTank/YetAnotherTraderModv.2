@@ -308,10 +308,10 @@
                     "items": [
                         {
                             "_id": "6a30b2fbd2999bc7b9bbaab0",
-                            "_tpl": "590c661e86f7741e566b646a"
+                            "_tpl": "6a3007dfd2999bc7b9bba97b"
                         }
                     ],
-                    "loyaltyLevel": 1,
+                    "loyaltyLevel": 2,
                     "target": "6a30b2fbd2999bc7b9bbaab0",
                     "traderId": "66a0f6b2c4d8e90123456789",
                     "type": "AssortmentUnlock",
