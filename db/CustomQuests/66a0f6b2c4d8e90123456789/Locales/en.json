@@ -131,5 +131,21 @@
 
     "6a30b2fbd2999bc7b9bbaaf2": "Locate the skimmed ammo cache in K Building, K4",
     "6a30b2fbd2999bc7b9bbaaf3": "Mark the skimmed ammo cache for Tony",
-    "6a30b2fbd2999bc7b9bbaaf4": "Survive and extract from Reserve"
+    "6a30b2fbd2999bc7b9bbaaf4": "Survive and extract from Reserve",
+
+    "6a3210dbd2999bc7b9bbab06 name": "Test Batch",
+    "6a3210dbd2999bc7b9bbab06 description": "Therapist throws away anything she cannot trust. That is why she sleeps better than most people in Tarkov, and why men like me still make money. Shoreline has a test batch that never made it back into clean hands: regular injectors, rejected batches, prototype stimulants, old labels, bad storage, maybe a few things Sanitar's people were smart enough not to touch. The case is in West 301 at the Health Resort. I will give you a key, but it is almost spent, so do not waste trips. Find the experimental stim case and bring it back sealed. Do not open it. Do not test anything.",
+    "6a3210dbd2999bc7b9bbab06 note": "Tony wants you to recover an experimental stim case from room W301 at the Health Resort.",
+    "6a3210dbd2999bc7b9bbab06 startedMessageText": "Shoreline. Health Resort west wing, room 301. Use the key, recover the experimental stim case, and bring it back sealed.",
+    "6a3210dbd2999bc7b9bbab06 successMessageText": "Good. Case is sealed, labels are ugly, and half of this should probably never touch a living body. That means it will sell. Therapist would sort this by safety. I sort it by demand.",
+    "6a3210dbd2999bc7b9bbab06 failMessageText": "You lost the case, opened it, wasted the key, or let Shoreline swallow you. None of that helps my business.",
+    "6a3210dbd2999bc7b9bbab06 acceptPlayerMessage": "I'll recover the stim case.",
+    "6a3210dbd2999bc7b9bbab06 declinePlayerMessage": "Not touching experimental medicine yet.",
+    "6a3210dbd2999bc7b9bbab06 completePlayerMessage": "Here's the experimental stim case.",
+    "6a3210dbd2999bc7b9bbab06 changeQuestMessageText": "Tony wants the experimental stim case recovered from West 301.",
+
+    "6a3210dbd2999bc7b9bbab07": "Locate the experimental stim case in room W301 at the Health Resort",
+    "6a3210dbd2999bc7b9bbab08": "Recover the experimental stim case",
+    "6a3210dbd2999bc7b9bbab09": "Survive and extract from Shoreline",
+    "6a3210dbd2999bc7b9bbab0a": "Hand over the experimental stim case to Tony"
 }
