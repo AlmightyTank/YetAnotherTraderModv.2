@@ -33,18 +33,18 @@
     "6a300025d2999bc7b9bba920": "Survive and extract from Ground Zero",
 
     "6a300025d2999bc7b9bba921 name": "Army Leftovers",
-    "6a300025d2999bc7b9bba921 description": "That envelope reached the right hands. Funny thing about frightened men, they remember things. One of Prapor's people just remembered an old Reserve parts cache that never made it onto the books. AK furniture, worn spares, magazines, cheap army scraps. I do not need you dragging metal across the base. Find the cache, mark it, and leave. My people will collect what Prapor forgot.",
-    "6a300025d2999bc7b9bba921 note": "Tony wants you to mark a forgotten army parts cache on Reserve so his people can recover it later.",
-    "6a300025d2999bc7b9bba921 startedMessageText": "Go to Reserve. Find the old army parts cache and mark it. Do not get greedy. Do not start opening crates.",
-    "6a300025d2999bc7b9bba921 successMessageText": "Good. The cache is marked. Prapor's man gave us the memory, you gave us the location, and now the leftovers belong to me.",
-    "6a300025d2999bc7b9bba921 failMessageText": "You either missed the cache or made too much noise near it. That is how useful things disappear.",
-    "6a300025d2999bc7b9bba921 acceptPlayerMessage": "I'll mark the cache.",
-    "6a300025d2999bc7b9bba921 declinePlayerMessage": "Not touching Prapor's leftovers yet.",
-    "6a300025d2999bc7b9bba921 completePlayerMessage": "The cache is marked.",
-    "6a300025d2999bc7b9bba921 changeQuestMessageText": "Tony wants the Reserve cache marked, not looted.",
+    "6a300025d2999bc7b9bba921 description": "That envelope reached the right hands. Funny thing about frightened men, they remember things. One of Prapor's people just remembered an old Reserve parts cache that never made it onto the books. Locked away behind RB-ST, where most rats stop looking. AK furniture, worn spares, magazines, cheap army scraps. I do not need you dragging metal across the base. Get inside, find the cache, mark it, and leave. My people will collect what Prapor forgot.",
+    "6a300025d2999bc7b9bba921 note": "Tony wants you to access RB-ST on Reserve and mark a forgotten army parts cache so his people can recover it later.",
+    "6a300025d2999bc7b9bba921 startedMessageText": "Go to Reserve. Get into RB-ST, find the old army parts cache, and mark it. Do not get greedy. Do not start opening crates.",
+    "6a300025d2999bc7b9bba921 successMessageText": "Good. The cache is marked. Prapor's man gave us the memory, you got through the lock, and now the leftovers belong to me.",
+    "6a300025d2999bc7b9bba921 failMessageText": "You either never got through RB-ST, missed the cache, or made too much noise near it. That is how useful things disappear.",
+    "6a300025d2999bc7b9bba921 acceptPlayerMessage": "I'll get into RB-ST and mark the cache.",
+    "6a300025d2999bc7b9bba921 declinePlayerMessage": "Not touching Prapor's locked leftovers yet.",
+    "6a300025d2999bc7b9bba921 completePlayerMessage": "The RB-ST cache is marked.",
+    "6a300025d2999bc7b9bba921 changeQuestMessageText": "Tony wants the RB-ST cache marked, not looted.",
 
     "6a300025d2999bc7b9bba922": "Forgotten army parts cache",
-    "6a300025d2999bc7b9bba923": "Locate the forgotten army parts cache on Reserve",
+    "6a300025d2999bc7b9bba923": "Locate the forgotten army parts cache behind RB-ST on Reserve",
     "6a300025d2999bc7b9bba924": "Mark the army parts cache for Tony",
     "6a300025d2999bc7b9bba925": "Survive and extract from Reserve",
 
@@ -116,5 +116,20 @@
     "6a30b2fbd2999bc7b9bbaab6": "Locate the buried weapons cache in the Reserve E2 bunkers",
     "6a30b2fbd2999bc7b9bbaab7": "Recover 2 sealed military weapon crates",
     "6a30b2fbd2999bc7b9bbaab8": "Survive and extract from Reserve",
-    "6a30b2fbd2999bc7b9bbaab9": "Hand over 2 sealed military weapon crates to Tony"
+    "6a30b2fbd2999bc7b9bbaab9": "Hand over 2 sealed military weapon crates to Tony",
+
+    "6a30b2fbd2999bc7b9bbaaf1 name": "Depot Rats",
+    "6a30b2fbd2999bc7b9bbaaf1 description": "Prapor's boys are shaving ammo before it reaches the books. They call it loss, damage, bad counts, whatever makes the paperwork sleep. I call it opportunity. One of those depot rats has a skimmed ammo cache inside K Building, K4, on Reserve. You are not taking it. You are marking it. My people will collect the ammo later, and Prapor's people will keep wondering where their missing rounds went.",
+    "6a30b2fbd2999bc7b9bbaaf1 note": "Tony wants you to locate and mark a skimmed ammo cache in K Building, K4, on Reserve.",
+    "6a30b2fbd2999bc7b9bbaaf1 startedMessageText": "Reserve. K Building, K4. Find the skimmed ammo cache and mark it. Do not haul boxes like a mule.",
+    "6a30b2fbd2999bc7b9bbaaf1 successMessageText": "Good. The stash is marked. Prapor's rats stole from him, and now I steal from the rats. I pulled a few boxes of BP from the count before my people moved the rest. Do not ask where it came from.",
+    "6a30b2fbd2999bc7b9bbaaf1 failMessageText": "You missed the stash or made too much noise near it. Depot rats scatter fast.",
+    "6a30b2fbd2999bc7b9bbaaf1 acceptPlayerMessage": "I'll mark the stash.",
+    "6a30b2fbd2999bc7b9bbaaf1 declinePlayerMessage": "Not touching Prapor's depot rats yet.",
+    "6a30b2fbd2999bc7b9bbaaf1 completePlayerMessage": "The ammo stash is marked.",
+    "6a30b2fbd2999bc7b9bbaaf1 changeQuestMessageText": "Tony wants the skimmed ammo cache in K Building, K4, marked for pickup.",
+
+    "6a30b2fbd2999bc7b9bbaaf2": "Locate the skimmed ammo cache in K Building, K4",
+    "6a30b2fbd2999bc7b9bbaaf3": "Mark the skimmed ammo cache for Tony",
+    "6a30b2fbd2999bc7b9bbaaf4": "Survive and extract from Reserve"
 }
