@@ -7,7 +7,7 @@ using SPTarkov.Server.Core.Utils.Logger;
 using SPTarkov.Server.Core.Models.Spt.Config;
 using SPTarkov.Server.Core.Servers;
 
-namespace Tony;
+namespace Tony.src;
 
 [Injectable(TypePriority = OnLoadOrder.PostSptModLoader + 10)]
 public class TonyInsuranceDialoguePatch(

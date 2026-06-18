@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace Tony;
+namespace Tony.src;
 
 public static class TonyLogger
 {

@@ -5,7 +5,7 @@ using SPTarkov.Server.Core.Servers;
 using System;
 using System.Threading.Tasks;
 
-namespace Tony;
+namespace Tony.src;
 
 /// <summary>
 /// Service to check and unlock trader based on player level.
@@ -16,7 +16,7 @@ public class TraderUnlockService : IOnLoad, IDisposable
 {
     private readonly ISptLogger<TraderUnlockService> _logger;
     private readonly SaveServer _saveServer;
-    private System.Threading.Timer? _timer;
+    private Timer? _timer;
     
     private const string TonyTraderId = "66a0f6b2c4d8e90123456789";
     
@@ -42,7 +42,7 @@ public class TraderUnlockService : IOnLoad, IDisposable
             CheckAllProfiles();
             
             // "Live" check every 10 seconds
-            _timer = new System.Threading.Timer(
+            _timer = new Timer(
                 _ => CheckAllProfiles(), 
                 null, 
                 TimeSpan.FromSeconds(10), 
