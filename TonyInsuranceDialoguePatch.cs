@@ -4,13 +4,16 @@ using SPTarkov.Server.Core.Models.Common;
 using SPTarkov.Server.Core.Models.Utils;
 using SPTarkov.Server.Core.Services;
 using SPTarkov.Server.Core.Utils.Logger;
+using SPTarkov.Server.Core.Models.Spt.Config;
+using SPTarkov.Server.Core.Servers;
 
 namespace Tony;
 
 [Injectable(TypePriority = OnLoadOrder.PostSptModLoader + 10)]
 public class TonyInsuranceDialoguePatch(
     ISptLogger<TonyInsuranceDialoguePatch> logger,
-    DatabaseService databaseService
+    DatabaseService databaseService,
+    ConfigServer configServer
 ) : IOnLoad
 {
     private static readonly MongoId TonyId = new("66a0f6b2c4d8e90123456789");
@@ -19,8 +22,23 @@ public class TonyInsuranceDialoguePatch(
     {
         PatchTraderDialogue();
         PatchLocales();
+        PatchInsuranceReturnChance();
 
         return Task.CompletedTask;
+    }
+
+    private void PatchInsuranceReturnChance()
+    {
+        InsuranceConfig insuranceConfig = configServer.GetConfig<InsuranceConfig>();
+
+        insuranceConfig.ReturnChancePercent ??= [];
+
+        // Tony insurance return chance.
+        // 95 = 95% chance item returns, 5% chance it gets deleted.
+        // 100 = always returns unless map rules like Labs block insurance.
+        insuranceConfig.ReturnChancePercent[TonyId] = 95;
+
+        logger.Success("[Tony] Patched insurance return chance.");
     }
 
     private void PatchTraderDialogue()
