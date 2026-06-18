@@ -1,9 +1,9 @@
 using System;
 using System.IO;
 
-namespace Tony.src;
+namespace YetAnotherTraderMod.src;
 
-public static class TonyLogger
+public static class YATMLogger
 {
     private static string? _logPath;
     private static bool _initialized = false;

@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace Tony.Features.CustomConsumables;
+namespace YetAnotherTraderMod.Features.CustomConsumables;
 
 public sealed class CustomConsumableDefinition
 {

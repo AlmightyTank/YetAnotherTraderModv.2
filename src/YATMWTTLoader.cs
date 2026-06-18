@@ -5,10 +5,10 @@ using SPTarkov.Server.Core.Models.Spt.Mod;
 using WTTServerCommonLib;
 using Path = System.IO.Path;
 
-namespace Tony.src;
+namespace YetAnotherTraderMod.src;
 
 [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 3)]
-public class TonyQuestLoader(WTTServerCommonLib.WTTServerCommonLib wttCommon) : IOnLoad
+public class YATMWTTLoader(WTTServerCommonLib.WTTServerCommonLib wttCommon) : IOnLoad
 {
     public async Task OnLoad()
     {

@@ -13,11 +13,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using YetAnotherTraderMod.config;
 using Path = System.IO.Path;
-using Tony.config;
-using Tony.Config;
 
-namespace Tony.src;
+namespace YetAnotherTraderMod.src;
 
 public record ModMetadata : AbstractModMetadata
 {
@@ -38,13 +37,13 @@ public record ModMetadata : AbstractModMetadata
 }
 
 [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 1)]
-public class TonyMod(
+public class YetAnotherTraderMod(
     ModHelper modHelper,
     ImageRouter imageRouter,
     ConfigServer configServer,
     DatabaseServer databaseServer,
     AddCustomTraderHelper addCustomTraderHelper,
-    TraderUnlockService traderUnlockService)
+    YATMUnlockService YATMUnlockService)
     : IOnLoad
 {
     private readonly TraderConfig _traderConfig = configServer.GetConfig<TraderConfig>();
@@ -54,26 +53,26 @@ public class TonyMod(
     {
         var pathToMod = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
 
-        TonyLogger.Init(pathToMod);
-        TonyLogger.Log("Mod OnLoad started.");
+        YATMLogger.Init(pathToMod);
+        YATMLogger.Log("Mod OnLoad started.");
 
         var traderBase = modHelper.GetJsonDataFromFile<TraderBase>(pathToMod, "db/CustomTrader/Tony/base.json");
         var assort = modHelper.GetJsonDataFromFile<TraderAssort>(pathToMod, "db/CustomTrader/Tony/assort.json");
         var traderImagePath = Path.Combine(pathToMod, "db/CustomTrader/Tony/Tony.jpg");
 
-        var config = new TonyConfig(pathToMod, databaseServer);
+        var config = new YATMConfig(pathToMod, databaseServer);
         config.LoadOrGenerate(traderBase, assort);
 
-        TonyLogger.IsDebugEnabled = config.Settings.DebugLogging;
-        if (TonyLogger.IsDebugEnabled)
+        YATMLogger.IsDebugEnabled = config.Settings.DebugLogging;
+        if (YATMLogger.IsDebugEnabled)
         {
-            TonyLogger.LogDebug("Debug Mode Enabled. Config Loaded.");
-            TonyLogger.LogDebug($"  MinLevel: {config.Settings.MinLevel}");
-            TonyLogger.LogDebug($"  UnlockedByDefault: {config.Settings.UnlockedByDefault}");
-            TonyLogger.LogDebug($"  UnlimitedStock: {config.Settings.UnlimitedStock}");
-            TonyLogger.LogDebug($"  RandomizeStock: {config.Settings.RandomizeStockAvailable} (Chance: {config.Settings.OutOfStockChance}%)");
-            TonyLogger.LogDebug($"  PriceMultiplier: {config.Settings.PriceMultiplier}");
-            TonyLogger.LogDebug($"  ForceCashOnly: {config.Settings.ForceCashOnly}");
+            YATMLogger.LogDebug("Debug Mode Enabled. Config Loaded.");
+            YATMLogger.LogDebug($"  MinLevel: {config.Settings.MinLevel}");
+            YATMLogger.LogDebug($"  UnlockedByDefault: {config.Settings.UnlockedByDefault}");
+            YATMLogger.LogDebug($"  UnlimitedStock: {config.Settings.UnlimitedStock}");
+            YATMLogger.LogDebug($"  RandomizeStock: {config.Settings.RandomizeStockAvailable} (Chance: {config.Settings.OutOfStockChance}%)");
+            YATMLogger.LogDebug($"  PriceMultiplier: {config.Settings.PriceMultiplier}");
+            YATMLogger.LogDebug($"  ForceCashOnly: {config.Settings.ForceCashOnly}");
         }
 
         traderBase.UnlockedByDefault = config.Settings.UnlockedByDefault;
@@ -95,16 +94,16 @@ public class TonyMod(
                         var targetType = Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType;
                         object val = Convert.ChangeType(config.Settings.InsurancePriceCoef, targetType);
                         prop.SetValue(level, val);
-                        TonyLogger.LogDebug($"[Insurance] Set Level {level.MinLevel} Coef to: {val}");
+                        YATMLogger.LogDebug($"[Insurance] Set Level {level.MinLevel} Coef to: {val}");
                     }
                     else
                     {
-                        TonyLogger.LogDebug("[Insurance] Warning: InsurancePriceCoefficient property not found on LoyaltyLevel.");
+                        YATMLogger.LogDebug("[Insurance] Warning: InsurancePriceCoefficient property not found on LoyaltyLevel.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    TonyLogger.Log($"[Insurance] Error setting coef for level: {ex.Message}");
+                    YATMLogger.Log($"[Insurance] Error setting coef for level: {ex.Message}");
                 }
             }
         }
@@ -122,21 +121,21 @@ public class TonyMod(
 
         if (!config.Settings.UnlockedByDefault)
         {
-            TraderUnlockService.EnableLevelLock = true;
-            TraderUnlockService.MinLevelRequired = config.Settings.MinLevel;
-            traderUnlockService.OnLoad();
-            TonyLogger.Log($"Level-based unlock enabled. Required level: {config.Settings.MinLevel}");
+            YATMUnlockService.EnableLevelLock = true;
+            YATMUnlockService.MinLevelRequired = config.Settings.MinLevel;
+            YATMUnlockService.OnLoad();
+            YATMLogger.Log($"Level-based unlock enabled. Required level: {config.Settings.MinLevel}");
         }
         else
         {
-            TraderUnlockService.EnableLevelLock = false;
-            TraderUnlockService.ForceUnlock = true;
-            TonyLogger.Log("Trader unlocked by default (ForceUnlock active).");
+            YATMUnlockService.EnableLevelLock = false;
+            YATMUnlockService.ForceUnlock = true;
+            YATMLogger.Log("Trader unlocked by default (ForceUnlock active).");
         }
 
         if (string.IsNullOrEmpty(traderBase.Id))
         {
-            TonyLogger.Log("CRITICAL ERROR: traderBase.Id is null or empty! Hardcoding ID to ensure stability.");
+            YATMLogger.Log("CRITICAL ERROR: traderBase.Id is null or empty! Hardcoding ID to ensure stability.");
             traderBase.Id = "66a0f6b2c4d8e90123456789";
         }
 
@@ -162,7 +161,7 @@ public class TonyMod(
 
         if (config.Settings.RandomizeStockAvailable || config.Settings.UnlimitedStock)
         {
-            TonyLogger.LogDebug("Starting Stock Manipulation...");
+            YATMLogger.LogDebug("Starting Stock Manipulation...");
             var itemsToRemove = new List<string>();
             var itemsToRemoveNames = new List<string>();
             var random = new Random();
@@ -184,14 +183,14 @@ public class TonyMod(
                         itemsToRemove.Add(item.Id);
 
                         string itemName = item.Id;
-                        var tpl = TonyConfig.GetTemplateId(item);
+                        var tpl = YATMConfig.GetTemplateId(item);
                         if (!string.IsNullOrEmpty(tpl) && locales.Value != null && locales.Value.TryGetValue($"{tpl} Name", out var nameVal))
                         {
                             itemName = nameVal?.ToString() ?? item.Id;
                         }
 
                         itemsToRemoveNames.Add($"{itemName} ({item.Id})");
-                        TonyLogger.LogDebug($"[Random Stock] removing: {itemName} ({item.Id})");
+                        YATMLogger.LogDebug($"[Random Stock] removing: {itemName} ({item.Id})");
                         continue;
                     }
                 }
@@ -219,7 +218,7 @@ public class TonyMod(
                 }
             }
 
-            TonyLogger.LogDebug($"Total items modified for Stock setting: {modifiedCount}");
+            YATMLogger.LogDebug($"Total items modified for Stock setting: {modifiedCount}");
 
             if (itemsToRemove.Count > 0)
             {
@@ -231,19 +230,19 @@ public class TonyMod(
                     assort.LoyalLevelItems.Remove(id);
                 }
 
-                TonyLogger.Log($"[Stock] Removed {itemsToRemove.Count} offers due to randomization.");
-                TonyLogger.LogDebug($"Removed Items:\n  {string.Join("\n  ", itemsToRemoveNames)}");
+                YATMLogger.Log($"[Stock] Removed {itemsToRemove.Count} offers due to randomization.");
+                YATMLogger.LogDebug($"Removed Items:\n  {string.Join("\n  ", itemsToRemoveNames)}");
             }
             else
             {
-                TonyLogger.LogDebug("No items removed by randomization this turn.");
+                YATMLogger.LogDebug("No items removed by randomization this turn.");
             }
         }
 
         // Price multiplier now only affects money components, not barter item counts.
         if (Math.Abs(config.Settings.PriceMultiplier - 1.0) > 0.001)
         {
-            TonyLogger.LogDebug($"Applying Price Multiplier {config.Settings.PriceMultiplier}...");
+            YATMLogger.LogDebug($"Applying Price Multiplier {config.Settings.PriceMultiplier}...");
             int changedCount = 0;
 
             var itemMap = assort.Items.ToDictionary(x => x.Id, x => x);
@@ -258,7 +257,7 @@ public class TonyMod(
                 {
                     foreach (var component in schemeSubList)
                     {
-                        if (component.Count.HasValue && TonyConfig.IsCurrencyTemplate(component.Template.ToString()))
+                        if (component.Count.HasValue && YATMConfig.IsCurrencyTemplate(component.Template.ToString()))
                         {
                             var oldPrice = component.Count.Value;
                             component.Count = (double)Math.Round(component.Count.Value * config.Settings.PriceMultiplier);
@@ -266,27 +265,27 @@ public class TonyMod(
                             string itemName = itemId;
                             if (itemMap.TryGetValue(itemId, out var item))
                             {
-                                var tpl = TonyConfig.GetTemplateId(item);
+                                var tpl = YATMConfig.GetTemplateId(item);
                                 if (!string.IsNullOrEmpty(tpl) && localesForPrice.Value != null && localesForPrice.Value.TryGetValue($"{tpl} Name", out var nameVal))
                                 {
                                     itemName = nameVal?.ToString() ?? itemId;
                                 }
                             }
 
-                            TonyLogger.LogDebug($"  Price adjust: {oldPrice} -> {component.Count} | {itemName} ({itemId})");
+                            YATMLogger.LogDebug($"  Price adjust: {oldPrice} -> {component.Count} | {itemName} ({itemId})");
                             changedCount++;
                         }
                     }
                 }
             }
 
-            TonyLogger.Log($"[Pricing] Applied Global Price Multiplier: {config.Settings.PriceMultiplier} to {changedCount} money components.");
+            YATMLogger.Log($"[Pricing] Applied Global Price Multiplier: {config.Settings.PriceMultiplier} to {changedCount} money components.");
         }
 
         var timerRandom = new Random();
         int restockTime = timerRandom.Next(config.Settings.TraderRefreshMin, config.Settings.TraderRefreshMax);
 
-        TonyLogger.Log($"Setting trader restock timer to {restockTime} seconds.");
+        YATMLogger.Log($"Setting trader restock timer to {restockTime} seconds.");
         addCustomTraderHelper.SetTraderUpdateTime(
             _traderConfig,
             traderBase,
@@ -299,7 +298,7 @@ public class TonyMod(
 
         if (config.Settings.DebugLogging)
         {
-            TonyLogger.Log("Trader initialized. Debug Enabled.");
+            YATMLogger.Log("Trader initialized. Debug Enabled.");
         }
 
         var localeFirstName = traderBase.Nickname ?? traderBase.Name ?? "Tony";
@@ -309,7 +308,7 @@ public class TonyMod(
         return Task.CompletedTask;
     }
 
-    private static void ApplyConfiguredPayments(TraderAssort assort, TonyConfig config)
+    private static void ApplyConfiguredPayments(TraderAssort assort, YATMConfig config)
     {
         var rootItems = assort.Items
             .Where(x => x.ParentId == "hideout")
@@ -323,13 +322,13 @@ public class TonyMod(
 
             if (matchingOffers.Count == 0)
             {
-                TonyLogger.LogDebug($"[Pricing] No matching offer for {priceConfig.ItemName} / {priceConfig.TplId}");
+                YATMLogger.LogDebug($"[Pricing] No matching offer for {priceConfig.ItemName} / {priceConfig.TplId}");
                 continue;
             }
 
             if (matchingOffers.Count > 1 && string.IsNullOrWhiteSpace(priceConfig.OfferId))
             {
-                TonyLogger.LogDebug($"[Pricing] Multiple offers matched TplId {priceConfig.TplId}. Add OfferId to items.json for exact control.");
+                YATMLogger.LogDebug($"[Pricing] Multiple offers matched TplId {priceConfig.TplId}. Add OfferId to items.json for exact control.");
             }
 
             foreach (var offer in matchingOffers)
@@ -348,7 +347,7 @@ public class TonyMod(
             return itemId == priceConfig.OfferId;
         }
 
-        var tpl = TonyConfig.GetTemplateId(item);
+        var tpl = YATMConfig.GetTemplateId(item);
         return !string.IsNullOrEmpty(tpl) && tpl == priceConfig.TplId;
     }
 
@@ -360,7 +359,7 @@ public class TonyMod(
     {
         if (!assort.BarterScheme.TryGetValue(offerId, out var existingSchemeList))
         {
-            TonyLogger.LogDebug($"[Pricing] Offer {offerId} has no barter_scheme entry.");
+            YATMLogger.LogDebug($"[Pricing] Offer {offerId} has no barter_scheme entry.");
             return;
         }
 
@@ -371,7 +370,7 @@ public class TonyMod(
 
         if (shouldUseCash)
         {
-            var currencyTpl = TonyConfig.CurrencyToTemplate(priceConfig.Currency);
+            var currencyTpl = YATMConfig.CurrencyToTemplate(priceConfig.Currency);
 
             ReplaceOfferPaymentScheme(existingSchemeList, new List<List<PaymentConfigItem>>
             {
@@ -386,12 +385,12 @@ public class TonyMod(
                 }
             });
 
-            TonyLogger.LogDebug($"[Pricing] Cash override: {priceConfig.ItemName} = {priceConfig.Price} {priceConfig.Currency}");
+            YATMLogger.LogDebug($"[Pricing] Cash override: {priceConfig.ItemName} = {priceConfig.Price} {priceConfig.Currency}");
             return;
         }
 
         ReplaceOfferPaymentScheme(existingSchemeList, priceConfig.BarterScheme);
-        TonyLogger.LogDebug($"[Pricing] Barter override: {priceConfig.ItemName}");
+        YATMLogger.LogDebug($"[Pricing] Barter override: {priceConfig.ItemName}");
     }
 
     private static void ReplaceOfferPaymentScheme(object existingSchemeListObject, List<List<PaymentConfigItem>> newScheme)

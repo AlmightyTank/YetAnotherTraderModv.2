@@ -7,11 +7,11 @@ using SPTarkov.Server.Core.Utils.Logger;
 using SPTarkov.Server.Core.Models.Spt.Config;
 using SPTarkov.Server.Core.Servers;
 
-namespace Tony.src;
+namespace YetAnotherTraderMod.src;
 
 [Injectable(TypePriority = OnLoadOrder.PostSptModLoader + 10)]
-public class TonyInsuranceDialoguePatch(
-    ISptLogger<TonyInsuranceDialoguePatch> logger,
+public class YATMInsurancePatch(
+    ISptLogger<YATMInsurancePatch> logger,
     DatabaseService databaseService,
     ConfigServer configServer
 ) : IOnLoad

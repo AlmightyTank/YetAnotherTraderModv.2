@@ -12,7 +12,7 @@ using SPTarkov.Server.Core.Services;
 using SPTarkov.Server.Core.Services.Mod;
 using Path = System.IO.Path;
 
-namespace Tony.Features.CustomConsumables;
+namespace YetAnotherTraderMod.Features.CustomConsumables;
 
 /// <summary>
 /// Loads custom stim/med JSON files from db/CustomsComsumables/*.json.
