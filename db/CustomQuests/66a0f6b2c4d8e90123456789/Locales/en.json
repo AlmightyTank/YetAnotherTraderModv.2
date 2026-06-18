@@ -147,5 +147,21 @@
     "6a3210dbd2999bc7b9bbab07": "Locate the experimental stim case in room W301 at the Health Resort",
     "6a3210dbd2999bc7b9bbab08": "Recover the experimental stim case",
     "6a3210dbd2999bc7b9bbab09": "Survive and extract from Shoreline",
-    "6a3210dbd2999bc7b9bbab0a": "Hand over the experimental stim case to Tony"
+    "6a3210dbd2999bc7b9bbab0a": "Hand over the experimental stim case to Tony",
+
+    "6a3210dbd2999bc7b9bbab29 name": "Safe Hands",
+    "6a3210dbd2999bc7b9bbab29 description": "The crates moved. The routes opened. Then someone hit one of my couriers near Interchange. He made it inside ULTRA before my people reached him, and they used Mantis as a quick triage point. Smart choice. Medical store, closed doors, enough clutter to hide behind. They pulled him out, but not everything came with them. There is a sealed trauma bag still inside Mantis. I want it back. This is not medicine for sale. This is how useful men keep breathing.",
+    "6a3210dbd2999bc7b9bbab29 note": "Tony wants you to recover a sealed trauma bag from an improvised triage point inside Mantis on Interchange.",
+    "6a3210dbd2999bc7b9bbab29 startedMessageText": "Interchange. Mantis, inside ULTRA. Find the triage point, recover the trauma bag, and leave alive.",
+    "6a3210dbd2999bc7b9bbab29 successMessageText": "Good. Bag is back. That keeps my people alive and keeps the route moving. Safe hands are worth paying for.",
+    "6a3210dbd2999bc7b9bbab29 failMessageText": "You lost the bag or let Interchange swallow you. Dead couriers are expensive. Lost supplies are worse.",
+    "6a3210dbd2999bc7b9bbab29 acceptPlayerMessage": "I'll recover the trauma bag.",
+    "6a3210dbd2999bc7b9bbab29 declinePlayerMessage": "Not going to Interchange for this yet.",
+    "6a3210dbd2999bc7b9bbab29 completePlayerMessage": "Here's the trauma bag.",
+    "6a3210dbd2999bc7b9bbab29 changeQuestMessageText": "Tony wants the Mantis triage point checked and the trauma bag recovered from Interchange.",
+
+    "6a3210dbd2999bc7b9bbab2d": "Locate Tony's improvised triage point inside Mantis",
+    "6a3210dbd2999bc7b9bbab2e": "Recover Tony's sealed trauma bag",
+    "6a3210dbd2999bc7b9bbab33": "Survive and extract from Interchange",
+    "6a3210dbd2999bc7b9bbab35": "Hand over Tony's sealed trauma bag"
 }
