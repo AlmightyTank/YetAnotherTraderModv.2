@@ -1948,33 +1948,6 @@
         ]
     },
     {
-        "OfferId": "6a300025d2999bc7b9bba951",
-        "TplId": "6a300025d2999bc7b9bba950",
-        "ItemName": "UNKNOWN_ITEM_6a300025d2999bc7b9bba950",
-        "Price": 0,
-        "Currency": "RUB",
-        "CashOnly": false,
-        "BarterScheme": [
-            [
-                {
-                    "TplId": "5c0e530286f7747fa1419862",
-                    "ItemName": "Propital regenerative stimulant injector",
-                    "Count": 1
-                },
-                {
-                    "TplId": "5c0e533786f7747fa23f4d47",
-                    "ItemName": "Zagustin hemostatic drug injector",
-                    "Count": 1
-                },
-                {
-                    "TplId": "5d1b3f2d86f774253763b735",
-                    "ItemName": "Disposable syringe",
-                    "Count": 2
-                }
-            ]
-        ]
-    },
-    {
         "OfferId": "6a30b2fbd2999bc7b9bbaaf0",
         "TplId": "5e32f56fcb6d5863cc5e5ee4",
         "ItemName": "VOG-17 Khattabka improvised hand grenade",
