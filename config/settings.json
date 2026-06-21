@@ -6,9 +6,9 @@
     "AddTraderToFleaMarket": true, //[Flea Market] If true, Tony's offers appear on the Flea Market search.
     "InsurancePriceCoef": 50, // [Insurance] Price multiplier for insurance. 25 = 25%. Higher is more expensive.
     "RepairQuality": 0.8, // [Repair] Quality of repairs (0.0 to 1.0). 0.8 is High Quality (loss accumulation is lower).
-    "RandomizeStockAvailable": false, //[Stock] If true, some items will randomly be out of stock each reset.
-    "OutOfStockChance": 15, //[Stock] The percentage chance (0-100) that an item is out of stock (if Randomize is true).
+    "RandomizeStockAvailable": true, //[Stock] If true, some items will randomly be out of stock each reset.
+    "OutOfStockChance": 5, //[Stock] The percentage chance (0-100) that an item is out of stock (if Randomize is true).
     "UnlimitedStock": false, //[Stock] If true, all items have infinite stock. Overrides randomization. Note: Refilling issues are currently being patched by auto-clearing BuyRestrictions.    
-    "PriceMultiplier": 1.0127, //[Pricing] Global multiplier for all item prices. 1.0 = standard price. 1.0127 = +1.27%.    
+    "PriceMultiplier": 1.0927, //[Pricing] Global multiplier for all item prices. 1.0 = standard price. 1.0127 = +1.27%.    
     "DebugLogging": false //[Debug] Enables detailed logs in the server console for troubleshooting.
 }

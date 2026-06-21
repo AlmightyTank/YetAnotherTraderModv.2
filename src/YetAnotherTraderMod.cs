@@ -162,10 +162,12 @@ public class YetAnotherTraderMod(
         if (config.Settings.RandomizeStockAvailable || config.Settings.UnlimitedStock)
         {
             YATMLogger.LogDebug("Starting Stock Manipulation...");
-            var itemsToRemove = new List<string>();
-            var itemsToRemoveNames = new List<string>();
+
+            var outOfStockNames = new List<string>();
             var random = new Random();
+
             int modifiedCount = 0;
+            int zeroedCount = 0;
 
             var locales = databaseServer.GetTables().Locales.Global["en"];
 
@@ -176,66 +178,76 @@ public class YetAnotherTraderMod(
                     continue;
                 }
 
+                if (item.Upd == null)
+                {
+                    YATMLogger.LogDebug($"[Stock] Skipping offer with no Upd data: {item.Id}");
+                    continue;
+                }
+
+                string itemName = item.Id;
+                var tpl = YATMConfig.GetTemplateId(item);
+
+                if (!string.IsNullOrEmpty(tpl)
+                    && locales.Value != null
+                    && locales.Value.TryGetValue($"{tpl} Name", out var nameVal))
+                {
+                    itemName = nameVal?.ToString() ?? item.Id;
+                }
+
                 if (config.Settings.RandomizeStockAvailable)
                 {
                     if (random.Next(0, 100) < config.Settings.OutOfStockChance)
                     {
-                        itemsToRemove.Add(item.Id);
+                        // Keep the offer loaded in the trader assort.
+                        // Do not remove the root item, child items, barter scheme, or loyalty entry.
+                        // Setting stock to 0 makes it show as out of stock instead of disappearing.
+                        item.Upd.UnlimitedCount = false;
+                        item.Upd.StackObjectsCount = 0;
 
-                        string itemName = item.Id;
-                        var tpl = YATMConfig.GetTemplateId(item);
-                        if (!string.IsNullOrEmpty(tpl) && locales.Value != null && locales.Value.TryGetValue($"{tpl} Name", out var nameVal))
+                        if (item.Upd.BuyRestrictionMax > 0)
                         {
-                            itemName = nameVal?.ToString() ?? item.Id;
+                            item.Upd.BuyRestrictionCurrent = 0;
                         }
 
-                        itemsToRemoveNames.Add($"{itemName} ({item.Id})");
-                        YATMLogger.LogDebug($"[Random Stock] removing: {itemName} ({item.Id})");
+                        zeroedCount++;
+                        outOfStockNames.Add($"{itemName} ({item.Id})");
+
+                        YATMLogger.LogDebug($"[Random Stock] zeroed stock: {itemName} ({item.Id})");
                         continue;
                     }
                 }
 
-                if (item.Upd != null)
+                if (config.Settings.UnlimitedStock)
                 {
-                    if (config.Settings.UnlimitedStock)
-                    {
-                        item.Upd.UnlimitedCount = true;
-                        item.Upd.StackObjectsCount = 999999;
-                        if (item.Upd.BuyRestrictionMax > 0)
-                        {
-                            item.Upd.BuyRestrictionMax = 9999;
-                            item.Upd.BuyRestrictionCurrent = 0;
-                        }
+                    item.Upd.UnlimitedCount = true;
+                    item.Upd.StackObjectsCount = 999999;
 
-                        modifiedCount++;
-                    }
-                    else
+                    if (item.Upd.BuyRestrictionMax > 0)
                     {
-                        item.Upd.UnlimitedCount = false;
-                        item.Upd.StackObjectsCount = 100;
-                        modifiedCount++;
+                        item.Upd.BuyRestrictionMax = 9999;
+                        item.Upd.BuyRestrictionCurrent = 0;
                     }
+
+                    modifiedCount++;
+                }
+                else
+                {
+                    item.Upd.UnlimitedCount = false;
+                    item.Upd.StackObjectsCount = 100;
+                    modifiedCount++;
                 }
             }
 
             YATMLogger.LogDebug($"Total items modified for Stock setting: {modifiedCount}");
 
-            if (itemsToRemove.Count > 0)
+            if (zeroedCount > 0)
             {
-                assort.Items.RemoveAll(x => itemsToRemove.Contains(x.Id) || itemsToRemove.Contains(x.ParentId));
-
-                foreach (var id in itemsToRemove)
-                {
-                    assort.BarterScheme.Remove(id);
-                    assort.LoyalLevelItems.Remove(id);
-                }
-
-                YATMLogger.Log($"[Stock] Removed {itemsToRemove.Count} offers due to randomization.");
-                YATMLogger.LogDebug($"Removed Items:\n  {string.Join("\n  ", itemsToRemoveNames)}");
+                YATMLogger.Log($"[Stock] Zeroed {zeroedCount} offers due to randomization.");
+                YATMLogger.LogDebug($"Out of Stock Items:\n  {string.Join("\n  ", outOfStockNames)}");
             }
             else
             {
-                YATMLogger.LogDebug("No items removed by randomization this turn.");
+                YATMLogger.LogDebug("No items were zeroed by randomization this turn.");
             }
         }
 
