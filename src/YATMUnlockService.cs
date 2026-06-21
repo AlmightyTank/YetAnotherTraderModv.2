@@ -5,18 +5,18 @@ using SPTarkov.Server.Core.Servers;
 using System;
 using System.Threading.Tasks;
 
-namespace Tony;
+namespace YetAnotherTraderMod.src;
 
 /// <summary>
 /// Service to check and unlock trader based on player level.
 /// Uses a timer to actively check profiles for "Live" unlock.
 /// </summary>
 [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 2)]
-public class TraderUnlockService : IOnLoad, IDisposable
+public class YATMUnlockService : IOnLoad, IDisposable
 {
-    private readonly ISptLogger<TraderUnlockService> _logger;
+    private readonly ISptLogger<YATMUnlockService> _logger;
     private readonly SaveServer _saveServer;
-    private System.Threading.Timer? _timer;
+    private Timer? _timer;
     
     private const string TonyTraderId = "66a0f6b2c4d8e90123456789";
     
@@ -25,8 +25,8 @@ public class TraderUnlockService : IOnLoad, IDisposable
     public static bool EnableLevelLock { get; set; } = false;
     public static bool ForceUnlock { get; set; } = false; // [NEW] Force unlock if enabled by default
 
-    public TraderUnlockService(
-        ISptLogger<TraderUnlockService> logger,
+    public YATMUnlockService(
+        ISptLogger<YATMUnlockService> logger,
         SaveServer saveServer)
     {
         _logger = logger;
@@ -37,12 +37,12 @@ public class TraderUnlockService : IOnLoad, IDisposable
     {
         if (EnableLevelLock)
         {
-            TonyLogger.Log($"Unlock Service Active. Required Level: {MinLevelRequired}");
+            YATMLogger.Log($"Unlock Service Active. Required Level: {MinLevelRequired}");
             // Initial check
             CheckAllProfiles();
             
             // "Live" check every 10 seconds
-            _timer = new System.Threading.Timer(
+            _timer = new Timer(
                 _ => CheckAllProfiles(), 
                 null, 
                 TimeSpan.FromSeconds(10), 
@@ -50,7 +50,7 @@ public class TraderUnlockService : IOnLoad, IDisposable
         }
         else if (ForceUnlock)
         {
-             TonyLogger.Log("Forcing Unlock for all profiles (UnlockedByDefault).");
+             YATMLogger.Log("Forcing Unlock for all profiles (UnlockedByDefault).");
              CheckAllProfiles();
         }
 
@@ -73,7 +73,7 @@ public class TraderUnlockService : IOnLoad, IDisposable
         {
             var profiles = _saveServer.GetProfiles();
             // Optional: Log every check tick? That's spammy. Maybe only if profiles found.
-            // TonyLogger.Log($"Checking {profiles.Count} profiles...");
+            // YATMLogger.Log($"Checking {profiles.Count} profiles...");
             
             foreach (var (sessionId, profile) in profiles)
             {
@@ -82,7 +82,7 @@ public class TraderUnlockService : IOnLoad, IDisposable
         }
         catch (Exception ex)
         {
-            TonyLogger.Log($"Error checking profiles: {ex.Message}");
+            YATMLogger.Log($"Error checking profiles: {ex.Message}");
         }
     }
     
@@ -116,7 +116,7 @@ public class TraderUnlockService : IOnLoad, IDisposable
                              ?? GetMemberValue(profile, "CharacterData");
             if (characters == null) 
             {
-                TonyLogger.Log($"Session {sessionId}: CharacterData missing.");
+                YATMLogger.Log($"Session {sessionId}: CharacterData missing.");
                 return;
             }
             
@@ -126,7 +126,7 @@ public class TraderUnlockService : IOnLoad, IDisposable
             
             if (pmcProfile == null) 
             {
-                 TonyLogger.Log($"Session {sessionId}: PmcData missing.");
+                 YATMLogger.Log($"Session {sessionId}: PmcData missing.");
                  return;
             }
             
@@ -170,7 +170,7 @@ public class TraderUnlockService : IOnLoad, IDisposable
                             SetUnlocked(traderInfo, true);
                             var msg = $"LIVE UNLOCK: Session {sessionId} reached Level {playerLevel}. UNLOCKED!";
                             _logger.Info($"[Tony] {msg}"); // Keep console for critical event
-                            TonyLogger.Log(msg);
+                            YATMLogger.Log(msg);
                         }
                     }
                 }
@@ -178,13 +178,13 @@ public class TraderUnlockService : IOnLoad, IDisposable
                 {
                      // Only log warning once? Or every time?
                      // Start spamming file is better than silent failure for debug mode.
-                     // TonyLogger.Log($"WARNING: Trader {TonyTraderId} missing in TradersInfo dict for {sessionId}.");
+                     // YATMLogger.Log($"WARNING: Trader {TonyTraderId} missing in TradersInfo dict for {sessionId}.");
                 }
             }
         }
         catch (Exception ex)
         {
-            TonyLogger.Log($"EXCEPTION in Unlock: {ex.Message}");
+            YATMLogger.Log($"EXCEPTION in Unlock: {ex.Message}");
         }
     }
 

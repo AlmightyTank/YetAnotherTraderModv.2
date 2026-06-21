@@ -6,13 +6,12 @@ using System.Reflection;
 using System.Text.Json;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
 using SPTarkov.Server.Core.Servers;
-using Tony;
-using Tony.Config;
+using YetAnotherTraderMod.src;
 using Path = System.IO.Path;
 
-namespace Tony.config;
+namespace YetAnotherTraderMod.config;
 
-public class TonyConfig
+public class YATMConfig
 {
     private readonly string _modPath;
     private readonly string _configDir;
@@ -24,7 +23,7 @@ public class TonyConfig
     public SettingsConfig Settings { get; private set; } = new();
     public List<PriceConfigItem> Prices { get; private set; } = new();
 
-    public TonyConfig(string modPath, DatabaseServer databaseServer)
+    public YATMConfig(string modPath, DatabaseServer databaseServer)
     {
         _modPath = modPath;
         _databaseServer = databaseServer;
@@ -175,17 +174,17 @@ public class TonyConfig
                 };
 
                 Prices = JsonSerializer.Deserialize<List<PriceConfigItem>>(json, options) ?? new List<PriceConfigItem>();
-                TonyLogger.LogDebug($"Loaded {Prices.Count} custom price entries from items.json");
+                YATMLogger.LogDebug($"Loaded {Prices.Count} custom price entries from items.json");
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"[Tony] Error loading items.json: {ex.Message}");
-                TonyLogger.Log($"Error loading items.json: {ex.Message}");
+                YATMLogger.Log($"Error loading items.json: {ex.Message}");
             }
         }
         else
         {
-            TonyLogger.LogDebug("items.json not found. Generating default prices from assort...");
+            YATMLogger.LogDebug("items.json not found. Generating default prices from assort...");
 
             Prices = new List<PriceConfigItem>();
             var locales = _databaseServer.GetTables().Locales.Global["en"];
@@ -273,7 +272,7 @@ public class TonyConfig
                 .ToList();
 
             SaveJson(_pricesPath, Prices);
-            TonyLogger.Log($"Generated items.json with {generatedCount} entries.");
+            YATMLogger.Log($"Generated items.json with {generatedCount} entries.");
         }
     }
 

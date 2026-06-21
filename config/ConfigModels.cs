@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-namespace Tony.Config;
+namespace YetAnotherTraderMod.config;
 
 public class SettingsConfig
 {

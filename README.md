@@ -60,4 +60,4 @@ This is only the rename/rebrand pass. Quest unlocks, four loyalty levels, betray
 ## Credits
 - Original Priscilu Origins foundation: Reis
 - Update/contributor foundation: Anigx
-- Tony concept/rebrand: Christopher Young
+- Tony concept/rebrand: AlMightyTank

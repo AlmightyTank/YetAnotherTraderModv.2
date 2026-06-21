@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Tony;
+namespace YetAnotherTraderMod.src;
 
 [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 1)]
 public class AddCustomTraderHelper(

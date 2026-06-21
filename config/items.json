@@ -1,6 +1,6 @@
 [
     {
-        "OfferId": "4e6b3ec4f5217eb5cf733963",
+        "OfferId": "6a3007dfd2999bc7b9bba987",
         "TplId": "5f0596629e22f464da6bbdd9",
         "ItemName": ".366 TKM AP-M",
         "Price": 1800,
@@ -17,7 +17,7 @@
         ]
     },
     {
-        "OfferId": "c2be5356d31ed6284acad384",
+        "OfferId": "6a300025d2999bc7b9bba95d",
         "TplId": "59e655cb86f77411dc52a77b",
         "ItemName": ".366 TKM EKO",
         "Price": 250,
@@ -34,7 +34,7 @@
         ]
     },
     {
-        "OfferId": "4794a63e23db8000ce2e0175",
+        "OfferId": "6a300025d2999bc7b9bba961",
         "TplId": "560d5e524bdc2d25448b4571",
         "ItemName": "12/70 7mm buckshot",
         "Price": 32,
@@ -51,7 +51,7 @@
         ]
     },
     {
-        "OfferId": "22a63335a6442da1d1c0f8a1",
+        "OfferId": "6a3007dfd2999bc7b9bba988",
         "TplId": "5d6e68a8a4b9360b6c0d54e2",
         "ItemName": "12/70 AP-20 armor-piercing slug",
         "Price": 3200,
@@ -68,7 +68,7 @@
         ]
     },
     {
-        "OfferId": "d98c3e790259b9bed102388f",
+        "OfferId": "6a3007dfd2999bc7b9bba978",
         "TplId": "5d6e6911a4b9361bd5780d52",
         "ItemName": "12/70 flechette",
         "Price": 750,
@@ -85,7 +85,7 @@
         ]
     },
     {
-        "OfferId": "9bb2cd352436b6c406e8b0be",
+        "OfferId": "6a3007dfd2999bc7b9bba973",
         "TplId": "56dfef82d2720bbd668b4567",
         "ItemName": "5.45x39mm BP gs",
         "Price": 220,
@@ -102,7 +102,7 @@
         ]
     },
     {
-        "OfferId": "a1ce9f2e791828226120cfac",
+        "OfferId": "6a3007dfd2999bc7b9bba982",
         "TplId": "56dff026d2720bb8668b4567",
         "ItemName": "5.45x39mm BS gs",
         "Price": 1350,
@@ -119,7 +119,7 @@
         ]
     },
     {
-        "OfferId": "ba26f5d9fe8ab4dee69e7f0f",
+        "OfferId": "6a3007dfd2999bc7b9bba974",
         "TplId": "56dff061d2720bb5668b4567",
         "ItemName": "5.45x39mm BT gs",
         "Price": 589,
@@ -136,7 +136,7 @@
         ]
     },
     {
-        "OfferId": "be34ef392486c281915992a5",
+        "OfferId": "6a3007dfd2999bc7b9bba972",
         "TplId": "56dff2ced2720bb4668b4567",
         "ItemName": "5.45x39mm PP gs",
         "Price": 570,
@@ -153,7 +153,7 @@
         ]
     },
     {
-        "OfferId": "57f997e48c0b0827202fdf94",
+        "OfferId": "6a3007dfd2999bc7b9bba990",
         "TplId": "5c0d5e4486f77478390952fe",
         "ItemName": "5.45x39mm PPBS gs Igolnik",
         "Price": 1600,
@@ -170,7 +170,7 @@
         ]
     },
     {
-        "OfferId": "5706e145a94278fa597ce8c8",
+        "OfferId": "6a300025d2999bc7b9bba95b",
         "TplId": "56dff3afd2720bba668b4567",
         "ItemName": "5.45x39mm PS gs",
         "Price": 215,
@@ -204,24 +204,24 @@
         ]
     },
     {
-        "OfferId": "92c625a05c753d80bf7e80b4",
-        "TplId": "5c0e5bab86f77461f55ed1f3",
-        "ItemName": "6B23-1 body armor (EMR)",
-        "Price": 25077,
+        "OfferId": "6a300025d2999bc7b9bba955",
+        "TplId": "5c0e57ba86f7747fa141986d",
+        "ItemName": "6B23-2 body armor (Mountain Flora)",
+        "Price": 34794,
         "Currency": "RUB",
         "CashOnly": false,
         "BarterScheme": [
             [
                 {
-                    "TplId": "5d40419286f774318526545f",
-                    "ItemName": "Metal cutting scissors",
+                    "TplId": "5d40407c86f774318526545a",
+                    "ItemName": "Bottle of Tarkovskaya vodka",
                     "Count": 1
                 }
             ]
         ]
     },
     {
-        "OfferId": "246bc407516b799c0e709a25",
+        "OfferId": "6a300025d2999bc7b9bba956",
         "TplId": "5d5d646386f7742797261fd9",
         "ItemName": "6B3TM-01 armored rig (Khaki)",
         "Price": 44420,
@@ -230,20 +230,20 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "573474f924597738002c6174",
-                    "ItemName": "Chainlet",
+                    "TplId": "5734758f24597738025ee253",
+                    "ItemName": "Golden neck chain",
                     "Count": 1
                 },
                 {
-                    "TplId": "590c2b4386f77425357b6123",
-                    "ItemName": "Pliers",
+                    "TplId": "59faf7ca86f7740dbe19f6c2",
+                    "ItemName": "Roler Submariner gold wrist watch",
                     "Count": 1
                 }
             ]
         ]
     },
     {
-        "OfferId": "48b3c84341225a19cac9e8ad",
+        "OfferId": "6a3007dfd2999bc7b9bba97a",
         "TplId": "5aa7cfc0e5b5b00015693143",
         "ItemName": "6B47 Ratnik-BSh helmet (EMR cover)",
         "Price": 36000,
@@ -277,7 +277,24 @@
         ]
     },
     {
-        "OfferId": "eb63faeada5bf57ffb6dd578",
+        "OfferId": "6a30b2fbd2999bc7b9bbaab4",
+        "TplId": "5c0e446786f7742013381639",
+        "ItemName": "6B5-15 Zh-86 Uley armored rig (Flora)",
+        "Price": 39890,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 39890
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a3007dfd2999bc7b9bba983",
         "TplId": "59e0d99486f7744a32234762",
         "ItemName": "7.62x39mm BP gzh",
         "Price": 1200,
@@ -294,7 +311,7 @@
         ]
     },
     {
-        "OfferId": "b1743896a4a5afdbf468b2b1",
+        "OfferId": "6a3007dfd2999bc7b9bba992",
         "TplId": "601aa3d2b2bcb34913271e6d",
         "ItemName": "7.62x39mm MAI AP",
         "Price": 1550,
@@ -311,7 +328,7 @@
         ]
     },
     {
-        "OfferId": "f5ae93779ef2b1a224f2b595",
+        "OfferId": "6a3007dfd2999bc7b9bba975",
         "TplId": "64b7af434b75259c590fa893",
         "ItemName": "7.62x39mm PP gzh",
         "Price": 1200,
@@ -328,7 +345,7 @@
         ]
     },
     {
-        "OfferId": "d037695ca99b1aee7675ce40",
+        "OfferId": "6a300025d2999bc7b9bba95c",
         "TplId": "5656d7c34bdc2d9d198b4587",
         "ItemName": "7.62x39mm PS gzh",
         "Price": 350,
@@ -345,7 +362,7 @@
         ]
     },
     {
-        "OfferId": "faf51b3d87e0eb55086869b5",
+        "OfferId": "6a300025d2999bc7b9bba957",
         "TplId": "57372140245977611f70ee91",
         "ItemName": "9x18mm PM SP7 gzh",
         "Price": 450,
@@ -362,7 +379,7 @@
         ]
     },
     {
-        "OfferId": "f6434395a233ea45f8c88c30",
+        "OfferId": "6a3007dfd2999bc7b9bba976",
         "TplId": "5c925fa22e221601da359b7b",
         "ItemName": "9x19mm AP 6.3",
         "Price": 360,
@@ -379,7 +396,7 @@
         ]
     },
     {
-        "OfferId": "42a483753ebc6ece30adec25",
+        "OfferId": "6a3007dfd2999bc7b9bba984",
         "TplId": "5efb0da7a29a85116f6ea05f",
         "ItemName": "9x19mm PBP gzh",
         "Price": 1200,
@@ -396,7 +413,7 @@
         ]
     },
     {
-        "OfferId": "4a42807ed0d6a80446dcb692",
+        "OfferId": "6a300025d2999bc7b9bba958",
         "TplId": "56d59d3ad2720bdb418b4577",
         "ItemName": "9x19mm Pst gzh",
         "Price": 60,
@@ -413,7 +430,7 @@
         ]
     },
     {
-        "OfferId": "8e010b6637390ee63c0fd3f6",
+        "OfferId": "6a300025d2999bc7b9bba95a",
         "TplId": "5c0d56a986f774449d5de529",
         "ItemName": "9x19mm RIP",
         "Price": 650,
@@ -430,7 +447,7 @@
         ]
     },
     {
-        "OfferId": "42e90f03a525a0bf24006f14",
+        "OfferId": "6a3007dfd2999bc7b9bba993",
         "TplId": "5c0d688c86f77413ae3407b2",
         "ItemName": "9x39mm BP gs",
         "Price": 1550,
@@ -447,7 +464,7 @@
         ]
     },
     {
-        "OfferId": "4e296da5dae974649bf0e449",
+        "OfferId": "6a3007dfd2999bc7b9bba991",
         "TplId": "61962d879bb3d20b0946d385",
         "ItemName": "9x39mm PAB-9 gs",
         "Price": 1320,
@@ -464,7 +481,7 @@
         ]
     },
     {
-        "OfferId": "a328d82e46317f00f8e7ee62",
+        "OfferId": "6a3007dfd2999bc7b9bba977",
         "TplId": "57a0dfb82459774d3078b56c",
         "ItemName": "9x39mm SP-5 gs",
         "Price": 300,
@@ -481,7 +498,7 @@
         ]
     },
     {
-        "OfferId": "20898c9c018c2ff7781b34c0",
+        "OfferId": "6a3007dfd2999bc7b9bba985",
         "TplId": "57a0e5022459774d1673f889",
         "ItemName": "9x39mm SP-6 gs",
         "Price": 1200,
@@ -498,7 +515,7 @@
         ]
     },
     {
-        "OfferId": "980d9f1dc771863930ce6290",
+        "OfferId": "6a3007dfd2999bc7b9bba986",
         "TplId": "5c0d668f86f7747ccb7f13b2",
         "ItemName": "9x39mm SPP gs",
         "Price": 650,
@@ -524,15 +541,15 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "54cb57776803fa99248b456e",
-                    "ItemName": "UNKNOWN_ITEM_54cb57776803fa99248b456e",
+                    "TplId": "590a3d9c86f774385926e510",
+                    "ItemName": "Ultraviolet lamp",
                     "Count": 1
                 }
             ]
         ]
     },
     {
-        "OfferId": "95fd8fbcd1982195d09236ab",
+        "OfferId": "6a3007dfd2999bc7b9bba96e",
         "TplId": "5755356824597772cb798962",
         "ItemName": "AI-2 medkit",
         "Price": 4500,
@@ -549,7 +566,119 @@
         ]
     },
     {
-        "OfferId": "836e0a9c1820ceb5a8460fd4",
+        "OfferId": "6a2f1c3bd2999bc7b9bba8e4",
+        "TplId": "5e21ca18e4d47f0da15e77dd",
+        "ItemName": "AK CNC Warrior 5.56x45 muzzle device adapter",
+        "Price": 2615,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "57347b8b24597737dd42e192",
+                    "ItemName": "Classic matches",
+                    "Count": 1
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a2f2001d2999bc7b9bba8e5",
+        "TplId": "5a0c59791526d8dba737bba7",
+        "ItemName": "AK GP-25 accessory kit recoil pad",
+        "Price": 3231,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "57347d7224597744596b4e72",
+                    "ItemName": "Can of beef stew (Small)",
+                    "Count": 1
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a2f1c3bd2999bc7b9bba8e2",
+        "TplId": "5a01ad4786f77450561fda02",
+        "ItemName": "AK Kiba Arms VDM CS gas tube",
+        "Price": 2904,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "575062b524597720a31c09a1",
+                    "ItemName": "Can of Ice Green tea",
+                    "Count": 1
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a2f1c3bd2999bc7b9bba8e3",
+        "TplId": "59fb375986f7741b681b81a6",
+        "ItemName": "AK Krebs Custom UFM KeyMod handguard",
+        "Price": 20355,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5e2af2bc86f7746d3f3c33fc",
+                    "ItemName": "Hunting matches",
+                    "Count": 2
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a3007dfd2999bc7b9bba9b4",
+        "TplId": "5a0d63621526d8dba31fe3bf",
+        "ItemName": "AKM PBS-1 7.62x39 sound suppressor",
+        "Price": 48176,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5d1c819a86f774771b0acd6c",
+                    "ItemName": "Weapon parts",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5734795124597738002c6176",
+                    "ItemName": "Insulating tape",
+                    "Count": 1
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a3007dfd2999bc7b9bba9b5",
+        "TplId": "57ffb0e42459777d047111c5",
+        "ItemName": "AKS-74U PBS-4 5.45x39 sound suppressor",
+        "Price": 32991,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5d1c819a86f774771b0acd6c",
+                    "ItemName": "Weapon parts",
+                    "Count": 1
+                },
+                {
+                    "TplId": "590c2d8786f774245b1f03f3",
+                    "ItemName": "Screwdriver",
+                    "Count": 1
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a3007dfd2999bc7b9bba98d",
         "TplId": "5aafbde786f774389d0cbc0f",
         "ItemName": "Ammunition case",
         "Price": 162552,
@@ -566,7 +695,7 @@
         ]
     },
     {
-        "OfferId": "f5698faec1a7edeb48245a3d",
+        "OfferId": "6a3007dfd2999bc7b9bba970",
         "TplId": "544fb37f4bdc2dee738b4567",
         "ItemName": "Analgin painkillers",
         "Price": 6200,
@@ -600,7 +729,7 @@
         ]
     },
     {
-        "OfferId": "76c991e7f4d6a8617d4fd0fe",
+        "OfferId": "6a3007dfd2999bc7b9bba96d",
         "TplId": "5751a25924597722c463c472",
         "ItemName": "Army bandage",
         "Price": 3600,
@@ -617,7 +746,7 @@
         ]
     },
     {
-        "OfferId": "d6e012d90694517d94247e60",
+        "OfferId": "6a3007dfd2999bc7b9bba98a",
         "TplId": "57c44b372459772d2b39b8ce",
         "ItemName": "AS VAL 9x39 special assault rifle",
         "Price": 117650,
@@ -634,7 +763,7 @@
         ]
     },
     {
-        "OfferId": "17430374fc1f2fb818d0a0af",
+        "OfferId": "6a3007dfd2999bc7b9bba96c",
         "TplId": "544fb25a4bdc2dfb738b4567",
         "ItemName": "Aseptic bandage",
         "Price": 2400,
@@ -651,7 +780,7 @@
         ]
     },
     {
-        "OfferId": "803fbf8a83aef8382c3542c2",
+        "OfferId": "6a300025d2999bc7b9bba969",
         "TplId": "5648a69d4bdc2ded0b8b457b",
         "ItemName": "BlackRock chest rig (Gray)",
         "Price": 24000,
@@ -685,7 +814,7 @@
         ]
     },
     {
-        "OfferId": "be11cd34afe7faf2aae39ecf",
+        "OfferId": "6a3007dfd2999bc7b9bba994",
         "TplId": "5c0e625a86f7742d77340f62",
         "ItemName": "BNTI Zhuk body armor (EMR)",
         "Price": 94152,
@@ -702,7 +831,7 @@
         ]
     },
     {
-        "OfferId": "6a2b8323d2999bc7b9bba8c3",
+        "OfferId": "6a3007dfd2999bc7b9bba980",
         "TplId": "591094e086f7747caa7bb2ef",
         "ItemName": "Body armor repair kit",
         "Price": 200000,
@@ -724,7 +853,7 @@
         ]
     },
     {
-        "OfferId": "6a2c0f98d2999bc7b9bba8c7",
+        "OfferId": "6a300025d2999bc7b9bba95e",
         "TplId": "5448fee04bdc2dbc018b4567",
         "ItemName": "Bottle of water (0.6L)",
         "Price": 11000,
@@ -758,7 +887,7 @@
         ]
     },
     {
-        "OfferId": "6a2c0f98d2999bc7b9bba8c8",
+        "OfferId": "6a300025d2999bc7b9bba95f",
         "TplId": "57347d7224597744596b4e72",
         "ItemName": "Can of beef stew (Small)",
         "Price": 15000,
@@ -775,7 +904,7 @@
         ]
     },
     {
-        "OfferId": "f61c30e94cb50995a818094b",
+        "OfferId": "6a3007dfd2999bc7b9bba97c",
         "TplId": "590c661e86f7741e566b646a",
         "ItemName": "Car first aid kit",
         "Price": 11000,
@@ -792,7 +921,7 @@
         ]
     },
     {
-        "OfferId": "5e7aa3feaefa22cae39fbfde",
+        "OfferId": "6a3007dfd2999bc7b9bba97d",
         "TplId": "60098af40accd37ef2175f27",
         "ItemName": "CAT hemostatic tourniquet",
         "Price": 5200,
@@ -809,7 +938,7 @@
         ]
     },
     {
-        "OfferId": "fbfd1b503fe5959b15b03953",
+        "OfferId": "6a3007dfd2999bc7b9bba97e",
         "TplId": "5d02778e86f774203e7dedbe",
         "ItemName": "CMS surgical kit",
         "Price": 28800,
@@ -826,7 +955,29 @@
         ]
     },
     {
-        "OfferId": "f6f3cf77cf5009bf849cc082",
+        "OfferId": "6a2e2072d2999bc7b9bba8dd",
+        "TplId": "6570aead4d84f81fd002a033",
+        "ItemName": "Death Shadow lightweight armored mask",
+        "Price": 52130,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5e54f62086f774219b0f1937",
+                    "ItemName": "Raven figurine",
+                    "Count": 1
+                },
+                {
+                    "TplId": "573476d324597737da2adc13",
+                    "ItemName": "Malboro Cigarettes",
+                    "Count": 2
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a3007dfd2999bc7b9bba98e",
         "TplId": "590c60fc86f77412b13fddcf",
         "ItemName": "Documents case",
         "Price": 167469,
@@ -835,9 +986,14 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "573474f924597738002c6174",
-                    "ItemName": "Chainlet",
-                    "Count": 3
+                    "TplId": "5734758f24597738025ee253",
+                    "ItemName": "Golden neck chain",
+                    "Count": 2
+                },
+                {
+                    "TplId": "590c651286f7741e566b6461",
+                    "ItemName": "Slim diary",
+                    "Count": 1
                 }
             ]
         ]
@@ -860,7 +1016,24 @@
         ]
     },
     {
-        "OfferId": "fd48681f08771d869fb06625",
+        "OfferId": "6a30b2fbd2999bc7b9bbaaef",
+        "TplId": "5710c24ad2720bc3458b45a3",
+        "ItemName": "F-1 hand grenade",
+        "Price": 8800,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 8800
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a3007dfd2999bc7b9bba999",
         "TplId": "5d1b5e94d7ad1a2b865a96b0",
         "ItemName": "FLIR RS-32 2.25-9x 35mm 60Hz thermal riflescope",
         "Price": 144794,
@@ -872,6 +1045,23 @@
                     "TplId": "5d03775b86f774203e7e0c4b",
                     "ItemName": "Phased array element",
                     "Count": 1
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a2f526bd2999bc7b9bba8fe",
+        "TplId": "5ab8f4ff86f77431c60d91ba",
+        "ItemName": "Ghost balaclava",
+        "Price": 5000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 5000
                 }
             ]
         ]
@@ -894,7 +1084,7 @@
         ]
     },
     {
-        "OfferId": "1ffeffcd9ba0f19c84c81877",
+        "OfferId": "6a3007dfd2999bc7b9bba96f",
         "TplId": "544fb3364bdc2d34748b456a",
         "ItemName": "Immobilizing splint",
         "Price": 2600,
@@ -928,7 +1118,7 @@
         ]
     },
     {
-        "OfferId": "be6566659f0630b2fd7a628f",
+        "OfferId": "6a3007dfd2999bc7b9bba996",
         "TplId": "59fb042886f7746c5005a7b2",
         "ItemName": "Item case",
         "Price": 1229994,
@@ -937,14 +1127,29 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "59faff1d86f7746c51718c9c",
-                    "ItemName": "Physical Bitcoin",
+                    "TplId": "5734758f24597738025ee253",
+                    "ItemName": "Golden neck chain",
+                    "Count": 3
+                },
+                {
+                    "TplId": "5d235a5986f77443f6329bc6",
+                    "ItemName": "Gold skull ring",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5d40407c86f774318526545a",
+                    "ItemName": "Bottle of Tarkovskaya vodka",
                     "Count": 2
                 },
                 {
-                    "TplId": "5a7c2eca46aef81a7ca2145d",
-                    "ItemName": "UNKNOWN_ITEM_5a7c2eca46aef81a7ca2145d",
-                    "Count": 2
+                    "TplId": "5d1b376e86f774252519444e",
+                    "ItemName": "Bottle of Fierce Hatchling moonshine",
+                    "Count": 1
+                },
+                {
+                    "TplId": "590de71386f774347051a052",
+                    "ItemName": "Antique teapot",
+                    "Count": 1
                 }
             ]
         ]
@@ -1018,7 +1223,7 @@
         ]
     },
     {
-        "OfferId": "8f2ab562faf9231110f1d627",
+        "OfferId": "6a300025d2999bc7b9bba963",
         "TplId": "57dc2fa62459775949412633",
         "ItemName": "Kalashnikov AKS-74U 5.45x39 assault rifle",
         "Price": 56500,
@@ -1035,7 +1240,7 @@
         ]
     },
     {
-        "OfferId": "8447c8d78e2eb421b072c461",
+        "OfferId": "6a3007dfd2999bc7b9bba98f",
         "TplId": "59fafd4b86f7745ca07e1232",
         "ItemName": "Key tool",
         "Price": 748453,
@@ -1072,21 +1277,21 @@
         "OfferId": "6a2b83fcd2999bc7b9bba8c4",
         "TplId": "5ed51652f6c34d2cc26336a1",
         "ItemName": "M.U.L.E. stimulant injector",
-        "Price": 200000,
+        "Price": 43550,
         "Currency": "RUB",
-        "CashOnly": true,
+        "CashOnly": false,
         "BarterScheme": [
             [
                 {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 200000
+                    "TplId": "5c1267ee86f77416ec610f72",
+                    "ItemName": "Chain with Prokill medallion",
+                    "Count": 1
                 }
             ]
         ]
     },
     {
-        "OfferId": "086037a44bd5c52d0890b9f4",
+        "OfferId": "6a300025d2999bc7b9bba962",
         "TplId": "5448bd6b4bdc2dfc2f8b4569",
         "ItemName": "Makarov PM 9x18PM pistol",
         "Price": 27500,
@@ -1120,7 +1325,7 @@
         ]
     },
     {
-        "OfferId": "68acdf260f513bf0b7381fff",
+        "OfferId": "6a300025d2999bc7b9bba964",
         "TplId": "59e6152586f77473dc057aa1",
         "ItemName": "Molot Arms VPO-136 Vepr-KM 7.62x39 carbine",
         "Price": 82500,
@@ -1137,7 +1342,7 @@
         ]
     },
     {
-        "OfferId": "62d8be85d0862f8271a88f02",
+        "OfferId": "6a300025d2999bc7b9bba965",
         "TplId": "59e6687d86f77411d949b251",
         "ItemName": "Molot Arms VPO-209 .366 TKM carbine",
         "Price": 89500,
@@ -1154,7 +1359,7 @@
         ]
     },
     {
-        "OfferId": "6a2bf77a8a12b7b0a0b622cb",
+        "OfferId": "6a300025d2999bc7b9bba959",
         "TplId": "5de652c31b7e3716273428be",
         "ItemName": "Molot Arms VPO-215 Gornostay .366 TKM bolt-action rifle",
         "Price": 7350,
@@ -1171,7 +1376,7 @@
         ]
     },
     {
-        "OfferId": "a150419a0e11c1c88956c84a",
+        "OfferId": "6a300025d2999bc7b9bba966",
         "TplId": "54491c4f4bdc2db1078b4568",
         "ItemName": "MP-133 12ga pump-action shotgun",
         "Price": 14443,
@@ -1188,7 +1393,7 @@
         ]
     },
     {
-        "OfferId": "b39b9ba299d34b4d9508f49f",
+        "OfferId": "6a3007dfd2999bc7b9bba981",
         "TplId": "5991b51486f77447b112d44f",
         "ItemName": "MS2000 Marker",
         "Price": 13923,
@@ -1205,7 +1410,24 @@
         ]
     },
     {
-        "OfferId": "16599af70d7e00d1fbc5463d",
+        "OfferId": "6a30b2fbd2999bc7b9bbaaea",
+        "TplId": "6033fa48ffd42c541047f728",
+        "ItemName": "OPSMEN Earmor M32 headset",
+        "Price": 27500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 27500
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a3007dfd2999bc7b9bba96a",
         "TplId": "5648a7494bdc2d9d488b4583",
         "ItemName": "PACA Soft Armor",
         "Price": 16000,
@@ -1222,10 +1444,10 @@
         ]
     },
     {
-        "OfferId": "6a2b82bed2999bc7b9bba8c2",
-        "TplId": "637b6251104668754b72f8f9",
-        "ItemName": "Perfotoran (Blue Blood) stimulant injector",
-        "Price": 110000,
+        "OfferId": "6a30b2fbd2999bc7b9bbaaeb",
+        "TplId": "628e4e576d783146b124c64d",
+        "ItemName": "Peltor ComTac IV Hybrid headset (Coyote Brown)",
+        "Price": 45000,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -1233,7 +1455,80 @@
                 {
                     "TplId": "5449016a4bdc2d6f028b456f",
                     "ItemName": "Roubles",
-                    "Count": 110000
+                    "Count": 45000
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a30b2fbd2999bc7b9bbaaec",
+        "TplId": "66b5f693acff495a294927e3",
+        "ItemName": "Peltor ComTac V headset (OD Green)",
+        "Price": 40000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 40000
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a30b2fbd2999bc7b9bbaaed",
+        "TplId": "66b5f6985891c84aab75ca76",
+        "ItemName": "Peltor ComTac VI headset (Coyote Brown)",
+        "Price": 65000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 65000
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a2b82bed2999bc7b9bba8c2",
+        "TplId": "637b6251104668754b72f8f9",
+        "ItemName": "Perfotoran (Blue Blood) stimulant injector",
+        "Price": 66000,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "62a09f32621468534a797acb",
+                    "ItemName": "Bottle of Pevko Light beer",
+                    "Count": 2
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a3007dfd2999bc7b9bba9b6",
+        "TplId": "59bfc5c886f7743bf6794e62",
+        "ItemName": "PP-19-01 Vityaz 9x19 sound suppressor",
+        "Price": 20343,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5672cb124bdc2d1a0f8b4568",
+                    "ItemName": "AA Battery",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5e2af29386f7746d4159f077",
+                    "ItemName": "KEKTAPE duct tape",
+                    "Count": 1
                 }
             ]
         ]
@@ -1256,6 +1551,23 @@
         ]
     },
     {
+        "OfferId": "6a2f1c3bd2999bc7b9bba8e1",
+        "TplId": "676177df1f08ed5e8800b7ae",
+        "ItemName": "PP-19-01 Vityaz SAG MK1 M-LOK handguard with gas tube",
+        "Price": 17500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 17500
+                }
+            ]
+        ]
+    },
+    {
         "OfferId": "6a2b802fd2999bc7b9bba8bf",
         "TplId": "5c0e530286f7747fa1419862",
         "ItemName": "Propital regenerative stimulant injector",
@@ -1273,7 +1585,58 @@
         ]
     },
     {
-        "OfferId": "139e9149717eb5e4398bdaff",
+        "OfferId": "6a30b2fbd2999bc7b9bbaaee",
+        "TplId": "5448be9a4bdc2dfd2f8b456a",
+        "ItemName": "RGD-5 hand grenade",
+        "Price": 10200,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 10200
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a30b2fbd2999bc7b9bbaaf1",
+        "TplId": "617fd91e5539a84ec44ce155",
+        "ItemName": "RGN hand grenade",
+        "Price": 32000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 32000
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a30b2fbd2999bc7b9bbaaf2",
+        "TplId": "618a431df1eb8e24b8741deb",
+        "ItemName": "RGO hand grenade",
+        "Price": 32000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 32000
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a3007dfd2999bc7b9bba989",
         "TplId": "5beed0f50db834001c062b12",
         "ItemName": "RPK-16 5.45x39 light machine gun",
         "Price": 22360,
@@ -1329,7 +1692,7 @@
         ]
     },
     {
-        "OfferId": "8f07327c6cd86ad713ad1768",
+        "OfferId": "6a3007dfd2999bc7b9bba97b",
         "TplId": "544fb45d4bdc2dee738b4568",
         "ItemName": "Salewa first aid kit",
         "Price": 17500,
@@ -1346,10 +1709,10 @@
         ]
     },
     {
-        "OfferId": "6a2b8279d2999bc7b9bba8c0",
-        "TplId": "637b612fb7afa97bfc3d7005",
-        "ItemName": "SJ12 TGLabs combat stimulant injector",
-        "Price": 98000,
+        "OfferId": "6a2f526bd2999bc7b9bba8fd",
+        "TplId": "5ab8f85d86f7745cd93a1cf5",
+        "ItemName": "Shemagh (Green)",
+        "Price": 8000,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -1357,13 +1720,30 @@
                 {
                     "TplId": "5449016a4bdc2d6f028b456f",
                     "ItemName": "Roubles",
-                    "Count": 98000
+                    "Count": 8000
                 }
             ]
         ]
     },
     {
-        "OfferId": "002f2adc318bfde1268d2407",
+        "OfferId": "6a2b8279d2999bc7b9bba8c0",
+        "TplId": "637b612fb7afa97bfc3d7005",
+        "ItemName": "SJ12 TGLabs combat stimulant injector",
+        "Price": 41000,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5d1b32c186f774252167a530",
+                    "ItemName": "Analog thermometer",
+                    "Count": 1
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a300025d2999bc7b9bba967",
         "TplId": "60339954d62c9b14ed777c06",
         "ItemName": "Soyuz-TM STM-9 Gen.2 9x19 carbine",
         "Price": 84500,
@@ -1380,7 +1760,7 @@
         ]
     },
     {
-        "OfferId": "c00ea76a2ab6bd994315680d",
+        "OfferId": "6a300025d2999bc7b9bba968",
         "TplId": "5e4abfed86f77406a2713cf7",
         "ItemName": "Splav Tarzan M22 chest rig (Smog)",
         "Price": 10500,
@@ -1397,7 +1777,7 @@
         ]
     },
     {
-        "OfferId": "b35d6414733155e09db9dab1",
+        "OfferId": "6a3007dfd2999bc7b9bba96b",
         "TplId": "5c06c6a80db834001b735491",
         "ItemName": "SSh-68 steel helmet (Olive Drab)",
         "Price": 22000,
@@ -1434,21 +1814,21 @@
         "OfferId": "6a2abd18d2999bc7b9bba8bc",
         "TplId": "5d02797c86f774203f38e30a",
         "ItemName": "Surv12 field surgical kit",
-        "Price": 69000,
+        "Price": 57600,
         "Currency": "RUB",
-        "CashOnly": true,
+        "CashOnly": false,
         "BarterScheme": [
             [
                 {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 69000
+                    "TplId": "5751435d24597720a27126d1",
+                    "ItemName": "Can of Max Energy energy drink",
+                    "Count": 3
                 }
             ]
         ]
     },
     {
-        "OfferId": "c59cd486dc7798bb741c5911",
+        "OfferId": "6a3007dfd2999bc7b9bba98c",
         "TplId": "5c46fbd72e2216398b5a8c9c",
         "ItemName": "SVDS 7.62x54R sniper rifle",
         "Price": 42800,
@@ -1465,7 +1845,7 @@
         ]
     },
     {
-        "OfferId": "02329a0a902578f0c4529f0b",
+        "OfferId": "6a3007dfd2999bc7b9bba997",
         "TplId": "5c0a840b86f7742ffa4f2482",
         "ItemName": "T H I C C item case",
         "Price": 3100000,
@@ -1519,24 +1899,39 @@
         ]
     },
     {
-        "OfferId": "02b595523e3ece8ef86e1fa6",
+        "OfferId": "6a3007dfd2999bc7b9bba971",
         "TplId": "590c2e1186f77425357b6124",
         "ItemName": "Toolset",
-        "Price": 75000,
+        "Price": 31000,
         "Currency": "RUB",
-        "CashOnly": true,
+        "CashOnly": false,
         "BarterScheme": [
             [
                 {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 75000
+                    "TplId": "590c2b4386f77425357b6123",
+                    "ItemName": "Pliers",
+                    "Count": 1
+                },
+                {
+                    "TplId": "590c2d8786f774245b1f03f3",
+                    "ItemName": "Screwdriver",
+                    "Count": 1
+                },
+                {
+                    "TplId": "590c31c586f774245e3141b2",
+                    "ItemName": "Pack of nails",
+                    "Count": 1
+                },
+                {
+                    "TplId": "57347c1124597737fb1379e3",
+                    "ItemName": "Duct tape",
+                    "Count": 1
                 }
             ]
         ]
     },
     {
-        "OfferId": "b5a5b9eaddc1e8dee7ed2b12",
+        "OfferId": "6a3007dfd2999bc7b9bba998",
         "TplId": "5a1eaa87fcdbcb001865f75e",
         "ItemName": "Trijicon REAP-IR thermal scope",
         "Price": 355794,
@@ -1553,7 +1948,51 @@
         ]
     },
     {
-        "OfferId": "d8a2ab74f7fa2bb749f732a7",
+        "OfferId": "6a300025d2999bc7b9bba951",
+        "TplId": "6a300025d2999bc7b9bba950",
+        "ItemName": "UNKNOWN_ITEM_6a300025d2999bc7b9bba950",
+        "Price": 0,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5c0e530286f7747fa1419862",
+                    "ItemName": "Propital regenerative stimulant injector",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5c0e533786f7747fa23f4d47",
+                    "ItemName": "Zagustin hemostatic drug injector",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5d1b3f2d86f774253763b735",
+                    "ItemName": "Disposable syringe",
+                    "Count": 2
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a30b2fbd2999bc7b9bbaaf0",
+        "TplId": "5e32f56fcb6d5863cc5e5ee4",
+        "ItemName": "VOG-17 Khattabka improvised hand grenade",
+        "Price": 22000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 22000
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a3007dfd2999bc7b9bba98b",
         "TplId": "57838ad32459774a17445cd2",
         "ItemName": "VSS Vintorez 9x39 special sniper rifle",
         "Price": 112000,
@@ -1570,7 +2009,7 @@
         ]
     },
     {
-        "OfferId": "6a2c0f98d2999bc7b9bba8c9",
+        "OfferId": "6a300025d2999bc7b9bba960",
         "TplId": "5ca20d5986f774331e7c9602",
         "ItemName": "WARTECH Berkut BB-102 backpack (A-TACS FG)",
         "Price": 26000,
@@ -1587,10 +2026,10 @@
         ]
     },
     {
-        "OfferId": "81cc04a88816a4f80c2e0b75",
+        "OfferId": "6a3007dfd2999bc7b9bba979",
         "TplId": "59e7643b86f7742cbf2c109a",
         "ItemName": "WARTECH TV-109 + TV-106 chest rig (A-TACS FG)",
-        "Price": 39000,
+        "Price": 18000,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -1598,13 +2037,13 @@
                 {
                     "TplId": "5449016a4bdc2d6f028b456f",
                     "ItemName": "Roubles",
-                    "Count": 39000
+                    "Count": 18000
                 }
             ]
         ]
     },
     {
-        "OfferId": "9639bcba4c49b24da7cfdf4f",
+        "OfferId": "6a3007dfd2999bc7b9bba995",
         "TplId": "59fb023c86f7746d0d4b423c",
         "ItemName": "Weapon case",
         "Price": 1093207,
@@ -1613,20 +2052,30 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "59faff1d86f7746c51718c9c",
-                    "ItemName": "Physical Bitcoin",
+                    "TplId": "5d1c819a86f774771b0acd6c",
+                    "ItemName": "Weapon parts",
+                    "Count": 6
+                },
+                {
+                    "TplId": "5d0375ff86f774186372f685",
+                    "ItemName": "Military cable",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5d6fc78386f77449d825f9dc",
+                    "ItemName": "Gunpowder \"Eagle\"",
                     "Count": 2
                 },
                 {
-                    "TplId": "5a7c2eca46aef81a7ca2145d",
-                    "ItemName": "UNKNOWN_ITEM_5a7c2eca46aef81a7ca2145d",
-                    "Count": 2
+                    "TplId": "590c2e1186f77425357b6124",
+                    "ItemName": "Toolset",
+                    "Count": 1
                 }
             ]
         ]
     },
     {
-        "OfferId": "f5ec52f3ec1f450f1e22971b",
+        "OfferId": "6a3007dfd2999bc7b9bba97f",
         "TplId": "5910968f86f77425cf569c32",
         "ItemName": "Weapon repair kit",
         "Price": 70000,
@@ -1655,6 +2104,23 @@
                     "TplId": "5672cb124bdc2d1a0f8b4568",
                     "ItemName": "AA Battery",
                     "Count": 1
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a2f526bd2999bc7b9bba8ff",
+        "TplId": "63626d904aa74b8fe30ab426",
+        "ItemName": "Zryachiy's balaclava",
+        "Price": 35000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 35000
                 }
             ]
         ]
