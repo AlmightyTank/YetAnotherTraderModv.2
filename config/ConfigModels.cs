@@ -1,4 +1,4 @@
-using System.Text.Json.Serialization;
+using System.Collections.Generic;
 
 namespace YetAnotherTraderMod.config;
 
@@ -18,34 +18,40 @@ public class SettingsConfig
     public bool UnlimitedStock { get; set; } = false;
     public double PriceMultiplier { get; set; } = 1.0;
 
-    // false = items.json can use BarterScheme per offer.
-    // true = every offer uses Price + Currency only.
     public bool ForceCashOnly { get; set; } = false;
+    public bool RandomizeCashBarterOffers { get; set; } = true;
+    public int CashOfferPercent { get; set; } = 85;
 
     public bool DebugLogging { get; set; } = false;
 }
 
 public class PriceConfigItem
 {
-    // Exact root assort offer id. Use this for duplicate TplId offers/presets.
     public string? OfferId { get; set; }
 
-    // Item being sold.
+    // Normal sold item. For ammo cash offers, this stays as the loose bullet tpl.
     public string TplId { get; set; } = string.Empty;
     public string ItemName { get; set; } = string.Empty;
 
-    // Used when CashOnly is true, or when settings.json ForceCashOnly is true.
+    // For ammo, this is the per-bullet price.
     public double Price { get; set; }
     public string Currency { get; set; } = "RUB";
 
-    // true = replace the offer payment with Price + Currency.
-    // false = use BarterScheme below.
     public bool CashOnly { get; set; } = true;
 
-    // SPT barter format:
-    // Outer list = alternate payment options.
-    // Inner list = required payment items for that option.
+    // For ammo pack barter rows, this should already be valued against:
+    // Price * AmmoBarterPackSize
     public List<List<PaymentConfigItem>>? BarterScheme { get; set; }
+
+    // Ammo-only barter metadata.
+    // When ammo rolls barter, the assort root tpl is changed to this pack tpl.
+    public string? AmmoBarterPackTplId { get; set; }
+    public string? AmmoBarterPackItemName { get; set; }
+    public int AmmoBarterPackSize { get; set; } = 0;
+
+    // "Unit" = BarterScheme is valued against Price.
+    // "Pack" = BarterScheme is already valued against Price * AmmoBarterPackSize.
+    public string BarterSchemeValueBasis { get; set; } = "Unit";
 }
 
 public class PaymentConfigItem

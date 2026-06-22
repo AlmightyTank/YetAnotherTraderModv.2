@@ -24,7 +24,7 @@ public record ModMetadata : AbstractModMetadata
     public override string Name { get; init; } = "YetAnotherTraderMod";
     public override string Author { get; init; } = "AMightyTank | Based on PrisciluOrigins by Reis/Anigx";
     public override List<string>? Contributors { get; init; } = ["Reis", "Anigx"];
-    public override SemanticVersioning.Version Version { get; init; } = new("0.0.4");
+    public override SemanticVersioning.Version Version { get; init; } = new("0.0.5");
     public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.11");
     public override List<string>? Incompatibilities { get; init; } = [];
     public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; } = new()
@@ -72,6 +72,8 @@ public class YetAnotherTraderMod(
             YATMLogger.LogDebug($"  UnlimitedStock: {config.Settings.UnlimitedStock}");
             YATMLogger.LogDebug($"  RandomizeStock: {config.Settings.RandomizeStockAvailable} (Chance: {config.Settings.OutOfStockChance}%)");
             YATMLogger.LogDebug($"  PriceMultiplier: {config.Settings.PriceMultiplier}");
+            YATMLogger.LogDebug($"  RandomizeCashBarterOffers: {GetBoolSetting(config.Settings, "RandomizeCashBarterOffers", true)}");
+            YATMLogger.LogDebug($"  CashOfferPercent: {GetIntSetting(config.Settings, "CashOfferPercent", 85)}");
             YATMLogger.LogDebug($"  ForceCashOnly: {config.Settings.ForceCashOnly}");
         }
 
@@ -162,10 +164,12 @@ public class YetAnotherTraderMod(
         if (config.Settings.RandomizeStockAvailable || config.Settings.UnlimitedStock)
         {
             YATMLogger.LogDebug("Starting Stock Manipulation...");
-            var itemsToRemove = new List<string>();
-            var itemsToRemoveNames = new List<string>();
+
+            var outOfStockNames = new List<string>();
             var random = new Random();
+
             int modifiedCount = 0;
+            int zeroedCount = 0;
 
             var locales = databaseServer.GetTables().Locales.Global["en"];
 
@@ -176,66 +180,76 @@ public class YetAnotherTraderMod(
                     continue;
                 }
 
+                if (item.Upd == null)
+                {
+                    YATMLogger.LogDebug($"[Stock] Skipping offer with no Upd data: {item.Id}");
+                    continue;
+                }
+
+                string itemName = item.Id;
+                var tpl = YATMConfig.GetTemplateId(item);
+
+                if (!string.IsNullOrEmpty(tpl)
+                    && locales.Value != null
+                    && locales.Value.TryGetValue($"{tpl} Name", out var nameVal))
+                {
+                    itemName = nameVal?.ToString() ?? item.Id;
+                }
+
                 if (config.Settings.RandomizeStockAvailable)
                 {
                     if (random.Next(0, 100) < config.Settings.OutOfStockChance)
                     {
-                        itemsToRemove.Add(item.Id);
+                        // Keep the offer loaded in the trader assort.
+                        // Do not remove the root item, child items, barter scheme, or loyalty entry.
+                        // Setting stock to 0 makes it show as out of stock instead of disappearing.
+                        item.Upd.UnlimitedCount = false;
+                        item.Upd.StackObjectsCount = 0;
 
-                        string itemName = item.Id;
-                        var tpl = YATMConfig.GetTemplateId(item);
-                        if (!string.IsNullOrEmpty(tpl) && locales.Value != null && locales.Value.TryGetValue($"{tpl} Name", out var nameVal))
+                        if (item.Upd.BuyRestrictionMax > 0)
                         {
-                            itemName = nameVal?.ToString() ?? item.Id;
+                            item.Upd.BuyRestrictionCurrent = 0;
                         }
 
-                        itemsToRemoveNames.Add($"{itemName} ({item.Id})");
-                        YATMLogger.LogDebug($"[Random Stock] removing: {itemName} ({item.Id})");
+                        zeroedCount++;
+                        outOfStockNames.Add($"{itemName} ({item.Id})");
+
+                        YATMLogger.LogDebug($"[Random Stock] zeroed stock: {itemName} ({item.Id})");
                         continue;
                     }
                 }
 
-                if (item.Upd != null)
+                if (config.Settings.UnlimitedStock)
                 {
-                    if (config.Settings.UnlimitedStock)
-                    {
-                        item.Upd.UnlimitedCount = true;
-                        item.Upd.StackObjectsCount = 999999;
-                        if (item.Upd.BuyRestrictionMax > 0)
-                        {
-                            item.Upd.BuyRestrictionMax = 9999;
-                            item.Upd.BuyRestrictionCurrent = 0;
-                        }
+                    item.Upd.UnlimitedCount = true;
+                    item.Upd.StackObjectsCount = 999999;
 
-                        modifiedCount++;
-                    }
-                    else
+                    if (item.Upd.BuyRestrictionMax > 0)
                     {
-                        item.Upd.UnlimitedCount = false;
-                        item.Upd.StackObjectsCount = 100;
-                        modifiedCount++;
+                        item.Upd.BuyRestrictionMax = 9999;
+                        item.Upd.BuyRestrictionCurrent = 0;
                     }
+
+                    modifiedCount++;
+                }
+                else
+                {
+                    item.Upd.UnlimitedCount = false;
+                    item.Upd.StackObjectsCount = 100;
+                    modifiedCount++;
                 }
             }
 
             YATMLogger.LogDebug($"Total items modified for Stock setting: {modifiedCount}");
 
-            if (itemsToRemove.Count > 0)
+            if (zeroedCount > 0)
             {
-                assort.Items.RemoveAll(x => itemsToRemove.Contains(x.Id) || itemsToRemove.Contains(x.ParentId));
-
-                foreach (var id in itemsToRemove)
-                {
-                    assort.BarterScheme.Remove(id);
-                    assort.LoyalLevelItems.Remove(id);
-                }
-
-                YATMLogger.Log($"[Stock] Removed {itemsToRemove.Count} offers due to randomization.");
-                YATMLogger.LogDebug($"Removed Items:\n  {string.Join("\n  ", itemsToRemoveNames)}");
+                YATMLogger.Log($"[Stock] Zeroed {zeroedCount} offers due to randomization.");
+                YATMLogger.LogDebug($"Out of Stock Items:\n  {string.Join("\n  ", outOfStockNames)}");
             }
             else
             {
-                YATMLogger.LogDebug("No items removed by randomization this turn.");
+                YATMLogger.LogDebug("No items were zeroed by randomization this turn.");
             }
         }
 
@@ -314,6 +328,9 @@ public class YetAnotherTraderMod(
             .Where(x => x.ParentId == "hideout")
             .ToList();
 
+        var configuredOffers = new List<(object Offer, PriceConfigItem PriceConfig)>();
+        var configuredOfferIds = new HashSet<string>();
+
         foreach (var priceConfig in config.Prices)
         {
             var matchingOffers = rootItems
@@ -333,8 +350,82 @@ public class YetAnotherTraderMod(
 
             foreach (var offer in matchingOffers)
             {
-                ApplyPaymentToOffer(assort, offer.Id, priceConfig, config.Settings.ForceCashOnly);
+                var offerId = GetMemberValue(offer, "Id")?.ToString();
+                if (string.IsNullOrWhiteSpace(offerId))
+                {
+                    YATMLogger.LogDebug($"[Pricing] Matched offer for {priceConfig.ItemName} has no Id.");
+                    continue;
+                }
+
+                // Avoid applying the same offer more than once if items.json has duplicate tpl matches.
+                if (!configuredOfferIds.Add(offerId))
+                {
+                    YATMLogger.LogDebug($"[Pricing] Duplicate configured offer skipped: {priceConfig.ItemName} ({offerId})");
+                    continue;
+                }
+
+                configuredOffers.Add((offer, priceConfig));
             }
+        }
+
+        if (configuredOffers.Count == 0)
+        {
+            YATMLogger.LogDebug("[Pricing] No configured offers were matched.");
+            return;
+        }
+
+        var forceCashOnly = config.Settings.ForceCashOnly;
+        var randomizeCashBarter = GetBoolSetting(config.Settings, "RandomizeCashBarterOffers", true) && !forceCashOnly;
+        var selectedBarterOfferIds = new HashSet<string>();
+
+        if (randomizeCashBarter)
+        {
+            var cashPercent = Math.Clamp(GetIntSetting(config.Settings, "CashOfferPercent", 85), 0, 100);
+            var barterPercent = 100 - cashPercent;
+            var requestedBarterCount = (int)Math.Round(
+                configuredOffers.Count * (barterPercent / 100.0),
+                MidpointRounding.AwayFromZero);
+
+            var random = new Random();
+            var eligibleBarterOfferIds = configuredOffers
+                .Where(x => HasUsableBarterScheme(x.PriceConfig))
+                .Select(x => GetMemberValue(x.Offer, "Id")?.ToString())
+                .Where(x => !string.IsNullOrWhiteSpace(x))
+                .Cast<string>()
+                .OrderBy(_ => random.Next())
+                .ToList();
+
+            var targetBarterCount = Math.Clamp(requestedBarterCount, 0, eligibleBarterOfferIds.Count);
+            selectedBarterOfferIds = eligibleBarterOfferIds
+                .Take(targetBarterCount)
+                .ToHashSet();
+
+            var targetCashCount = configuredOffers.Count - selectedBarterOfferIds.Count;
+            YATMLogger.Log($"[Pricing] Random payment split enabled: {targetCashCount} cash offers / {selectedBarterOfferIds.Count} barter offers.");
+
+            if (eligibleBarterOfferIds.Count < requestedBarterCount)
+            {
+                YATMLogger.Log($"[Pricing] Warning: requested {requestedBarterCount} barter offers, but only {eligibleBarterOfferIds.Count} offers have real barter schemes available.");
+            }
+        }
+
+        foreach (var configuredOffer in configuredOffers)
+        {
+            var offerId = GetMemberValue(configuredOffer.Offer, "Id")?.ToString();
+            if (string.IsNullOrWhiteSpace(offerId))
+            {
+                continue;
+            }
+
+            var useBarter = randomizeCashBarter && selectedBarterOfferIds.Contains(offerId);
+            ApplyPaymentToOffer(
+                assort,
+                configuredOffer.Offer,
+                offerId,
+                configuredOffer.PriceConfig,
+                forceCashOnly,
+                randomizeCashBarter,
+                useBarter);
         }
     }
 
@@ -353,9 +444,12 @@ public class YetAnotherTraderMod(
 
     private static void ApplyPaymentToOffer(
         TraderAssort assort,
+        object offer,
         string offerId,
         PriceConfigItem priceConfig,
-        bool forceCashOnly)
+        bool forceCashOnly,
+        bool randomizeCashBarter,
+        bool useBarter)
     {
         if (!assort.BarterScheme.TryGetValue(offerId, out var existingSchemeList))
         {
@@ -363,34 +457,155 @@ public class YetAnotherTraderMod(
             return;
         }
 
+        if (randomizeCashBarter)
+        {
+            if (useBarter && HasUsableBarterScheme(priceConfig))
+            {
+                ApplyBarterPaymentToOffer(offer, existingSchemeList, priceConfig);
+                return;
+            }
+
+            ApplyCashPaymentToOffer(offer, existingSchemeList, priceConfig);
+            YATMLogger.LogDebug($"[Pricing] Random cash offer: {priceConfig.ItemName} = {priceConfig.Price} {priceConfig.Currency}");
+            return;
+        }
+
         var shouldUseCash = forceCashOnly
             || priceConfig.CashOnly
-            || priceConfig.BarterScheme == null
-            || priceConfig.BarterScheme.Count == 0;
+            || !HasUsableBarterScheme(priceConfig);
 
         if (shouldUseCash)
         {
-            var currencyTpl = YATMConfig.CurrencyToTemplate(priceConfig.Currency);
-
-            ReplaceOfferPaymentScheme(existingSchemeList, new List<List<PaymentConfigItem>>
-            {
-                new()
-                {
-                    new PaymentConfigItem
-                    {
-                        TplId = currencyTpl,
-                        ItemName = priceConfig.Currency.ToUpperInvariant(),
-                        Count = priceConfig.Price
-                    }
-                }
-            });
-
+            ApplyCashPaymentToOffer(offer, existingSchemeList, priceConfig);
             YATMLogger.LogDebug($"[Pricing] Cash override: {priceConfig.ItemName} = {priceConfig.Price} {priceConfig.Currency}");
             return;
         }
 
-        ReplaceOfferPaymentScheme(existingSchemeList, priceConfig.BarterScheme);
-        YATMLogger.LogDebug($"[Pricing] Barter override: {priceConfig.ItemName}");
+        ApplyBarterPaymentToOffer(offer, existingSchemeList, priceConfig);
+    }
+
+    private static void ApplyBarterPaymentToOffer(object offer, object existingSchemeList, PriceConfigItem priceConfig)
+    {
+        // Normal items keep their configured sold tpl.
+        // Ammo rows generated with AmmoBarterPackTplId swap the sold item to the ammo pack tpl
+        // only when that offer is actually using barter.
+        var ammoPackTpl = GetStringMember(priceConfig, "AmmoBarterPackTplId");
+        var ammoPackName = GetStringMember(priceConfig, "AmmoBarterPackItemName");
+        var ammoPackSize = GetIntMember(priceConfig, "AmmoBarterPackSize", 0);
+
+        if (!string.IsNullOrWhiteSpace(ammoPackTpl))
+        {
+            SetOfferTemplate(offer, ammoPackTpl);
+
+            if (!string.IsNullOrWhiteSpace(ammoPackName) && ammoPackSize > 0)
+            {
+                YATMLogger.LogDebug($"[Pricing] Ammo pack barter offer: {priceConfig.ItemName} -> {ammoPackName} ({ammoPackSize} pcs)");
+            }
+            else
+            {
+                YATMLogger.LogDebug($"[Pricing] Ammo pack barter offer: {priceConfig.ItemName} -> {ammoPackTpl}");
+            }
+        }
+        else
+        {
+            SetOfferTemplate(offer, priceConfig.TplId);
+            YATMLogger.LogDebug($"[Pricing] Barter offer: {priceConfig.ItemName}");
+        }
+
+        ReplaceOfferPaymentScheme(existingSchemeList, priceConfig.BarterScheme!);
+    }
+
+    private static void ApplyCashPaymentToOffer(object offer, object existingSchemeList, PriceConfigItem priceConfig)
+    {
+        // Cash offers sell the normal configured item. For ammo this means the loose bullet tpl.
+        SetOfferTemplate(offer, priceConfig.TplId);
+
+        var currencyTpl = YATMConfig.CurrencyToTemplate(priceConfig.Currency);
+
+        ReplaceOfferPaymentScheme(existingSchemeList, new List<List<PaymentConfigItem>>
+        {
+            new()
+            {
+                new PaymentConfigItem
+                {
+                    TplId = currencyTpl,
+                    ItemName = priceConfig.Currency.ToUpperInvariant(),
+                    Count = priceConfig.Price
+                }
+            }
+        });
+    }
+
+    private static void SetOfferTemplate(object offer, string templateId)
+    {
+        if (string.IsNullOrWhiteSpace(templateId))
+        {
+            return;
+        }
+
+        // Different SPT model versions expose the sold template id under different names.
+        // Setting all known aliases is safe because SetMemberValue ignores missing members.
+        SetMemberValue(offer, "Template", templateId);
+        SetMemberValue(offer, "Tpl", templateId);
+        SetMemberValue(offer, "_tpl", templateId);
+        SetMemberValue(offer, "TemplateId", templateId);
+    }
+
+    private static string? GetStringMember(object target, string memberName)
+    {
+        return GetMemberValue(target, memberName)?.ToString();
+    }
+
+    private static int GetIntMember(object target, string memberName, int defaultValue)
+    {
+        var value = GetMemberValue(target, memberName);
+        if (value == null)
+        {
+            return defaultValue;
+        }
+
+        if (value is int intValue)
+        {
+            return intValue;
+        }
+
+        if (int.TryParse(value.ToString(), out var parsedInt))
+        {
+            return parsedInt;
+        }
+
+        return defaultValue;
+    }
+
+    private static bool HasUsableBarterScheme(PriceConfigItem priceConfig)
+    {
+        if (priceConfig.BarterScheme == null || priceConfig.BarterScheme.Count == 0)
+        {
+            return false;
+        }
+
+        foreach (var paymentOption in priceConfig.BarterScheme)
+        {
+            if (paymentOption == null || paymentOption.Count == 0)
+            {
+                continue;
+            }
+
+            foreach (var paymentConfig in paymentOption)
+            {
+                if (paymentConfig == null || string.IsNullOrWhiteSpace(paymentConfig.TplId))
+                {
+                    continue;
+                }
+
+                if (!YATMConfig.IsCurrencyTemplate(paymentConfig.TplId))
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     private static void ReplaceOfferPaymentScheme(object existingSchemeListObject, List<List<PaymentConfigItem>> newScheme)
@@ -447,6 +662,53 @@ public class YetAnotherTraderMod(
         return null;
     }
 
+    private static bool GetBoolSetting(object settings, string settingName, bool defaultValue)
+    {
+        var value = GetMemberValue(settings, settingName);
+        if (value == null)
+        {
+            return defaultValue;
+        }
+
+        if (value is bool boolValue)
+        {
+            return boolValue;
+        }
+
+        if (bool.TryParse(value.ToString(), out var parsedBool))
+        {
+            return parsedBool;
+        }
+
+        if (int.TryParse(value.ToString(), out var parsedInt))
+        {
+            return parsedInt != 0;
+        }
+
+        return defaultValue;
+    }
+
+    private static int GetIntSetting(object settings, string settingName, int defaultValue)
+    {
+        var value = GetMemberValue(settings, settingName);
+        if (value == null)
+        {
+            return defaultValue;
+        }
+
+        if (value is int intValue)
+        {
+            return intValue;
+        }
+
+        if (int.TryParse(value.ToString(), out var parsedInt))
+        {
+            return parsedInt;
+        }
+
+        return defaultValue;
+    }
+
     private static object? GetMemberValue(object target, string memberName)
     {
         var type = target.GetType();
@@ -464,7 +726,35 @@ public class YetAnotherTraderMod(
             memberName,
             BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
 
-        return field?.GetValue(target);
+        if (field != null)
+        {
+            return field.GetValue(target);
+        }
+
+        if (!memberName.Equals("ExtensionData", StringComparison.OrdinalIgnoreCase))
+        {
+            var extensionData = type.GetProperty(
+                    "ExtensionData",
+                    BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase)
+                ?.GetValue(target)
+                ?? type.GetField(
+                    "ExtensionData",
+                    BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase)
+                ?.GetValue(target);
+
+            if (extensionData is IDictionary genericDictionary)
+            {
+                foreach (DictionaryEntry entry in genericDictionary)
+                {
+                    if (entry.Key?.ToString()?.Equals(memberName, StringComparison.OrdinalIgnoreCase) == true)
+                    {
+                        return entry.Value;
+                    }
+                }
+            }
+        }
+
+        return null;
     }
 
     private static void SetMemberValue(object target, string memberName, object? value)
