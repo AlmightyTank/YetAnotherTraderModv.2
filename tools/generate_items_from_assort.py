@@ -393,20 +393,20 @@ BUILT_IN_AMMO_PACKS: dict[str, dict[str, Any]] = {
     "560d5e524bdc2d25448b4571": {"AmmoBarterPackTplId": "657024361419851aef03e6fa", "AmmoBarterPackItemName": "12/70 7mm buckshot ammo pack (25 pcs)", "AmmoBarterPackSize": 25},
     "5d6e68a8a4b9360b6c0d54e2": {"AmmoBarterPackTplId": "64898838d5b4df6140000a20", "AmmoBarterPackItemName": "12/70 AP-20 ammo pack (25 pcs)", "AmmoBarterPackSize": 25},
     "5d6e6911a4b9361bd5780d52": {"AmmoBarterPackTplId": "65702474bfc87b3a34093226", "AmmoBarterPackItemName": "12/70 flechette ammo pack (25 pcs)", "AmmoBarterPackSize": 25},
-    "56dfef82d2720bbd668b4567": {"AmmoBarterPackTplId": "57372ac324597767001bc261", "AmmoBarterPackItemName": "5.45x39mm BP gs ammo pack (30 pcs)", "AmmoBarterPackSize": 30},
-    "56dff026d2720bb8668b4567": {"AmmoBarterPackTplId": "57372bd3245977670b7cd243", "AmmoBarterPackItemName": "5.45x39mm BS gs ammo pack (30 pcs)", "AmmoBarterPackSize": 30},
-    "56dff061d2720bb5668b4567": {"AmmoBarterPackTplId": "57372c89245977685d4159b1", "AmmoBarterPackItemName": "5.45x39mm BT gs ammo pack (30 pcs)", "AmmoBarterPackSize": 30},
-    "56dff2ced2720bb4668b4567": {"AmmoBarterPackTplId": "57372db0245977685d4159b2", "AmmoBarterPackItemName": "5.45x39mm PP gs ammo pack (30 pcs)", "AmmoBarterPackSize": 30},
-    "5c0d5e4486f77478390952fe": {"AmmoBarterPackTplId": "5c1262a286f7743f8a69aab2", "AmmoBarterPackItemName": "5.45x39mm PPBS gs Igolnik ammo pack (30 pcs)", "AmmoBarterPackSize": 30},
-    "56dff3afd2720bba668b4567": {"AmmoBarterPackTplId": "57372ebf2459776862260582", "AmmoBarterPackItemName": "5.45x39mm PS gs ammo pack (30 pcs)", "AmmoBarterPackSize": 30},
+    "56dfef82d2720bbd668b4567": {"AmmoBarterPackTplId": "5737292724597765e5728562", "AmmoBarterPackItemName": "5.45x39mm BP gs ammo pack (120 pcs)", "AmmoBarterPackSize": 120},
+    "56dff026d2720bb8668b4567": {"AmmoBarterPackTplId": "57372b832459776701014e41", "AmmoBarterPackItemName": "5.45x39mm BS gs ammo pack (120 pcs)", "AmmoBarterPackSize": 120},
+    "56dff061d2720bb5668b4567": {"AmmoBarterPackTplId": "57372c21245977670937c6c2", "AmmoBarterPackItemName": "5.45x39mm BT gs ammo pack (120 pcs)", "AmmoBarterPackSize": 120},
+    "56dff2ced2720bb4668b4567": {"AmmoBarterPackTplId": "57372d1b2459776862260581", "AmmoBarterPackItemName": "5.45x39mm PP gs ammo pack (120 pcs)", "AmmoBarterPackSize": 120},
+    "5c0d5e4486f77478390952fe": {"AmmoBarterPackTplId": "657025ebc5d7d4cb4d078588", "AmmoBarterPackItemName": "5.45x39mm PPBS gs Igolnik ammo pack (120 pcs)", "AmmoBarterPackSize": 120},
+    "56dff3afd2720bba668b4567": {"AmmoBarterPackTplId": "57372e73245977685d4159b4", "AmmoBarterPackItemName": "5.45x39mm PS gs ammo pack (120 pcs)", "AmmoBarterPackSize": 120},
     "59e0d99486f7744a32234762": {"AmmoBarterPackTplId": "64acea16c4eda9354b0226b0", "AmmoBarterPackItemName": "7.62x39mm BP gzh ammo pack (20 pcs)", "AmmoBarterPackSize": 20},
     "601aa3d2b2bcb34913271e6d": {"AmmoBarterPackTplId": "6489851fc827d4637f01791b", "AmmoBarterPackItemName": "7.62x39mm MAI AP ammo pack (20 pcs)", "AmmoBarterPackSize": 20},
     "64b7af434b75259c590fa893": {"AmmoBarterPackTplId": "64ace9f9c4eda9354b0226aa", "AmmoBarterPackItemName": "7.62x39mm PP gzh ammo pack (20 pcs)", "AmmoBarterPackSize": 20},
     "5656d7c34bdc2d9d198b4587": {"AmmoBarterPackTplId": "5649ed104bdc2d3d1c8b458b", "AmmoBarterPackItemName": "7.62x39mm PS gzh ammo pack (20 pcs)", "AmmoBarterPackSize": 20},
-    "57372140245977611f70ee91": {"AmmoBarterPackTplId": "573728cc24597765cc785b5d", "AmmoBarterPackItemName": "9x18mm PM SP7 gzh ammo pack (16 pcs)", "AmmoBarterPackSize": 16},
+    "57372140245977611f70ee91": {"AmmoBarterPackTplId": "657026341419851aef03e730", "AmmoBarterPackItemName": "9x18mm PM SP7 gzh ammo pack (50 pcs)", "AmmoBarterPackSize": 50},
     "5c925fa22e221601da359b7b": {"AmmoBarterPackTplId": "65702591c5d7d4cb4d07857c", "AmmoBarterPackItemName": "9x19mm AP 6.3 ammo pack (50 pcs)", "AmmoBarterPackSize": 50},
     "5efb0da7a29a85116f6ea05f": {"AmmoBarterPackTplId": "648987d673c462723909a151", "AmmoBarterPackItemName": "9x19mm PBP ammo pack (50 pcs)", "AmmoBarterPackSize": 50},
-    "56d59d3ad2720bdb418b4577": {"AmmoBarterPackTplId": "5739d41224597779c3645501", "AmmoBarterPackItemName": "9x19mm Pst gzh ammo pack (16 pcs)", "AmmoBarterPackSize": 16},
+    "56d59d3ad2720bdb418b4577": {"AmmoBarterPackTplId": "657025a81419851aef03e724", "AmmoBarterPackItemName": "9x19mm Pst gzh ammo pack (50 pcs)", "AmmoBarterPackSize": 50},
     "5c0d56a986f774449d5de529": {"AmmoBarterPackTplId": "5c1127bdd174af44217ab8b9", "AmmoBarterPackItemName": "9x19mm RIP ammo pack (20 pcs)", "AmmoBarterPackSize": 20},
     "5c0d688c86f77413ae3407b2": {"AmmoBarterPackTplId": "6489854673c462723909a14e", "AmmoBarterPackItemName": "9x39mm BP ammo pack (20 pcs)", "AmmoBarterPackSize": 20},
     "61962d879bb3d20b0946d385": {"AmmoBarterPackTplId": "657025cfbfc87b3a34093253", "AmmoBarterPackItemName": "9x39mm PAB-9 gs ammo pack (20 pcs)", "AmmoBarterPackSize": 20},
@@ -1400,7 +1400,7 @@ def generate_items(
             "Currency": currency,
             # Keep cash-only rows cash by default. The runtime randomizer can still use the
             # generated BarterScheme when it picks the offer as part of the barter 15%.
-            "CashOnly": force_cash_only_rows or original_cash_only,
+            "CashOnly": True,
             "BarterScheme": normalized_scheme,
         }
 
@@ -1501,7 +1501,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--catalog", default=None, help="Optional existing items.json/list used for readable names and fallback prices")
     parser.add_argument("--locale", default=None, help="Optional SPT English locale JSON used for readable item names")
     parser.add_argument("--report", default=None, help="Optional report output path. Defaults to <out>.report.txt")
-    parser.add_argument("--cash-only", action="store_true", help="Set CashOnly=true on every generated row")
+    parser.add_argument("--cash-only", action="store_true", help="Deprecated: items.json rows are now always generated with CashOnly=true while preserving BarterScheme for runtime randomization")
     parser.add_argument("--default-price", type=float, default=0.0, help="Fallback RUB price for barter-only rows with no catalog/tarkov.dev price")
     parser.add_argument(
         "--generate-barter-schemes",

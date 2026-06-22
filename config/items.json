@@ -114,16 +114,16 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "5e2af2bc86f7746d3f3c33fc",
-                    "ItemName": "Hunting matches",
-                    "Count": 1
+                    "TplId": "5e2af29386f7746d4159f077",
+                    "ItemName": "KEKTAPE duct tape",
+                    "Count": 2
                 }
             ]
         ],
-        "AmmoBarterPackSize": 30,
+        "AmmoBarterPackSize": 120,
         "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "57372ac324597767001bc261",
-        "AmmoBarterPackItemName": "5.45x39mm BP gs ammo pack (30 pcs)"
+        "AmmoBarterPackTplId": "5737292724597765e5728562",
+        "AmmoBarterPackItemName": "5.45x39mm BP gs ammo pack (120 pcs)"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba982",
@@ -135,16 +135,16 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "5734770f24597738025ee254",
-                    "ItemName": "Strike Cigarettes",
-                    "Count": 5
+                    "TplId": "590de71386f774347051a052",
+                    "ItemName": "Antique teapot",
+                    "Count": 3
                 }
             ]
         ],
-        "AmmoBarterPackSize": 30,
+        "AmmoBarterPackSize": 120,
         "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "57372bd3245977670b7cd243",
-        "AmmoBarterPackItemName": "5.45x39mm BS gs ammo pack (30 pcs)"
+        "AmmoBarterPackTplId": "57372b832459776701014e41",
+        "AmmoBarterPackItemName": "5.45x39mm BS gs ammo pack (120 pcs)"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba974",
@@ -156,16 +156,16 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "62a0a043cf4a99369e2624a5",
-                    "ItemName": "Bottle of OLOLO Multivitamins",
+                    "TplId": "5e2aedd986f7746d404f3aa4",
+                    "ItemName": "GreenBat lithium battery",
                     "Count": 1
                 }
             ]
         ],
-        "AmmoBarterPackSize": 30,
+        "AmmoBarterPackSize": 120,
         "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "57372c89245977685d4159b1",
-        "AmmoBarterPackItemName": "5.45x39mm BT gs ammo pack (30 pcs)"
+        "AmmoBarterPackTplId": "57372c21245977670937c6c2",
+        "AmmoBarterPackItemName": "5.45x39mm BT gs ammo pack (120 pcs)"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba972",
@@ -179,14 +179,14 @@
                 {
                     "TplId": "5e2aef7986f7746d3f3c33f5",
                     "ItemName": "Repellent",
-                    "Count": 1
+                    "Count": 4
                 }
             ]
         ],
-        "AmmoBarterPackSize": 30,
+        "AmmoBarterPackSize": 120,
         "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "57372db0245977685d4159b2",
-        "AmmoBarterPackItemName": "5.45x39mm PP gs ammo pack (30 pcs)"
+        "AmmoBarterPackTplId": "57372d1b2459776862260581",
+        "AmmoBarterPackItemName": "5.45x39mm PP gs ammo pack (120 pcs)"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba990",
@@ -198,16 +198,16 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "575062b524597720a31c09a1",
-                    "ItemName": "Can of Ice Green tea",
-                    "Count": 4
+                    "TplId": "5d1b2fa286f77425227d1674",
+                    "ItemName": "Electric motor",
+                    "Count": 3
                 }
             ]
         ],
-        "AmmoBarterPackSize": 30,
+        "AmmoBarterPackSize": 120,
         "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "5c1262a286f7743f8a69aab2",
-        "AmmoBarterPackItemName": "5.45x39mm PPBS gs Igolnik ammo pack (30 pcs)"
+        "AmmoBarterPackTplId": "657025ebc5d7d4cb4d078588",
+        "AmmoBarterPackItemName": "5.45x39mm PPBS gs Igolnik ammo pack (120 pcs)"
     },
     {
         "OfferId": "6a300025d2999bc7b9bba95b",
@@ -219,16 +219,16 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "5e2af2bc86f7746d3f3c33fc",
-                    "ItemName": "Hunting matches",
-                    "Count": 1
+                    "TplId": "5e2af29386f7746d4159f077",
+                    "ItemName": "KEKTAPE duct tape",
+                    "Count": 2
                 }
             ]
         ],
-        "AmmoBarterPackSize": 30,
+        "AmmoBarterPackSize": 120,
         "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "57372ebf2459776862260582",
-        "AmmoBarterPackItemName": "5.45x39mm PS gs ammo pack (30 pcs)"
+        "AmmoBarterPackTplId": "57372e73245977685d4159b4",
+        "AmmoBarterPackItemName": "5.45x39mm PS gs ammo pack (120 pcs)"
     },
     {
         "OfferId": "6a2c15ff0ad81c90c80166df",
@@ -436,16 +436,16 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "57347c1124597737fb1379e3",
-                    "ItemName": "Duct tape",
-                    "Count": 1
+                    "TplId": "5734795124597738002c6176",
+                    "ItemName": "Insulating tape",
+                    "Count": 5
                 }
             ]
         ],
-        "AmmoBarterPackSize": 16,
+        "AmmoBarterPackSize": 50,
         "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "573728cc24597765cc785b5d",
-        "AmmoBarterPackItemName": "9x18mm PM SP7 gzh ammo pack (16 pcs)"
+        "AmmoBarterPackTplId": "657026341419851aef03e730",
+        "AmmoBarterPackItemName": "9x18mm PM SP7 gzh ammo pack (50 pcs)"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba976",
@@ -499,16 +499,16 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "57347b8b24597737dd42e192",
-                    "ItemName": "Classic matches",
+                    "TplId": "5734795124597738002c6176",
+                    "ItemName": "Insulating tape",
                     "Count": 1
                 }
             ]
         ],
-        "AmmoBarterPackSize": 16,
+        "AmmoBarterPackSize": 50,
         "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "5739d41224597779c3645501",
-        "AmmoBarterPackItemName": "9x19mm Pst gzh ammo pack (16 pcs)"
+        "AmmoBarterPackTplId": "657025a81419851aef03e724",
+        "AmmoBarterPackItemName": "9x19mm Pst gzh ammo pack (50 pcs)"
     },
     {
         "OfferId": "6a300025d2999bc7b9bba95a",
@@ -2052,6 +2052,65 @@
         ]
     },
     {
+        "OfferId": "6a3210dbd2999bc7b9bbab43",
+        "TplId": "683288ecdf6daf7c654cdb06",
+        "ItemName": "UNKNOWN_ITEM_683288ecdf6daf7c654cdb06",
+        "Price": 111000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5ed5160a87bb8443d10680b5",
+                    "ItemName": "Meldonin injector",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5c10c8fd86f7743d7d706df3",
+                    "ItemName": "Adrenaline injector",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5d1b3f2d86f774253763b735",
+                    "ItemName": "Disposable syringe",
+                    "Count": 2
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a3210dbd2999bc7b9bbab45",
+        "TplId": "6832890f4951707edabbe776",
+        "ItemName": "UNKNOWN_ITEM_6832890f4951707edabbe776",
+        "Price": 155000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5c0e534186f7747fa1419867",
+                    "ItemName": "eTG-change regenerative stimulant injector",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5c0e530286f7747fa1419862",
+                    "ItemName": "Propital regenerative stimulant injector",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5c0e533786f7747fa23f4d47",
+                    "ItemName": "Zagustin hemostatic drug injector",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5d1b3f2d86f774253763b735",
+                    "ItemName": "Disposable syringe",
+                    "Count": 2
+                }
+            ]
+        ]
+    },
+    {
         "OfferId": "6a300025d2999bc7b9bba967",
         "TplId": "699bacc55a0601415c931358",
         "ItemName": "UNKNOWN_ITEM_699bacc55a0601415c931358",
@@ -2189,6 +2248,33 @@
                     "TplId": "5d1c819a86f774771b0acd6c",
                     "ItemName": "Weapon parts",
                     "Count": 4
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a3210dbd2999bc7b9bbab44",
+        "TplId": "6a300025d2999bc7b9bba950",
+        "ItemName": "UNKNOWN_ITEM_6a300025d2999bc7b9bba950",
+        "Price": 65000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5c0e530286f7747fa1419862",
+                    "ItemName": "Propital regenerative stimulant injector",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5c0e533786f7747fa23f4d47",
+                    "ItemName": "Zagustin hemostatic drug injector",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5d1b3a5d86f774252167ba22",
+                    "ItemName": "Pile of meds",
+                    "Count": 2
                 }
             ]
         ]
