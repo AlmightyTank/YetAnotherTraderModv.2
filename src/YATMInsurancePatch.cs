@@ -38,7 +38,10 @@ public class YATMInsurancePatch(
         // 100 = always returns unless map rules like Labs block insurance.
         insuranceConfig.ReturnChancePercent[TonyId] = 95;
 
-        logger.Success("[Tony] Patched insurance return chance.");
+        if (YATMLogger.IsDebugEnabled)
+        {
+            YATMLogger.LogDebug("Patched insurance return chance.");
+        }
     }
 
     private void PatchTraderDialogue()
@@ -47,13 +50,13 @@ public class YATMInsurancePatch(
 
         if (trader is null)
         {
-            logger.Error($"[Tony] Could not patch insurance dialogue. Trader {TonyId} was not found.");
+            YATMLogger.Log("Could not patch insurance dialogue. Trader {TonyId} was not found.");
             return;
         }
 
         if (trader.Dialogue == null)
         {
-            logger.Error($"[Tony] Could not patch insurance dialogue. Trader {TonyId} Dialogue property is null and cannot be set (init-only).");
+            YATMLogger.Log("Could not patch insurance dialogue. Trader {TonyId} Dialogue property is null and cannot be set (init-only).");
             return;
         }
 
@@ -113,7 +116,10 @@ public class YATMInsurancePatch(
             $"{TonyId} insuranceFailedLabyrinth 3",
         ];
 
-        logger.Success("[Tony] Patched insurance dialogue keys.");
+        if (YATMLogger.IsDebugEnabled)
+        {
+            YATMLogger.LogDebug("Patched insurance dialogue keys.");
+        }
     }
 
     private void PatchLocales()
@@ -122,7 +128,7 @@ public class YATMInsurancePatch(
 
         if (!locales.Global.TryGetValue("en", out var englishLocale) || englishLocale is null)
         {
-            logger.Error("[Tony] Could not patch insurance locale text. English locale was not found.");
+            YATMLogger.Log("Could not patch insurance locale text. English locale was not found.");
             return;
         }
 
@@ -221,6 +227,9 @@ public class YATMInsurancePatch(
             return locale;
         });
 
-        logger.Success("[Tony] Patched insurance locale text.");
+        if (YATMLogger.IsDebugEnabled)
+        {
+            YATMLogger.LogDebug("Patched insurance locale text.");
+        }
     }
 }
