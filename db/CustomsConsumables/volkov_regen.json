@@ -33,33 +33,5 @@
             "shortName": "V-Regen",
             "description": "A black-market regenerative combat injector cooked from military stimulants and stolen medical stock."
         }
-    },
-
-    "trader": {
-        "traderId": "66a0f6b2c4d8e90123456789",
-        "loyaltyReq": 3,
-        "amountForSale": 3,
-        "buyRestrictionMax": 2,
-        "assortmentId": "6a3210dbd2999bc7b9bbab45",
-        "barter_scheme": [
-            [
-                {
-                    "count": 1,
-                    "_tpl": "5c0e534186f7747fa1419867"
-                },
-                {
-                    "count": 1,
-                    "_tpl": "5c0e530286f7747fa1419862"
-                },
-                {
-                    "count": 1,
-                    "_tpl": "5c0e533786f7747fa23f4d47"
-                },
-                {
-                    "count": 2,
-                    "_tpl": "5d1b3f2d86f774253763b735"
-                }
-            ]
-        ]
     }
 }

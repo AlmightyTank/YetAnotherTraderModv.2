@@ -59,29 +59,5 @@
             "shortName": "V-Hemo",
             "description": "A back-room injector mixed from Zagustin hemostatics and Propital-style regenerative compounds. It seals bleeding fast, dulls pain, and keeps the body moving long enough to leave the fight. The crash comes after."
         }
-    },
-
-    "trader": {
-        "traderId": "66a0f6b2c4d8e90123456789",
-        "loyaltyReq": 3,
-        "amountForSale": 4,
-        "buyRestrictionMax": 2,
-        "assortmentId": "6a3210dbd2999bc7b9bbab44",
-        "barterScheme": [
-            [
-                {
-                    "count": 1,
-                    "_tpl": "5c0e530286f7747fa1419862"
-                },
-                {
-                    "count": 1,
-                    "_tpl": "5c0e533786f7747fa23f4d47"
-                },
-                {
-                    "count": 2,
-                    "_tpl": "5d1b3a5d86f774252167ba22"
-                }
-            ]
-        ]
     }
 }
