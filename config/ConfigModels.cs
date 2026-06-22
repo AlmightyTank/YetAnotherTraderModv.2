@@ -18,7 +18,7 @@ public class SettingsConfig
     public bool UnlimitedStock { get; set; } = false;
     public double PriceMultiplier { get; set; } = 1.0;
 
-    public bool ForceCashOnly { get; set; } = false;
+    public bool CashOffersOnly { get; set; } = false;
     public bool RandomizeCashBarterOffers { get; set; } = true;
     public int CashOfferPercent { get; set; } = 85;
 

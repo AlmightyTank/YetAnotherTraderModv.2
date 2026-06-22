@@ -161,14 +161,8 @@ public class YATMConfig
             try
             {
                 var json = File.ReadAllText(_settingsPath);
-                var options = new JsonSerializerOptions
-                {
-                    ReadCommentHandling = JsonCommentHandling.Skip,
-                    AllowTrailingCommas = true,
-                    PropertyNameCaseInsensitive = true
-                };
 
-                Settings = JsonSerializer.Deserialize<SettingsConfig>(json, options) ?? new SettingsConfig();
+                Settings = JsonSerializer.Deserialize<SettingsConfig>(json, CachedReadOptions) ?? new SettingsConfig();
                 NormalizeSettings();
             }
             catch (Exception ex)
@@ -199,7 +193,7 @@ public class YATMConfig
 
                 // false = allow custom barter recipes in items.json.
                 // true = force every configured offer to use Price + Currency only.
-                ForceCashOnly = false,
+                CashOffersOnly = false,
 
                 // If true, configured offers are randomly split between cash and barter.
                 // CashOfferPercent = 85 means roughly 85% cash and 15% barter.
@@ -216,8 +210,23 @@ public class YATMConfig
 
     private void NormalizeSettings()
     {
-        // Keep the setting safe. 0 = all barter, 100 = all cash.
+        var changed = false;
+
         Settings.CashOfferPercent = Math.Clamp(Settings.CashOfferPercent, 0, 100);
+        Settings.OutOfStockChance = Math.Clamp(Settings.OutOfStockChance, 0, 100);
+        Settings.RepairQuality = Math.Clamp(Settings.RepairQuality, 0.0, 1.0);
+
+        if (Settings.CashOffersOnly && Settings.RandomizeCashBarterOffers)
+        {
+            YATMLogger.Log("[Config] CashOffersOnly and RandomizeCashBarterOffers cannot both be true. CashOffersOnly takes priority, so RandomizeCashBarterOffers was disabled.");
+            Settings.RandomizeCashBarterOffers = false;
+            changed = true;
+        }
+
+        if (changed)
+        {
+            SaveJson(_settingsPath, Settings);
+        }
     }
 
     private void LoadOrGeneratePrices(TraderAssort assortJson)
@@ -227,14 +236,8 @@ public class YATMConfig
             try
             {
                 var json = File.ReadAllText(_pricesPath);
-                var options = new JsonSerializerOptions
-                {
-                    ReadCommentHandling = JsonCommentHandling.Skip,
-                    AllowTrailingCommas = true,
-                    PropertyNameCaseInsensitive = true
-                };
 
-                Prices = JsonSerializer.Deserialize<List<PriceConfigItem>>(json, options) ?? new List<PriceConfigItem>();
+                Prices = JsonSerializer.Deserialize<List<PriceConfigItem>>(json, CachedReadOptions) ?? new List<PriceConfigItem>();
 
                 var upgradedAmmoPackRows = ApplyAmmoPackMetadata(Prices);
                 if (upgradedAmmoPackRows > 0)
@@ -405,22 +408,30 @@ public class YATMConfig
         return changed;
     }
 
-    private void SaveJson<T>(string path, T data)
+    private static void SaveJson<T>(string path, T data)
     {
-        var options = new JsonSerializerOptions
-        {
-            WriteIndented = true,
-            ReadCommentHandling = JsonCommentHandling.Skip,
-            AllowTrailingCommas = true
-        };
-
         try
         {
-            File.WriteAllText(path, JsonSerializer.Serialize(data, options));
+            File.WriteAllText(path, JsonSerializer.Serialize(data, CachedWriteOptions));
         }
         catch (Exception ex)
         {
             Console.WriteLine($"[Tony] Failed to save config: {ex.Message}");
         }
     }
+
+    // Add these static readonly fields to cache JsonSerializerOptions instances
+    private static readonly JsonSerializerOptions CachedReadOptions = new()
+    {
+        ReadCommentHandling = JsonCommentHandling.Skip,
+        AllowTrailingCommas = true,
+        PropertyNameCaseInsensitive = true
+    };
+
+    private static readonly JsonSerializerOptions CachedWriteOptions = new()
+    {
+        WriteIndented = true,
+        ReadCommentHandling = JsonCommentHandling.Skip,
+        AllowTrailingCommas = true
+    };
 }

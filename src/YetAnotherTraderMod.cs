@@ -74,7 +74,7 @@ public class YetAnotherTraderMod(
             YATMLogger.LogDebug($"  PriceMultiplier: {config.Settings.PriceMultiplier}");
             YATMLogger.LogDebug($"  RandomizeCashBarterOffers: {GetBoolSetting(config.Settings, "RandomizeCashBarterOffers", true)}");
             YATMLogger.LogDebug($"  CashOfferPercent: {GetIntSetting(config.Settings, "CashOfferPercent", 85)}");
-            YATMLogger.LogDebug($"  ForceCashOnly: {config.Settings.ForceCashOnly}");
+            YATMLogger.LogDebug($"  ForceCashOnly: {config.Settings.CashOffersOnly}");
         }
 
         traderBase.UnlockedByDefault = config.Settings.UnlockedByDefault;
@@ -173,6 +173,12 @@ public class YetAnotherTraderMod(
 
             var locales = databaseServer.GetTables().Locales.Global["en"];
 
+            var ammoBarterPackTplIds = config.Prices
+                .Select(x => GetStringMember(x, "AmmoBarterPackTplId"))
+                .Where(x => !string.IsNullOrWhiteSpace(x))
+                .Cast<string>()
+                .ToHashSet();
+
             foreach (var item in assort.Items)
             {
                 if (item.ParentId != "hideout")
@@ -194,6 +200,17 @@ public class YetAnotherTraderMod(
                     && locales.Value.TryGetValue($"{tpl} Name", out var nameVal))
                 {
                     itemName = nameVal?.ToString() ?? item.Id;
+                }
+
+                // Ammo offers that rolled into barter were swapped to their ammo pack tpl.
+                // Keep these pack offers limited to 10 stock with a 1-3 buy restriction.
+                // This must run before the general random stock/unlimited logic so ammo pack barters
+                // do not get zeroed out or expanded to normal/unlimited stock.
+                if (!string.IsNullOrWhiteSpace(tpl) && ammoBarterPackTplIds.Contains(tpl))
+                {
+                    ApplyAmmoPackBarterOfferLimits(item, itemName);
+                    modifiedCount++;
+                    continue;
                 }
 
                 if (config.Settings.RandomizeStockAvailable)
@@ -374,8 +391,8 @@ public class YetAnotherTraderMod(
             return;
         }
 
-        var forceCashOnly = config.Settings.ForceCashOnly;
-        var randomizeCashBarter = GetBoolSetting(config.Settings, "RandomizeCashBarterOffers", true) && !forceCashOnly;
+        var CashOffersOnly = config.Settings.CashOffersOnly;
+        var randomizeCashBarter = GetBoolSetting(config.Settings, "RandomizeCashBarterOffers", true) && !CashOffersOnly;
         var selectedBarterOfferIds = new HashSet<string>();
 
         if (randomizeCashBarter)
@@ -423,7 +440,7 @@ public class YetAnotherTraderMod(
                 configuredOffer.Offer,
                 offerId,
                 configuredOffer.PriceConfig,
-                forceCashOnly,
+                CashOffersOnly,
                 randomizeCashBarter,
                 useBarter);
         }
@@ -447,7 +464,7 @@ public class YetAnotherTraderMod(
         object offer,
         string offerId,
         PriceConfigItem priceConfig,
-        bool forceCashOnly,
+        bool CashOffersOnly,
         bool randomizeCashBarter,
         bool useBarter)
     {
@@ -470,7 +487,7 @@ public class YetAnotherTraderMod(
             return;
         }
 
-        var shouldUseCash = forceCashOnly
+        var shouldUseCash = CashOffersOnly
             || priceConfig.CashOnly
             || !HasUsableBarterScheme(priceConfig);
 
@@ -496,6 +513,7 @@ public class YetAnotherTraderMod(
         if (!string.IsNullOrWhiteSpace(ammoPackTpl))
         {
             SetOfferTemplate(offer, ammoPackTpl);
+            ApplyAmmoPackBarterOfferLimits(offer, priceConfig.ItemName);
 
             if (!string.IsNullOrWhiteSpace(ammoPackName) && ammoPackSize > 0)
             {
@@ -513,6 +531,25 @@ public class YetAnotherTraderMod(
         }
 
         ReplaceOfferPaymentScheme(existingSchemeList, priceConfig.BarterScheme!);
+    }
+
+    private static void ApplyAmmoPackBarterOfferLimits(object offer, string? itemName)
+    {
+        var upd = GetMemberValue(offer, "Upd");
+        if (upd == null)
+        {
+            YATMLogger.LogDebug($"[Pricing] Ammo pack barter stock skipped because offer has no Upd data: {itemName ?? "Unknown item"}");
+            return;
+        }
+
+        var buyRestrictionMax = Random.Shared.Next(1, 4);
+
+        SetMemberValue(upd, "UnlimitedCount", false);
+        SetMemberValue(upd, "StackObjectsCount", 10);
+        SetMemberValue(upd, "BuyRestrictionMax", buyRestrictionMax);
+        SetMemberValue(upd, "BuyRestrictionCurrent", 0);
+
+        YATMLogger.LogDebug($"[Pricing] Ammo pack barter stock: {itemName ?? "Unknown item"} | StackObjectsCount 10 | BuyRestrictionMax {buyRestrictionMax}");
     }
 
     private static void ApplyCashPaymentToOffer(object offer, object existingSchemeList, PriceConfigItem priceConfig)
