@@ -746,23 +746,6 @@
         ]
     },
     {
-        "OfferId": "6a3007dfd2999bc7b9bba98a",
-        "TplId": "57c44b372459772d2b39b8ce",
-        "ItemName": "AS VAL 9x39 special assault rifle",
-        "Price": 117650,
-        "Currency": "RUB",
-        "CashOnly": true,
-        "BarterScheme": [
-            [
-                {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 117650
-                }
-            ]
-        ]
-    },
-    {
         "OfferId": "6a3007dfd2999bc7b9bba96c",
         "TplId": "544fb25a4bdc2dfb738b4567",
         "ItemName": "Aseptic bandage",
@@ -1206,23 +1189,6 @@
         ]
     },
     {
-        "OfferId": "6a2b7f5c5dfa23a0e0e0a843",
-        "TplId": "59d6088586f774275f37482f",
-        "ItemName": "Kalashnikov AKM 7.62x39 assault rifle",
-        "Price": 86400,
-        "Currency": "RUB",
-        "CashOnly": true,
-        "BarterScheme": [
-            [
-                {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 86400
-                }
-            ]
-        ]
-    },
-    {
         "OfferId": "6a300025d2999bc7b9bba963",
         "TplId": "57dc2fa62459775949412633",
         "ItemName": "Kalashnikov AKS-74U 5.45x39 assault rifle",
@@ -1286,74 +1252,6 @@
                     "TplId": "5c1267ee86f77416ec610f72",
                     "ItemName": "Chain with Prokill medallion",
                     "Count": 1
-                }
-            ]
-        ]
-    },
-    {
-        "OfferId": "6a300025d2999bc7b9bba962",
-        "TplId": "5448bd6b4bdc2dfc2f8b4569",
-        "ItemName": "Makarov PM 9x18PM pistol",
-        "Price": 27500,
-        "Currency": "RUB",
-        "CashOnly": true,
-        "BarterScheme": [
-            [
-                {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 27500
-                }
-            ]
-        ]
-    },
-    {
-        "OfferId": "6a2bf72e8a12b7b0a0b622bc",
-        "TplId": "587e02ff24597743df3deaeb",
-        "ItemName": "Molot Arms Simonov OP-SKS 7.62x39 carbine",
-        "Price": 65500,
-        "Currency": "RUB",
-        "CashOnly": true,
-        "BarterScheme": [
-            [
-                {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 65500
-                }
-            ]
-        ]
-    },
-    {
-        "OfferId": "6a300025d2999bc7b9bba964",
-        "TplId": "59e6152586f77473dc057aa1",
-        "ItemName": "Molot Arms VPO-136 Vepr-KM 7.62x39 carbine",
-        "Price": 82500,
-        "Currency": "RUB",
-        "CashOnly": true,
-        "BarterScheme": [
-            [
-                {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 82500
-                }
-            ]
-        ]
-    },
-    {
-        "OfferId": "6a300025d2999bc7b9bba965",
-        "TplId": "59e6687d86f77411d949b251",
-        "ItemName": "Molot Arms VPO-209 .366 TKM carbine",
-        "Price": 89500,
-        "Currency": "RUB",
-        "CashOnly": true,
-        "BarterScheme": [
-            [
-                {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 89500
                 }
             ]
         ]
@@ -1743,23 +1641,6 @@
         ]
     },
     {
-        "OfferId": "6a300025d2999bc7b9bba967",
-        "TplId": "60339954d62c9b14ed777c06",
-        "ItemName": "Soyuz-TM STM-9 Gen.2 9x19 carbine",
-        "Price": 84500,
-        "Currency": "RUB",
-        "CashOnly": true,
-        "BarterScheme": [
-            [
-                {
-                    "TplId": "5449016a4bdc2d6f028b456f",
-                    "ItemName": "Roubles",
-                    "Count": 84500
-                }
-            ]
-        ]
-    },
-    {
         "OfferId": "6a300025d2999bc7b9bba968",
         "TplId": "5e4abfed86f77406a2713cf7",
         "ItemName": "Splav Tarzan M22 chest rig (Smog)",
@@ -1823,23 +1704,6 @@
                     "TplId": "5751435d24597720a27126d1",
                     "ItemName": "Can of Max Energy energy drink",
                     "Count": 3
-                }
-            ]
-        ]
-    },
-    {
-        "OfferId": "6a3007dfd2999bc7b9bba98c",
-        "TplId": "5c46fbd72e2216398b5a8c9c",
-        "ItemName": "SVDS 7.62x54R sniper rifle",
-        "Price": 42800,
-        "Currency": "RUB",
-        "CashOnly": false,
-        "BarterScheme": [
-            [
-                {
-                    "TplId": "5d1c819a86f774771b0acd6c",
-                    "ItemName": "Weapon parts",
-                    "Count": 4
                 }
             ]
         ]
@@ -1943,6 +1807,142 @@
                     "TplId": "5d1b376e86f774252519444e",
                     "ItemName": "Bottle of Fierce Hatchling moonshine",
                     "Count": 1
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a300025d2999bc7b9bba967",
+        "TplId": "699bacc55a0601415c931358",
+        "ItemName": "UNKNOWN_ITEM_699bacc55a0601415c931358",
+        "Price": 84500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 84500
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a300025d2999bc7b9bba965",
+        "TplId": "69ac236f895124b233cb4b5c",
+        "ItemName": "UNKNOWN_ITEM_69ac236f895124b233cb4b5c",
+        "Price": 89500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 89500
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a300025d2999bc7b9bba964",
+        "TplId": "69ac2686f67026da2c75948f",
+        "ItemName": "UNKNOWN_ITEM_69ac2686f67026da2c75948f",
+        "Price": 82500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 82500
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a3007dfd2999bc7b9bba98a",
+        "TplId": "69ac37ebd05c3cf7e4542d12",
+        "ItemName": "UNKNOWN_ITEM_69ac37ebd05c3cf7e4542d12",
+        "Price": 117650,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 117650
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a2bf72e8a12b7b0a0b622bc",
+        "TplId": "69ac9191b5d3ed0dcbfa29c7",
+        "ItemName": "UNKNOWN_ITEM_69ac9191b5d3ed0dcbfa29c7",
+        "Price": 65500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 65500
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a3007dfd2999bc7b9bba98c",
+        "TplId": "69b3eecb340e9925c26e1852",
+        "ItemName": "UNKNOWN_ITEM_69b3eecb340e9925c26e1852",
+        "Price": 0,
+        "Currency": "RUB",
+        "CashOnly": false,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5d1c819a86f774771b0acd6c",
+                    "ItemName": "Weapon parts",
+                    "Count": 4
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a300025d2999bc7b9bba962",
+        "TplId": "6a3804fd82d8dd83f87b1f52",
+        "ItemName": "UNKNOWN_ITEM_6a3804fd82d8dd83f87b1f52",
+        "Price": 27500,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 27500
+                }
+            ]
+        ]
+    },
+    {
+        "OfferId": "6a2b7f5c5dfa23a0e0e0a843",
+        "TplId": "6a38124b82d8dd83f87b1f55",
+        "ItemName": "UNKNOWN_ITEM_6a38124b82d8dd83f87b1f55",
+        "Price": 86400,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5449016a4bdc2d6f028b456f",
+                    "ItemName": "Roubles",
+                    "Count": 86400
                 }
             ]
         ]

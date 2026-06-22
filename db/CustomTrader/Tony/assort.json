@@ -110,7 +110,7 @@
         },
         {
             "_id": "6a2bf72e8a12b7b0a0b622bc",
-            "_tpl": "587e02ff24597743df3deaeb",
+            "_tpl": "69ac9191b5d3ed0dcbfa29c7",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -457,6 +457,18 @@
             "slotId": "Front_plate"
         },
         {
+            "_id": "6a3825ca0fe83fa83ce91d02",
+            "_tpl": "6557458f83942d705f0c4962",
+            "parentId": "6a2bfc3951ab7898b840fc8c",
+            "slotId": "Left_side_plate"
+        },
+        {
+            "_id": "6a3825cb0fe83fa83ce91d03",
+            "_tpl": "6557458f83942d705f0c4962",
+            "parentId": "6a2bfc3951ab7898b840fc8c",
+            "slotId": "Right_side_plate"
+        },
+        {
             "_id": "6a300025d2999bc7b9bba95b",
             "_tpl": "56dff3afd2720bba668b4567",
             "parentId": "hideout",
@@ -590,7 +602,7 @@
         },
         {
             "_id": "6a300025d2999bc7b9bba962",
-            "_tpl": "5448bd6b4bdc2dfc2f8b4569",
+            "_tpl": "6a3804fd82d8dd83f87b1f52",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -725,7 +737,7 @@
         },
         {
             "_id": "6a300025d2999bc7b9bba964",
-            "_tpl": "59e6152586f77473dc057aa1",
+            "_tpl": "69ac2686f67026da2c75948f",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -824,7 +836,7 @@
         },
         {
             "_id": "6a300025d2999bc7b9bba965",
-            "_tpl": "59e6687d86f77411d949b251",
+            "_tpl": "69ac236f895124b233cb4b5c",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -974,7 +986,7 @@
         },
         {
             "_id": "6a300025d2999bc7b9bba967",
-            "_tpl": "60339954d62c9b14ed777c06",
+            "_tpl": "699bacc55a0601415c931358",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -1645,7 +1657,7 @@
         },
         {
             "_id": "6a2b7f5c5dfa23a0e0e0a843",
-            "_tpl": "59d6088586f774275f37482f",
+            "_tpl": "6a38124b82d8dd83f87b1f55",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -2476,7 +2488,7 @@
         },
         {
             "_id": "6a3007dfd2999bc7b9bba98a",
-            "_tpl": "57c44b372459772d2b39b8ce",
+            "_tpl": "69ac37ebd05c3cf7e4542d12",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -2662,7 +2674,7 @@
         },
         {
             "_id": "6a3007dfd2999bc7b9bba98c",
-            "_tpl": "5c46fbd72e2216398b5a8c9c",
+            "_tpl": "69b3eecb340e9925c26e1852",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {

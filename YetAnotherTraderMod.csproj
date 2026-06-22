@@ -66,6 +66,22 @@
     <Content Remove="db\CustomsConsumables\volkov_hemostat.json" />
     <Content Remove="db\CustomsConsumables\volkov_redline.json" />
     <Content Remove="db\CustomsConsumables\volkov_regen.json" />
+    <Content Remove="db\CustomWeaponPresets\BTAKM_Preset.json" />
+    <Content Remove="db\CustomWeaponPresets\BTASVAL_Preset.json" />
+    <Content Remove="db\CustomWeaponPresets\FA209_Preset.json" />
+    <Content Remove="db\CustomWeaponPresets\FAPM9X18_Preset.json" />
+    <Content Remove="db\CustomWeaponPresets\FASKS_Preset.json" />
+    <Content Remove="db\CustomWeaponPresets\FASTM_Preset.json" />
+    <Content Remove="db\CustomWeaponPresets\SVDSARB_Preset.json" />
+    <Content Remove="db\CustomWeapons\BTAKM.json" />
+    <Content Remove="db\CustomWeapons\BTASVAL.json" />
+    <Content Remove="db\CustomWeapons\FA136.json" />
+    <Content Remove="db\CustomWeapons\FA136_Preset.json" />
+    <Content Remove="db\CustomWeapons\FA209.json" />
+    <Content Remove="db\CustomWeapons\FAPM9X18.json" />
+    <Content Remove="db\CustomWeapons\FASKS.json" />
+    <Content Remove="db\CustomWeapons\FASTM.json" />
+    <Content Remove="db\CustomWeapons\SVDSARB.json" />
   </ItemGroup>
   <ItemGroup>
     <None Include="db\CustomQuests\579dc571d53a0658a154fbec\QuestAssort\assort.json" />
@@ -78,6 +94,8 @@
     <Folder Include="db\CustomQuests\66a0f6b2c4d8e90123456789\Images\" />
     <Folder Include="db\CustomQuests\66a0f6b2c4d8e90123456789\QuestAssort\" />
     <Folder Include="db\CustomLocales\" />
+    <Folder Include="src\Models\" />
+    <Folder Include="src\Services\ItemHelpers\" />
   </ItemGroup>
 
 	<PropertyGroup>
