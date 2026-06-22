@@ -10,5 +10,7 @@
     "OutOfStockChance": 5, //[Stock] The percentage chance (0-100) that an item is out of stock (if Randomize is true).
     "UnlimitedStock": false, //[Stock] If true, all items have infinite stock. Overrides randomization. Note: Refilling issues are currently being patched by auto-clearing BuyRestrictions.    
     "PriceMultiplier": 1.0927, //[Pricing] Global multiplier for all item prices. 1.0 = standard price. 1.0127 = +1.27%.    
+    "RandomizeCashBarterOffers": true, //[Pricing] If true, configured offers randomly become cash or barter when the server loads.
+    "CashOfferPercent": 85, //[Pricing] Percent of configured offers that become cash. The remaining percent becomes barter when a real barter scheme exists.
     "DebugLogging": false //[Debug] Enables detailed logs in the server console for troubleshooting.
 }
