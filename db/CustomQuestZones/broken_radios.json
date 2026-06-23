@@ -1,0 +1,56 @@
+[
+    {
+        "ZoneId": "place_tony_lighthouse_tennis_court_satellite_jammer",
+        "ZoneName": "place_tony_lighthouse_tennis_court_satellite_jammer",
+        "ZoneLocation": "Lighthouse",
+        "ZoneType": "placeitem",
+        "FlareType": "",
+        "Position": {
+            "X": "-116.7533",
+            "Y": "40.78991",
+            "Z": "89.32043",
+            "W": "0"
+        },
+        "Rotation": {
+            "X": "0",
+            "Y": "0",
+            "Z": "0",
+            "W": "1"
+        },
+        "Scale": {
+            "X": "3.5",
+            "Y": "1.75",
+            "Z": "1.5",
+            "W": "0"
+        },
+        "GroupPosition": null,
+        "Salvage": null
+    },
+    {
+        "ZoneId": "place_tony_lighthouse_helipad_satellite_jammer",
+        "ZoneName": "place_tony_lighthouse_helipad_satellite_jammer",
+        "ZoneLocation": "Lighthouse",
+        "ZoneType": "placeitem",
+        "FlareType": "",
+        "Position": {
+            "X": "-68.01543",
+            "Y": "27.78517",
+            "Z": "119.6756",
+            "W": "0"
+        },
+        "Rotation": {
+            "X": "0",
+            "Y": "0",
+            "Z": "0",
+            "W": "1"
+        },
+        "Scale": {
+            "X": "3.5",
+            "Y": "2.75",
+            "Z": "2.5",
+            "W": "0"
+        },
+        "GroupPosition": null,
+        "Salvage": null
+    }
+]
