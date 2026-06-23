@@ -25,7 +25,7 @@ public record ModMetadata : AbstractModMetadata
     public override string Author { get; init; } = "AMightyTank | Based on PrisciluOrigins by Reis/Anigx";
     public override List<string>? Contributors { get; init; } = ["Reis", "Anigx"];
     public override SemanticVersioning.Version Version { get; init; } = new("0.0.5");
-    public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.11");
+    public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.13");
     public override List<string>? Incompatibilities { get; init; } = [];
     public override Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; } = new()
     {
@@ -173,11 +173,15 @@ public class YetAnotherTraderMod(
 
             var locales = databaseServer.GetTables().Locales.Global["en"];
 
-            var ammoBarterPackTplIds = config.Prices
-                .Select(x => GetStringMember(x, "AmmoBarterPackTplId"))
-                .Where(x => !string.IsNullOrWhiteSpace(x))
-                .Cast<string>()
-                .ToHashSet();
+            var ammoBarterPackConfigsByTpl = config.Prices
+                .Select(x => new
+                {
+                    PackTpl = GetStringMember(x, "AmmoBarterPackTplId"),
+                    PriceConfig = x
+                })
+                .Where(x => !string.IsNullOrWhiteSpace(x.PackTpl))
+                .GroupBy(x => x.PackTpl!)
+                .ToDictionary(x => x.Key, x => x.First().PriceConfig);
 
             foreach (var item in assort.Items)
             {
@@ -206,9 +210,10 @@ public class YetAnotherTraderMod(
                 // Keep these pack offers limited to 10 stock with a 1-3 buy restriction.
                 // This must run before the general random stock/unlimited logic so ammo pack barters
                 // do not get zeroed out or expanded to normal/unlimited stock.
-                if (!string.IsNullOrWhiteSpace(tpl) && ammoBarterPackTplIds.Contains(tpl))
+                if (!string.IsNullOrWhiteSpace(tpl)
+                    && ammoBarterPackConfigsByTpl.TryGetValue(tpl, out var ammoPackPriceConfig))
                 {
-                    ApplyAmmoPackBarterOfferLimits(item, itemName);
+                    ApplyAmmoPackBarterOfferLimits(item, ammoPackPriceConfig);
                     modifiedCount++;
                     continue;
                 }
@@ -513,7 +518,7 @@ public class YetAnotherTraderMod(
         if (!string.IsNullOrWhiteSpace(ammoPackTpl))
         {
             SetOfferTemplate(offer, ammoPackTpl);
-            ApplyAmmoPackBarterOfferLimits(offer, priceConfig.ItemName);
+            ApplyAmmoPackBarterOfferLimits(offer, priceConfig);
 
             if (!string.IsNullOrWhiteSpace(ammoPackName) && ammoPackSize > 0)
             {
@@ -533,23 +538,149 @@ public class YetAnotherTraderMod(
         ReplaceOfferPaymentScheme(existingSchemeList, priceConfig.BarterScheme!);
     }
 
-    private static void ApplyAmmoPackBarterOfferLimits(object offer, string? itemName)
+    private static void ApplyAmmoPackBarterOfferLimits(object offer, PriceConfigItem priceConfig)
     {
         var upd = GetMemberValue(offer, "Upd");
         if (upd == null)
         {
-            YATMLogger.LogDebug($"[Pricing] Ammo pack barter stock skipped because offer has no Upd data: {itemName ?? "Unknown item"}");
+            YATMLogger.LogDebug($"[Pricing] Ammo pack barter stock skipped because offer has no Upd data: {priceConfig.ItemName ?? "Unknown item"}");
             return;
         }
 
-        var buyRestrictionMax = Random.Shared.Next(1, 4);
+        var buyRestrictionMax = GetAmmoPackBuyRestrictionMax(priceConfig);
 
         SetMemberValue(upd, "UnlimitedCount", false);
         SetMemberValue(upd, "StackObjectsCount", 10);
         SetMemberValue(upd, "BuyRestrictionMax", buyRestrictionMax);
         SetMemberValue(upd, "BuyRestrictionCurrent", 0);
 
-        YATMLogger.LogDebug($"[Pricing] Ammo pack barter stock: {itemName ?? "Unknown item"} | StackObjectsCount 10 | BuyRestrictionMax {buyRestrictionMax}");
+        YATMLogger.LogDebug($"[Pricing] Ammo pack barter stock: {priceConfig.ItemName ?? "Unknown item"} | StackObjectsCount 10 | BuyRestrictionMax {buyRestrictionMax}");
+    }
+
+    private static int GetAmmoPackBuyRestrictionMax(PriceConfigItem priceConfig)
+    {
+        var itemName = priceConfig.ItemName ?? string.Empty;
+        var looseAmmoTpl = priceConfig.TplId ?? string.Empty;
+        var packTpl = GetStringMember(priceConfig, "AmmoBarterPackTplId") ?? string.Empty;
+        var price = priceConfig.Price;
+
+        if (IsHighTierAmmo(looseAmmoTpl, packTpl, price))
+        {
+            return 1;
+        }
+
+        if (IsMidTierAmmo(looseAmmoTpl, packTpl, price))
+        {
+            return 2;
+        }
+
+        return 3;
+    }
+
+    private static bool IsHighTierAmmo(string looseAmmoTpl, string packTpl, double price)
+    {
+        if (price >= 1000)
+        {
+            return true;
+        }
+
+        return IsTplMatch(looseAmmoTpl, packTpl,
+            // .366 AP-M
+            "5f0596629e22f464da6bbdd9",
+            "657023f81419851aef03e6f1",
+
+            // 12/70 AP-20
+            "5d6e68a8a4b9360b6c0d54e2",
+            "64898838d5b4df6140000a20",
+
+            // 5.45 PPBS Igolnik
+            "5c0d5e4486f77478390952fe",
+            "657025ebc5d7d4cb4d078588",
+
+            // 5.45 BS
+            "56dff026d2720bb8668b4567",
+            "57372b832459776701014e41",
+
+            // 7.62x39 MAI AP
+            "601aa3d2b2bcb34913271e6d",
+            "6489851fc827d4637f01791b",
+
+            // 9x19 PBP
+            "5efb0da7a29a85116f6ea05f",
+            "648987d673c462723909a151",
+
+            // 9x39 BP
+            "5c0d688c86f77413ae3407b2",
+            "6489854673c462723909a14e",
+
+            // 9x39 SP-6
+            "57a0e5022459774d1673f889",
+            "657025dabfc87b3a34093256"
+        );
+    }
+
+    private static bool IsMidTierAmmo(string looseAmmoTpl, string packTpl, double price)
+    {
+        if (price >= 500)
+        {
+            return true;
+        }
+
+        return IsTplMatch(looseAmmoTpl, packTpl,
+            // 12/70 flechette
+            "5d6e6911a4b9361bd5780d52",
+            "65702474bfc87b3a34093226",
+
+            // 5.45 BP
+            "56dfef82d2720bbd668b4567",
+            "5737292724597765e5728562",
+
+            // 5.45 BT
+            "56dff061d2720bb5668b4567",
+            "57372c21245977670937c6c2",
+
+            // 5.45 PP
+            "56dff2ced2720bb4668b4567",
+            "57372d1b2459776862260581",
+
+            // 7.62x39 BP
+            "59e0d99486f7744a32234762",
+            "64acea16c4eda9354b0226b0",
+
+            // 7.62x39 PP
+            "64b7af434b75259c590fa893",
+            "64ace9f9c4eda9354b0226aa",
+
+            // 9x19 AP 6.3
+            "5c925fa22e221601da359b7b",
+            "65702591c5d7d4cb4d07857c",
+
+            // 9x19 RIP
+            "5c0d56a986f774449d5de529",
+            "5c1127bdd174af44217ab8b9",
+
+            // 9x39 SPP
+            "5c0d668f86f7747ccb7f13b2",
+            "657025dfcfc010a0f5006a3b",
+
+            // 9x39 PAB-9
+            "61962d879bb3d20b0946d385",
+            "657025cfbfc87b3a34093253"
+        );
+    }
+
+    private static bool IsTplMatch(string looseAmmoTpl, string packTpl, params string[] tplIds)
+    {
+        foreach (var tplId in tplIds)
+        {
+            if (looseAmmoTpl.Equals(tplId, StringComparison.OrdinalIgnoreCase)
+                || packTpl.Equals(tplId, StringComparison.OrdinalIgnoreCase))
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private static void ApplyCashPaymentToOffer(object offer, object existingSchemeList, PriceConfigItem priceConfig)
