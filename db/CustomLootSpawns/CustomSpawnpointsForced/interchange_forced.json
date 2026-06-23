@@ -4,7 +4,7 @@
             "locationId": "(25.2702, 27.6249, -76.3549)",
             "probability": 1,
             "template": {
-                "Id": "tony_first_dead_drop_factory_day",
+                "Id": "tony_trauma_bag",
                 "IsContainer": false,
                 "useGravity": false,
                 "randomRotation": false,
