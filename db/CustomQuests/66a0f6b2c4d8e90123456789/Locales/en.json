@@ -163,5 +163,20 @@
     "6a3210dbd2999bc7b9bbab2d": "Locate Tony's improvised triage point inside Mantis",
     "6a3210dbd2999bc7b9bbab2e": "Recover Tony's sealed trauma bag",
     "6a3210dbd2999bc7b9bbab33": "Survive and extract from Interchange",
-    "6a3210dbd2999bc7b9bbab35": "Hand over Tony's sealed trauma bag"
+    "6a3210dbd2999bc7b9bbab35": "Hand over Tony's sealed trauma bag",
+
+    "6a39bb7182d8dd83f87b1f6b name": "Broken Radios",
+    "6a39bb7182d8dd83f87b1f6b description": "The bags moved. The crates moved. Now the coast is listening. Someone with clean dollars and cleaner uniforms has a contact route on Lighthouse, and their radios are pointed at traffic I would rather keep quiet. I do not need them dead. Dead men get replaced. I need them deaf. Take these jammers. Put one near the chalet comms setup and one near the Water Treatment relay. Once their radios start screaming, my people can move without every errand boy on the coast hearing about it.",
+    "6a39bb7182d8dd83f87b1f6b note": "Tony wants you to plant signal jammers near communication equipment on Lighthouse.",
+    "6a39bb7182d8dd83f87b1f6b startedMessageText": "Lighthouse. Two jammers. One by the chalet comms, one by the Water Treatment relay. Plant them and leave alive.",
+    "6a39bb7182d8dd83f87b1f6b successMessageText": "Good. Their radios are coughing static, and my people have a quiet window to move. You did not start a war. You made sure the first shot comes from the dark.",
+    "6a39bb7182d8dd83f87b1f6b failMessageText": "The radios are still talking. That means someone is still listening, and I dislike being overheard.",
+    "6a39bb7182d8dd83f87b1f6b acceptPlayerMessage": "I'll plant the jammers.",
+    "6a39bb7182d8dd83f87b1f6b declinePlayerMessage": "Not touching Lighthouse comms yet.",
+    "6a39bb7182d8dd83f87b1f6b completePlayerMessage": "The radios are broken.",
+    "6a39bb7182d8dd83f87b1f6b changeQuestMessageText": "Tony wants two signal jammers planted near Lighthouse communication equipment.",
+
+    "6a39bb7182d8dd83f87b1f6c": "Plant the first signal jammer near the chalet comms equipment",
+    "6a39bb7182d8dd83f87b1f6d": "Plant the second signal jammer near the Water Treatment comms relay",
+    "6a39bb7182d8dd83f87b1f71": "Survive and extract from Lighthouse"
 }
