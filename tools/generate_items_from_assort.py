@@ -40,11 +40,18 @@ write the matching ammo pack template so the runtime loader can sell the pack wh
 
 Force every row to cash-only while still preserving the original/generated barter recipe in BarterScheme:
   python tools/generate_items_from_assort.py --assort data/assort.json --out config/items.json --cash-only --catalog config/items.old.json
+
+Keep your current config/items.json tuning and only fill rows/settings that are missing:
+  python tools/generate_items_from_assort.py --assort data/assort.json --out config/items.json --keep-current-settings --generate-barter-schemes cash-only
+
+Limit repeated barter ingredients so one item does not dominate generated recipes:
+  python tools/generate_items_from_assort.py --assort data/assort.json --out config/items.json --generate-barter-schemes cash-only --barter-max-uses-per-item 5
 """
 
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 import random
 import re
@@ -52,7 +59,7 @@ import time
 import urllib.error
 import urllib.request
 
-SCRIPT_VERSION = "2.5.3"
+SCRIPT_VERSION = "2.7.0"
 from collections import Counter
 from pathlib import Path
 from typing import Any
@@ -522,6 +529,160 @@ def load_name_and_price_catalog(path: Path | None) -> tuple[dict[str, str], dict
     return names, prices
 
 
+def load_existing_item_settings(path: Path | None) -> tuple[list[dict[str, Any]], list[str]]:
+    """Load an existing items.json file for --keep-current-settings mode."""
+    warnings: list[str] = []
+
+    if path is None:
+        warnings.append("--keep-current-settings was enabled, but no current settings file was selected")
+        return [], warnings
+
+    if not path.exists():
+        warnings.append(f"--keep-current-settings was enabled, but current settings file was not found: {path}")
+        return [], warnings
+
+    data = load_json(path)
+    if not isinstance(data, list):
+        warnings.append(f"--keep-current-settings ignored {path}: expected a JSON list")
+        return [], warnings
+
+    rows: list[dict[str, Any]] = []
+    skipped = 0
+    for row in data:
+        if isinstance(row, dict):
+            rows.append(copy.deepcopy(row))
+        else:
+            skipped += 1
+
+    if skipped:
+        warnings.append(f"--keep-current-settings skipped {skipped} non-object rows from {path}")
+
+    warnings.append(f"Loaded {len(rows)} current settings rows from {path}")
+    return rows, warnings
+
+
+def get_row_offer_id(row: dict[str, Any]) -> str:
+    return str(get_ci(row, "OfferId", "offerId", "Id", "id", default="") or "")
+
+
+def get_row_tpl_id(row: dict[str, Any]) -> str:
+    return str(get_ci(row, "TplId", "tplId", "_tpl", "Template", default="") or "")
+
+
+def is_missing_setting_value(key: str, value: Any) -> bool:
+    """True when a field should be considered missing and safe to fill.
+
+    We intentionally do not treat False, 0, empty lists, or existing barter
+    schemes as missing because those may be deliberate Tony tuning choices.
+    """
+    if value is None:
+        return True
+    if key in {"OfferId", "TplId", "ItemName", "Currency", "BarterSchemeValueBasis"} and isinstance(value, str):
+        return value.strip() == ""
+    return False
+
+
+def fill_missing_settings(existing_row: dict[str, Any], generated_row: dict[str, Any]) -> tuple[dict[str, Any], int]:
+    """Preserve existing settings and copy only missing top-level fields."""
+    merged = copy.deepcopy(existing_row)
+    filled_count = 0
+
+    for key, generated_value in generated_row.items():
+        if key not in merged or is_missing_setting_value(key, merged.get(key)):
+            merged[key] = copy.deepcopy(generated_value)
+            filled_count += 1
+
+    return merged, filled_count
+
+
+def merge_current_settings(
+    generated_rows: list[dict[str, Any]],
+    existing_rows: list[dict[str, Any]],
+    current_settings_path: Path | None,
+) -> tuple[list[dict[str, Any]], list[str]]:
+    """Keep current item settings, fill missing fields, and append new assort rows.
+
+    Matching is OfferId-first because duplicate TplIds are allowed in trader
+    assorts. TplId fallback is only used when the generated TplId is unique.
+    """
+    warnings: list[str] = []
+
+    if not existing_rows:
+        warnings.append("--keep-current-settings had no existing rows to preserve; wrote fully generated output")
+        return generated_rows, warnings
+
+    generated_by_offer: dict[str, int] = {}
+    generated_tpl_counts: Counter[str] = Counter()
+    generated_by_tpl: dict[str, int] = {}
+
+    for index, row in enumerate(generated_rows):
+        offer_id = get_row_offer_id(row)
+        tpl_id = get_row_tpl_id(row)
+        if offer_id:
+            generated_by_offer[offer_id] = index
+        if tpl_id:
+            generated_tpl_counts[tpl_id] += 1
+            generated_by_tpl.setdefault(tpl_id, index)
+
+    merged_rows: list[dict[str, Any]] = []
+    used_generated_indexes: set[int] = set()
+    preserved_existing_rows = 0
+    appended_missing_rows = 0
+    filled_missing_fields = 0
+    ignored_stale_rows = 0
+    ambiguous_tpl_matches = 0
+
+    for existing_row in existing_rows:
+        offer_id = get_row_offer_id(existing_row)
+        tpl_id = get_row_tpl_id(existing_row)
+        generated_index: int | None = None
+
+        if offer_id and offer_id in generated_by_offer:
+            generated_index = generated_by_offer[offer_id]
+        elif tpl_id and generated_tpl_counts.get(tpl_id, 0) == 1:
+            generated_index = generated_by_tpl[tpl_id]
+        elif tpl_id and generated_tpl_counts.get(tpl_id, 0) > 1:
+            ambiguous_tpl_matches += 1
+
+        if generated_index is None:
+            ignored_stale_rows += 1
+            continue
+
+        if generated_index in used_generated_indexes:
+            ignored_stale_rows += 1
+            continue
+
+        merged_row, filled_count = fill_missing_settings(existing_row, generated_rows[generated_index])
+        merged_rows.append(merged_row)
+        used_generated_indexes.add(generated_index)
+        preserved_existing_rows += 1
+        filled_missing_fields += filled_count
+
+    for index, generated_row in enumerate(generated_rows):
+        if index in used_generated_indexes:
+            continue
+        merged_rows.append(copy.deepcopy(generated_row))
+        appended_missing_rows += 1
+
+    source_text = f" from {current_settings_path}" if current_settings_path is not None else ""
+    warnings.append(
+        "--keep-current-settings merge complete"
+        f"{source_text}: preserved {preserved_existing_rows} existing rows, "
+        f"filled {filled_missing_fields} missing fields, appended {appended_missing_rows} new rows"
+    )
+
+    if ignored_stale_rows:
+        warnings.append(
+            f"--keep-current-settings ignored {ignored_stale_rows} existing rows that are not in the current assort output"
+        )
+    if ambiguous_tpl_matches:
+        warnings.append(
+            f"--keep-current-settings could not TplId-match {ambiguous_tpl_matches} existing rows because that TplId appears more than once; add OfferId to those rows to preserve them"
+        )
+
+    return merged_rows, warnings
+
+
 def load_locale_names(path: Path | None) -> dict[str, str]:
     names: dict[str, str] = {}
 
@@ -607,9 +768,9 @@ def parse_tarkov_dev_items(raw_items: list[Any]) -> tuple[dict[str, str], dict[s
             names[item_id] = str(name)
 
         # basePrice is stable game data. avg24hPrice can be useful if basePrice is missing.
-        price = item.get("basePrice")
+        price = item.get("avg24hPrice")
         if price is None:
-            price = item.get("avg24hPrice")
+            price = item.get("basePrice")
         if price is not None:
             try:
                 prices[item_id] = float(price)
@@ -1035,6 +1196,126 @@ def make_payment_component(component: dict[str, Any], count: int) -> dict[str, A
     }
 
 
+def get_barter_component_tpls(scheme: list[list[dict[str, Any]]]) -> list[str]:
+    """Return non-currency barter ingredient TplIds used by a scheme.
+
+    The generator counts each ingredient type once per offer, not by stack
+    count. This prevents one ingredient from appearing in too many different
+    recipes while still allowing normal stacks such as 2x duct tape.
+    """
+    tpl_ids: list[str] = []
+    if not isinstance(scheme, list):
+        return tpl_ids
+
+    for option in scheme:
+        if not isinstance(option, list):
+            continue
+        for payment in option:
+            if not isinstance(payment, dict):
+                continue
+            tpl = str(payment.get("TplId", ""))
+            if tpl and not is_currency_tpl(tpl):
+                tpl_ids.append(tpl)
+
+    return tpl_ids
+
+
+def record_barter_scheme_usage(
+    scheme: list[list[dict[str, Any]]],
+    usage_counts: Counter[str] | None,
+) -> None:
+    if usage_counts is None:
+        return
+
+    # Count each ingredient template once per row/offer.
+    for tpl in sorted(set(get_barter_component_tpls(scheme))):
+        usage_counts[tpl] += 1
+
+
+def filter_components_by_usage_cap(
+    components: list[dict[str, Any]],
+    usage_counts: Counter[str] | None,
+    max_uses_per_item: int,
+) -> list[dict[str, Any]]:
+    """Prefer components below the configured global usage cap.
+
+    If every candidate is already at the cap, return the original list so the
+    generator can still make a valid recipe instead of failing. The report will
+    warn when a cap had to be exceeded.
+    """
+    if max_uses_per_item <= 0 or usage_counts is None:
+        return components
+
+    under_cap = [
+        component for component in components
+        if usage_counts[str(component.get("TplId", ""))] < max_uses_per_item
+    ]
+    return under_cap or components
+
+
+def barter_usage_sort_key(
+    component: dict[str, Any],
+    usage_counts: Counter[str] | None,
+    max_uses_per_item: int,
+) -> tuple[int, int]:
+    if max_uses_per_item <= 0 or usage_counts is None:
+        return (0, 0)
+
+    tpl = str(component.get("TplId", ""))
+    current_uses = int(usage_counts[tpl])
+    over_cap = 1 if current_uses >= max_uses_per_item else 0
+    return (over_cap, current_uses)
+
+
+def count_barter_ingredient_usage_from_rows(rows: list[dict[str, Any]]) -> Counter[str]:
+    usage_counts: Counter[str] = Counter()
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        scheme = row.get("BarterScheme", [])
+        if isinstance(scheme, list):
+            record_barter_scheme_usage(scheme, usage_counts)
+    return usage_counts
+
+
+def build_barter_ingredient_name_map(rows: list[dict[str, Any]]) -> dict[str, str]:
+    names: dict[str, str] = {}
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        scheme = row.get("BarterScheme", [])
+        if not isinstance(scheme, list):
+            continue
+        for option in scheme:
+            if not isinstance(option, list):
+                continue
+            for payment in option:
+                if not isinstance(payment, dict):
+                    continue
+                tpl = str(payment.get("TplId", ""))
+                if not tpl or is_currency_tpl(tpl):
+                    continue
+                item_name = str(payment.get("ItemName", "") or "")
+                if item_name:
+                    names.setdefault(tpl, item_name)
+    return names
+
+
+def format_barter_usage_summary(
+    usage_counts: Counter[str],
+    name_by_tpl: dict[str, str],
+    limit: int = 5,
+) -> str:
+    if not usage_counts:
+        return "none"
+
+    parts: list[str] = []
+    for tpl, count in usage_counts.most_common(max(1, int(limit or 5))):
+        name = name_by_tpl.get(tpl) or BARTER_POOL_NAME_BY_TPL.get(tpl) or tpl
+        parts.append(f"{name} x{count}")
+    return "; ".join(parts)
+
+
 def make_cash_payment_scheme(price: float, currency: str) -> list[list[dict[str, Any]]]:
     currency_code = (currency or "RUB").upper()
     currency_tpl = TPL_BY_CURRENCY.get(currency_code, RUB_TPL)
@@ -1061,6 +1342,8 @@ def generate_barter_scheme_for_price(
     max_components: int,
     rng: random.Random,
     pack_count: int = 1,
+    barter_usage_counts: Counter[str] | None = None,
+    barter_max_uses_per_item: int = 0,
 ) -> list[list[dict[str, Any]]]:
     """Create one plausible non-currency barter option from the item cash Price.
 
@@ -1081,6 +1364,7 @@ def generate_barter_scheme_for_price(
         component_slots = rng.randint(3, max_components)
 
     pool = choose_barter_pool_for_offer(item_name, sold_tpl, target)
+    pool = filter_components_by_usage_cap(pool, barter_usage_counts, barter_max_uses_per_item)
     pool = sorted(pool, key=lambda component: float(component.get("Value", 0) or 0))
 
     selected: list[dict[str, Any]] = []
@@ -1094,6 +1378,7 @@ def generate_barter_scheme_for_price(
         # Keep candidates near the current target piece. Add a little randomness so
         # repeated runs with different seeds do not all look identical.
         available = [component for component in pool if component["TplId"] not in used_tpls]
+        available = filter_components_by_usage_cap(available, barter_usage_counts, barter_max_uses_per_item)
         near = [
             component for component in available
             if float(component.get("Value", 0) or 0) <= max(ideal_piece_value * 1.75, 5_000)
@@ -1103,7 +1388,10 @@ def generate_barter_scheme_for_price(
 
         ranked = sorted(
             near,
-            key=lambda component: abs(float(component.get("Value", 0) or 0) - ideal_piece_value),
+            key=lambda component: (
+                barter_usage_sort_key(component, barter_usage_counts, barter_max_uses_per_item),
+                abs(float(component.get("Value", 0) or 0) - ideal_piece_value),
+            ),
         )
         sample_count = min(len(ranked), 5)
         component = rng.choice(ranked[:sample_count]) if sample_count else rng.choice(pool)
@@ -1161,6 +1449,8 @@ def generate_barter_scheme_covering_target(
     target_value: float,
     max_components: int,
     rng: random.Random,
+    barter_usage_counts: Counter[str] | None = None,
+    barter_max_uses_per_item: int = 0,
 ) -> list[list[dict[str, Any]]]:
     """Create a barter option that actually lands near the requested value.
 
@@ -1170,6 +1460,7 @@ def generate_barter_scheme_covering_target(
     target = max(float(target_value or 0), 1.0)
     max_components = max(1, min(int(max_components or 1), 6))
     pool = choose_barter_pool_for_offer(item_name, sold_tpl, target)
+    pool = filter_components_by_usage_cap(pool, barter_usage_counts, barter_max_uses_per_item)
 
     bundles: list[dict[str, Any]] = []
     for component in pool:
@@ -1204,11 +1495,16 @@ def generate_barter_scheme_covering_target(
             max_components=max_components,
             rng=rng,
             pack_count=1,
+            barter_usage_counts=barter_usage_counts,
+            barter_max_uses_per_item=barter_max_uses_per_item,
         )
 
-    def score_bundle_set(bundle_set: list[dict[str, Any]]) -> tuple[float, float, int, float]:
+    def score_bundle_set(bundle_set: list[dict[str, Any]]) -> tuple[float, int, float, int, float]:
         total = sum(float(bundle["value"]) for bundle in bundle_set)
         distance = abs(total - target)
+        usage_score = 0
+        if barter_usage_counts is not None and barter_max_uses_per_item > 0:
+            usage_score = sum(int(barter_usage_counts[str(bundle["tpl"])]) for bundle in bundle_set)
 
         # Strongly punish underpaying by more than 15%.
         if total < target * 0.85:
@@ -1220,7 +1516,7 @@ def generate_barter_scheme_covering_target(
 
         component_type_count = len(bundle_set)
         total_item_count = sum(int(bundle["count"]) for bundle in bundle_set)
-        return (distance, abs(total - target), component_type_count, total_item_count)
+        return (distance, usage_score, abs(total - target), component_type_count, total_item_count)
 
     # Search a trimmed list of good bundle choices. This gives stable, near-value
     # results without exploding runtime for large assortments.
@@ -1228,7 +1524,7 @@ def generate_barter_scheme_covering_target(
     search_space = bundles[:36]
 
     best: list[dict[str, Any]] | None = None
-    best_score: tuple[float, float, int, float] | None = None
+    best_score: tuple[float, int, float, int, float] | None = None
 
     def consider(candidate: list[dict[str, Any]]) -> None:
         nonlocal best, best_score
@@ -1290,6 +1586,7 @@ def generate_items(
     barter_max_components: int,
     barter_rng: random.Random,
     ammo_barter_pack_size: int,
+    barter_max_uses_per_item: int,
 ) -> tuple[list[dict[str, Any]], list[str]]:
     items = get_ci(assort, "items", "Items", default=[])
     barter_scheme = get_ci(assort, "barter_scheme", "BarterScheme", default={})
@@ -1311,6 +1608,7 @@ def generate_items(
 
     output: list[dict[str, Any]] = []
     warnings: list[str] = []
+    barter_usage_counts: Counter[str] = Counter()
 
     for root in sellable_roots:
         offer_id = get_item_id(root)
@@ -1363,6 +1661,8 @@ def generate_items(
                 target_value=pack_price,
                 max_components=barter_max_components,
                 rng=barter_rng,
+                barter_usage_counts=barter_usage_counts,
+                barter_max_uses_per_item=barter_max_uses_per_item,
             )
             if generated_scheme:
                 normalized_scheme = generated_scheme
@@ -1387,6 +1687,8 @@ def generate_items(
                 max_components=barter_max_components,
                 rng=barter_rng,
                 pack_count=1,
+                barter_usage_counts=barter_usage_counts,
+                barter_max_uses_per_item=barter_max_uses_per_item,
             )
             if generated_scheme:
                 normalized_scheme = generated_scheme
@@ -1420,7 +1722,21 @@ def generate_items(
                     "runtime randomizer should keep this ammo offer cash-only unless you add AmmoBarterPackTplId manually"
                 )
 
+        record_barter_scheme_usage(normalized_scheme, barter_usage_counts)
         output.append(row)
+
+    if barter_max_uses_per_item > 0:
+        name_by_tpl = build_barter_ingredient_name_map(output)
+        overused = {tpl: count for tpl, count in barter_usage_counts.items() if count > barter_max_uses_per_item}
+        if overused:
+            overused_text = format_barter_usage_summary(Counter(overused), name_by_tpl, limit=10)
+            warnings.append(
+                f"WARNING: barter ingredient cap {barter_max_uses_per_item} was exceeded because not enough valid alternatives were available: {overused_text}"
+            )
+        warnings.append(
+            f"Barter ingredient usage cap active: max {barter_max_uses_per_item} offers per ingredient; "
+            f"most used: {format_barter_usage_summary(barter_usage_counts, name_by_tpl, limit=5)}"
+        )
 
     output.sort(key=lambda row: (str(row["ItemName"]).lower(), str(row["OfferId"])))
 
@@ -1454,6 +1770,8 @@ def build_report(out_path: Path, output: list[dict[str, Any]], warnings: list[st
 
     duplicate_tpl_counts = Counter(str(row.get("TplId", "")) for row in output)
     duplicate_tpls = {tpl: count for tpl, count in duplicate_tpl_counts.items() if count > 1}
+    barter_usage_counts = count_barter_ingredient_usage_from_rows(output)
+    barter_name_by_tpl = build_barter_ingredient_name_map(output)
 
     lines = [
         "items.json generation report",
@@ -1469,6 +1787,8 @@ def build_report(out_path: Path, output: list[dict[str, Any]], warnings: list[st
         f"Ammo rows missing pack template target: {ammo_rows_without_pack_target}",
         f"Unique TplIds: {len(duplicate_tpl_counts)}",
         f"Duplicate TplIds preserved: {duplicate_tpls}",
+        f"Unique barter ingredients: {len(barter_usage_counts)}",
+        f"Most-used barter ingredients: {format_barter_usage_summary(barter_usage_counts, barter_name_by_tpl, limit=5)}",
         "",
         "Warnings:",
     ]
@@ -1501,6 +1821,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--catalog", default=None, help="Optional existing items.json/list used for readable names and fallback prices")
     parser.add_argument("--locale", default=None, help="Optional SPT English locale JSON used for readable item names")
     parser.add_argument("--report", default=None, help="Optional report output path. Defaults to <out>.report.txt")
+    parser.add_argument("--keep-current-settings", "--fill-missing-only", action="store_true", help="Preserve existing items.json rows/settings and only fill missing fields or append missing assort rows")
+    parser.add_argument("--current-settings", default=None, help="Optional existing items.json path used by --keep-current-settings. Defaults to --catalog when provided, otherwise --out")
     parser.add_argument("--cash-only", action="store_true", help="Deprecated: items.json rows are now always generated with CashOnly=true while preserving BarterScheme for runtime randomization")
     parser.add_argument("--default-price", type=float, default=0.0, help="Fallback RUB price for barter-only rows with no catalog/tarkov.dev price")
     parser.add_argument(
@@ -1514,6 +1836,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--barter-value-multiplier", type=float, default=1.0, help="Generated barter target value multiplier based on Price")
     parser.add_argument("--barter-max-components", type=int, default=4, help="Max different item types in a generated barter recipe")
+    parser.add_argument("--barter-max-uses-per-item", type=int, default=0, help="Maximum number of generated offers that should use the same barter ingredient. 0 disables the cap")
     parser.add_argument("--barter-seed", type=int, default=1337, help="Seed for deterministic generated barter recipes")
     parser.add_argument("--ammo-barter-pack-size", type=int, default=30, help="Ammo generated barters are valued as this many rounds instead of one round")
 
@@ -1538,6 +1861,7 @@ def main() -> int:
     locale_path = Path(args.locale) if args.locale else None
     report_path = Path(args.report) if args.report else out_path.with_suffix(out_path.suffix + ".report.txt")
     tarkov_dev_cache_path = Path(args.tarkov_dev_cache) if args.tarkov_dev_cache else out_path.parent / "tarkovdev_items_cache.json"
+    current_settings_path = Path(args.current_settings) if args.current_settings else (catalog_path if catalog_path is not None else out_path)
 
     if not assort_path.exists():
         raise FileNotFoundError(f"assort file not found: {assort_path}")
@@ -1548,6 +1872,10 @@ def main() -> int:
 
     catalog_names, catalog_prices = load_name_and_price_catalog(catalog_path)
     locale_names = load_locale_names(locale_path)
+    existing_item_settings: list[dict[str, Any]] = []
+    current_settings_warnings: list[str] = []
+    if args.keep_current_settings:
+        existing_item_settings, current_settings_warnings = load_existing_item_settings(current_settings_path)
     tarkov_dev_names, tarkov_dev_prices, tarkov_dev_warnings = get_tarkov_dev_names_and_prices(
         enabled=bool(args.tarkov_dev),
         cache_path=tarkov_dev_cache_path,
@@ -1569,8 +1897,33 @@ def main() -> int:
         barter_max_components=args.barter_max_components,
         barter_rng=random.Random(args.barter_seed),
         ammo_barter_pack_size=args.ammo_barter_pack_size,
+        barter_max_uses_per_item=max(0, int(args.barter_max_uses_per_item or 0)),
     )
-    warnings = tarkov_dev_warnings + warnings
+    if args.keep_current_settings:
+        output, merge_warnings = merge_current_settings(
+            generated_rows=output,
+            existing_rows=existing_item_settings,
+            current_settings_path=current_settings_path,
+        )
+        warnings.extend(merge_warnings)
+
+    final_barter_max_uses_per_item = max(0, int(args.barter_max_uses_per_item or 0))
+    if final_barter_max_uses_per_item > 0:
+        final_usage_counts = count_barter_ingredient_usage_from_rows(output)
+        final_name_by_tpl = build_barter_ingredient_name_map(output)
+        final_overused = {
+            tpl: count
+            for tpl, count in final_usage_counts.items()
+            if count > final_barter_max_uses_per_item
+        }
+        if final_overused:
+            warnings.append(
+                f"WARNING: final items.json has barter ingredients over cap {final_barter_max_uses_per_item}: "
+                f"{format_barter_usage_summary(Counter(final_overused), final_name_by_tpl, limit=10)}. "
+                "This can happen when --keep-current-settings preserves existing tuned BarterScheme values."
+            )
+
+    warnings = tarkov_dev_warnings + current_settings_warnings + warnings
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(output, indent=4, ensure_ascii=False) + "\n", encoding="utf-8")
