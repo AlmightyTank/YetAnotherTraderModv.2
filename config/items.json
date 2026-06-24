@@ -16,6 +16,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "657023f81419851aef03e6f1"
     },
     {
@@ -35,6 +36,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "657024011419851aef03e6f4"
     },
     {
@@ -54,6 +56,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "657024361419851aef03e6fa"
     },
     {
@@ -78,6 +81,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "64898838d5b4df6140000a20"
     },
     {
@@ -102,6 +106,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "65702474bfc87b3a34093226"
     },
     {
@@ -121,6 +126,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "5737292724597765e5728562"
     },
     {
@@ -140,6 +146,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "57372b832459776701014e41"
     },
     {
@@ -159,6 +166,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "57372c21245977670937c6c2"
     },
     {
@@ -178,6 +186,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "57372d1b2459776862260581"
     },
     {
@@ -202,6 +211,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "657025ebc5d7d4cb4d078588"
     },
     {
@@ -221,6 +231,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "57372e73245977685d4159b4"
     },
     {
@@ -239,7 +250,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba955",
@@ -257,7 +269,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba956",
@@ -280,7 +293,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba97a",
@@ -303,7 +317,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6c6da34d9dc8e53bdb1ed465",
@@ -321,7 +336,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaab4",
@@ -339,7 +355,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba983",
@@ -358,6 +375,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "64acea16c4eda9354b0226b0"
     },
     {
@@ -377,6 +395,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "6489851fc827d4637f01791b"
     },
     {
@@ -396,6 +415,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "64ace9f9c4eda9354b0226aa"
     },
     {
@@ -415,6 +435,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "5649ed104bdc2d3d1c8b458b"
     },
     {
@@ -434,6 +455,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "657026341419851aef03e730"
     },
     {
@@ -453,6 +475,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "65702591c5d7d4cb4d07857c"
     },
     {
@@ -472,6 +495,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "648987d673c462723909a151"
     },
     {
@@ -491,6 +515,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "657025a81419851aef03e724"
     },
     {
@@ -510,6 +535,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "5c1127bdd174af44217ab8b9"
     },
     {
@@ -529,6 +555,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "6489854673c462723909a14e"
     },
     {
@@ -548,6 +575,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "657025cfbfc87b3a34093253"
     },
     {
@@ -567,6 +595,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "657025d4c5d7d4cb4d078585"
     },
     {
@@ -591,6 +620,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "657025dabfc87b3a34093256"
     },
     {
@@ -610,6 +640,7 @@
             ]
         ],
         "AlwaysBarter": false,
+        "AlwaysInStock": false,
         "AmmoBarterPackTplId": "657025dfcfc010a0f5006a3b"
     },
     {
@@ -643,7 +674,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2b7f99d2999bc7b9bba8be",
@@ -661,7 +693,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba96e",
@@ -679,7 +712,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2f1c3bd2999bc7b9bba8e4",
@@ -697,7 +731,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2f2001d2999bc7b9bba8e5",
@@ -715,7 +750,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2f1c3bd2999bc7b9bba8e2",
@@ -733,7 +769,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2f1c3bd2999bc7b9bba8e3",
@@ -751,7 +788,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba9b4",
@@ -774,7 +812,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba9b5",
@@ -797,7 +836,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba98d",
@@ -815,7 +855,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba970",
@@ -833,7 +874,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2c1133d2999bc7b9bba8cc",
@@ -856,7 +898,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba96d",
@@ -874,7 +917,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba96c",
@@ -892,7 +936,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba969",
@@ -910,7 +955,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2bfc3951ab7898b840fc8c",
@@ -928,7 +974,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba994",
@@ -946,7 +993,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba980",
@@ -969,7 +1017,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba95e",
@@ -992,7 +1041,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2a2501339aae85cffe58d2",
@@ -1015,7 +1065,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba95f",
@@ -1038,7 +1089,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba97c",
@@ -1061,7 +1113,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba97d",
@@ -1079,7 +1132,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba97e",
@@ -1097,7 +1151,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2e2072d2999bc7b9bba8dd",
@@ -1120,7 +1175,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba98e",
@@ -1143,7 +1199,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a39f49c82d8dd83f87b1f9a",
@@ -1171,7 +1228,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2a24be339aae85cffe58d1",
@@ -1189,7 +1247,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaef",
@@ -1207,7 +1266,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba999",
@@ -1225,7 +1285,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2f526bd2999bc7b9bba8fe",
@@ -1243,7 +1304,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2c1062d2999bc7b9bba8cb",
@@ -1261,7 +1323,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba96f",
@@ -1279,7 +1342,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2c1062d2999bc7b9bba8ca",
@@ -1297,7 +1361,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba996",
@@ -1335,7 +1400,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2b7e8e5dfa23a0e0e08a56",
@@ -1363,7 +1429,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2b7dbd5dfa23a0e0e06e9b",
@@ -1386,7 +1453,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2b7951ea367e8be8e5390d",
@@ -1414,7 +1482,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba963",
@@ -1442,7 +1511,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba98f",
@@ -1460,7 +1530,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2bf7af8a12b7b0a0b622d4",
@@ -1483,7 +1554,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2b83fcd2999bc7b9bba8c4",
@@ -1501,7 +1573,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba959",
@@ -1519,7 +1592,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba966",
@@ -1537,7 +1611,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba981",
@@ -1555,7 +1630,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": true
     },
     {
         "OfferId": "6a39f49c82d8dd83f87b1f9c",
@@ -1588,7 +1664,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaea",
@@ -1606,7 +1683,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba96a",
@@ -1629,7 +1707,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaeb",
@@ -1647,7 +1726,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaec",
@@ -1670,7 +1750,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaed",
@@ -1698,7 +1779,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2b82bed2999bc7b9bba8c2",
@@ -1716,7 +1798,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba9b6",
@@ -1739,7 +1822,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2b78b1ea367e8be8e51ab7",
@@ -1767,7 +1851,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2f1c3bd2999bc7b9bba8e1",
@@ -1785,7 +1870,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2b802fd2999bc7b9bba8bf",
@@ -1803,7 +1889,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a39f49c82d8dd83f87b1f9e",
@@ -1836,7 +1923,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a39f49c82d8dd83f87b1f9f",
@@ -1864,7 +1952,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a39f49c82d8dd83f87b1f9d",
@@ -1897,7 +1986,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaee",
@@ -1920,7 +2010,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaf1",
@@ -1938,7 +2029,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaf2",
@@ -1956,7 +2048,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba989",
@@ -1974,7 +2067,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2c1a18d2999bc7b9bba8d0",
@@ -1997,7 +2091,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2b7d175dfa23a0e0e05e16",
@@ -2025,7 +2120,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba97b",
@@ -2043,7 +2139,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2f526bd2999bc7b9bba8fd",
@@ -2061,7 +2158,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2b8279d2999bc7b9bba8c0",
@@ -2079,7 +2177,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba968",
@@ -2102,7 +2201,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba96b",
@@ -2120,7 +2220,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2c1133d2999bc7b9bba8cd",
@@ -2148,7 +2249,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2abd18d2999bc7b9bba8bc",
@@ -2166,7 +2268,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba997",
@@ -2194,7 +2297,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2c05b4d2999bc7b9bba8c5",
@@ -2222,7 +2326,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba971",
@@ -2240,7 +2345,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": true
+        "AlwaysBarter": true,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba998",
@@ -2258,7 +2364,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3210dbd2999bc7b9bbab43",
@@ -2286,7 +2393,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3210dbd2999bc7b9bbab45",
@@ -2319,7 +2427,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba967",
@@ -2347,7 +2456,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba965",
@@ -2375,7 +2485,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba964",
@@ -2398,7 +2509,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba98a",
@@ -2426,7 +2538,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2bf72e8a12b7b0a0b622bc",
@@ -2454,7 +2567,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba98c",
@@ -2472,7 +2586,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3210dbd2999bc7b9bbab44",
@@ -2500,7 +2615,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba962",
@@ -2518,7 +2634,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2b7f5c5dfa23a0e0e0a843",
@@ -2541,7 +2658,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaf0",
@@ -2556,10 +2674,16 @@
                     "TplId": "5c1267ee86f77416ec610f72",
                     "ItemName": "Chain with Prokill medallion",
                     "Count": 1
+                },
+                {
+                    "TplId": "5c1267ee86f77416ec610f72",
+                    "ItemName": "Chain with Prokill medallion",
+                    "Count": 1
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba98b",
@@ -2582,7 +2706,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba960",
@@ -2605,7 +2730,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba979",
@@ -2628,7 +2754,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba995",
@@ -2661,7 +2788,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba97f",
@@ -2679,7 +2807,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     },
     {
         "OfferId": "6a2b75aed2999bc7b9bba8bd",
@@ -2697,7 +2826,8 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": true
     },
     {
         "OfferId": "6a2f526bd2999bc7b9bba8ff",
@@ -2720,6 +2850,7 @@
                 }
             ]
         ],
-        "AlwaysBarter": false
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     }
 ]

@@ -39,16 +39,27 @@ public class PriceConfigItem
 
     public bool CashOnly { get; set; } = true;
 
-    // If true, runtime randomization must keep this row as barter.
-    // These rows still count toward CashOfferPercent's barter side.
+    // true = this row is forced to barter when it has a real BarterScheme.
+    // It still counts toward the configured barter percentage.
     public bool AlwaysBarter { get; set; } = false;
 
-    // For ammo pack barter rows, this should already be valued against the full pack.
+    // true = this row can never be zeroed by RandomizeStockAvailable.
+    // Useful for quest/progression items like MS2000 Marker and WI-FI Camera.
+    public bool AlwaysInStock { get; set; } = false;
+
+    // For ammo pack barter rows, this should already be valued against:
+    // Price * AmmoBarterPackSize
     public List<List<PaymentConfigItem>>? BarterScheme { get; set; }
 
     // Ammo-only barter metadata.
-    // When ammo rolls barter, the assort root _tpl is changed to this pack tpl.
+    // When ammo rolls barter, the assort root tpl is changed to this pack tpl.
     public string? AmmoBarterPackTplId { get; set; }
+    public string? AmmoBarterPackItemName { get; set; }
+    public int AmmoBarterPackSize { get; set; } = 0;
+
+    // "Unit" = BarterScheme is valued against Price.
+    // "Pack" = BarterScheme is already valued against Price * AmmoBarterPackSize.
+    public string BarterSchemeValueBasis { get; set; } = "Unit";
 }
 
 public class PaymentConfigItem

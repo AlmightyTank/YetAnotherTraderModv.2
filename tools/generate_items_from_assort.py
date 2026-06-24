@@ -15,7 +15,8 @@ Outputs the barter-aware schema used by PriceConfigItem.cs:
     "Currency": "RUB",
     "CashOnly": true,
     "BarterScheme": [[{"TplId": "5449016a4bdc2d6f028b456f", "ItemName": "Roubles", "Count": 42000}]],
-    "AlwaysBarter": false
+    "AlwaysBarter": false,
+    "AlwaysInStock": false
   }
 ]
 
@@ -60,7 +61,7 @@ import time
 import urllib.error
 import urllib.request
 
-SCRIPT_VERSION = "2.8.0"
+SCRIPT_VERSION = "2.9.0"
 from collections import Counter
 from pathlib import Path
 from typing import Any
@@ -90,6 +91,13 @@ TPL_BY_CURRENCY = {value: key for key, value in CURRENCY_BY_TPL.items()}
 # toward the random barter target. Every other row is generated with false.
 ALWAYS_BARTER_TPL_IDS: set[str] = {
     "590c2e1186f77425357b6124",  # Toolset
+}
+
+# These rows should never be zeroed by RandomizeStockAvailable.
+# They are generated with AlwaysInStock=true so the stock randomizer skips them.
+ALWAYS_IN_STOCK_TPL_IDS: set[str] = {
+    "5b4391a586f7745321235ab2",  # WI-FI Camera
+    "5991b51486f77447b112d44f",  # MS2000 Marker
 }
 
 # Small built-in name map for common Tony assortment entries. Names are only for readability;
@@ -602,6 +610,32 @@ def apply_always_barter_flags(rows: list[dict[str, Any]]) -> int:
     return changed_count
 
 
+def should_always_in_stock(row_or_tpl: dict[str, Any] | str) -> bool:
+    """True only for rows that should never be zeroed by the stock randomizer."""
+    if isinstance(row_or_tpl, dict):
+        tpl_id = get_row_tpl_id(row_or_tpl)
+    else:
+        tpl_id = str(row_or_tpl or "")
+
+    return tpl_id in ALWAYS_IN_STOCK_TPL_IDS
+
+
+def apply_always_in_stock_flags(rows: list[dict[str, Any]]) -> int:
+    """Force AlwaysInStock to false on every row except configured protected TplIds."""
+    changed_count = 0
+
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+
+        expected_value = should_always_in_stock(row)
+        if row.get("AlwaysInStock") is not expected_value:
+            row["AlwaysInStock"] = expected_value
+            changed_count += 1
+
+    return changed_count
+
+
 def order_items_row(row: dict[str, Any]) -> dict[str, Any]:
     """Keep generated items.json stable and easy to review."""
     preferred_order = [
@@ -613,6 +647,7 @@ def order_items_row(row: dict[str, Any]) -> dict[str, Any]:
         "CashOnly",
         "BarterScheme",
         "AlwaysBarter",
+        "AlwaysInStock",
         "AmmoBarterPackTplId",
     ]
 
@@ -1769,6 +1804,8 @@ def generate_items(
             "BarterScheme": normalized_scheme,
             # Default false on every row. Toolset is forced true below by TplId.
             "AlwaysBarter": should_always_barter(sold_tpl),
+            # Default false on every row. WI-FI Camera and MS2000 Marker are forced true below by TplId.
+            "AlwaysInStock": should_always_in_stock(sold_tpl),
         }
 
         if is_ammo:
@@ -1819,6 +1856,7 @@ def generate_items(
 def build_report(out_path: Path, output: list[dict[str, Any]], warnings: list[str]) -> str:
     cash_default_rows = sum(1 for row in output if row.get("CashOnly") is True)
     real_barter_scheme_rows = sum(1 for row in output if is_real_barter_scheme(row.get("BarterScheme", [])))
+    always_in_stock_rows = sum(1 for row in output if row.get("AlwaysInStock") is True)
     cash_only_scheme_rows = sum(1 for row in output if is_cash_only_scheme(row.get("BarterScheme", [])))
     generated_rows = sum(
         1 for warning in warnings
@@ -1846,6 +1884,7 @@ def build_report(out_path: Path, output: list[dict[str, Any]], warnings: list[st
         f"Rows written: {len(output)}",
         f"Cash default rows (CashOnly=true): {cash_default_rows}",
         f"AlwaysBarter rows: {always_barter_rows}",
+        f"AlwaysInStock rows: {always_in_stock_rows}",
         f"Rows with real barter scheme: {real_barter_scheme_rows}",
         f"Rows with cash-only scheme: {cash_only_scheme_rows}",
         f"Generated barter schemes: {generated_rows}",
@@ -1995,6 +2034,14 @@ def main() -> int:
         warnings.append(
             f"Forced AlwaysBarter flags on {always_barter_changed_count} rows: "
             "false for all rows except Toolset (590c2e1186f77425357b6124)"
+        )
+
+    always_in_stock_changed_count = apply_always_in_stock_flags(output)
+    if always_in_stock_changed_count:
+        warnings.append(
+            f"Forced AlwaysInStock flags on {always_in_stock_changed_count} rows: "
+            "false for all rows except WI-FI Camera (5b4391a586f7745321235ab2) "
+            "and MS2000 Marker (5991b51486f77447b112d44f)"
         )
 
     output = order_items_rows(output)

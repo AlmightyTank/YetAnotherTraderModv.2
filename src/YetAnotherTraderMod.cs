@@ -183,6 +183,16 @@ public class YetAnotherTraderMod(
                 .GroupBy(x => x.PackTpl!)
                 .ToDictionary(x => x.Key, x => x.First().PriceConfig);
 
+            var priceConfigsByOfferId = config.Prices
+                .Where(x => !string.IsNullOrWhiteSpace(x.OfferId))
+                .GroupBy(x => x.OfferId!)
+                .ToDictionary(x => x.Key, x => x.First());
+
+            var priceConfigsByTplId = config.Prices
+                .Where(x => !string.IsNullOrWhiteSpace(x.TplId))
+                .GroupBy(x => x.TplId)
+                .ToDictionary(x => x.Key, x => x.First());
+
             foreach (var item in assort.Items)
             {
                 if (item.ParentId != "hideout")
@@ -206,6 +216,12 @@ public class YetAnotherTraderMod(
                     itemName = nameVal?.ToString() ?? item.Id;
                 }
 
+                var priceConfigForStock = FindPriceConfigForStock(
+                    item,
+                    tpl,
+                    priceConfigsByOfferId,
+                    priceConfigsByTplId);
+
                 // Ammo offers that rolled into barter were swapped to their ammo pack tpl.
                 // Keep these pack offers limited to 10 stock with a 1-3 buy restriction.
                 // This must run before the general random stock/unlimited logic so ammo pack barters
@@ -214,6 +230,13 @@ public class YetAnotherTraderMod(
                     && ammoBarterPackConfigsByTpl.TryGetValue(tpl, out var ammoPackPriceConfig))
                 {
                     ApplyAmmoPackBarterOfferLimits(item, ammoPackPriceConfig);
+                    modifiedCount++;
+                    continue;
+                }
+
+                if (priceConfigForStock != null && IsAlwaysInStock(priceConfigForStock))
+                {
+                    ApplyAlwaysInStockOfferLimits(item, itemName, config.Settings.UnlimitedStock);
                     modifiedCount++;
                     continue;
                 }
@@ -342,6 +365,66 @@ public class YetAnotherTraderMod(
         addCustomTraderHelper.AddTraderToLocales(traderBase, localeFirstName, localeDescription);
 
         return Task.CompletedTask;
+    }
+
+    private static PriceConfigItem? FindPriceConfigForStock(
+        object offer,
+        string? currentTpl,
+        Dictionary<string, PriceConfigItem> priceConfigsByOfferId,
+        Dictionary<string, PriceConfigItem> priceConfigsByTplId)
+    {
+        var offerId = GetMemberValue(offer, "Id")?.ToString();
+
+        if (!string.IsNullOrWhiteSpace(offerId)
+            && priceConfigsByOfferId.TryGetValue(offerId, out var byOfferIdConfig))
+        {
+            return byOfferIdConfig;
+        }
+
+        if (!string.IsNullOrWhiteSpace(currentTpl)
+            && priceConfigsByTplId.TryGetValue(currentTpl, out var byTplConfig))
+        {
+            return byTplConfig;
+        }
+
+        return null;
+    }
+
+    private static void ApplyAlwaysInStockOfferLimits(object offer, string? itemName, bool unlimitedStock)
+    {
+        var upd = GetMemberValue(offer, "Upd");
+        if (upd == null)
+        {
+            YATMLogger.LogDebug($"[Stock] AlwaysInStock skipped because offer has no Upd data: {itemName ?? "Unknown item"}");
+            return;
+        }
+
+        if (unlimitedStock)
+        {
+            SetMemberValue(upd, "UnlimitedCount", true);
+            SetMemberValue(upd, "StackObjectsCount", 999999);
+
+            var buyRestrictionMax = GetIntMember(upd, "BuyRestrictionMax", 0);
+            if (buyRestrictionMax > 0)
+            {
+                SetMemberValue(upd, "BuyRestrictionMax", 9999);
+                SetMemberValue(upd, "BuyRestrictionCurrent", 0);
+            }
+
+            YATMLogger.LogDebug($"[Stock] AlwaysInStock protected unlimited offer: {itemName ?? "Unknown item"}");
+            return;
+        }
+
+        SetMemberValue(upd, "UnlimitedCount", false);
+        SetMemberValue(upd, "StackObjectsCount", 100);
+
+        var existingBuyRestrictionMax = GetIntMember(upd, "BuyRestrictionMax", 0);
+        if (existingBuyRestrictionMax > 0)
+        {
+            SetMemberValue(upd, "BuyRestrictionCurrent", 0);
+        }
+
+        YATMLogger.LogDebug($"[Stock] AlwaysInStock protected offer: {itemName ?? "Unknown item"} | StackObjectsCount 100");
     }
 
     private static void ApplyConfiguredPayments(TraderAssort assort, YATMConfig config)
@@ -806,6 +889,11 @@ public class YetAnotherTraderMod(
     private static bool IsAlwaysBarter(PriceConfigItem priceConfig)
     {
         return priceConfig.AlwaysBarter;
+    }
+
+    private static bool IsAlwaysInStock(PriceConfigItem priceConfig)
+    {
+        return priceConfig.AlwaysInStock;
     }
 
     private static bool HasUsableBarterScheme(PriceConfigItem priceConfig)
