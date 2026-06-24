@@ -14,14 +14,14 @@
                     "conditionType": "PlaceBeacon",
                     "dynamicLocale": false,
                     "globalQuestCounterId": "",
-                    "id": "6a39bb7182d8dd83f87b1f6c",
-                    "index": 1,
+                    "id": "6a39fcff82d8dd83f87b1fa7",
+                    "index": 0,
                     "parentId": "",
                     "plantTime": 20,
                     "target": [
                         "5ac78a9b86f7741cca0bbd8d"
                     ],
-                    "value": 0,
+                    "value": 1,
                     "visibilityConditions": [],
                     "zoneId": "place_tony_lighthouse_tennis_court_satellite_jammer"
                 },
@@ -81,7 +81,7 @@
                         {
                             "conditionType": "CompleteCondition",
                             "id": "6a39bb7182d8dd83f87b1f72",
-                            "target": "6a39bb7182d8dd83f87b1f6c"
+                            "target": "6a39fcff82d8dd83f87b1fa7"
                         },
                         {
                             "conditionType": "CompleteCondition",
