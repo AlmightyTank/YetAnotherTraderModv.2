@@ -14,7 +14,8 @@ Outputs the barter-aware schema used by PriceConfigItem.cs:
     "Price": 42000,
     "Currency": "RUB",
     "CashOnly": true,
-    "BarterScheme": [[{"TplId": "5449016a4bdc2d6f028b456f", "ItemName": "Roubles", "Count": 42000}]]
+    "BarterScheme": [[{"TplId": "5449016a4bdc2d6f028b456f", "ItemName": "Roubles", "Count": 42000}]],
+    "AlwaysBarter": false
   }
 ]
 
@@ -59,7 +60,7 @@ import time
 import urllib.error
 import urllib.request
 
-SCRIPT_VERSION = "2.7.0"
+SCRIPT_VERSION = "2.8.0"
 from collections import Counter
 from pathlib import Path
 from typing import Any
@@ -84,6 +85,12 @@ CURRENCY_NAME_BY_TPL = {
 }
 
 TPL_BY_CURRENCY = {value: key for key, value in CURRENCY_BY_TPL.items()}
+
+# items.json row flag support. Toolset should always stay barter and still count
+# toward the random barter target. Every other row is generated with false.
+ALWAYS_BARTER_TPL_IDS: set[str] = {
+    "590c2e1186f77425357b6124",  # Toolset
+}
 
 # Small built-in name map for common Tony assortment entries. Names are only for readability;
 # TplId, OfferId, Price, Currency, CashOnly, and BarterScheme are what the mod actually uses.
@@ -569,6 +576,62 @@ def get_row_tpl_id(row: dict[str, Any]) -> str:
     return str(get_ci(row, "TplId", "tplId", "_tpl", "Template", default="") or "")
 
 
+def should_always_barter(row_or_tpl: dict[str, Any] | str) -> bool:
+    """True only for rows that must never be converted to cash by the runtime randomizer."""
+    if isinstance(row_or_tpl, dict):
+        tpl_id = get_row_tpl_id(row_or_tpl)
+    else:
+        tpl_id = str(row_or_tpl or "")
+
+    return tpl_id in ALWAYS_BARTER_TPL_IDS
+
+
+def apply_always_barter_flags(rows: list[dict[str, Any]]) -> int:
+    """Force AlwaysBarter to false on every row except configured always-barter TplIds."""
+    changed_count = 0
+
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+
+        expected_value = should_always_barter(row)
+        if row.get("AlwaysBarter") is not expected_value:
+            row["AlwaysBarter"] = expected_value
+            changed_count += 1
+
+    return changed_count
+
+
+def order_items_row(row: dict[str, Any]) -> dict[str, Any]:
+    """Keep generated items.json stable and easy to review."""
+    preferred_order = [
+        "OfferId",
+        "TplId",
+        "ItemName",
+        "Price",
+        "Currency",
+        "CashOnly",
+        "BarterScheme",
+        "AlwaysBarter",
+        "AmmoBarterPackTplId",
+    ]
+
+    ordered: dict[str, Any] = {}
+    for key in preferred_order:
+        if key in row:
+            ordered[key] = row[key]
+
+    for key, value in row.items():
+        if key not in ordered:
+            ordered[key] = value
+
+    return ordered
+
+
+def order_items_rows(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [order_items_row(row) if isinstance(row, dict) else row for row in rows]
+
+
 def is_missing_setting_value(key: str, value: Any) -> bool:
     """True when a field should be considered missing and safe to fill.
 
@@ -577,7 +640,7 @@ def is_missing_setting_value(key: str, value: Any) -> bool:
     """
     if value is None:
         return True
-    if key in {"OfferId", "TplId", "ItemName", "Currency", "BarterSchemeValueBasis"} and isinstance(value, str):
+    if key in {"OfferId", "TplId", "ItemName", "Currency"} and isinstance(value, str):
         return value.strip() == ""
     return False
 
@@ -1704,17 +1767,18 @@ def generate_items(
             # generated BarterScheme when it picks the offer as part of the barter 15%.
             "CashOnly": True,
             "BarterScheme": normalized_scheme,
+            # Default false on every row. Toolset is forced true below by TplId.
+            "AlwaysBarter": should_always_barter(sold_tpl),
         }
 
         if is_ammo:
-            row["AmmoBarterPackSize"] = max(1, int(pack_count or ammo_barter_pack_size or 30))
-            row["BarterSchemeValueBasis"] = barter_scheme_value_basis
-
             if ammo_pack_info:
-                row.update(ammo_pack_info)
+                # Runtime only needs the pack tpl. Pack size/name are used by this
+                # generator internally to value the barter correctly, not by items.json.
+                row["AmmoBarterPackTplId"] = ammo_pack_info["AmmoBarterPackTplId"]
                 warnings.append(
                     f"Ammo barter pack target for {item_name} ({offer_id}): "
-                    f"{ammo_pack_info['AmmoBarterPackItemName']} / {ammo_pack_info['AmmoBarterPackSize']} rounds"
+                    f"{ammo_pack_info['AmmoBarterPackTplId']}"
                 )
             else:
                 warnings.append(
@@ -1765,8 +1829,10 @@ def build_report(out_path: Path, output: list[dict[str, Any]], warnings: list[st
     ammo_pack_target_rows = sum(1 for row in output if row.get("AmmoBarterPackTplId"))
     ammo_rows_without_pack_target = sum(
         1 for row in output
-        if row.get("AmmoBarterPackSize") and not row.get("AmmoBarterPackTplId")
+        if is_ammo_offer(str(row.get("ItemName", "")), str(row.get("TplId", "")))
+        and not row.get("AmmoBarterPackTplId")
     )
+    always_barter_rows = sum(1 for row in output if row.get("AlwaysBarter") is True)
 
     duplicate_tpl_counts = Counter(str(row.get("TplId", "")) for row in output)
     duplicate_tpls = {tpl: count for tpl, count in duplicate_tpl_counts.items() if count > 1}
@@ -1779,6 +1845,7 @@ def build_report(out_path: Path, output: list[dict[str, Any]], warnings: list[st
         f"Output: {out_path}",
         f"Rows written: {len(output)}",
         f"Cash default rows (CashOnly=true): {cash_default_rows}",
+        f"AlwaysBarter rows: {always_barter_rows}",
         f"Rows with real barter scheme: {real_barter_scheme_rows}",
         f"Rows with cash-only scheme: {cash_only_scheme_rows}",
         f"Generated barter schemes: {generated_rows}",
@@ -1922,6 +1989,15 @@ def main() -> int:
                 f"{format_barter_usage_summary(Counter(final_overused), final_name_by_tpl, limit=10)}. "
                 "This can happen when --keep-current-settings preserves existing tuned BarterScheme values."
             )
+
+    always_barter_changed_count = apply_always_barter_flags(output)
+    if always_barter_changed_count:
+        warnings.append(
+            f"Forced AlwaysBarter flags on {always_barter_changed_count} rows: "
+            "false for all rows except Toolset (590c2e1186f77425357b6124)"
+        )
+
+    output = order_items_rows(output)
 
     warnings = tarkov_dev_warnings + current_settings_warnings + warnings
 

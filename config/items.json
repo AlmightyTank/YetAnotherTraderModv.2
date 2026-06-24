@@ -15,10 +15,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 20,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "657023f81419851aef03e6f1",
-        "AmmoBarterPackItemName": ".366 TKM AP-M ammo pack (20 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "657023f81419851aef03e6f1"
     },
     {
         "OfferId": "6a300025d2999bc7b9bba95d",
@@ -36,10 +34,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 20,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "657024011419851aef03e6f4",
-        "AmmoBarterPackItemName": ".366 TKM EKO ammo pack (20 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "657024011419851aef03e6f4"
     },
     {
         "OfferId": "6a300025d2999bc7b9bba961",
@@ -57,10 +53,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 25,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "657024361419851aef03e6fa",
-        "AmmoBarterPackItemName": "12/70 7mm buckshot ammo pack (25 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "657024361419851aef03e6fa"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba988",
@@ -83,10 +77,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 25,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "64898838d5b4df6140000a20",
-        "AmmoBarterPackItemName": "12/70 AP-20 ammo pack (25 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "64898838d5b4df6140000a20"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba978",
@@ -109,10 +101,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 25,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "65702474bfc87b3a34093226",
-        "AmmoBarterPackItemName": "12/70 flechette ammo pack (25 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "65702474bfc87b3a34093226"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba973",
@@ -130,10 +120,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 120,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "5737292724597765e5728562",
-        "AmmoBarterPackItemName": "5.45x39mm BP gs ammo pack (120 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "5737292724597765e5728562"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba982",
@@ -151,10 +139,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 120,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "57372b832459776701014e41",
-        "AmmoBarterPackItemName": "5.45x39mm BS gs ammo pack (120 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "57372b832459776701014e41"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba974",
@@ -172,10 +158,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 120,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "57372c21245977670937c6c2",
-        "AmmoBarterPackItemName": "5.45x39mm BT gs ammo pack (120 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "57372c21245977670937c6c2"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba972",
@@ -193,10 +177,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 120,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "57372d1b2459776862260581",
-        "AmmoBarterPackItemName": "5.45x39mm PP gs ammo pack (120 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "57372d1b2459776862260581"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba990",
@@ -219,10 +201,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 120,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "657025ebc5d7d4cb4d078588",
-        "AmmoBarterPackItemName": "5.45x39mm PPBS gs Igolnik ammo pack (120 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "657025ebc5d7d4cb4d078588"
     },
     {
         "OfferId": "6a300025d2999bc7b9bba95b",
@@ -240,10 +220,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 120,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "57372e73245977685d4159b4",
-        "AmmoBarterPackItemName": "5.45x39mm PS gs ammo pack (120 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "57372e73245977685d4159b4"
     },
     {
         "OfferId": "6a2c15ff0ad81c90c80166df",
@@ -260,7 +238,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba955",
@@ -277,7 +256,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba956",
@@ -299,7 +279,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba97a",
@@ -321,7 +302,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6c6da34d9dc8e53bdb1ed465",
@@ -338,7 +320,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaab4",
@@ -355,7 +338,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba983",
@@ -373,10 +357,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 20,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "64acea16c4eda9354b0226b0",
-        "AmmoBarterPackItemName": "7.62x39mm BP gzh ammo pack (20 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "64acea16c4eda9354b0226b0"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba992",
@@ -394,10 +376,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 20,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "6489851fc827d4637f01791b",
-        "AmmoBarterPackItemName": "7.62x39mm MAI AP ammo pack (20 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "6489851fc827d4637f01791b"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba975",
@@ -415,10 +395,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 20,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "64ace9f9c4eda9354b0226aa",
-        "AmmoBarterPackItemName": "7.62x39mm PP gzh ammo pack (20 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "64ace9f9c4eda9354b0226aa"
     },
     {
         "OfferId": "6a300025d2999bc7b9bba95c",
@@ -436,10 +414,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 20,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "5649ed104bdc2d3d1c8b458b",
-        "AmmoBarterPackItemName": "7.62x39mm PS gzh ammo pack (20 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "5649ed104bdc2d3d1c8b458b"
     },
     {
         "OfferId": "6a300025d2999bc7b9bba957",
@@ -457,10 +433,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 50,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "657026341419851aef03e730",
-        "AmmoBarterPackItemName": "9x18mm PM SP7 gzh ammo pack (50 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "657026341419851aef03e730"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba976",
@@ -478,10 +452,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 50,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "65702591c5d7d4cb4d07857c",
-        "AmmoBarterPackItemName": "9x19mm AP 6.3 ammo pack (50 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "65702591c5d7d4cb4d07857c"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba984",
@@ -499,10 +471,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 50,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "648987d673c462723909a151",
-        "AmmoBarterPackItemName": "9x19mm PBP ammo pack (50 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "648987d673c462723909a151"
     },
     {
         "OfferId": "6a300025d2999bc7b9bba958",
@@ -520,10 +490,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 50,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "657025a81419851aef03e724",
-        "AmmoBarterPackItemName": "9x19mm Pst gzh ammo pack (50 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "657025a81419851aef03e724"
     },
     {
         "OfferId": "6a300025d2999bc7b9bba95a",
@@ -541,10 +509,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 20,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "5c1127bdd174af44217ab8b9",
-        "AmmoBarterPackItemName": "9x19mm RIP ammo pack (20 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "5c1127bdd174af44217ab8b9"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba993",
@@ -562,10 +528,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 20,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "6489854673c462723909a14e",
-        "AmmoBarterPackItemName": "9x39mm BP ammo pack (20 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "6489854673c462723909a14e"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba991",
@@ -583,10 +547,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 20,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "657025cfbfc87b3a34093253",
-        "AmmoBarterPackItemName": "9x39mm PAB-9 gs ammo pack (20 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "657025cfbfc87b3a34093253"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba977",
@@ -604,10 +566,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 20,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "657025d4c5d7d4cb4d078585",
-        "AmmoBarterPackItemName": "9x39mm SP-5 gs ammo pack (20 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "657025d4c5d7d4cb4d078585"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba985",
@@ -630,10 +590,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 20,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "657025dabfc87b3a34093256",
-        "AmmoBarterPackItemName": "9x39mm SP-6 gs ammo pack (20 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "657025dabfc87b3a34093256"
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba986",
@@ -651,10 +609,8 @@
                 }
             ]
         ],
-        "AmmoBarterPackSize": 20,
-        "BarterSchemeValueBasis": "Pack",
-        "AmmoBarterPackTplId": "657025dfcfc010a0f5006a3b",
-        "AmmoBarterPackItemName": "9x39mm SPP gs ammo pack (20 pcs)"
+        "AlwaysBarter": false,
+        "AmmoBarterPackTplId": "657025dfcfc010a0f5006a3b"
     },
     {
         "OfferId": "6a39f49c82d8dd83f87b1f9b",
@@ -686,7 +642,8 @@
                     "Count": 6
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2b7f99d2999bc7b9bba8be",
@@ -703,7 +660,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba96e",
@@ -720,7 +678,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2f1c3bd2999bc7b9bba8e4",
@@ -737,7 +696,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2f2001d2999bc7b9bba8e5",
@@ -754,7 +714,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2f1c3bd2999bc7b9bba8e2",
@@ -771,7 +732,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2f1c3bd2999bc7b9bba8e3",
@@ -788,7 +750,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba9b4",
@@ -810,7 +773,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba9b5",
@@ -832,7 +796,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba98d",
@@ -849,7 +814,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba970",
@@ -866,7 +832,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2c1133d2999bc7b9bba8cc",
@@ -888,7 +855,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba96d",
@@ -905,7 +873,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba96c",
@@ -922,7 +891,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba969",
@@ -939,7 +909,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2bfc3951ab7898b840fc8c",
@@ -956,7 +927,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba994",
@@ -973,7 +945,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba980",
@@ -995,7 +968,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba95e",
@@ -1017,7 +991,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2a2501339aae85cffe58d2",
@@ -1039,7 +1014,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba95f",
@@ -1061,7 +1037,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba97c",
@@ -1083,7 +1060,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba97d",
@@ -1100,7 +1078,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba97e",
@@ -1117,7 +1096,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2e2072d2999bc7b9bba8dd",
@@ -1139,7 +1119,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba98e",
@@ -1161,7 +1142,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a39f49c82d8dd83f87b1f9a",
@@ -1188,7 +1170,8 @@
                     "Count": 6
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2a24be339aae85cffe58d1",
@@ -1205,7 +1188,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaef",
@@ -1222,7 +1206,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba999",
@@ -1239,7 +1224,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2f526bd2999bc7b9bba8fe",
@@ -1256,7 +1242,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2c1062d2999bc7b9bba8cb",
@@ -1273,7 +1260,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba96f",
@@ -1290,7 +1278,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2c1062d2999bc7b9bba8ca",
@@ -1307,7 +1296,8 @@
                     "Count": 4
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba996",
@@ -1344,7 +1334,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2b7e8e5dfa23a0e0e08a56",
@@ -1371,7 +1362,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2b7dbd5dfa23a0e0e06e9b",
@@ -1393,7 +1385,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2b7951ea367e8be8e5390d",
@@ -1420,7 +1413,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba963",
@@ -1447,7 +1441,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba98f",
@@ -1464,7 +1459,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2bf7af8a12b7b0a0b622d4",
@@ -1486,7 +1482,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2b83fcd2999bc7b9bba8c4",
@@ -1503,13 +1500,14 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba959",
         "TplId": "5de652c31b7e3716273428be",
         "ItemName": "Molot Arms VPO-215 Gornostay .366 TKM bolt-action rifle",
-        "Price": 7350,
+        "Price": 23350,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -1520,13 +1518,14 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba966",
         "TplId": "54491c4f4bdc2db1078b4568",
         "ItemName": "MP-133 12ga pump-action shotgun",
-        "Price": 14443,
+        "Price": 30443,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -1537,7 +1536,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba981",
@@ -1554,7 +1554,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a39f49c82d8dd83f87b1f9c",
@@ -1586,7 +1587,8 @@
                     "Count": 5
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaea",
@@ -1603,7 +1605,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba96a",
@@ -1625,7 +1628,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaeb",
@@ -1642,7 +1646,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaec",
@@ -1664,7 +1669,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaed",
@@ -1691,7 +1697,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2b82bed2999bc7b9bba8c2",
@@ -1708,7 +1715,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba9b6",
@@ -1730,7 +1738,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2b78b1ea367e8be8e51ab7",
@@ -1757,7 +1766,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2f1c3bd2999bc7b9bba8e1",
@@ -1774,7 +1784,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2b802fd2999bc7b9bba8bf",
@@ -1791,7 +1802,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a39f49c82d8dd83f87b1f9e",
@@ -1823,7 +1835,8 @@
                     "Count": 6
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a39f49c82d8dd83f87b1f9f",
@@ -1850,7 +1863,8 @@
                     "Count": 8
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a39f49c82d8dd83f87b1f9d",
@@ -1882,7 +1896,8 @@
                     "Count": 6
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaee",
@@ -1904,7 +1919,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaf1",
@@ -1921,7 +1937,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaf2",
@@ -1938,13 +1955,14 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba989",
         "TplId": "5beed0f50db834001c062b12",
         "ItemName": "RPK-16 5.45x39 light machine gun",
-        "Price": 22360,
+        "Price": 95360,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -1955,7 +1973,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2c1a18d2999bc7b9bba8d0",
@@ -1977,7 +1996,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2b7d175dfa23a0e0e05e16",
@@ -2004,7 +2024,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba97b",
@@ -2021,7 +2042,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2f526bd2999bc7b9bba8fd",
@@ -2038,7 +2060,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2b8279d2999bc7b9bba8c0",
@@ -2055,7 +2078,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba968",
@@ -2077,7 +2101,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba96b",
@@ -2094,7 +2119,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2c1133d2999bc7b9bba8cd",
@@ -2121,7 +2147,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2abd18d2999bc7b9bba8bc",
@@ -2138,7 +2165,8 @@
                     "Count": 3
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba997",
@@ -2165,7 +2193,8 @@
                     "Count": 6
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2c05b4d2999bc7b9bba8c5",
@@ -2192,7 +2221,8 @@
                     "Count": 6
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba971",
@@ -2209,7 +2239,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": true
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba998",
@@ -2226,7 +2257,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3210dbd2999bc7b9bbab43",
@@ -2253,7 +2285,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3210dbd2999bc7b9bbab45",
@@ -2285,7 +2318,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba967",
@@ -2312,7 +2346,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba965",
@@ -2339,7 +2374,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba964",
@@ -2361,7 +2397,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba98a",
@@ -2388,7 +2425,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2bf72e8a12b7b0a0b622bc",
@@ -2415,7 +2453,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba98c",
@@ -2432,7 +2471,8 @@
                     "Count": 4
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3210dbd2999bc7b9bbab44",
@@ -2459,7 +2499,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba962",
@@ -2476,7 +2517,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2b7f5c5dfa23a0e0e0a843",
@@ -2498,7 +2540,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a30b2fbd2999bc7b9bbaaf0",
@@ -2515,7 +2558,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba98b",
@@ -2537,7 +2581,8 @@
                     "Count": 2
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a300025d2999bc7b9bba960",
@@ -2559,7 +2604,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba979",
@@ -2581,7 +2627,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba995",
@@ -2613,7 +2660,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a3007dfd2999bc7b9bba97f",
@@ -2630,7 +2678,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2b75aed2999bc7b9bba8bd",
@@ -2647,7 +2696,8 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     },
     {
         "OfferId": "6a2f526bd2999bc7b9bba8ff",
@@ -2669,6 +2719,7 @@
                     "Count": 1
                 }
             ]
-        ]
+        ],
+        "AlwaysBarter": false
     }
 ]

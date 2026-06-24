@@ -408,26 +408,51 @@ public class YetAnotherTraderMod(
                 configuredOffers.Count * (barterPercent / 100.0),
                 MidpointRounding.AwayFromZero);
 
+            var forcedBarterOfferIds = configuredOffers
+                .Where(x => IsAlwaysBarter(x.PriceConfig) && HasUsableBarterScheme(x.PriceConfig))
+                .Select(x => GetMemberValue(x.Offer, "Id")?.ToString())
+                .Where(x => !string.IsNullOrWhiteSpace(x))
+                .Cast<string>()
+                .ToHashSet();
+
+            var invalidAlwaysBarterCount = configuredOffers
+                .Count(x => IsAlwaysBarter(x.PriceConfig) && !HasUsableBarterScheme(x.PriceConfig));
+
+            if (invalidAlwaysBarterCount > 0)
+            {
+                YATMLogger.Log($"[Pricing] Warning: {invalidAlwaysBarterCount} AlwaysBarter rows have no usable barter scheme and cannot be forced to barter.");
+            }
+
             var random = new Random();
-            var eligibleBarterOfferIds = configuredOffers
+            var eligibleRandomBarterOfferIds = configuredOffers
                 .Where(x => HasUsableBarterScheme(x.PriceConfig))
                 .Select(x => GetMemberValue(x.Offer, "Id")?.ToString())
                 .Where(x => !string.IsNullOrWhiteSpace(x))
                 .Cast<string>()
+                .Where(x => !forcedBarterOfferIds.Contains(x))
                 .OrderBy(_ => random.Next())
                 .ToList();
 
-            var targetBarterCount = Math.Clamp(requestedBarterCount, 0, eligibleBarterOfferIds.Count);
-            selectedBarterOfferIds = eligibleBarterOfferIds
-                .Take(targetBarterCount)
+            // AlwaysBarter offers are guaranteed barter and still count against the target barter percent.
+            // Example: 15 target barter offers and 2 AlwaysBarter rows means only 13 more are randomly selected.
+            var targetBarterCount = Math.Clamp(requestedBarterCount, 0, forcedBarterOfferIds.Count + eligibleRandomBarterOfferIds.Count);
+            var randomBarterSlots = Math.Max(0, targetBarterCount - forcedBarterOfferIds.Count);
+
+            selectedBarterOfferIds = forcedBarterOfferIds
+                .Concat(eligibleRandomBarterOfferIds.Take(randomBarterSlots))
                 .ToHashSet();
 
             var targetCashCount = configuredOffers.Count - selectedBarterOfferIds.Count;
-            YATMLogger.Log($"[Pricing] Random payment split enabled: {targetCashCount} cash offers / {selectedBarterOfferIds.Count} barter offers.");
+            YATMLogger.Log($"[Pricing] Random payment split enabled: {targetCashCount} cash offers / {selectedBarterOfferIds.Count} barter offers ({forcedBarterOfferIds.Count} forced barter).");
 
-            if (eligibleBarterOfferIds.Count < requestedBarterCount)
+            if (forcedBarterOfferIds.Count > requestedBarterCount)
             {
-                YATMLogger.Log($"[Pricing] Warning: requested {requestedBarterCount} barter offers, but only {eligibleBarterOfferIds.Count} offers have real barter schemes available.");
+                YATMLogger.Log($"[Pricing] Warning: AlwaysBarter rows ({forcedBarterOfferIds.Count}) exceed requested barter count ({requestedBarterCount}). All AlwaysBarter rows were kept as barter and no random barter offers were added.");
+            }
+
+            if ((forcedBarterOfferIds.Count + eligibleRandomBarterOfferIds.Count) < requestedBarterCount)
+            {
+                YATMLogger.Log($"[Pricing] Warning: requested {requestedBarterCount} barter offers, but only {forcedBarterOfferIds.Count + eligibleRandomBarterOfferIds.Count} offers have real barter schemes available.");
             }
         }
 
@@ -493,8 +518,8 @@ public class YetAnotherTraderMod(
         }
 
         var shouldUseCash = CashOffersOnly
-            || priceConfig.CashOnly
-            || !HasUsableBarterScheme(priceConfig);
+            || !HasUsableBarterScheme(priceConfig)
+            || (!IsAlwaysBarter(priceConfig) && priceConfig.CashOnly);
 
         if (shouldUseCash)
         {
@@ -508,31 +533,23 @@ public class YetAnotherTraderMod(
 
     private static void ApplyBarterPaymentToOffer(object offer, object existingSchemeList, PriceConfigItem priceConfig)
     {
-        // Normal items keep their configured sold tpl.
-        // Ammo rows generated with AmmoBarterPackTplId swap the sold item to the ammo pack tpl
-        // only when that offer is actually using barter.
+        // If this items.json row has AmmoBarterPackTplId, that tpl is the actual sold item.
+        // Do not calculate or choose a pack here; trust config/items.json as the source of truth.
         var ammoPackTpl = GetStringMember(priceConfig, "AmmoBarterPackTplId");
-        var ammoPackName = GetStringMember(priceConfig, "AmmoBarterPackItemName");
-        var ammoPackSize = GetIntMember(priceConfig, "AmmoBarterPackSize", 0);
+        var targetTpl = !string.IsNullOrWhiteSpace(ammoPackTpl)
+            ? ammoPackTpl
+            : priceConfig.TplId;
+
+        SetOfferTemplate(offer, targetTpl);
 
         if (!string.IsNullOrWhiteSpace(ammoPackTpl))
         {
-            SetOfferTemplate(offer, ammoPackTpl);
             ApplyAmmoPackBarterOfferLimits(offer, priceConfig);
-
-            if (!string.IsNullOrWhiteSpace(ammoPackName) && ammoPackSize > 0)
-            {
-                YATMLogger.LogDebug($"[Pricing] Ammo pack barter offer: {priceConfig.ItemName} -> {ammoPackName} ({ammoPackSize} pcs)");
-            }
-            else
-            {
-                YATMLogger.LogDebug($"[Pricing] Ammo pack barter offer: {priceConfig.ItemName} -> {ammoPackTpl}");
-            }
+            YATMLogger.LogDebug($"[Pricing] Ammo pack barter offer: {priceConfig.ItemName} | _tpl = {targetTpl}");
         }
         else
         {
-            SetOfferTemplate(offer, priceConfig.TplId);
-            YATMLogger.LogDebug($"[Pricing] Barter offer: {priceConfig.ItemName}");
+            YATMLogger.LogDebug($"[Pricing] Barter offer: {priceConfig.ItemName} | _tpl = {targetTpl}");
         }
 
         ReplaceOfferPaymentScheme(existingSchemeList, priceConfig.BarterScheme!);
@@ -559,122 +576,93 @@ public class YetAnotherTraderMod(
 
     private static int GetAmmoPackBuyRestrictionMax(PriceConfigItem priceConfig)
     {
-        var itemName = priceConfig.ItemName ?? string.Empty;
-        var looseAmmoTpl = priceConfig.TplId ?? string.Empty;
+        // Use the actual ammo pack tpl from items.json.
+        // This is the tpl that the live assort root item is changed to when ammo rolls barter.
         var packTpl = GetStringMember(priceConfig, "AmmoBarterPackTplId") ?? string.Empty;
-        var price = priceConfig.Price;
 
-        if (IsHighTierAmmo(looseAmmoTpl, packTpl, price))
+        if (IsHighTierAmmoPack(packTpl))
         {
             return 1;
         }
 
-        if (IsMidTierAmmo(looseAmmoTpl, packTpl, price))
+        if (IsMidTierAmmoPack(packTpl))
         {
             return 2;
         }
 
+        // Anything not listed as high/mid is treated as low-tier ammo pack.
         return 3;
     }
 
-    private static bool IsHighTierAmmo(string looseAmmoTpl, string packTpl, double price)
+    private static bool IsHighTierAmmoPack(string packTpl)
     {
-        if (price >= 1000)
-        {
-            return true;
-        }
-
-        return IsTplMatch(looseAmmoTpl, packTpl,
-            // .366 AP-M
-            "5f0596629e22f464da6bbdd9",
+        return IsTplMatch(packTpl,
+            // .366 TKM AP-M ammo pack (20 pcs)
             "657023f81419851aef03e6f1",
 
-            // 12/70 AP-20
-            "5d6e68a8a4b9360b6c0d54e2",
+            // 12/70 AP-20 ammo pack (25 pcs)
             "64898838d5b4df6140000a20",
 
-            // 5.45 PPBS Igolnik
-            "5c0d5e4486f77478390952fe",
+            // 5.45x39mm PPBS Igolnik ammo pack (120 pcs)
             "657025ebc5d7d4cb4d078588",
 
-            // 5.45 BS
-            "56dff026d2720bb8668b4567",
+            // 5.45x39mm BS gs ammo pack (120 pcs)
             "57372b832459776701014e41",
 
-            // 7.62x39 MAI AP
-            "601aa3d2b2bcb34913271e6d",
+            // 7.62x39mm MAI AP ammo pack (20 pcs)
             "6489851fc827d4637f01791b",
 
-            // 9x19 PBP
-            "5efb0da7a29a85116f6ea05f",
+            // 9x19mm PBP ammo pack (50 pcs)
             "648987d673c462723909a151",
 
-            // 9x39 BP
-            "5c0d688c86f77413ae3407b2",
+            // 9x39mm BP ammo pack (20 pcs)
             "6489854673c462723909a14e",
 
-            // 9x39 SP-6
-            "57a0e5022459774d1673f889",
+            // 9x39mm SP-6 ammo pack (20 pcs)
             "657025dabfc87b3a34093256"
         );
     }
 
-    private static bool IsMidTierAmmo(string looseAmmoTpl, string packTpl, double price)
+    private static bool IsMidTierAmmoPack(string packTpl)
     {
-        if (price >= 500)
-        {
-            return true;
-        }
-
-        return IsTplMatch(looseAmmoTpl, packTpl,
-            // 12/70 flechette
-            "5d6e6911a4b9361bd5780d52",
+        return IsTplMatch(packTpl,
+            // 12/70 flechette ammo pack (25 pcs)
             "65702474bfc87b3a34093226",
 
-            // 5.45 BP
-            "56dfef82d2720bbd668b4567",
+            // 5.45x39mm BP gs ammo pack (120 pcs)
             "5737292724597765e5728562",
 
-            // 5.45 BT
-            "56dff061d2720bb5668b4567",
+            // 5.45x39mm BT gs ammo pack
             "57372c21245977670937c6c2",
 
-            // 5.45 PP
-            "56dff2ced2720bb4668b4567",
+            // 5.45x39mm PP gs ammo pack (120 pcs)
             "57372d1b2459776862260581",
 
-            // 7.62x39 BP
-            "59e0d99486f7744a32234762",
+            // 7.62x39mm BP gzh ammo pack (20 pcs)
             "64acea16c4eda9354b0226b0",
 
-            // 7.62x39 PP
-            "64b7af434b75259c590fa893",
+            // 7.62x39mm PP gzh ammo pack (20 pcs)
             "64ace9f9c4eda9354b0226aa",
 
-            // 9x19 AP 6.3
-            "5c925fa22e221601da359b7b",
+            // 9x19mm AP 6.3 ammo pack (50 pcs)
             "65702591c5d7d4cb4d07857c",
 
-            // 9x19 RIP
-            "5c0d56a986f774449d5de529",
+            // 9x19mm RIP ammo pack (20 pcs)
             "5c1127bdd174af44217ab8b9",
 
-            // 9x39 SPP
-            "5c0d668f86f7747ccb7f13b2",
+            // 9x39mm SPP ammo pack (20 pcs)
             "657025dfcfc010a0f5006a3b",
 
-            // 9x39 PAB-9
-            "61962d879bb3d20b0946d385",
+            // 9x39mm PAB-9 ammo pack (20 pcs)
             "657025cfbfc87b3a34093253"
         );
     }
 
-    private static bool IsTplMatch(string looseAmmoTpl, string packTpl, params string[] tplIds)
+    private static bool IsTplMatch(string tpl, params string[] tplIds)
     {
         foreach (var tplId in tplIds)
         {
-            if (looseAmmoTpl.Equals(tplId, StringComparison.OrdinalIgnoreCase)
-                || packTpl.Equals(tplId, StringComparison.OrdinalIgnoreCase))
+            if (tpl.Equals(tplId, StringComparison.OrdinalIgnoreCase))
             {
                 return true;
             }
@@ -711,12 +699,82 @@ public class YetAnotherTraderMod(
             return;
         }
 
-        // Different SPT model versions expose the sold template id under different names.
-        // Setting all known aliases is safe because SetMemberValue ignores missing members.
+        // This is the important live assort mutation.
+        // For ammo barter offers, templateId must be priceConfig.AmmoBarterPackTplId from items.json.
+        // The serialized SPT assort uses _tpl, so write _tpl first and also update aliases used by model wrappers.
+        SetMemberValue(offer, "_tpl", templateId);
         SetMemberValue(offer, "Template", templateId);
         SetMemberValue(offer, "Tpl", templateId);
-        SetMemberValue(offer, "_tpl", templateId);
         SetMemberValue(offer, "TemplateId", templateId);
+
+        // Some SPT model objects keep raw JSON-only fields in ExtensionData.
+        // Force _tpl there too so AddTraderToDb serializes the ammo pack tpl, not the loose ammo tpl.
+        SetExtensionDataValue(offer, "_tpl", templateId);
+        SetExtensionDataValue(offer, "tpl", templateId);
+        SetExtensionDataValue(offer, "Template", templateId);
+        SetExtensionDataValue(offer, "Tpl", templateId);
+        SetExtensionDataValue(offer, "TemplateId", templateId);
+
+        var rawTpl = GetMemberValue(offer, "_tpl")?.ToString();
+        var resolvedTpl = YATMConfig.GetTemplateId(offer);
+        if (!string.Equals(rawTpl, templateId, StringComparison.OrdinalIgnoreCase)
+            && !string.Equals(resolvedTpl, templateId, StringComparison.OrdinalIgnoreCase))
+        {
+            var offerId = GetMemberValue(offer, "Id")?.ToString() ?? "unknown offer";
+            YATMLogger.LogDebug($"[Pricing] Warning: attempted to set assort _tpl for {offerId} to {templateId}, but readback returned _tpl={rawTpl ?? "null"}, resolved={resolvedTpl ?? "null"}.");
+        }
+    }
+
+    private static void SetExtensionDataValue(object target, string key, object? value)
+    {
+        var type = target.GetType();
+
+        var extensionMember = type.GetProperty(
+                "ExtensionData",
+                BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase)
+            ?? (MemberInfo?)type.GetField(
+                "ExtensionData",
+                BindingFlags.Public | BindingFlags.Instance | BindingFlags.IgnoreCase);
+
+        if (extensionMember == null)
+        {
+            return;
+        }
+
+        object? extensionData = extensionMember switch
+        {
+            PropertyInfo prop => prop.GetValue(target),
+            FieldInfo field => field.GetValue(target),
+            _ => null
+        };
+
+        if (extensionData == null)
+        {
+            // Most SPT models use Dictionary<string, object> for ExtensionData.
+            extensionData = new Dictionary<string, object?>();
+
+            try
+            {
+                switch (extensionMember)
+                {
+                    case PropertyInfo prop when prop.CanWrite:
+                        prop.SetValue(target, extensionData);
+                        break;
+                    case FieldInfo field:
+                        field.SetValue(target, extensionData);
+                        break;
+                }
+            }
+            catch
+            {
+                return;
+            }
+        }
+
+        if (extensionData is IDictionary dictionary)
+        {
+            dictionary[key] = value;
+        }
     }
 
     private static string? GetStringMember(object target, string memberName)
@@ -743,6 +801,11 @@ public class YetAnotherTraderMod(
         }
 
         return defaultValue;
+    }
+
+    private static bool IsAlwaysBarter(PriceConfigItem priceConfig)
+    {
+        return priceConfig.AlwaysBarter;
     }
 
     private static bool HasUsableBarterScheme(PriceConfigItem priceConfig)
