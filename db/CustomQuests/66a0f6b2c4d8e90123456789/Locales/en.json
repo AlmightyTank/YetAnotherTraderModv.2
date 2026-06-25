@@ -176,7 +176,23 @@
     "6a39bb7182d8dd83f87b1f6b completePlayerMessage": "The satellite equipment is jammed.",
     "6a39bb7182d8dd83f87b1f6b changeQuestMessageText": "Tony wants Signal Jammers placed near Lighthouse satellite equipment.",
 
-    "6a39bb7182d8dd83f87b1f6c": "Place the first Signal Jammer near the satellite equipment at the tennis court",
+    "6a39fcff82d8dd83f87b1fa7": "Place the first Signal Jammer near the satellite equipment at the tennis court",
     "6a39bb7182d8dd83f87b1f6d": "Place the second Signal Jammer near the satellite equipment at the first helipad",
-    "6a39bb7182d8dd83f87b1f71": "Survive and extract from Lighthouse"
+    "6a39bb7182d8dd83f87b1f71": "Survive and extract from Lighthouse",
+
+    "6a39bce282d8dd83f87b1f84 name": "Paper Shields",
+    "6a39bce282d8dd83f87b1f84 description": "Bullets open doors, but paper keeps them open. My people are moving more now, and moving men need names, manifests, stamps, and lies that look official under bad light. There is a packet of forged route documents hidden in the guard office of two-story Dorms on Customs. Bring it to me sealed. If you read it, you will only learn names that are bad for your health.",
+    "6a39bce282d8dd83f87b1f84 note": "Tony wants you to recover forged route documents from the guard office in two-story Dorms.",
+    "6a39bce282d8dd83f87b1f84 startedMessageText": "Customs. Two-story Dorms. Guard office. Find the forged route documents and leave alive.",
+    "6a39bce282d8dd83f87b1f84 successMessageText": "Good. Paper shields, my friend. A stamp in the right place can stop more bullets than armor.",
+    "6a39bce282d8dd83f87b1f84 failMessageText": "You lost the papers or let Dorms eat you. Without documents, every route looks like a crime scene.",
+    "6a39bce282d8dd83f87b1f84 acceptPlayerMessage": "I'll recover the documents.",
+    "6a39bce282d8dd83f87b1f84 declinePlayerMessage": "Not going into Dorms for papers yet.",
+    "6a39bce282d8dd83f87b1f84 completePlayerMessage": "Here are the forged route documents.",
+    "6a39bce282d8dd83f87b1f84 changeQuestMessageText": "Tony wants the forged route documents recovered from two-story Dorms.",
+
+    "6a39bce282d8dd83f87b1f88": "Locate the guard office in two-story Dorms",
+    "6a39bce282d8dd83f87b1f89": "Recover the forged route documents",
+    "6a39bce282d8dd83f87b1f8e": "Survive and extract from Customs",
+    "6a39bce282d8dd83f87b1f90": "Hand over the forged route documents to Tony"
 }
