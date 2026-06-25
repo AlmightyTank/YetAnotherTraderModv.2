@@ -233,7 +233,7 @@
                             "_tpl": "56dfef82d2720bbd668b4567"
                         }
                     ],
-                    "loyaltyLevel": 3,
+                    "loyaltyLevel": 2,
                     "target": "6a3210dbd2999bc7b9bbab05",
                     "traderId": "66a0f6b2c4d8e90123456789",
                     "type": "AssortmentUnlock",
@@ -250,10 +250,10 @@
                     "items": [
                         {
                             "_id": "6a30b2fbd2999bc7b9bbaacc",
-                            "_tpl": "56dff026d2720bb8668b4567"
+                            "_tpl": "64b7af434b75259c590fa893"
                         }
                     ],
-                    "loyaltyLevel": 3,
+                    "loyaltyLevel": 2,
                     "target": "6a30b2fbd2999bc7b9bbaacc",
                     "traderId": "66a0f6b2c4d8e90123456789",
                     "type": "AssortmentUnlock",
