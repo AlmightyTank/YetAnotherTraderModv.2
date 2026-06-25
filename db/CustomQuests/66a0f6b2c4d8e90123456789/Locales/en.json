@@ -194,5 +194,21 @@
     "6a39bce282d8dd83f87b1f88": "Locate the guard office in two-story Dorms",
     "6a39bce282d8dd83f87b1f89": "Recover the forged route documents",
     "6a39bce282d8dd83f87b1f8e": "Survive and extract from Customs",
-    "6a39bce282d8dd83f87b1f90": "Hand over the forged route documents to Tony"
+    "6a39bce282d8dd83f87b1f90": "Hand over the forged route documents",
+
+    "6a39fcff82d8dd83f87b1fa9 name": "Clean Run",
+    "6a39fcff82d8dd83f87b1fa9 description": "The radios are blind and the papers are clean enough to pass under bad light. Now we test the route with cargo that matters. I am giving you three sealed packages. Customs, Interchange, Streets. One package for each cache. Do not open them, do not lose them, and do not ask what they are worth. If one disappears, you replace the value yourself before you finish the job.",
+    "6a39fcff82d8dd83f87b1fa9 note": "Tony wants you to stash three sealed cargo packages across Customs, Interchange, and Streets.",
+    "6a39fcff82d8dd83f87b1fa9 startedMessageText": "Three packages. Train car near Fortress, Goshan flatbed, LexOs container. Keep the run clean.",
+    "6a39fcff82d8dd83f87b1fa9 successMessageText": "Good. Customs opened, Interchange moved, Streets received. That is a clean run. Now I know the route works.",
+    "6a39fcff82d8dd83f87b1fa9 failMessageText": "Lost cargo, broken route, dead courier. None of that is clean.",
+    "6a39fcff82d8dd83f87b1fa9 acceptPlayerMessage": "I'll move the packages.",
+    "6a39fcff82d8dd83f87b1fa9 declinePlayerMessage": "Not running cargo yet.",
+    "6a39fcff82d8dd83f87b1fa9 completePlayerMessage": "The packages are stashed.",
+    "6a39fcff82d8dd83f87b1fa9 changeQuestMessageText": "Tony wants three sealed cargo packages stashed across the route.",
+
+    "6a39fcff82d8dd83f87b1faa": "Stash the first sealed cargo package in the train car near Fortress",
+    "6a39fcff82d8dd83f87b1fab": "Stash the second sealed cargo package in the flatbed truck at the back of Goshan",
+    "6a39fcff82d8dd83f87b1fad": "Stash the third sealed cargo package in the closed container behind LexOs",
+    "6a39fcff82d8dd83f87b1fb1": "Survive and extract"
 }

@@ -70,6 +70,7 @@ public sealed class YATMWTTLoader(
         // 4. WTT loads locales, loot spawns, quests, and quest zones
         YATMLogger.LogDebug("[CustomContentLoader] Loading locales, loot spawns, quests, and quest zones...");
 
+        await wttCommon.CustomHideoutRecipeService.CreateHideoutRecipes(assembly);
         await wttCommon.CustomLocaleService.CreateCustomLocales(assembly);
         await wttCommon.CustomLootspawnService.CreateCustomLootSpawns(assembly);
         await wttCommon.CustomQuestService.CreateCustomQuests(assembly);
