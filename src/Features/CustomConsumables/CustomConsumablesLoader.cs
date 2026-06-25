@@ -39,7 +39,7 @@ public sealed class CustomConsumablesLoader(
     {
         var assemblyPath = Assembly.GetExecutingAssembly().Location;
         var modPath = Path.GetDirectoryName(assemblyPath) ?? AppContext.BaseDirectory;
-        var consumablesPath = Path.Combine(modPath, "db", "CustomsConsumables");
+        var consumablesPath = Path.Combine(modPath, "db", "CustomConsumables");
 
         Load(consumablesPath);
         await Task.CompletedTask;

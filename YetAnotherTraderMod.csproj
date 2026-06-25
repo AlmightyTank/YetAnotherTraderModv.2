@@ -36,10 +36,12 @@
 		</None>
 	</ItemGroup>
   <ItemGroup>
+    <Content Remove="db\CustomHideoutRecipes\clean_run_sealed_cargo_package.json" />
     <Content Remove="db\CustomItems\buried_steel_crate.json" />
     <Content Remove="db\customitems\dead-drop_package.json" />
     <Content Remove="db\CustomItems\experimental_stim_case.json" />
     <Content Remove="db\CustomItems\forged_route_documents.json" />
+    <Content Remove="db\CustomItems\sealed_cargo_package.json" />
     <Content Remove="db\customitems\tony_calling_card.json" />
     <Content Remove="db\CustomItems\tony_quest_items.json" />
     <Content Remove="db\customitems\trauma_bag.json" />
@@ -54,6 +56,7 @@
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\quests\back_room_etiquette.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\broken_radios.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\buried_steel.json" />
+    <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\clean_run.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\depot_rats.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\no_names_spoken.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\old_bear_trails.json" />
@@ -65,6 +68,7 @@
     <Content Remove="db\CustomQuestZones\back_room_etiquette.json" />
     <Content Remove="db\CustomQuestZones\broken_radios.json" />
     <Content Remove="db\CustomQuestZones\buried_steel.json" />
+    <Content Remove="db\customquestzones\clean_run.json" />
     <Content Remove="db\CustomQuestZones\depot_rats.json" />
     <Content Remove="db\customquestzones\first_dead_drop.json" />
     <Content Remove="db\customquestzones\no_names_spoken.json" />
@@ -73,9 +77,9 @@
     <Content Remove="db\customquestzones\safe_hands.json" />
     <Content Remove="db\customquestzones\street_tax.json" />
     <Content Remove="db\CustomQuestZones\test_batch.json" />
-    <Content Remove="db\CustomsConsumables\volkov_hemostat.json" />
-    <Content Remove="db\CustomsConsumables\volkov_redline.json" />
-    <Content Remove="db\CustomsConsumables\volkov_regen.json" />
+    <Content Remove="db\CustomConsumables\volkov_hemostat.json" />
+    <Content Remove="db\CustomConsumables\volkov_redline.json" />
+    <Content Remove="db\CustomConsumables\volkov_regen.json" />
     <Content Remove="db\CustomWeaponPresets\BTAKM_Preset.json" />
     <Content Remove="db\CustomWeaponPresets\BTASVAL_Preset.json" />
     <Content Remove="db\CustomWeaponPresets\FA209_Preset.json" />
@@ -138,24 +142,17 @@
 		<MakeDir Directories="$(TestSptModDeployPath)" />
 
 		<ItemGroup>
-			<TonyDeployFiles Include="$(TargetDir)**\*.*"
-							 Exclude="$(TargetDir)tools\**\*.*;
-                            $(TargetDir)**\*.pdb;
-                            $(TargetDir)config\**\*.*" />
+			<TonyDeployFiles Include="$(TargetDir)**\*.*" Exclude="$(TargetDir)tools\**\*.*;&#xD;&#xA;                            $(TargetDir)**\*.pdb;&#xD;&#xA;                            $(TargetDir)config\**\*.*" />
 
 			<TonyDeployConfigFiles Include="$(TargetDir)config\items.json" />
 			<TonyDeployConfigFiles Include="$(TargetDir)config\settings.json" />
 		</ItemGroup>
 
-		<Copy SourceFiles="@(TonyDeployFiles)"
-			  DestinationFiles="@(TonyDeployFiles->'$(TestSptModDeployPath)%(RecursiveDir)%(Filename)%(Extension)')"
-			  SkipUnchangedFiles="false" />
+		<Copy SourceFiles="@(TonyDeployFiles)" DestinationFiles="@(TonyDeployFiles->'$(TestSptModDeployPath)%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" />
 
 		<MakeDir Directories="$(TestSptModDeployPath)config\" />
 
-		<Copy SourceFiles="@(TonyDeployConfigFiles)"
-			  DestinationFolder="$(TestSptModDeployPath)config\"
-			  SkipUnchangedFiles="false" />
+		<Copy SourceFiles="@(TonyDeployConfigFiles)" DestinationFolder="$(TestSptModDeployPath)config\" SkipUnchangedFiles="false" />
 	</Target>
 
 	<Target Name="CreateTonyFullInstallZip" AfterTargets="Build" Condition="'$(CreateModZip)' == 'true'">
@@ -169,24 +166,17 @@
 		<MakeDir Directories="$(PackageModRoot)" />
 
 		<ItemGroup>
-			<TonyPackageFiles Include="$(TargetDir)**\*.*"
-							  Exclude="$(TargetDir)tools\**\*.*;
-                             $(TargetDir)**\*.pdb;
-                             $(TargetDir)config\**\*.*" />
+			<TonyPackageFiles Include="$(TargetDir)**\*.*" Exclude="$(TargetDir)tools\**\*.*;&#xD;&#xA;                             $(TargetDir)**\*.pdb;&#xD;&#xA;                             $(TargetDir)config\**\*.*" />
 
 			<TonyPackageConfigFiles Include="$(TargetDir)config\items.json" />
 			<TonyPackageConfigFiles Include="$(TargetDir)config\settings.json" />
 		</ItemGroup>
 
-		<Copy SourceFiles="@(TonyPackageFiles)"
-			  DestinationFiles="@(TonyPackageFiles->'$(PackageModRoot)%(RecursiveDir)%(Filename)%(Extension)')"
-			  SkipUnchangedFiles="false" />
+		<Copy SourceFiles="@(TonyPackageFiles)" DestinationFiles="@(TonyPackageFiles->'$(PackageModRoot)%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="false" />
 
 		<MakeDir Directories="$(PackageModRoot)config\" />
 
-		<Copy SourceFiles="@(TonyPackageConfigFiles)"
-			  DestinationFolder="$(PackageModRoot)config\"
-			  SkipUnchangedFiles="false" />
+		<Copy SourceFiles="@(TonyPackageConfigFiles)" DestinationFolder="$(PackageModRoot)config\" SkipUnchangedFiles="false" />
 
 		<!-- Remove old zip -->
 		<Delete Files="$(ModZipPath)" Condition="Exists('$(ModZipPath)')" />
