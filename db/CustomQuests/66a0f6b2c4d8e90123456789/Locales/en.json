@@ -1,4 +1,5 @@
 {
+    // Quest 2
     "6a300025d2999bc7b9bba916 name": "Back Room Etiquette",
     "6a300025d2999bc7b9bba916 description": "Concordia had security before it had ghosts. Cameras, guards, records, keys, people who looked the other way when paid. One of my old ledgers used to sit in that security room, until someone smart moved it before the wrong eyes found it. Now it is stashed in a maintenance closet under the ramp on Ground Zero. Find it, recover it, and leave alive. Do not make a scene.",
     "6a300025d2999bc7b9bba916 note": "Tony wants you to recover an old security ledger hidden in a maintenance closet under the ramp on Ground Zero.",
@@ -15,6 +16,7 @@
     "6a300025d2999bc7b9bba919": "Survive and extract from Ground Zero",
     "6a300025d2999bc7b9bba91a": "Hand over Tony's security ledger",
 
+    // Quest 3
     "6a300025d2999bc7b9bba91b name": "First Dead Drop",
     "6a300025d2999bc7b9bba91b description": "The Concordia ledger you recovered still has a useful name in it. One of my people left a sealed envelope in the Factory office building, second-floor locker room. You will move it to Ground Zero. Underground level, meat truck, far back. The man collecting it works for Prapor. He must not know where it came from or who carried it. Do not open it. Do not lose it. Do not bring it back to me.",
     "6a300025d2999bc7b9bba91b note": "Move Tony's sealed envelope from the second-floor Factory office locker room to the far back of the underground meat truck on Ground Zero.",
@@ -32,6 +34,7 @@
     "6a300025d2999bc7b9bba91f": "Stash Tony's sealed envelope in the Ground Zero meat truck",
     "6a300025d2999bc7b9bba920": "Survive and extract from Ground Zero",
 
+    // Prapor's side quest 1 - Army Leftovers
     "6a300025d2999bc7b9bba921 name": "Army Leftovers",
     "6a300025d2999bc7b9bba921 description": "That envelope reached the right hands. Funny thing about frightened men, they remember things. One of Prapor's people just remembered an old Reserve parts cache that never made it onto the books. Locked away behind RB-ST, where most rats stop looking. AK furniture, worn spares, magazines, cheap army scraps. I do not need you dragging metal across the base. Get inside, find the cache, mark it, and leave. My people will collect what Prapor forgot.",
     "6a300025d2999bc7b9bba921 note": "Tony wants you to access RB-ST on Reserve and mark a forgotten army parts cache so his people can recover it later.",
@@ -48,6 +51,7 @@
     "6a300025d2999bc7b9bba924": "Mark the army parts cache for Tony",
     "6a300025d2999bc7b9bba925": "Survive and extract from Reserve",
 
+    // Quest 4
     "6a300025d2999bc7b9bba926 name": "No Names Spoken",
     "6a300025d2999bc7b9bba926 description": "Names are dangerous. Symbols last longer. Take my card to Factory and leave it in the third-floor office, on the desk where people will see it. No signatures, no speeches, no bodies in Scav jackets. Fence opened the first door for you, and I do not repay useful men with dead workers. Plant the card, leave alive, and say nothing.",
     "6a300025d2999bc7b9bba926 note": "Tony wants you to plant his calling card on the third-floor office desk in Factory without killing Scavs.",
@@ -64,16 +68,17 @@
     "6a300025d2999bc7b9bba928": "Survive and extract from Factory",
     "6a300025d2999bc7b9bba929": "Do not kill any Scavs on Factory",
 
+    // Quest 5
     "6a30a341d2999bc7b9bbaa32 name": "Street Tax",
-    "6a30a341d2999bc7b9bbaa32 description": "The card was seen. Now comes the bill. Customs has roads for men who do not like checkpoints, offices for goods with no paperwork, dorm rooms where cash changes hands, and gas stations where deals get settled behind locked doors. Big Red keeps the paper. Three-story Dorms keeps the dirty money. New Gas keeps the route moving. Go there, collect what is owed, and leave alive. Bring me my cut. You keep the collector's fee.",
-    "6a30a341d2999bc7b9bbaa32 note": "Tony wants you to collect valuables from Big Red, three-story Dorms, and New Gas on Customs, then bring him his cut.",
-    "6a30a341d2999bc7b9bbaa32 startedMessageText": "Customs. Big Red upstairs office, three-story Dorms near marked room, then New Gas office. Collect the street tax and come back alive.",
-    "6a30a341d2999bc7b9bbaa32 successMessageText": "Good. Big Red, Dorms, New Gas, cash, gold. The route remembers who owns it now. Keep your collector's fee. You earned that much.",
+    "6a30a341d2999bc7b9bbaa32 description": "The card was seen. Now comes the bill. Customs has roads for men who do not like checkpoints, offices for goods with no paperwork, dorm rooms where cash changes hands, and gas stations where deals get settled behind locked doors. Big Red keeps the paper. Three-story Dorms keeps the dirty money. New Gas keeps the route moving. Hit all three points, make sure the route is still open, then bring me my cut in cash and gold. I do not care where you lift it from, as long as it comes back clean. You keep the collector's fee.",
+    "6a30a341d2999bc7b9bbaa32 note": "Tony wants you to check the Customs collection route at Big Red, three-story Dorms, and New Gas, then bring him his cut.",
+    "6a30a341d2999bc7b9bbaa32 startedMessageText": "Customs. Big Red upstairs office, three-story Dorms near marked room, then New Gas office. Check the route, collect enough cash and gold, and come back alive.",
+    "6a30a341d2999bc7b9bbaa32 successMessageText": "Good. Big Red, Dorms, New Gas, cash, gold. The route is still open, and the bill got paid. Keep your collector's fee. You earned that much.",
     "6a30a341d2999bc7b9bbaa32 failMessageText": "You lost the route, lost the money, or forgot whose tax you were collecting.",
     "6a30a341d2999bc7b9bbaa32 acceptPlayerMessage": "I'll collect the tax.",
     "6a30a341d2999bc7b9bbaa32 declinePlayerMessage": "Not collecting from Customs yet.",
     "6a30a341d2999bc7b9bbaa32 completePlayerMessage": "Here's your cut.",
-    "6a30a341d2999bc7b9bbaa32 changeQuestMessageText": "Tony wants his cut collected from Big Red, Dorms, and New Gas.",
+    "6a30a341d2999bc7b9bbaa32 changeQuestMessageText": "Tony wants the Customs route checked and his cut brought back in cash and gold.",
 
     "6a30a341d2999bc7b9bbaa33": "Locate the upstairs Big Red office collection point",
     "6a30a341d2999bc7b9bbaa34": "Locate the three-story Dorms marked room collection point",
@@ -86,6 +91,7 @@
     "6a30a341d2999bc7b9bbaa3b": "Hand over 1 golden rooster",
     "6a30a341d2999bc7b9bbaa3c": "Hand over 1 gold chain",
 
+    // Quest 6
     "6a30b2fbd2999bc7b9bbaa96 name": "Old BEAR Trails",
     "6a30b2fbd2999bc7b9bbaa96 description": "The Customs route pays again. Good. But money is useless if every road is watched. Before Tarkov broke open, BEAR teams used paths through Woods that never touched the main roads. Old Station, Scav bunker, Abandoned Village. Those routes were quiet once. I want to know if they still are. Mark them, leave alive, and do not waste time looking for souvenirs. I am not sending you for supplies. I am seeing if you can follow ghosts.",
     "6a30b2fbd2999bc7b9bbaa96 note": "Tony wants you to mark three old BEAR route points on Woods and survive.",
@@ -102,6 +108,7 @@
     "6a30b2fbd2999bc7b9bbaa99": "Mark the old BEAR route near Abandoned Village",
     "6a30b2fbd2999bc7b9bbaa9a": "Survive and extract from Woods",
 
+    // Quest 7
     "6a30b2fbd2999bc7b9bbaab5 name": "Buried Steel",
     "6a30b2fbd2999bc7b9bbaab5 description": "The old trails are open. That means people can move again. One of mine already did his part and left two sealed military weapon crates in the E2 bunkers on Reserve. He does not know your name, and you do not know his. That is how this works. Find the buried cache, recover both crates, and bring them to me sealed. If the wire is cut or one crate is missing, do not bother making excuses.",
     "6a30b2fbd2999bc7b9bbaab5 note": "Tony wants you to recover two sealed military weapon crates from the E2 bunkers on Reserve.",
@@ -118,6 +125,8 @@
     "6a30b2fbd2999bc7b9bbaab8": "Survive and extract from Reserve",
     "6a30b2fbd2999bc7b9bbaab9": "Hand over 2 sealed military weapon crates to Tony",
 
+
+    // Prapor's side quest 2 - Depot Rats
     "6a30b2fbd2999bc7b9bbaaf1 name": "Depot Rats",
     "6a30b2fbd2999bc7b9bbaaf1 description": "Prapor's boys are shaving ammo before it reaches the books. They call it loss, damage, bad counts, whatever makes the paperwork sleep. I call it opportunity. One of those depot rats has a skimmed ammo cache inside K Building, K4, on Reserve. You are not taking it. You are marking it. My people will collect the ammo later, and Prapor's people will keep wondering where their missing rounds went.",
     "6a30b2fbd2999bc7b9bbaaf1 note": "Tony wants you to locate and mark a skimmed ammo cache in K Building, K4, on Reserve.",
@@ -133,6 +142,7 @@
     "6a30b2fbd2999bc7b9bbaaf3": "Mark the skimmed ammo cache for Tony",
     "6a30b2fbd2999bc7b9bbaaf4": "Survive and extract from Reserve",
 
+    // Therapist's side quest 1 - Test Batch
     "6a3210dbd2999bc7b9bbab06 name": "Test Batch",
     "6a3210dbd2999bc7b9bbab06 description": "Therapist throws away anything she cannot trust. That is why she sleeps better than most people in Tarkov, and why men like me still make money. Shoreline has a test batch that never made it back into clean hands: regular injectors, rejected batches, prototype stimulants, old labels, bad storage, maybe a few things Sanitar's people were smart enough not to touch. The case is in West 301 at the Health Resort. I will give you a key, but it is almost spent, so do not waste trips. Find the experimental stim case and bring it back sealed. Do not open it. Do not test anything.",
     "6a3210dbd2999bc7b9bbab06 note": "Tony wants you to recover an experimental stim case from room W301 at the Health Resort.",
@@ -149,6 +159,7 @@
     "6a3210dbd2999bc7b9bbab09": "Survive and extract from Shoreline",
     "6a3210dbd2999bc7b9bbab0a": "Hand over the experimental stim case to Tony",
 
+    // Quest 8
     "6a3210dbd2999bc7b9bbab29 name": "Safe Hands",
     "6a3210dbd2999bc7b9bbab29 description": "The crates moved. The routes opened. Then someone hit one of my couriers near Interchange. He made it inside ULTRA before my people reached him, and they used Mantis as a quick triage point. Smart choice. Medical store, closed doors, enough clutter to hide behind. They pulled him out, but not everything came with them. There is a sealed trauma bag still inside Mantis. I want it back. This is not medicine for sale. This is how useful men keep breathing.",
     "6a3210dbd2999bc7b9bbab29 note": "Tony wants you to recover a sealed trauma bag from an improvised triage point inside Mantis on Interchange.",
@@ -165,6 +176,7 @@
     "6a3210dbd2999bc7b9bbab33": "Survive and extract from Interchange",
     "6a3210dbd2999bc7b9bbab35": "Hand over Tony's sealed trauma bag",
 
+    // Quest 9
     "6a39bb7182d8dd83f87b1f6b name": "Broken Radios",
     "6a39bb7182d8dd83f87b1f6b description": "The bags moved, the crates moved, and now the coast is listening. Someone has a contact route on Lighthouse, and they are using satellite equipment to watch movement I would rather keep quiet. I do not need them dead. Dead men get replaced. I need them blind. Take these Signal Jammers. Place one near the satellite equipment at the tennis court and another at the first helipad. Once their equipment starts screaming, my people can move without every clean-dollar errand boy hearing about it.",
     "6a39bb7182d8dd83f87b1f6b note": "Tony wants you to place Signal Jammers near satellite communication equipment on Lighthouse.",
@@ -180,6 +192,7 @@
     "6a39bb7182d8dd83f87b1f6d": "Place the second Signal Jammer near the satellite equipment at the first helipad",
     "6a39bb7182d8dd83f87b1f71": "Survive and extract from Lighthouse",
 
+    //Quest 10
     "6a39bce282d8dd83f87b1f84 name": "Paper Shields",
     "6a39bce282d8dd83f87b1f84 description": "Bullets open doors, but paper keeps them open. My people are moving more now, and moving men need names, manifests, stamps, and lies that look official under bad light. There is a packet of forged route documents hidden in the guard office of two-story Dorms on Customs. Bring it to me sealed. If you read it, you will only learn names that are bad for your health.",
     "6a39bce282d8dd83f87b1f84 note": "Tony wants you to recover forged route documents from the guard office in two-story Dorms.",
@@ -196,6 +209,7 @@
     "6a39bce282d8dd83f87b1f8e": "Survive and extract from Customs",
     "6a39bce282d8dd83f87b1f90": "Hand over the forged route documents",
 
+    // Quest 11
     "6a39fcff82d8dd83f87b1fa9 name": "Clean Run",
     "6a39fcff82d8dd83f87b1fa9 description": "The radios are blind and the papers are clean enough to pass under bad light. Now we test the route with cargo that matters. I am giving you three sealed packages. Customs, Interchange, Streets. One package for each cache. Do not open them, do not lose them, and do not ask what they are worth. If one disappears, you replace the value yourself before you finish the job.",
     "6a39fcff82d8dd83f87b1fa9 note": "Tony wants you to stash three sealed cargo packages across Customs, Interchange, and Streets.",
@@ -210,5 +224,21 @@
     "6a39fcff82d8dd83f87b1faa": "Stash the first sealed cargo package in the train car near Fortress",
     "6a39fcff82d8dd83f87b1fab": "Stash the second sealed cargo package in the flatbed truck at the back of Goshan",
     "6a39fcff82d8dd83f87b1fad": "Stash the third sealed cargo package in the closed container behind LexOs",
-    "6a39fcff82d8dd83f87b1fb1": "Survive and extract"
+    "6a39fcff82d8dd83f87b1fb1": "Survive and extract",
+
+
+    // Prapor's side quest 3 - Red Caliber
+    "6a3cab9782d8dd83f87b1fd1 name": "Red Caliber",
+    "6a3cab9782d8dd83f87b1fd1 description": "Prapor's boys keep losing rifles, ammo, and men in the trees. I do not waste good boxes on someone who sprays at shadows and dies with a warm barrel. Woods is where old BEARs learned patience. Take a Russian-service weapon, put down five PMCs, and leave alive. Do that, and I will know the better ammo is not being wasted.",
+    "6a3cab9782d8dd83f87b1fd1 note": "Tony wants you to prove yourself on Woods with Russian-service weapons.",
+    "6a3cab9782d8dd83f87b1fd1 startedMessageText": "Woods. Russian steel. Five PMCs. Leave alive.",
+    "6a3cab9782d8dd83f87b1fd1 successMessageText": "Good. Red caliber still does honest work in the right hands. I will open a few better boxes for you, but do not mistake access for charity.",
+    "6a3cab9782d8dd83f87b1fd1 failMessageText": "Dead men do not get better ammo. Try again when you can keep your rifle and your pulse steady.",
+    "6a3cab9782d8dd83f87b1fd1 acceptPlayerMessage": "I'll prove it with Russian steel.",
+    "6a3cab9782d8dd83f87b1fd1 declinePlayerMessage": "Not going to Woods for this yet.",
+    "6a3cab9782d8dd83f87b1fd1 completePlayerMessage": "Five PMCs down. I made it out.",
+    "6a3cab9782d8dd83f87b1fd1 changeQuestMessageText": "Tony wants proof you can fight with Russian-service weapons on Woods.",
+
+    "6a3cab9782d8dd83f87b1fd5": "Eliminate 5 PMCs on Woods with Russian-service weapons without dying",
+    "6a3cab9782d8dd83f87b1fd9": "Survive and extract from Woods"
 }

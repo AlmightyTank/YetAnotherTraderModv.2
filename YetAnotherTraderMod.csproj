@@ -62,6 +62,7 @@
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\old_bear_trails.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\paper_shields.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\quest.json" />
+    <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\red_caliber.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\safe_hands.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\street_tax.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\test_batch.json" />
