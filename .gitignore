@@ -19,3 +19,5 @@ config/tarkovdev_items_cache.json
 tools/report_tony_western_buy_blacklist.txt
 config/tony_western_buy_blacklist.generated.json
 Properties/launchSettings.json
+/data
+tools/ids.json

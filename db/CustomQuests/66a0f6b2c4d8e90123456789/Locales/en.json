@@ -256,5 +256,23 @@
 
     "6a3fd74f82d8dd83f87b1ff4": "Locate the back-alley clinic inside the old pharmacy on Primorsky Ave",
     "6a3fd74f82d8dd83f87b1ff8": "Confirm the street doctor is still operating",
-    "6a3fd74f82d8dd83f87b1ffd": "Survive and extract from Streets"
+    "6a3fd74f82d8dd83f87b1ffd": "Survive and extract from Streets",
+
+    // Ragman's side quest 1 - Used But Usable
+    "6a413ec882d8dd83f87b2053 name": "Used But Usable",
+    "6a413ec882d8dd83f87b2053 description": "Ragman sells clean fabric and straight stitching. I need something cheaper. KIBA has seen enough panic, looting, and bad decisions to leave useful scraps behind. First, get inside after the power comes on. Then bring me armor plates and tactical rigs. Torn straps can be sewn. Plates can be re-housed. Ugly gear is still gear if the right hands touch it.",
+    "6a413ec882d8dd83f87b2053 note": "Tony wants you to get into KIBA on Interchange, then bring him armor plates and tactical rigs for cheap refurbished gear.",
+    "6a413ec882d8dd83f87b2053 startedMessageText": "Interchange. Power first, KIBA second. After that, bring me plates and rigs.",
+    "6a413ec882d8dd83f87b2053 successMessageText": "Good. Used, burned, cracked, torn \u2014 does not matter. My people can make it usable again, and you get cheaper gear because of it.",
+    "6a413ec882d8dd83f87b2053 failMessageText": "You came back with nothing useful. KIBA is dangerous, but empty hands are worse.",
+    "6a413ec882d8dd83f87b2053 acceptPlayerMessage": "I'll see what KIBA has left.",
+    "6a413ec882d8dd83f87b2053 declinePlayerMessage": "Not going into KIBA for salvage yet.",
+    "6a413ec882d8dd83f87b2053 completePlayerMessage": "Here are the plates and rigs.",
+    "6a413ec882d8dd83f87b2053 changeQuestMessageText": "Tony wants KIBA checked and salvage materials handed over.",
+
+    "6a413ec882d8dd83f87b2057": "Locate KIBA Arms inside ULTRA",
+    "6a413ec882d8dd83f87b205b": "Enter KIBA Arms after power has been restored",
+    "6a413ec882d8dd83f87b205d": "Hand over any 5 armor plates",
+    "6a413ec882d8dd83f87b205f": "Hand over any 3 tactical rigs",
+    "6a41407d82d8dd83f87b2064": "Survive and extract from Interchange"
 }
