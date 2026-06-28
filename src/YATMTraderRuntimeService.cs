@@ -119,26 +119,41 @@ public sealed class YATMTraderRuntimeService(
 
         if (traderBase.LoyaltyLevels != null)
         {
-            foreach (var level in traderBase.LoyaltyLevels)
+            var baseInsuranceCoef = config.Settings.InsurancePriceCoef; // Example: 95
+            const int insuranceStepDownPerLoyaltyLevel = 10;
+
+            for (var i = 0; i < traderBase.LoyaltyLevels.Count; i++)
             {
+                var level = traderBase.LoyaltyLevels[i];
+                var loyaltyLevel = i + 1;
+
                 try
                 {
                     var prop = level.GetType().GetProperty("InsurancePriceCoefficient");
                     if (prop != null && prop.CanWrite)
                     {
+                        var coefForLevel = Math.Max(
+                            0,
+                            baseInsuranceCoef - (i * insuranceStepDownPerLoyaltyLevel));
+
                         var targetType = Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType;
-                        object val = Convert.ChangeType(config.Settings.InsurancePriceCoef, targetType);
+                        object val = Convert.ChangeType(coefForLevel, targetType);
+
                         prop.SetValue(level, val);
-                        YATMLogger.LogDebug($"[Insurance] Set Level {level.MinLevel} Coef to: {val}");
+
+                        YATMLogger.LogDebug(
+                            $"[Insurance] Set Loyalty Level {loyaltyLevel} " +
+                            $"(MinLevel {level.MinLevel}) Coef to: {val}");
                     }
                     else
                     {
-                        YATMLogger.LogDebug("[Insurance] Warning: InsurancePriceCoefficient property not found on LoyaltyLevel.");
+                        YATMLogger.LogDebug(
+                            $"[Insurance] Warning: InsurancePriceCoefficient property not found on Loyalty Level {loyaltyLevel}.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    YATMLogger.Log($"[Insurance] Error setting coef for level: {ex.Message}");
+                    YATMLogger.Log($"[Insurance] Error setting coef for Loyalty Level {loyaltyLevel}: {ex.Message}");
                 }
             }
         }
@@ -832,7 +847,7 @@ public sealed class YATMTraderRuntimeService(
         if (zeroedCount > 0)
         {
             YATMLogger.Log($"[{rollReason}] [Stock] Zeroed {zeroedCount} offers due to randomization.");
-            YATMLogger.LogDebug($"Out of Stock Items:\n  {string.Join("\n  ", outOfStockNames)}");
+            YATMLogger.LogRealDebug($"Out of Stock Items:\n  {string.Join("\n  ", outOfStockNames)}");
         }
         else
         {
@@ -907,7 +922,7 @@ public sealed class YATMTraderRuntimeService(
                             }
                         }
 
-                        YATMLogger.LogDebug($"  Price adjust: {oldPrice} -> {component.Count} | {itemName} ({itemId})");
+                        YATMLogger.LogRealDebug($"  Price adjust: {oldPrice} -> {component.Count} | {itemName} ({itemId})");
                         changedCount++;
                     }
                 }
@@ -1305,11 +1320,11 @@ public sealed class YATMTraderRuntimeService(
 
         if (randomizeCashBarter)
         {
-            YATMLogger.LogDebug($"[Pricing] Random cash offer: {priceConfig.ItemName} = {priceConfig.Price} {priceConfig.Currency}");
+            YATMLogger.LogRealDebug($"[Pricing] Random cash offer: {priceConfig.ItemName} = {priceConfig.Price} {priceConfig.Currency}");
         }
         else
         {
-            YATMLogger.LogDebug($"[Pricing] Cash override: {priceConfig.ItemName} = {priceConfig.Price} {priceConfig.Currency}");
+            YATMLogger.LogRealDebug($"[Pricing] Cash override: {priceConfig.ItemName} = {priceConfig.Price} {priceConfig.Currency}");
         }
 
         return false;
@@ -1345,7 +1360,7 @@ public sealed class YATMTraderRuntimeService(
         }
 
         ReplaceOfferPaymentScheme(packBarterSchemeList, priceConfig.BarterScheme!);
-        YATMLogger.LogDebug($"[Pricing] Paired ammo pack barter: {priceConfig.ItemName} | LooseOfferId {looseOfferId} removed | PackOfferId {packOfferId} kept.");
+        YATMLogger.LogRealDebug($"[Pricing] Paired ammo pack barter: {priceConfig.ItemName} | LooseOfferId {looseOfferId} removed | PackOfferId {packOfferId} kept.");
 
         return true;
     }
@@ -1465,11 +1480,11 @@ public sealed class YATMTraderRuntimeService(
 
         if (!string.IsNullOrWhiteSpace(ammoPackTpl))
         {
-            YATMLogger.LogDebug($"[Pricing] Ammo pack barter payment: {priceConfig.ItemName} | OfferId kept | _tpl = {targetTpl}");
+            YATMLogger.LogRealDebug($"[Pricing] Ammo pack barter payment: {priceConfig.ItemName} | OfferId kept | _tpl = {targetTpl}");
         }
         else
         {
-            YATMLogger.LogDebug($"[Pricing] Barter offer: {priceConfig.ItemName} | OfferId kept | _tpl = {targetTpl}");
+            YATMLogger.LogRealDebug($"[Pricing] Barter offer: {priceConfig.ItemName} | OfferId kept | _tpl = {targetTpl}");
         }
 
         ReplaceOfferPaymentScheme(existingSchemeList, priceConfig.BarterScheme!);
@@ -1498,7 +1513,7 @@ public sealed class YATMTraderRuntimeService(
         SetMemberValue(upd, "BuyRestrictionMax", buyRestrictionMax);
         SetMemberValue(upd, "BuyRestrictionCurrent", 0);
 
-        YATMLogger.LogDebug($"[Pricing] Ammo pack barter stock: {priceConfig.ItemName ?? "Unknown item"} | StackObjectsCount 10 | BuyRestrictionMax {buyRestrictionMax}");
+        YATMLogger.LogRealDebug($"[Pricing] Ammo pack barter stock: {priceConfig.ItemName ?? "Unknown item"} | StackObjectsCount 10 | BuyRestrictionMax {buyRestrictionMax}");
     }
 
     private static void ClearAmmoPackOfferLimits(object offer, PriceConfigItem priceConfig)
@@ -1649,7 +1664,7 @@ public sealed class YATMTraderRuntimeService(
 
         if (!string.IsNullOrWhiteSpace(GetStringMember(priceConfig, "AmmoBarterPackTplId")))
         {
-            YATMLogger.LogDebug($"[Pricing] Ammo cash offer reset: {priceConfig.ItemName} | _tpl = {priceConfig.TplId}");
+            YATMLogger.LogRealDebug($"[Pricing] Ammo cash offer reset: {priceConfig.ItemName} | _tpl = {priceConfig.TplId}");
         }
     }
 
@@ -1659,22 +1674,10 @@ public sealed class YATMTraderRuntimeService(
         {
             return;
         }
-
-        // This is the important live assort mutation.
-        // For ammo barter offers, templateId must be priceConfig.AmmoBarterPackTplId from items.json.
-        // The serialized SPT assort uses _tpl, so write _tpl first and also update aliases used by model wrappers.
         SetMemberValue(offer, "_tpl", templateId);
         SetMemberValue(offer, "Template", templateId);
         SetMemberValue(offer, "Tpl", templateId);
         SetMemberValue(offer, "TemplateId", templateId);
-
-        // Some SPT model objects keep raw JSON-only fields in ExtensionData.
-        // Force _tpl there too so AddTraderToDb serializes the ammo pack tpl, not the loose ammo tpl.
-        SetExtensionDataValue(offer, "_tpl", templateId);
-        SetExtensionDataValue(offer, "tpl", templateId);
-        SetExtensionDataValue(offer, "Template", templateId);
-        SetExtensionDataValue(offer, "Tpl", templateId);
-        SetExtensionDataValue(offer, "TemplateId", templateId);
 
         var rawTpl = GetMemberValue(offer, "_tpl")?.ToString();
         var resolvedTpl = YATMConfig.GetTemplateId(offer);
@@ -1842,25 +1845,13 @@ public sealed class YATMTraderRuntimeService(
 
     private static void SetPaymentComponentValues(object paymentComponent, string tpl, double? count)
     {
-        // Keep payment components clean when an offer flips barter -> cash or cash -> barter.
-        // This only writes the component fields; it does not change offer IDs.
         SetMemberValue(paymentComponent, "_tpl", tpl);
         SetMemberValue(paymentComponent, "tpl", tpl);
         SetMemberValue(paymentComponent, "Template", tpl);
         SetMemberValue(paymentComponent, "Tpl", tpl);
         SetMemberValue(paymentComponent, "TemplateId", tpl);
-
-        SetExtensionDataValue(paymentComponent, "_tpl", tpl);
-        SetExtensionDataValue(paymentComponent, "tpl", tpl);
-        SetExtensionDataValue(paymentComponent, "Template", tpl);
-        SetExtensionDataValue(paymentComponent, "Tpl", tpl);
-        SetExtensionDataValue(paymentComponent, "TemplateId", tpl);
-
         SetMemberValue(paymentComponent, "count", count);
         SetMemberValue(paymentComponent, "Count", count);
-
-        SetExtensionDataValue(paymentComponent, "count", count);
-        SetExtensionDataValue(paymentComponent, "Count", count);
     }
 
     private static Type? FindExistingPaymentComponentType(IList existingSchemeList)
