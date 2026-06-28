@@ -124,9 +124,9 @@
         "BarterScheme": [
             [
                 {
-                    "TplId": "5e2af29386f7746d4159f077",
-                    "ItemName": "KEKTAPE duct tape",
-                    "Count": 2
+                    "TplId": "590c651286f7741e566b6461",
+                    "ItemName": "Slim diary",
+                    "Count": 4
                 }
             ]
         ],
@@ -672,7 +672,7 @@
         "OfferId": "6a39f49c82d8dd83f87b1f9b",
         "TplId": "63a3a93f8a56922e82001f5d",
         "ItemName": "Abandoned factory marked key",
-        "Price": 2984631,
+        "Price": 14584631,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -696,25 +696,6 @@
                     "TplId": "575062b524597720a31c09a1",
                     "ItemName": "Can of Ice Green tea",
                     "Count": 6
-                }
-            ]
-        ],
-        "AlwaysBarter": false,
-        "AlwaysInStock": false
-    },
-    {
-        "OfferId": "6a2b7f99d2999bc7b9bba8be",
-        "TplId": "5c10c8fd86f7743d7d706df3",
-        "ItemName": "Adrenaline injector",
-        "Price": 31460,
-        "Currency": "RUB",
-        "CashOnly": true,
-        "BarterScheme": [
-            [
-                {
-                    "TplId": "590a3d9c86f774385926e510",
-                    "ItemName": "Ultraviolet lamp",
-                    "Count": 1
                 }
             ]
         ],
@@ -1231,7 +1212,7 @@
         "OfferId": "6a39f49c82d8dd83f87b1f9a",
         "TplId": "5780cf7f2459777de4559322",
         "ItemName": "Dorm room 314 marked key",
-        "Price": 7314434,
+        "Price": 15516072,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -1443,9 +1424,9 @@
                     "Count": 1
                 },
                 {
-                    "TplId": "57347c1124597737fb1379e3",
-                    "ItemName": "Duct tape",
-                    "Count": 4
+                    "TplId": "5e2af29386f7746d4159f077",
+                    "ItemName": "KEKTAPE duct tape",
+                    "Count": 2
                 },
                 {
                     "TplId": "5d1c819a86f774771b0acd6c",
@@ -1496,9 +1477,9 @@
                     "Count": 1
                 },
                 {
-                    "TplId": "590c651286f7741e566b6461",
-                    "ItemName": "Slim diary",
-                    "Count": 1
+                    "TplId": "57347c1124597737fb1379e3",
+                    "ItemName": "Duct tape",
+                    "Count": 4
                 },
                 {
                     "TplId": "5734758f24597738025ee253",
@@ -1662,7 +1643,7 @@
         "OfferId": "6a39f49c82d8dd83f87b1f9c",
         "TplId": "64ccc25f95763a1ae376e447",
         "ItemName": "Mysterious room marked key",
-        "Price": 4127706,
+        "Price": 15127706,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -1809,7 +1790,7 @@
     },
     {
         "OfferId": "6a2b82bed2999bc7b9bba8c2",
-        "TplId": "637b6251104668754b72f8f9",
+        "TplId": "6a3fd8c382d8dd83f87b200c",
         "ItemName": "Perfotoran (Blue Blood) stimulant injector",
         "Price": 66000,
         "Currency": "RUB",
@@ -1899,29 +1880,10 @@
         "AlwaysInStock": false
     },
     {
-        "OfferId": "6a2b802fd2999bc7b9bba8bf",
-        "TplId": "5c0e530286f7747fa1419862",
-        "ItemName": "Propital regenerative stimulant injector",
-        "Price": 21060,
-        "Currency": "RUB",
-        "CashOnly": true,
-        "BarterScheme": [
-            [
-                {
-                    "TplId": "62a0a043cf4a99369e2624a5",
-                    "ItemName": "Bottle of OLOLO Multivitamins",
-                    "Count": 1
-                }
-            ]
-        ],
-        "AlwaysBarter": false,
-        "AlwaysInStock": false
-    },
-    {
         "OfferId": "6a39f49c82d8dd83f87b1f9e",
         "TplId": "5d80c60f86f77440373c4ece",
         "ItemName": "RB-BK marked key",
-        "Price": 3353967,
+        "Price": 10353967,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -1955,7 +1917,7 @@
         "OfferId": "6a39f49c82d8dd83f87b1f9f",
         "TplId": "5ede7a8229445733cb4c18e2",
         "ItemName": "RB-PKPM marked key",
-        "Price": 1536858,
+        "Price": 11536858,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -1984,7 +1946,7 @@
         "OfferId": "6a39f49c82d8dd83f87b1f9d",
         "TplId": "5d80c62a86f7744036212b3f",
         "ItemName": "RB-VO marked key",
-        "Price": 2354357,
+        "Price": 8354357,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -2679,6 +2641,63 @@
                 {
                     "TplId": "5d1c819a86f774771b0acd6c",
                     "ItemName": "Weapon parts",
+                    "Count": 1
+                }
+            ]
+        ],
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
+    },
+    {
+        "OfferId": "6a3fd8c382d8dd83f87b200d",
+        "TplId": "6a3fd8c382d8dd83f87b2011",
+        "ItemName": "UNKNOWN_ITEM_6a3fd8c382d8dd83f87b2011",
+        "Price": 0,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5d1b32c186f774252167a530",
+                    "ItemName": "Analog thermometer",
+                    "Count": 1
+                }
+            ]
+        ],
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
+    },
+    {
+        "OfferId": "6a2b802fd2999bc7b9bba8bf",
+        "TplId": "6a3fd8c382d8dd83f87b2012",
+        "ItemName": "UNKNOWN_ITEM_6a3fd8c382d8dd83f87b2012",
+        "Price": 0,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "62a0a043cf4a99369e2624a5",
+                    "ItemName": "Bottle of OLOLO Multivitamins",
+                    "Count": 1
+                }
+            ]
+        ],
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
+    },
+    {
+        "OfferId": "6a2b7f99d2999bc7b9bba8be",
+        "TplId": "6a3fd8c382d8dd83f87b2013",
+        "ItemName": "UNKNOWN_ITEM_6a3fd8c382d8dd83f87b2013",
+        "Price": 0,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "590a3d9c86f774385926e510",
+                    "ItemName": "Ultraviolet lamp",
                     "Count": 1
                 }
             ]

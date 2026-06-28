@@ -16,7 +16,9 @@ Outputs the barter-aware schema used by PriceConfigItem.cs:
     "CashOnly": true,
     "BarterScheme": [[{"TplId": "5449016a4bdc2d6f028b456f", "ItemName": "Roubles", "Count": 42000}]],
     "AlwaysBarter": false,
-    "AlwaysInStock": false
+    "AlwaysInStock": false,
+    "AmmoBarterPackTplId": "57372e73245977685d4159b4",
+    "PackOfferId": "root ammo pack offer id when found"
   }
 ]
 
@@ -61,7 +63,7 @@ import time
 import urllib.error
 import urllib.request
 
-SCRIPT_VERSION = "2.9.0"
+SCRIPT_VERSION = "2.10.0"
 from collections import Counter
 from pathlib import Path
 from typing import Any
@@ -444,6 +446,14 @@ WEAPON_NAME_HINTS = (
 )
 
 
+def get_known_ammo_pack_tpl_ids() -> set[str]:
+    return {
+        str(pack_info.get("AmmoBarterPackTplId", ""))
+        for pack_info in BUILT_IN_AMMO_PACKS.values()
+        if str(pack_info.get("AmmoBarterPackTplId", ""))
+    }
+
+
 def strip_json_comments_and_trailing_commas(text: str) -> str:
     """Simple fallback for JSON files with comments/trailing commas."""
     text = text.lstrip("\ufeff")
@@ -649,6 +659,7 @@ def order_items_row(row: dict[str, Any]) -> dict[str, Any]:
         "AlwaysBarter",
         "AlwaysInStock",
         "AmmoBarterPackTplId",
+        "PackOfferId",
     ]
 
     ordered: dict[str, Any] = {}
@@ -1222,6 +1233,53 @@ def find_ammo_pack_for_offer(
     }
 
 
+def is_ammo_pack_root_offer(
+    item_name: str,
+    sold_tpl: str,
+    known_pack_tpl_ids: set[str] | None = None,
+) -> bool:
+    """True for standalone ammo pack assort roots that should not become items.json rows.
+
+    Tony keeps these pack offers in assort.json so the runtime can swap a loose
+    ammo offer to a pack offer when the row rolls barter. The config/items.json
+    row should point at the pack offer through PackOfferId instead of writing
+    a second visible row for the pack itself.
+    """
+    pack_tpl_ids = known_pack_tpl_ids or get_known_ammo_pack_tpl_ids()
+    if sold_tpl in pack_tpl_ids:
+        return True
+
+    return "ammo pack" in (item_name or "").lower()
+
+
+def build_ammo_pack_offer_id_lookup(
+    sellable_roots: list[dict[str, Any]],
+    tarkov_dev_names: dict[str, str],
+    locale_names: dict[str, str],
+    catalog_names: dict[str, str],
+) -> dict[str, str]:
+    """Map ammo pack template IDs to their root assort offer IDs.
+
+    This lets the generated loose-ammo row match the target schema:
+    AmmoBarterPackTplId tells the runtime what template to sell, and PackOfferId
+    tells it which hidden/static pack offer in assort.json belongs to that ammo.
+    """
+    pack_offer_id_by_tpl: dict[str, str] = {}
+    known_pack_tpl_ids = get_known_ammo_pack_tpl_ids()
+
+    for root in sellable_roots:
+        offer_id = get_item_id(root)
+        sold_tpl = get_item_tpl(root)
+        if not offer_id or not sold_tpl:
+            continue
+
+        item_name = resolve_name(sold_tpl, tarkov_dev_names, locale_names, catalog_names)
+        if is_ammo_pack_root_offer(item_name, sold_tpl, known_pack_tpl_ids):
+            pack_offer_id_by_tpl.setdefault(sold_tpl, offer_id)
+
+    return pack_offer_id_by_tpl
+
+
 def infer_barter_tags(item_name: str, sold_tpl: str) -> list[str]:
     name = item_name.lower()
     tags = {"generic"}
@@ -1704,6 +1762,14 @@ def generate_items(
         if parent_id == "hideout" and (slot_id in ("", "hideout")):
             sellable_roots.append(item)
 
+    ammo_pack_offer_id_by_tpl = build_ammo_pack_offer_id_lookup(
+        sellable_roots,
+        tarkov_dev_names,
+        locale_names,
+        catalog_names,
+    )
+    known_pack_tpl_ids = get_known_ammo_pack_tpl_ids()
+
     output: list[dict[str, Any]] = []
     warnings: list[str] = []
     barter_usage_counts: Counter[str] = Counter()
@@ -1717,6 +1783,14 @@ def generate_items(
             continue
         if not sold_tpl:
             warnings.append(f"Offer {offer_id} has no tpl/template; skipped")
+            continue
+
+        item_name = resolve_name(sold_tpl, tarkov_dev_names, locale_names, catalog_names)
+        if is_ammo_pack_root_offer(item_name, sold_tpl, known_pack_tpl_ids):
+            warnings.append(
+                f"Skipped standalone ammo pack offer {offer_id} / {sold_tpl}; "
+                "linked from loose ammo rows with PackOfferId instead"
+            )
             continue
 
         raw_scheme = barter_scheme.get(offer_id, [])
@@ -1733,7 +1807,6 @@ def generate_items(
             else:
                 warnings.append(f"Offer {offer_id} / {sold_tpl} is barter-only; using fallback Price {price} RUB for the cash fallback field")
 
-        item_name = resolve_name(sold_tpl, tarkov_dev_names, locale_names, catalog_names)
         original_cash_only = is_cash_only_scheme(normalized_scheme)
         is_ammo = is_ammo_offer(item_name, sold_tpl)
         ammo_pack_info = find_ammo_pack_for_offer(
@@ -1812,11 +1885,21 @@ def generate_items(
             if ammo_pack_info:
                 # Runtime only needs the pack tpl. Pack size/name are used by this
                 # generator internally to value the barter correctly, not by items.json.
-                row["AmmoBarterPackTplId"] = ammo_pack_info["AmmoBarterPackTplId"]
-                warnings.append(
-                    f"Ammo barter pack target for {item_name} ({offer_id}): "
-                    f"{ammo_pack_info['AmmoBarterPackTplId']}"
-                )
+                pack_tpl_id = str(ammo_pack_info["AmmoBarterPackTplId"])
+                row["AmmoBarterPackTplId"] = pack_tpl_id
+
+                pack_offer_id = ammo_pack_offer_id_by_tpl.get(pack_tpl_id, "")
+                if pack_offer_id:
+                    row["PackOfferId"] = pack_offer_id
+                    warnings.append(
+                        f"Ammo barter pack target for {item_name} ({offer_id}): "
+                        f"{pack_tpl_id} via pack offer {pack_offer_id}"
+                    )
+                else:
+                    warnings.append(
+                        f"Ammo barter pack target for {item_name} ({offer_id}): {pack_tpl_id}; "
+                        "no matching standalone pack offer was found in assort.json, so PackOfferId was not written"
+                    )
             else:
                 warnings.append(
                     f"No ammo pack template found for {item_name} ({offer_id}); "
@@ -1865,6 +1948,7 @@ def build_report(out_path: Path, output: list[dict[str, Any]], warnings: list[st
     )
     generated_ammo_pack_rows = sum(1 for warning in warnings if warning.startswith("Generated ammo pack item-barter scheme for "))
     ammo_pack_target_rows = sum(1 for row in output if row.get("AmmoBarterPackTplId"))
+    ammo_pack_offer_id_rows = sum(1 for row in output if row.get("PackOfferId"))
     ammo_rows_without_pack_target = sum(
         1 for row in output
         if is_ammo_offer(str(row.get("ItemName", "")), str(row.get("TplId", "")))
@@ -1890,6 +1974,7 @@ def build_report(out_path: Path, output: list[dict[str, Any]], warnings: list[st
         f"Generated barter schemes: {generated_rows}",
         f"Generated ammo pack item-barter schemes: {generated_ammo_pack_rows}",
         f"Ammo rows with pack template target: {ammo_pack_target_rows}",
+        f"Ammo rows with pack offer id: {ammo_pack_offer_id_rows}",
         f"Ammo rows missing pack template target: {ammo_rows_without_pack_target}",
         f"Unique TplIds: {len(duplicate_tpl_counts)}",
         f"Duplicate TplIds preserved: {duplicate_tpls}",
