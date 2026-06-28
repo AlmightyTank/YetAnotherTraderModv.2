@@ -17,6 +17,7 @@ public class SettingsConfig
     public bool RerollAssortOnRestock { get; set; } = true;
 
     public bool AddTraderToFleaMarket { get; set; } = true;
+    public bool EnableCustomQuests { get; set; } = true; //[Quests] If false, Tony custom quests and quest zones will not load.
     public int InsurancePriceCoef { get; set; } = 25;
     public double RepairQuality { get; set; } = 0.8;
 

@@ -1,4 +1,5 @@
 using System.Reflection;
+using System.Text.Json;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
 using SPTarkov.Server.Core.Models.Spt.Mod;
@@ -67,15 +68,62 @@ public sealed class YATMWTTLoader(
 
         await wttCommon.CustomWeaponPresetService.CreateCustomWeaponPresets(assembly, presetPath);
 
-        // 4. WTT loads locales, loot spawns, quests, and quest zones
-        YATMLogger.LogRealDebug("[CustomContentLoader] Loading locales, loot spawns, quests, and quest zones...");
+        // 4. WTT loads hideout recipes, locales, loot spawns
+        YATMLogger.LogRealDebug("[CustomContentLoader] Loading hideout recipes, locales, and loot spawns...");
 
         await wttCommon.CustomHideoutRecipeService.CreateHideoutRecipes(assembly);
         await wttCommon.CustomLocaleService.CreateCustomLocales(assembly);
         await wttCommon.CustomLootspawnService.CreateCustomLootSpawns(assembly);
-        await wttCommon.CustomQuestService.CreateCustomQuests(assembly);
-        await wttCommon.CustomQuestZoneService.CreateCustomQuestZones(assembly);
+
+        // 5. Optional quest loading
+        if (CustomQuestsEnabled(modPath))
+        {
+            YATMLogger.LogRealDebug("[CustomContentLoader] Loading custom quests and quest zones...");
+
+            await wttCommon.CustomQuestService.CreateCustomQuests(assembly);
+            await wttCommon.CustomQuestZoneService.CreateCustomQuestZones(assembly);
+        }
+        else
+        {
+            YATMLogger.Log("[CustomContentLoader] Custom quests are disabled in settings.json. Skipping quests and quest zones.");
+        }
 
         YATMLogger.Log("[CustomContentLoader] Finished loading all custom content.");
+    }
+
+    private static bool CustomQuestsEnabled(string modPath)
+    {
+        var settingsPath = Path.Combine(modPath, "config", "settings.json");
+
+        // Default true so missing config does not break existing installs.
+        if (!File.Exists(settingsPath))
+        {
+            return true;
+        }
+
+        try
+        {
+            var json = File.ReadAllText(settingsPath);
+
+            using var doc = JsonDocument.Parse(
+                json,
+                new JsonDocumentOptions
+                {
+                    AllowTrailingCommas = true,
+                    CommentHandling = JsonCommentHandling.Skip
+                });
+
+            if (doc.RootElement.TryGetProperty("EnableCustomQuests", out var value)
+                && value.ValueKind is JsonValueKind.True or JsonValueKind.False)
+            {
+                return value.GetBoolean();
+            }
+        }
+        catch (Exception ex)
+        {
+            YATMLogger.Log($"[CustomContentLoader] Failed to read EnableCustomQuests from settings.json. Defaulting to enabled. Error: {ex.Message}");
+        }
+
+        return true;
     }
 }
