@@ -116,9 +116,13 @@ public class YATMConfig
             try
             {
                 var json = File.ReadAllText(_settingsPath);
+                var settingsFileMissingRerollAssortOnRestock =
+                    !json.Contains("RerollAssortOnRestock", StringComparison.OrdinalIgnoreCase);
+                var settingsFileMissingPreventBarterOffersOutOfStock =
+                    !json.Contains("PreventBarterOffersOutOfStock", StringComparison.OrdinalIgnoreCase);
 
                 Settings = JsonSerializer.Deserialize<SettingsConfig>(json, CachedReadOptions) ?? new SettingsConfig();
-                NormalizeSettings();
+                NormalizeSettings(settingsFileMissingRerollAssortOnRestock || settingsFileMissingPreventBarterOffersOutOfStock);
             }
             catch (Exception ex)
             {
@@ -136,12 +140,14 @@ public class YATMConfig
 
                 TraderRefreshMin = 1800,
                 TraderRefreshMax = 3600,
+                RerollAssortOnRestock = true,
                 AddTraderToFleaMarket = true,
                 InsurancePriceCoef = 25,
                 RepairQuality = 0.8,
 
                 RandomizeStockAvailable = true,
                 OutOfStockChance = 15,
+                PreventBarterOffersOutOfStock = true,
                 UnlimitedStock = false,
 
                 PriceMultiplier = 1.0,
@@ -164,9 +170,9 @@ public class YATMConfig
         }
     }
 
-    private void NormalizeSettings()
+    private void NormalizeSettings(bool forceSave = false)
     {
-        var changed = false;
+        var changed = forceSave;
 
         Settings.CashOfferPercent = Math.Clamp(Settings.CashOfferPercent, 0, 100);
         Settings.OutOfStockChance = Math.Clamp(Settings.OutOfStockChance, 0, 100);

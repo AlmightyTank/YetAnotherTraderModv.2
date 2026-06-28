@@ -47,7 +47,8 @@ public sealed class YATMTraderRuntimeService(
     // 4) Stock roll starts only after paymentRollResult.Completed is true.
     // 5) Stock roll only changes stock values and ammo pack limits. It never decides payment state.
     // 6) Offer IDs are never changed. The losing paired ammo offer is removed from the clean assort.
-    // 7) RerollAssortOnRestock controls only the OnUpdate/restock reroll side; startup still rolls normally.
+    // 7) If PreventBarterOffersOutOfStock is true, the stock roll excludes offers that became barter.
+    // 8) RerollAssortOnRestock controls only the OnUpdate/restock reroll side; startup still rolls normally.
 
     // These remember the previous randomized roll so the next restock can avoid
     // picking the same items again when there are enough alternatives.
@@ -59,6 +60,11 @@ public sealed class YATMTraderRuntimeService(
     private sealed class PaymentRollResult
     {
         public Dictionary<string, PriceConfigItem> AmmoPackBarterOffersById { get; } = new(StringComparer.OrdinalIgnoreCase);
+
+        // Filled by the completed payment roll. The stock roll can use this
+        // to prevent barter offers from becoming out of stock when the setting is enabled.
+        public HashSet<string> BarterOfferIds { get; } = new(StringComparer.OrdinalIgnoreCase);
+
         public bool Completed { get; private set; }
 
         public void MarkCompleted()
@@ -99,6 +105,7 @@ public sealed class YATMTraderRuntimeService(
             YATMLogger.LogDebug($"  CashOfferPercent: {GetIntSetting(config.Settings, "CashOfferPercent", 85)}");
             YATMLogger.LogDebug($"  ForceCashOnly: {config.Settings.CashOffersOnly}");
             YATMLogger.LogDebug($"  RerollAssortOnRestock: {_rerollAssortOnRestock}");
+            YATMLogger.LogDebug($"  PreventBarterOffersOutOfStock: {GetBoolSetting(config.Settings, "PreventBarterOffersOutOfStock", true)}");
         }
 
         traderBase.UnlockedByDefault = config.Settings.UnlockedByDefault;
@@ -606,6 +613,12 @@ public sealed class YATMTraderRuntimeService(
             .ToDictionary(x => x.Key, x => x.First());
 
         var selectedOutOfStockOfferIds = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        var preventBarterOffersOutOfStock = GetBoolSetting(config.Settings, "PreventBarterOffersOutOfStock", true);
+
+        if (preventBarterOffersOutOfStock)
+        {
+            YATMLogger.LogDebug($"[{rollReason}] PreventBarterOffersOutOfStock enabled: barter offers will be excluded from the random out-of-stock pool.");
+        }
 
         if (config.Settings.RandomizeStockAvailable)
         {
@@ -624,6 +637,13 @@ public sealed class YATMTraderRuntimeService(
                 // Check by OfferId first because the _tpl swap can fail readback on some SPT model wrappers
                 // even after the serialized value has been updated.
                 if (paymentRollResult.AmmoPackBarterOffersById.ContainsKey(candidateItem.Id))
+                {
+                    continue;
+                }
+
+                if (preventBarterOffersOutOfStock
+                    && (paymentRollResult.BarterOfferIds.Contains(candidateItem.Id)
+                        || OfferUsesNonCurrencyPayment(assort, candidateItem.Id)))
                 {
                     continue;
                 }
@@ -794,6 +814,35 @@ public sealed class YATMTraderRuntimeService(
         {
             YATMLogger.LogDebug($"[{rollReason}] No items were zeroed by randomization this turn.");
         }
+    }
+
+    private static bool OfferUsesNonCurrencyPayment(TraderAssort assort, string offerId)
+    {
+        if (string.IsNullOrWhiteSpace(offerId)
+            || !assort.BarterScheme.TryGetValue(offerId, out var schemeList)
+            || schemeList == null)
+        {
+            return false;
+        }
+
+        foreach (var paymentOption in schemeList)
+        {
+            if (paymentOption == null)
+            {
+                continue;
+            }
+
+            foreach (var component in paymentOption)
+            {
+                var tpl = component?.Template.ToString();
+                if (!string.IsNullOrWhiteSpace(tpl) && !YATMConfig.IsCurrencyTemplate(tpl))
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     private void ApplyPriceMultiplierToMoneyComponents(TraderAssort assort, YATMConfig config)
@@ -1084,10 +1133,20 @@ public sealed class YATMTraderRuntimeService(
             {
                 paymentRollResult.AmmoPackBarterOffersById[appliedAmmoPackOfferId] = configuredOffer.PriceConfig;
             }
+
+            var appliedBarterOfferId = !string.IsNullOrWhiteSpace(appliedAmmoPackOfferId)
+                ? appliedAmmoPackOfferId
+                : offerId;
+
+            if (!string.IsNullOrWhiteSpace(appliedBarterOfferId)
+                && OfferUsesNonCurrencyPayment(assort, appliedBarterOfferId))
+            {
+                paymentRollResult.BarterOfferIds.Add(appliedBarterOfferId);
+            }
         }
 
         paymentRollResult.MarkCompleted();
-        YATMLogger.LogDebug($"[{rollReason}] Payment roll completed before stock roll. Ammo pack barter offers: {paymentRollResult.AmmoPackBarterOffersById.Count}.");
+        YATMLogger.LogDebug($"[{rollReason}] Payment roll completed before stock roll. Barter offers: {paymentRollResult.BarterOfferIds.Count}. Ammo pack barter offers: {paymentRollResult.AmmoPackBarterOffersById.Count}.");
         return paymentRollResult;
     }
 
