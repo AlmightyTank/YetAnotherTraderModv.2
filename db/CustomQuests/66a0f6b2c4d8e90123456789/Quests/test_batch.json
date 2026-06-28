@@ -279,10 +279,10 @@
                     "items": [
                         {
                             "_id": "6a3210dbd2999bc7b9bbab1f",
-                            "_tpl": "5ed51652f6c34d2cc26336a1"
+                            "_tpl": "6a3fd8c382d8dd83f87b200c"
                         }
                     ],
-                    "loyaltyLevel": 3,
+                    "loyaltyLevel": 2,
                     "target": "6a3210dbd2999bc7b9bbab1f",
                     "traderId": "66a0f6b2c4d8e90123456789",
                     "type": "AssortmentUnlock",
@@ -299,7 +299,7 @@
                     "items": [
                         {
                             "_id": "6a3210dbd2999bc7b9bbab21",
-                            "_tpl": "637b612fb7afa97bfc3d7005"
+                            "_tpl": "6a3fd8c382d8dd83f87b2014"
                         }
                     ],
                     "loyaltyLevel": 2,
@@ -319,10 +319,10 @@
                     "items": [
                         {
                             "_id": "6a3210dbd2999bc7b9bbab23",
-                            "_tpl": "637b6251104668754b72f8f9"
+                            "_tpl": "6a3fd8c382d8dd83f87b2010"
                         }
                     ],
-                    "loyaltyLevel": 2,
+                    "loyaltyLevel": 3,
                     "target": "6a3210dbd2999bc7b9bbab23",
                     "traderId": "66a0f6b2c4d8e90123456789",
                     "type": "AssortmentUnlock",
