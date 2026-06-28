@@ -240,5 +240,21 @@
     "6a3cab9782d8dd83f87b1fd1 changeQuestMessageText": "Tony wants proof you can fight with Russian-service weapons on Woods.",
 
     "6a3cab9782d8dd83f87b1fd5": "Eliminate 5 PMCs on Woods with Russian-service weapons without dying",
-    "6a3cab9782d8dd83f87b1fd9": "Survive and extract from Woods"
+    "6a3cab9782d8dd83f87b1fd9": "Survive and extract from Woods",
+
+    // Therapist's side quest 2 - Street Clinic
+    "6a3fd74f82d8dd83f87b1ff0 name": "Street Clinic",
+    "6a3fd74f82d8dd83f87b1ff0 description": "The route into Streets works. Good. Now I need people on that side who can keep my couriers breathing. There is an old pharmacy on Primorsky Ave, across from LexOs. The front looks dead, but the back room may still be used by a street doctor who treats men who cannot walk into Therapist's place. Find the clinic, confirm the doctor is still operating, and leave alive. If he is still there, I can start moving field kits through him.",
+    "6a3fd74f82d8dd83f87b1ff0 note": "Tony wants you to locate a back-alley clinic contact inside an old pharmacy on Primorsky Ave.",
+    "6a3fd74f82d8dd83f87b1ff0 startedMessageText": "Streets. Primorsky Ave, across from LexOs. Find the old pharmacy, check the back room, and leave alive.",
+    "6a3fd74f82d8dd83f87b1ff0 successMessageText": "Good. The clinic still breathes. The doctor is dirty, quiet, and useful. That means my people can get patched without begging Therapist, and you can get field kits through me.",
+    "6a3fd74f82d8dd83f87b1ff0 failMessageText": "You missed the clinic or let Streets swallow you. A doctor who cannot be found is the same as no doctor at all.",
+    "6a3fd74f82d8dd83f87b1ff0 acceptPlayerMessage": "I'll find the clinic.",
+    "6a3fd74f82d8dd83f87b1ff0 declinePlayerMessage": "Not going to Streets for a back-alley doctor yet.",
+    "6a3fd74f82d8dd83f87b1ff0 completePlayerMessage": "The clinic is still operating.",
+    "6a3fd74f82d8dd83f87b1ff0 changeQuestMessageText": "Tony wants the old pharmacy clinic on Primorsky Ave checked.",
+
+    "6a3fd74f82d8dd83f87b1ff4": "Locate the back-alley clinic inside the old pharmacy on Primorsky Ave",
+    "6a3fd74f82d8dd83f87b1ff8": "Confirm the street doctor is still operating",
+    "6a3fd74f82d8dd83f87b1ffd": "Survive and extract from Streets"
 }

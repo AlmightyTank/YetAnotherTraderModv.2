@@ -36,6 +36,11 @@
 		</None>
 	</ItemGroup>
   <ItemGroup>
+    <Content Remove="db\customconsumables\volkov_field_stabilizer.json" />
+    <Content Remove="db\CustomConsumables\volkov_ghost_9.json" />
+    <Content Remove="db\customconsumables\volkov_mule_lite.json" />
+    <Content Remove="db\customconsumables\volkov_nerve_igniter.json" />
+    <Content Remove="db\CustomConsumables\volkov_rus_alpha.json" />
     <Content Remove="db\CustomHideoutRecipes\clean_run_sealed_cargo_package.json" />
     <Content Remove="db\CustomItems\buried_steel_crate.json" />
     <Content Remove="db\customitems\dead-drop_package.json" />
@@ -64,6 +69,7 @@
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\quest.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\red_caliber.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\safe_hands.json" />
+    <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\street_clinic.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\street_tax.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\test_batch.json" />
     <Content Remove="db\CustomQuestZones\back_room_etiquette.json" />
@@ -76,6 +82,7 @@
     <Content Remove="db\customquestzones\old_bear_trails.json" />
     <Content Remove="db\CustomQuestZones\paper_shields.json" />
     <Content Remove="db\customquestzones\safe_hands.json" />
+    <Content Remove="db\customquestzones\street_clinic.json" />
     <Content Remove="db\customquestzones\street_tax.json" />
     <Content Remove="db\CustomQuestZones\test_batch.json" />
     <Content Remove="db\CustomConsumables\volkov_hemostat.json" />
