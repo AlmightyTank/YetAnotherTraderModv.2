@@ -12,7 +12,9 @@
         "CanSellOnRagfair": true,
         "BackgroundColor": "blue",
         "StackMaxSize": 1,
-        "ExaminedByDefault": false
+        "ExaminedByDefault": false,
+        "effects_health": {},
+        "effects_damage": {}
     },
 
     "Buffs": [
@@ -22,8 +24,8 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 600,
-            "Value": 24,
-            "AbsoluteValue": false
+            "Value": 0.24,
+            "AbsoluteValue": true
         },
         {
             "BuffType": "SkillRate",
@@ -31,15 +33,15 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 600,
-            "Value": 8,
-            "AbsoluteValue": false
+            "Value": 0.08,
+            "AbsoluteValue": true
         },
         {
             "BuffType": "BodyTemperature",
             "Chance": 1,
             "Delay": 1,
             "Duration": 600,
-            "Value": -3.5,
+            "Value": -0.035,
             "AbsoluteValue": false
         },
         {
@@ -63,7 +65,7 @@
             "Chance": 1,
             "Delay": 606,
             "Duration": 300,
-            "Value": 5,
+            "Value": 0.05,
             "AbsoluteValue": false
         },
         {
@@ -71,7 +73,7 @@
             "Chance": 1,
             "Delay": 650,
             "Duration": 60,
-            "Value": 1,
+            "Value": 0,
             "AbsoluteValue": true
         }
     ],

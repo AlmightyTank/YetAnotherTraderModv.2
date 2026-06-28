@@ -12,17 +12,29 @@
         "CanSellOnRagfair": true,
         "BackgroundColor": "blue",
         "StackMaxSize": 1,
-        "ExaminedByDefault": false
+        "ExaminedByDefault": false,
+        "effects_health": {},
+        "effects_damage": {}
     },
 
     "Buffs": [
         {
+            "AbsoluteValue": false,
             "BuffType": "WeightLimit",
             "Chance": 1,
             "Delay": 1,
             "Duration": 600,
-            "Value": 20,
-            "AbsoluteValue": false
+            "SkillName": "",
+            "Value": 0.25
+        },
+        {
+            "AbsoluteValue": true,
+            "BuffType": "HealthRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 600,
+            "SkillName": "",
+            "Value": -0.05
         },
         {
             "BuffType": "SkillRate",
@@ -31,7 +43,7 @@
             "Delay": 1,
             "Duration": 600,
             "Value": 5,
-            "AbsoluteValue": false
+            "AbsoluteValue": true
         },
         {
             "BuffType": "SkillRate",
@@ -40,14 +52,14 @@
             "Delay": 1,
             "Duration": 600,
             "Value": 5,
-            "AbsoluteValue": false
+            "AbsoluteValue": true
         },
         {
             "BuffType": "HydrationRate",
             "Chance": 1,
             "Delay": 1,
             "Duration": 600,
-            "Value": -5,
+            "Value": -0.05,
             "AbsoluteValue": false
         },
         {
@@ -55,17 +67,26 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 600,
-            "Value": -5,
+            "Value": -0.05,
             "AbsoluteValue": false
         },
         {
-            "BuffType": "SkillRate",
-            "SkillName": "Endurance",
-            "Chance": 1,
+            "AbsoluteValue": false,
+            "BuffType": "MaxStamina",
+            "Chance": 0.75,
             "Delay": 610,
             "Duration": 180,
-            "Value": -8,
-            "AbsoluteValue": false
+            "SkillName": "",
+            "Value": -0.08
+        },
+        {
+            "AbsoluteValue": false,
+            "BuffType": "StaminaRate",
+            "Chance": 0.75,
+            "Delay": 610,
+            "Duration": 180,
+            "SkillName": "",
+            "Value": -0.08
         }
     ],
 

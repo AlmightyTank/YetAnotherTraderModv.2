@@ -6,11 +6,14 @@
     "includeInSameQuestsAsOrigin": true,
     "addSpawnsInSamePlacesAsOrigin": true,
     "spawnWeightComparedToOrigin": 0.35,
+    "inheritOriginBuffs": false,
 
     "overrideProperties": {
         "CanSellOnRagfair": true,
         "BackgroundColor": "blue",
-        "StackMaxSize": 1
+        "StackMaxSize": 1,
+        "effects_health": {},
+        "effects_damage": {}
     },
 
     "Buffs": [
@@ -18,8 +21,8 @@
             "BuffType": "DamageModifier",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 600,
-            "Value": -0.08,
+            "Duration": 900,
+            "Value": -0.1,
             "AbsoluteValue": false,
             "SkillName": ""
         },
@@ -28,54 +31,45 @@
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 600,
+            "Duration": 900,
             "SkillName": "Strength",
-            "Value": 8
+            "Value": 10
         },
         {
             "AbsoluteValue": true,
             "BuffType": "SkillRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 600,
+            "Duration": 900,
             "SkillName": "Endurance",
-            "Value": 12
+            "Value": 20
         },
         {
             "AbsoluteValue": true,
             "BuffType": "StaminaRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 600,
+            "Duration": 900,
             "SkillName": "",
-            "Value": 0.35
+            "Value": 0.5
         },
         {
             "AbsoluteValue": true,
             "BuffType": "HydrationRate",
             "Chance": 1,
-            "Delay": 20,
-            "Duration": 600,
+            "Delay": 30,
+            "Duration": 900,
             "SkillName": "",
-            "Value": -0.35
+            "Value": -0.1
         },
         {
             "AbsoluteValue": true,
             "BuffType": "EnergyRate",
             "Chance": 1,
-            "Delay": 20,
-            "Duration": 600,
+            "Delay": 30,
+            "Duration": 900,
             "SkillName": "",
-            "Value": -0.3
-        },
-        {
-            "AbsoluteValue": true,
-            "BuffType": "HandsTremor",
-            "Chance": 1,
-            "Delay": 500,
-            "Duration": 120,
-            "SkillName": "",
-            "Value": 1
+            "Value": -0.1
         }
     ],
 

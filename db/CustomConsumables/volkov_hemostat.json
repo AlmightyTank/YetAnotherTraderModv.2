@@ -6,15 +6,41 @@
     "includeInSameQuestsAsOrigin": true,
     "addSpawnsInSamePlacesAsOrigin": true,
     "spawnWeightComparedToOrigin": 0.35,
-    "inheritOriginBuffs": true,
+    "inheritOriginBuffs": false,
 
     "overrideProperties": {
         "CanSellOnRagfair": true,
         "BackgroundColor": "blue",
-        "StackMaxSize": 1
+        "StackMaxSize": 1,
+        "effects_health": {},
+        "effects_damage": {
+            "Pain": {
+                "delay": 0,
+                "duration": 60,
+                "fadeOut": 15
+            }
+        }
     },
 
     "Buffs": [
+        {
+            "BuffType": "SkillRate",
+            "SkillName": "Vitality",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "Value": 20,
+            "AbsoluteValue": true
+        },
+        {
+            "BuffType": "SkillRate",
+            "SkillName": "Health",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "Value": 20,
+            "AbsoluteValue": true
+        },
         {
             "BuffType": "HealthRate",
             "Chance": 1,
@@ -25,11 +51,20 @@
             "SkillName": ""
         },
         {
+            "AbsoluteValue": true,
+            "BuffType": "RemoveAllBloodLosses",
+            "Chance": 1,
+            "Delay": 0,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": 1
+        },
+        {
             "BuffType": "HydrationRate",
             "Chance": 1,
             "Delay": 30,
             "Duration": 300,
-            "Value": -0.6,
+            "Value": -0.4,
             "AbsoluteValue": true,
             "SkillName": ""
         },

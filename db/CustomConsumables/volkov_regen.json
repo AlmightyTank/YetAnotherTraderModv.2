@@ -6,13 +6,16 @@
     "includeInSameQuestsAsOrigin": true,
     "addSpawnsInSamePlacesAsOrigin": true,
     "spawnWeightComparedToOrigin": 0.25,
+    "inheritOriginBuffs": false,
 
     "overrideProperties": {
         "CanSellOnRagfair": true,
         "BackgroundColor": "blue",
         "medUseTime": 2,
-        "MaxHpResource": 1,
-        "StackMaxSize": 1
+        "MaxHpResource": 2,
+        "StackMaxSize": 1,
+        "effects_health": {},
+        "effects_damage": {}
     },
 
     "Buffs": [
@@ -20,8 +23,89 @@
             "BuffType": "HealthRate",
             "Chance": 1,
             "Delay": 1,
-            "Duration": 75,
-            "Value": 6.5,
+            "Duration": 60,
+            "Value": 8.5,
+            "AbsoluteValue": true,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "RemoveAllBloodLosses",
+            "Chance": 1,
+            "Delay": 0,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": true,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "StaminaRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 60,
+            "Value": 5,
+            "AbsoluteValue": true,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Antidote",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 60,
+            "Value": 0,
+            "AbsoluteValue": true,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 60,
+            "Value": 25,
+            "AbsoluteValue": true,
+            "SkillName": "StressResistance"
+        },
+        {
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 60,
+            "Value": 25,
+            "AbsoluteValue": true,
+            "SkillName": "Vitality"
+        },
+        {
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 60,
+            "Duration": 90,
+            "Value": -3.5,
+            "AbsoluteValue": true,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 60,
+            "Duration": 90,
+            "Value": -3.5,
+            "AbsoluteValue": true,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "Contusion",
+            "Chance": 1,
+            "Delay": 30,
+            "Duration": 120,
+            "Value": 1,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "HandsTremor",
+            "Chance": 1,
+            "Delay": 30,
+            "Duration": 120,
+            "Value": 0,
             "AbsoluteValue": true,
             "SkillName": ""
         }

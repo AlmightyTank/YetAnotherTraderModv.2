@@ -1,7 +1,7 @@
 {
-    "cloneOrigin": "5c0e533786f7747fa23f4d47",
+    "cloneOrigin": "637b6179104668754b72f8f5",
     "id": "6a3fd8c382d8dd83f87b200c",
-    "fleaPrice": 1.6,
+    "fleaPrice": 1.8,
     "handBookPrice": "asOriginal",
     "includeInSameQuestsAsOrigin": true,
     "addSpawnsInSamePlacesAsOrigin": true,
@@ -12,7 +12,9 @@
         "CanSellOnRagfair": true,
         "BackgroundColor": "blue",
         "StackMaxSize": 1,
-        "ExaminedByDefault": false
+        "ExaminedByDefault": false,
+        "effects_health": {},
+        "effects_damage": {}
     },
 
     "Buffs": [
@@ -22,8 +24,8 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 180,
-            "Value": 8,
-            "AbsoluteValue": false
+            "Value": 10,
+            "AbsoluteValue": true
         },
         {
             "BuffType": "SkillRate",
@@ -31,8 +33,8 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 180,
-            "Value": 8,
-            "AbsoluteValue": false
+            "Value": 10,
+            "AbsoluteValue": true
         },
         {
             "BuffType": "SkillRate",
@@ -40,15 +42,15 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 180,
-            "Value": 5,
-            "AbsoluteValue": false
+            "Value": 10,
+            "AbsoluteValue": true
         },
         {
             "BuffType": "HydrationRate",
             "Chance": 1,
             "Delay": 1,
             "Duration": 180,
-            "Value": -8,
+            "Value": -0.08,
             "AbsoluteValue": false
         },
         {
@@ -56,7 +58,7 @@
             "Chance": 1,
             "Delay": 1,
             "Duration": 180,
-            "Value": -6,
+            "Value": -0.06,
             "AbsoluteValue": false
         },
         {
@@ -64,7 +66,7 @@
             "Chance": 1,
             "Delay": 190,
             "Duration": 45,
-            "Value": 1,
+            "Value": 0,
             "AbsoluteValue": true
         }
     ],

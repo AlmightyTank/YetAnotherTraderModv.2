@@ -1792,7 +1792,7 @@
         "OfferId": "6a2b82bed2999bc7b9bba8c2",
         "TplId": "6a3fd8c382d8dd83f87b200c",
         "ItemName": "Perfotoran (Blue Blood) stimulant injector",
-        "Price": 66000,
+        "Price": 76000,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -2660,25 +2660,6 @@
                 {
                     "TplId": "5d1b32c186f774252167a530",
                     "ItemName": "Analog thermometer",
-                    "Count": 1
-                }
-            ]
-        ],
-        "AlwaysBarter": false,
-        "AlwaysInStock": false
-    },
-    {
-        "OfferId": "6a2b802fd2999bc7b9bba8bf",
-        "TplId": "6a3fd8c382d8dd83f87b2012",
-        "ItemName": "UNKNOWN_ITEM_6a3fd8c382d8dd83f87b2012",
-        "Price": 45000,
-        "Currency": "RUB",
-        "CashOnly": true,
-        "BarterScheme": [
-            [
-                {
-                    "TplId": "62a0a043cf4a99369e2624a5",
-                    "ItemName": "Bottle of OLOLO Multivitamins",
                     "Count": 1
                 }
             ]

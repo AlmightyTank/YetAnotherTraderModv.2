@@ -1384,18 +1384,6 @@
             }
         },
         {
-            "_id": "6a2b802fd2999bc7b9bba8bf",
-            "_tpl": "6a3fd8c382d8dd83f87b2012",
-            "parentId": "hideout",
-            "slotId": "hideout",
-            "upd": {
-                "StackObjectsCount": 40,
-                "UnlimitedCount": false,
-                "BuyRestrictionMax": 4,
-                "BuyRestrictionCurrent": 0
-            }
-        },
-        {
             "_id": "6a2b83fcd2999bc7b9bba8c4",
             "_tpl": "6a3fd8c382d8dd83f87b2010",
             "parentId": "hideout",
@@ -4011,14 +3999,6 @@
                 }
             ]
         ],
-        "6a2b802fd2999bc7b9bba8bf": [
-            [
-                {
-                    "_tpl": "62a0a043cf4a99369e2624a5",
-                    "count": 1
-                }
-            ]
-        ],
         "6a2b83fcd2999bc7b9bba8c4": [
             [
                 {
@@ -5042,7 +5022,6 @@
         "6a3007dfd2999bc7b9bba96c": 1,
         "6a3007dfd2999bc7b9bba96d": 1,
         "6a3007dfd2999bc7b9bba96e": 1,
-        "6a2b802fd2999bc7b9bba8bf": 2,
         "6a2b83fcd2999bc7b9bba8c4": 3,
         "6a2b82bed2999bc7b9bba8c2": 2,
         "6a2b8279d2999bc7b9bba8c0": 2,
