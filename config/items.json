@@ -2652,7 +2652,7 @@
         "OfferId": "6a3fd8c382d8dd83f87b200d",
         "TplId": "6a3fd8c382d8dd83f87b2011",
         "ItemName": "UNKNOWN_ITEM_6a3fd8c382d8dd83f87b2011",
-        "Price": 0,
+        "Price": 56000,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -2671,7 +2671,7 @@
         "OfferId": "6a2b802fd2999bc7b9bba8bf",
         "TplId": "6a3fd8c382d8dd83f87b2012",
         "ItemName": "UNKNOWN_ITEM_6a3fd8c382d8dd83f87b2012",
-        "Price": 0,
+        "Price": 45000,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
@@ -2690,7 +2690,7 @@
         "OfferId": "6a2b7f99d2999bc7b9bba8be",
         "TplId": "6a3fd8c382d8dd83f87b2013",
         "ItemName": "UNKNOWN_ITEM_6a3fd8c382d8dd83f87b2013",
-        "Price": 0,
+        "Price": 21511,
         "Currency": "RUB",
         "CashOnly": true,
         "BarterScheme": [
