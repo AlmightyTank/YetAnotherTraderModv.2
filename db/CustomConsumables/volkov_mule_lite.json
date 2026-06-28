@@ -1,0 +1,79 @@
+{
+    "cloneOrigin": "5ed51652f6c34d2cc26336a1",
+    "id": "6a3fd8c382d8dd83f87b2010",
+    "fleaPrice": 1.35,
+    "handBookPrice": "asOriginal",
+    "includeInSameQuestsAsOrigin": false,
+    "addSpawnsInSamePlacesAsOrigin": true,
+    "spawnWeightComparedToOrigin": 0.25,
+    "inheritOriginBuffs": false,
+
+    "overrideProperties": {
+        "CanSellOnRagfair": true,
+        "BackgroundColor": "blue",
+        "StackMaxSize": 1,
+        "ExaminedByDefault": false
+    },
+
+    "Buffs": [
+        {
+            "BuffType": "WeightLimit",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 600,
+            "Value": 20,
+            "AbsoluteValue": false
+        },
+        {
+            "BuffType": "SkillRate",
+            "SkillName": "Strength",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 600,
+            "Value": 5,
+            "AbsoluteValue": false
+        },
+        {
+            "BuffType": "SkillRate",
+            "SkillName": "Endurance",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 600,
+            "Value": 5,
+            "AbsoluteValue": false
+        },
+        {
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 600,
+            "Value": -5,
+            "AbsoluteValue": false
+        },
+        {
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 600,
+            "Value": -5,
+            "AbsoluteValue": false
+        },
+        {
+            "BuffType": "SkillRate",
+            "SkillName": "Endurance",
+            "Chance": 1,
+            "Delay": 610,
+            "Duration": 180,
+            "Value": -8,
+            "AbsoluteValue": false
+        }
+    ],
+
+    "locales": {
+        "en": {
+            "name": "MULE-Lite Field Carrier",
+            "shortName": "MULE-L",
+            "description": "A cut-down field carrier stimulant made for moving heavy gear without the full shock of a military M.U.L.E. dose. It improves load tolerance and physical output for several minutes, but drains the body and leaves endurance weakened after the compound fades."
+        }
+    }
+}

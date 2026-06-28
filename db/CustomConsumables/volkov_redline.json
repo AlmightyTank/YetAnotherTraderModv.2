@@ -9,7 +9,7 @@
 
     "overrideProperties": {
         "CanSellOnRagfair": true,
-        "BackgroundColor": "orange",
+        "BackgroundColor": "blue",
         "StackMaxSize": 1
     },
 

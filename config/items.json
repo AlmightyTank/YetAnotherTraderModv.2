@@ -1584,8 +1584,8 @@
     },
     {
         "OfferId": "6a2b83fcd2999bc7b9bba8c4",
-        "TplId": "5ed51652f6c34d2cc26336a1",
-        "ItemName": "M.U.L.E. stimulant injector",
+        "TplId": "6a3fd8c382d8dd83f87b2010",
+        "ItemName": "M.U.L.E. Lite stimulant injector",
         "Price": 43550,
         "Currency": "RUB",
         "CashOnly": true,
@@ -2188,7 +2188,7 @@
     },
     {
         "OfferId": "6a2b8279d2999bc7b9bba8c0",
-        "TplId": "637b612fb7afa97bfc3d7005",
+        "TplId": "6a3fd8c382d8dd83f87b2014",
         "ItemName": "SJ12 TGLabs combat stimulant injector",
         "Price": 41000,
         "Currency": "RUB",

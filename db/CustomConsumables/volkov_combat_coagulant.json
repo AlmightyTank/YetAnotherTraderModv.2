@@ -1,0 +1,86 @@
+{
+    "cloneOrigin": "5c0e530286f7747fa1419862",
+    "id": "6a3fd8c382d8dd83f87b2012",
+    "fleaPrice": 1.55,
+    "handBookPrice": "asOriginal",
+    "includeInSameQuestsAsOrigin": false,
+    "addSpawnsInSamePlacesAsOrigin": true,
+    "spawnWeightComparedToOrigin": 0.22,
+    "inheritOriginBuffs": false,
+
+    "overrideProperties": {
+        "CanSellOnRagfair": true,
+        "BackgroundColor": "blue",
+        "StackMaxSize": 1,
+        "ExaminedByDefault": false
+    },
+
+    "Buffs": [
+        {
+            "BuffType": "LightBleeding",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "Value": 0,
+            "AbsoluteValue": true
+        },
+        {
+            "BuffType": "HeavyBleeding",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "Value": 0,
+            "AbsoluteValue": true
+        },
+        {
+            "BuffType": "SkillRate",
+            "SkillName": "Vitality",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "Value": 10,
+            "AbsoluteValue": false
+        },
+        {
+            "BuffType": "SkillRate",
+            "SkillName": "Health",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "Value": 6,
+            "AbsoluteValue": false
+        },
+        {
+            "BuffType": "HydrationRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "Value": -10,
+            "AbsoluteValue": false
+        },
+        {
+            "BuffType": "EnergyRate",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "Value": -8,
+            "AbsoluteValue": false
+        },
+        {
+            "BuffType": "HandsTremor",
+            "Chance": 1,
+            "Delay": 190,
+            "Duration": 60,
+            "Value": 1,
+            "AbsoluteValue": true
+        }
+    ],
+
+    "locales": {
+        "en": {
+            "name": "Bastion-7 Combat Coagulant",
+            "shortName": "BST-7",
+            "description": "A harsh combat coagulant meant to keep a wounded operator moving after blood loss that should have ended the fight. It suppresses bleeding and hardens trauma response for a short time, but the crash leaves the body shaking and drained."
+        }
+    }
+}
