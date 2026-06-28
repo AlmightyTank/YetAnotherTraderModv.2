@@ -170,9 +170,9 @@ public sealed class CustomConsumablesLoader(
             AddCraft(tables, definition.Craft.Value);
         }
 
-        if (YATMLogger.IsDebugEnabled)
+        if (YATMLogger.IsRealDebugEnabled)
         {
-            YATMLogger.LogDebug($"Loaded custom consumable {definition.Id} from {Path.GetFileName(file)}");
+            YATMLogger.LogRealDebug($"Loaded custom consumable {definition.Id} from {Path.GetFileName(file)}");
         }
     }
 

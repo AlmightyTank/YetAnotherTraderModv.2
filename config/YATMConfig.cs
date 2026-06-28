@@ -155,7 +155,8 @@ public class YATMConfig
                 RandomizeCashBarterOffers = true,
                 CashOfferPercent = 85,
 
-                DebugLogging = false
+                DebugLogging = false,
+                RealDebugLogging = false
             };
 
             NormalizeSettings();

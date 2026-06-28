@@ -23,6 +23,7 @@ public class SettingsConfig
     public int CashOfferPercent { get; set; } = 85;
 
     public bool DebugLogging { get; set; } = false;
+    public bool RealDebugLogging { get; set; } = false;
 }
 
 public class PriceConfigItem

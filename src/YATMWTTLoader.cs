@@ -24,8 +24,8 @@ public sealed class YATMWTTLoader(
 
         var dbPath = Path.Combine(modPath, "db");
 
-        YATMLogger.LogDebug($"[CustomContentLoader] Mod path: {modPath}");
-        YATMLogger.LogDebug($"[CustomContentLoader] DB path: {dbPath}");
+        YATMLogger.LogRealDebug($"[CustomContentLoader] Mod path: {modPath}");
+        YATMLogger.LogRealDebug($"[CustomContentLoader] DB path: {dbPath}");
 
         if (!Directory.Exists(dbPath))
         {
@@ -47,7 +47,7 @@ public sealed class YATMWTTLoader(
         var presetPath = Path.Join("db", "CustomWeaponPresets");
 
         // 1. WTT creates custom ammo/parts/weapons
-        YATMLogger.LogDebug("[CustomContentLoader] Loading WTT custom items...");
+        YATMLogger.LogRealDebug("[CustomContentLoader] Loading WTT custom items...");
 
         foreach (var path in itemPaths)
         {
@@ -55,7 +55,7 @@ public sealed class YATMWTTLoader(
         }
 
         // 2. YATM slot clone helper copies missing slots onto custom weapons
-        YATMLogger.LogDebug("[CustomContentLoader] Processing YATM slot copies...");
+        YATMLogger.LogRealDebug("[CustomContentLoader] Processing YATM slot copies...");
 
         foreach (var path in slotCopyPaths)
         {
@@ -63,12 +63,12 @@ public sealed class YATMWTTLoader(
         }
 
         // 3. WTT creates weapon presets
-        YATMLogger.LogDebug("[CustomContentLoader] Loading custom weapon presets...");
+        YATMLogger.LogRealDebug("[CustomContentLoader] Loading custom weapon presets...");
 
         await wttCommon.CustomWeaponPresetService.CreateCustomWeaponPresets(assembly, presetPath);
 
         // 4. WTT loads locales, loot spawns, quests, and quest zones
-        YATMLogger.LogDebug("[CustomContentLoader] Loading locales, loot spawns, quests, and quest zones...");
+        YATMLogger.LogRealDebug("[CustomContentLoader] Loading locales, loot spawns, quests, and quest zones...");
 
         await wttCommon.CustomHideoutRecipeService.CreateHideoutRecipes(assembly);
         await wttCommon.CustomLocaleService.CreateCustomLocales(assembly);
