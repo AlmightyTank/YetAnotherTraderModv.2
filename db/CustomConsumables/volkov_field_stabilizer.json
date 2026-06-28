@@ -10,7 +10,7 @@
 
     "overrideProperties": {
         "CanSellOnRagfair": true,
-        "BackgroundColor": "blue",
+        "BackgroundColor": "#453324",
         "StackMaxSize": 1,
         "ExaminedByDefault": false,
         "effects_health": {},

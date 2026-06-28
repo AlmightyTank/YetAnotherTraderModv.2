@@ -4,18 +4,19 @@
     "parentId": "5447b5fc4bdc2d87278b4567",
     "handbookParentId": "5b5f78e986f77447ed5636b1",
     "overrideProperties": {
-      "ExaminedByDefault": true,
-      "RecoilForceBack": 300,
-      "RecoilForceUp": 98,
-      "RecolDispersion": 9,
-      "DurabilityBurnRatio": 1.05,
-      "Ergonomics": 48,
-      "bFirerate": 50,
-      "weapFireType": [
-        "single",
-        "fullauto"
-      ],
-      "CanSellOnRagfair": false
+        "ExaminedByDefault": true,
+        "BackgroundColor": "#292929",
+        "RecoilForceBack": 300,
+        "RecoilForceUp": 98,
+        "RecolDispersion": 9,
+        "DurabilityBurnRatio": 1.05,
+        "Ergonomics": 48,
+        "bFirerate": 50,
+        "weapFireType": [
+            "single",
+            "fullauto"
+        ],
+        "CanSellOnRagfair": false
     },
     "fleaPriceRoubles": 17500,
     "handbookPriceRoubles": 12500,
