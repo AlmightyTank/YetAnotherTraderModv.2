@@ -15,6 +15,6 @@
     "CashOffersOnly": false, //[Pricing] If true, Tony will only use cash offers and barter randomization is disabled.
     "RandomizeCashBarterOffers": true, //[Pricing] If true, configured offers randomly become cash or barter when the server loads.
     "CashOfferPercent": 85, //[Pricing] Percent of configured offers that become cash. Remaining offers become barter when a real barter scheme exists.
-    "DebugLogging": true, //[Debug] Enables detailed logs in the server console for troubleshooting.
+    "DebugLogging": false, //[Debug] Enables detailed logs in the server console for troubleshooting.
     "RealDebugLogging": false //[Debug] Enables more detailed logs in the server console for troubleshooting.
 }
