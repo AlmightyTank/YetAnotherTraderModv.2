@@ -1355,7 +1355,19 @@
             "upd": {
                 "StackObjectsCount": 40,
                 "UnlimitedCount": false,
-                "BuyRestrictionMax": 4,
+                "BuyRestrictionMax": 5,
+                "BuyRestrictionCurrent": 0
+            }
+        },
+        {
+            "_id": "6a41373a82d8dd83f87b2048",
+            "_tpl": "6a41373a82d8dd83f87b2045",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 40,
+                "UnlimitedCount": false,
+                "BuyRestrictionMax": 3,
                 "BuyRestrictionCurrent": 0
             }
         },
@@ -2387,6 +2399,18 @@
                 "StackObjectsCount": 30,
                 "UnlimitedCount": false,
                 "BuyRestrictionMax": 5,
+                "BuyRestrictionCurrent": 0
+            }
+        },
+        {
+            "_id": "6a41373a82d8dd83f87b2047",
+            "_tpl": "6a41373a82d8dd83f87b2046",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "StackObjectsCount": 30,
+                "UnlimitedCount": false,
+                "BuyRestrictionMax": 3,
                 "BuyRestrictionCurrent": 0
             }
         },
@@ -3991,6 +4015,14 @@
                 }
             ]
         ],
+        "6a41373a82d8dd83f87b2048": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 9600
+                }
+            ]
+        ],
         "6a3007dfd2999bc7b9bba96e": [
             [
                 {
@@ -4248,6 +4280,14 @@
                 {
                     "_tpl": "5449016a4bdc2d6f028b456f",
                     "count": 11200
+                }
+            ]
+        ],
+        "6a41373a82d8dd83f87b2047": [
+            [
+                {
+                    "_tpl": "5449016a4bdc2d6f028b456f",
+                    "count": 28200
                 }
             ]
         ],
@@ -5021,6 +5061,7 @@
         "6a3007dfd2999bc7b9bba96b": 1,
         "6a3007dfd2999bc7b9bba96c": 1,
         "6a3007dfd2999bc7b9bba96d": 1,
+        "6a41373a82d8dd83f87b2048": 2,
         "6a3007dfd2999bc7b9bba96e": 1,
         "6a2b83fcd2999bc7b9bba8c4": 3,
         "6a2b82bed2999bc7b9bba8c2": 2,
@@ -5054,6 +5095,7 @@
         "6a3007dfd2999bc7b9bba97d": 1,
         "6a2a24be339aae85cffe58d1": 1,
         "6a2a2501339aae85cffe58d2": 2,
+        "6a41373a82d8dd83f87b2047": 3,
         "6a3007dfd2999bc7b9bba97e": 1,
         "6a2abd18d2999bc7b9bba8bc": 2,
         "6a3007dfd2999bc7b9bba97f": 2,

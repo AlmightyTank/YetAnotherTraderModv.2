@@ -41,6 +41,8 @@
     <Content Remove="db\customconsumables\volkov_mule_lite.json" />
     <Content Remove="db\customconsumables\volkov_nerve_igniter.json" />
     <Content Remove="db\CustomConsumables\volkov_rus_alpha.json" />
+    <Content Remove="db\CustomConsumables\volkov_super_army_bandage.json" />
+    <Content Remove="db\CustomConsumables\volkov_super_calok_b.json" />
     <Content Remove="db\CustomHideoutRecipes\clean_run_sealed_cargo_package.json" />
     <Content Remove="db\CustomItems\buried_steel_crate.json" />
     <Content Remove="db\customitems\dead-drop_package.json" />
