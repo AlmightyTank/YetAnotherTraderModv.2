@@ -36,6 +36,7 @@ public sealed class YATMTraderRuntimeService(
     private static int? _lastSeenNextResupply;
     private static long _lastRestockPollUnix;
     private static bool _restockRerollReady;
+    private static bool _skipFirstRestockUpdateRun = true;
     private static bool _rerollAssortOnRestock = true;
     private static bool _loggedUpdateHookActive;
 
@@ -49,6 +50,7 @@ public sealed class YATMTraderRuntimeService(
     // 6) Offer IDs are never changed. The losing paired ammo offer is removed from the clean assort.
     // 7) If PreventBarterOffersOutOfStock is true, the stock roll excludes offers that became barter.
     // 8) RerollAssortOnRestock controls only the OnUpdate/restock reroll side; startup still rolls normally.
+    // 9) The first IOnUpdate call after startup is ignored so the update hook cannot immediately reroll after OnLoad.
 
     // These remember the previous randomized roll so the next restock can avoid
     // picking the same items again when there are enough alternatives.
@@ -212,6 +214,8 @@ public sealed class YATMTraderRuntimeService(
         PatchServerQuestAssortForPairedAmmoOffers(config);
 
         _lastSeenNextResupply = traderBase.NextResupply;
+        _lastRestockPollUnix = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+        _skipFirstRestockUpdateRun = true;
         _restockRerollReady = true;
 
         if (config.Settings.DebugLogging)
@@ -241,12 +245,32 @@ public sealed class YATMTraderRuntimeService(
                 return Task.FromResult(true);
             }
 
+            var now = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+
+            // Do not let the first IOnUpdate call after OnLoad do any restock work.
+            // This primes the watcher against the live server DB state after AddTraderToDb
+            // and prevents an immediate startup-adjacent reroll.
+            if (_skipFirstRestockUpdateRun)
+            {
+                _skipFirstRestockUpdateRun = false;
+                _lastRestockPollUnix = now;
+
+                var startupTables = databaseServer.GetTables();
+                if (startupTables.Traders.TryGetValue(_runtimeTraderId, out var startupTraderData)
+                    && startupTraderData.Base != null
+                    && startupTraderData.Base.NextResupply > 0)
+                {
+                    _lastSeenNextResupply = startupTraderData.Base.NextResupply;
+                }
+
+                YATMLogger.LogDebug("[Restock] First IOnUpdate run ignored after startup; restock watcher is now primed.");
+                return Task.FromResult(true);
+            }
+
             if (!_rerollAssortOnRestock)
             {
                 return Task.FromResult(true);
             }
-
-            var now = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
 
             // IOnUpdate can run often. Polling every few seconds is enough because
             // trader restocks are minute/hour-scale events, not frame-sensitive work.
