@@ -54,9 +54,9 @@
 
     "locales": {
         "en": {
-            "name": "Volkov's Blackline CALOK-B",
-            "shortName": "V-CALOK",
-            "description": "A CALOK-B hemostatic applicator pulled from one of Volkov's sealed medical crates. Tony's people mark these with a black line so they do not get wasted on scratches. Push it deep, stop the heavy bleed, and keep moving before someone notices you are still alive."
+            "name": "Volkov Field Bandage",
+            "shortName": "V-Field",
+            "description": "A reinforced field bandage from Tony Volkov's private medical stash. Repacked from army surplus and treated with clotting compound, it is meant for quick pressure wraps when a light bleed needs to stop before the next corner."
         }
     }
 }
