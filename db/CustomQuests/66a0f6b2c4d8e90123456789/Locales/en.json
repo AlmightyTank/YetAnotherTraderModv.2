@@ -290,5 +290,22 @@
 
     "6a415fe582d8dd83f87b209c": "Mark the locked 21WS shipment container for Tony's crew",
     "6a415fe582d8dd83f87b209d": "Mark the locked 11SR shipment container for Tony's crew",
-    "6a415fe582d8dd83f87b20a1": "Survive and extract from Interchange"
+    "6a415fe582d8dd83f87b20a1": "Survive and extract from Interchange",
+
+    // Quest 13
+    "6a417a6c82d8dd83f87b20d4 name": "Dead Drop Rules",
+    "6a417a6c82d8dd83f87b20d4 description": "A dead drop is not a trash can. You do not empty it, you do not stand over it, and you do not come back twice if someone is watching. I need to know you understand that before I put better goods in your hands. Woods has two old drops still worth using. Check the first drop, recover the coded dog tag, move it to the second drop, and leave alive. One raid. No excuses.",
+    "6a417a6c82d8dd83f87b20d4 note": "Tony wants you to move a coded dead-drop tag between two Woods dead drops and extract alive.",
+    "6a417a6c82d8dd83f87b20d4 startedMessageText": "Woods. First drop, coded tag, second drop. Move clean and leave alive.",
+    "6a417a6c82d8dd83f87b20d4 successMessageText": "Good. You followed the rules. The tag moved, the route stayed quiet, and nobody had to say your name.",
+    "6a417a6c82d8dd83f87b20d4 failMessageText": "You lost the tag, missed the drop, or died walking the route. That is not how couriers survive.",
+    "6a417a6c82d8dd83f87b20d4 acceptPlayerMessage": "I'll move the tag.",
+    "6a417a6c82d8dd83f87b20d4 declinePlayerMessage": "Not running dead drops yet.",
+    "6a417a6c82d8dd83f87b20d4 completePlayerMessage": "The tag was moved.",
+    "6a417a6c82d8dd83f87b20d4 changeQuestMessageText": "Tony wants the coded dead-drop tag moved between two Woods dead drops.",
+
+    "6a417a6c82d8dd83f87b20d8": "Locate the first dead drop on Woods",
+    "6a417a6c82d8dd83f87b20da": "Recover Tony's coded dead-drop tag",
+    "6a417a6c82d8dd83f87b20dc": "Stash Tony's coded dead-drop tag at the second dead drop",
+    "6a417a6c82d8dd83f87b20e1": "Survive and extract from Woods"
 }

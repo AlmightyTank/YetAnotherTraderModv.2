@@ -45,10 +45,13 @@
     <Content Remove="db\CustomConsumables\volkov_super_calok_b.json" />
     <Content Remove="db\CustomHideoutRecipes\clean_run_sealed_cargo_package.json" />
     <Content Remove="db\CustomItems\buried_steel_crate.json" />
+    <Content Remove="db\CustomItems\coded_dead_drop_tag.json" />
     <Content Remove="db\customitems\dead-drop_package.json" />
     <Content Remove="db\CustomItems\experimental_stim_case.json" />
     <Content Remove="db\CustomItems\forged_route_documents.json" />
     <Content Remove="db\CustomItems\sealed_cargo_package.json" />
+    <Content Remove="db\CustomItems\thicc_holodilnick_thermal_bag.json" />
+    <Content Remove="db\CustomItems\thicc_medicine_case.json" />
     <Content Remove="db\customitems\tony_calling_card.json" />
     <Content Remove="db\CustomItems\tony_quest_items.json" />
     <Content Remove="db\customitems\trauma_bag.json" />
@@ -59,12 +62,14 @@
     <Content Remove="db\CustomLootSpawns\CustomSpawnpointsForced\interchange_forced.json" />
     <Content Remove="db\CustomLootSpawns\CustomSpawnpointsForced\rezervbase_forced.json" />
     <Content Remove="db\customlootspawns\customspawnpointsforced\shoreline_forced.json" />
+    <Content Remove="db\CustomLootSpawns\CustomSpawnpointsForced\woods_forced.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\questassort\assort.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\quests\back_room_etiquette.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\broken_radios.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\buried_steel.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\clean_run.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\cold_freight.json" />
+    <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\dead_drop_rules.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\depot_rats.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\no_names_spoken.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\old_bear_trails.json" />
@@ -81,6 +86,7 @@
     <Content Remove="db\CustomQuestZones\buried_steel.json" />
     <Content Remove="db\customquestzones\clean_run.json" />
     <Content Remove="db\CustomQuestZones\cold_freight.json" />
+    <Content Remove="db\CustomQuestZones\dead_drop_rules.json" />
     <Content Remove="db\CustomQuestZones\depot_rats.json" />
     <Content Remove="db\customquestzones\first_dead_drop.json" />
     <Content Remove="db\customquestzones\no_names_spoken.json" />
