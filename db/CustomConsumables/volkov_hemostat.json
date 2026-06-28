@@ -24,24 +24,6 @@
 
     "Buffs": [
         {
-            "BuffType": "SkillRate",
-            "SkillName": "Vitality",
-            "Chance": 1,
-            "Delay": 1,
-            "Duration": 180,
-            "Value": 20,
-            "AbsoluteValue": true
-        },
-        {
-            "BuffType": "SkillRate",
-            "SkillName": "Health",
-            "Chance": 1,
-            "Delay": 1,
-            "Duration": 180,
-            "Value": 20,
-            "AbsoluteValue": true
-        },
-        {
             "BuffType": "HealthRate",
             "Chance": 1,
             "Delay": 1,
@@ -58,6 +40,24 @@
             "Duration": 240,
             "SkillName": "",
             "Value": 1
+        },
+        {
+            "BuffType": "SkillRate",
+            "SkillName": "Vitality",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "Value": 20,
+            "AbsoluteValue": true
+        },
+        {
+            "BuffType": "SkillRate",
+            "SkillName": "Health",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "Value": 20,
+            "AbsoluteValue": true
         },
         {
             "BuffType": "HydrationRate",
