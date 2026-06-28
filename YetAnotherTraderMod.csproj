@@ -64,6 +64,7 @@
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\broken_radios.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\buried_steel.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\clean_run.json" />
+    <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\cold_freight.json" />
     <Content Remove="db\CustomQuests\66a0f6b2c4d8e90123456789\Quests\depot_rats.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\no_names_spoken.json" />
     <Content Remove="db\customquests\66a0f6b2c4d8e90123456789\quests\old_bear_trails.json" />
@@ -79,6 +80,7 @@
     <Content Remove="db\CustomQuestZones\broken_radios.json" />
     <Content Remove="db\CustomQuestZones\buried_steel.json" />
     <Content Remove="db\customquestzones\clean_run.json" />
+    <Content Remove="db\CustomQuestZones\cold_freight.json" />
     <Content Remove="db\CustomQuestZones\depot_rats.json" />
     <Content Remove="db\customquestzones\first_dead_drop.json" />
     <Content Remove="db\customquestzones\no_names_spoken.json" />

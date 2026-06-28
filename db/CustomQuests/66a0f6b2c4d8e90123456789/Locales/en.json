@@ -274,5 +274,21 @@
     "6a413ec882d8dd83f87b205b": "Enter KIBA Arms after power has been restored",
     "6a413ec882d8dd83f87b205d": "Hand over any 5 armor plates",
     "6a413ec882d8dd83f87b205f": "Hand over any 3 tactical rigs",
-    "6a41407d82d8dd83f87b2064": "Survive and extract from Interchange"
+    "6a41407d82d8dd83f87b2064": "Survive and extract from Interchange",
+
+    // Quest 12
+    "6a415fe582d8dd83f87b209b name": "Cold Freight",
+    "6a415fe582d8dd83f87b209b description": "The clean route worked. Now we look for heavier freight. Interchange has locked containers tied to old access cards, 21WS and 11SR. People think a locked door means ownership. It does not. It means someone was afraid of losing what was inside. Take these markers, tag both containers, and leave. My crew will handle the cold work after you are gone.",
+    "6a415fe582d8dd83f87b209b note": "Tony wants you to mark the locked 21WS and 11SR shipment containers on Interchange.",
+    "6a415fe582d8dd83f87b209b startedMessageText": "Interchange. Two locked containers. 21WS and 11SR. Mark them and leave alive.",
+    "6a415fe582d8dd83f87b209b successMessageText": "Good. The freight is tagged, and my people know where to cut. Locked doors only slow honest men.",
+    "6a415fe582d8dd83f87b209b failMessageText": "The containers are still unmarked. Cold freight does not move itself.",
+    "6a415fe582d8dd83f87b209b acceptPlayerMessage": "I'll mark the containers.",
+    "6a415fe582d8dd83f87b209b declinePlayerMessage": "Not touching locked freight yet.",
+    "6a415fe582d8dd83f87b209b completePlayerMessage": "The containers are marked.",
+    "6a415fe582d8dd83f87b209b changeQuestMessageText": "Tony wants the locked Interchange freight containers marked for his crew.",
+
+    "6a415fe582d8dd83f87b209c": "Mark the locked 21WS shipment container for Tony's crew",
+    "6a415fe582d8dd83f87b209d": "Mark the locked 11SR shipment container for Tony's crew",
+    "6a415fe582d8dd83f87b20a1": "Survive and extract from Interchange"
 }
