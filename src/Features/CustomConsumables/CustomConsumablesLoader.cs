@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Reflection;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
 using SPTarkov.Server.Core.Models.Common;
@@ -10,6 +6,11 @@ using SPTarkov.Server.Core.Models.Spt.Mod;
 using SPTarkov.Server.Core.Models.Utils;
 using SPTarkov.Server.Core.Services;
 using SPTarkov.Server.Core.Services.Mod;
+using System.Collections;
+using System.Reflection;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using YetAnotherTraderMod.src;
 using Path = System.IO.Path;
 
 namespace YetAnotherTraderMod.Features.CustomConsumables;
@@ -18,11 +19,10 @@ namespace YetAnotherTraderMod.Features.CustomConsumables;
 /// Loads custom stim/med JSON files from db/CustomsComsumables/*.json.
 /// This is a C# SPT 4.x port of the old ConsumablesGalore loader pattern.
 /// </summary>
-[Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 20)]
+[Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 5)]
 public sealed class CustomConsumablesLoader(
     DatabaseService databaseService,
-    CustomItemService customItemService,
-    ISptLogger<CustomConsumablesLoader> logger) : IOnLoad
+    CustomItemService customItemService) : IOnLoad
 {
     private const string RoublesTpl = "5449016a4bdc2d6f028b456f";
 
@@ -39,7 +39,7 @@ public sealed class CustomConsumablesLoader(
     {
         var assemblyPath = Assembly.GetExecutingAssembly().Location;
         var modPath = Path.GetDirectoryName(assemblyPath) ?? AppContext.BaseDirectory;
-        var consumablesPath = Path.Combine(modPath, "db", "CustomsConsumables");
+        var consumablesPath = Path.Combine(modPath, "db", "CustomConsumables");
 
         Load(consumablesPath);
         await Task.CompletedTask;
@@ -49,14 +49,17 @@ public sealed class CustomConsumablesLoader(
     {
         if (!Directory.Exists(consumablesPath))
         {
-            logger.Warning($"[Tony] Custom consumables folder not found: {consumablesPath}");
+            YATMLogger.Log($"Custom consumables folder not found: {consumablesPath}");
             return;
         }
 
         var files = Directory.EnumerateFiles(consumablesPath, "*.json", SearchOption.AllDirectories).ToList();
         if (files.Count == 0)
         {
-            logger.Info($"[Tony] No custom consumables found in {consumablesPath}");
+            if (YATMLogger.IsDebugEnabled)
+            {
+                YATMLogger.LogDebug($"No custom consumables found in {consumablesPath}");
+            }
             return;
         }
 
@@ -70,7 +73,7 @@ public sealed class CustomConsumablesLoader(
                 var definition = JsonSerializer.Deserialize<CustomConsumableDefinition>(File.ReadAllText(file), JsonOptions);
                 if (definition is null)
                 {
-                    logger.Warning($"[Tony] Skipped empty custom consumable file: {file}");
+                    YATMLogger.Log($"[Tony] Skipped empty custom consumable file: {file}");
                     continue;
                 }
 
@@ -80,11 +83,13 @@ public sealed class CustomConsumablesLoader(
             }
             catch (Exception ex)
             {
-                logger.Error($"[Tony] Failed to load custom consumable '{file}': {ex}");
+                YATMLogger.Log($"[Tony] Failed to load custom consumable '{file}': {ex}");
             }
         }
-
-        logger.Info($"[Tony] Loaded {loaded}/{files.Count} custom consumable JSON file(s)");
+        if (YATMLogger.IsDebugEnabled)
+        {
+            YATMLogger.LogDebug($"Loaded {loaded}/{files.Count} custom consumable JSON file(s)");
+        }
     }
 
     private void LoadOne(object tables, CustomConsumableDefinition definition, string file)
@@ -112,7 +117,7 @@ public sealed class CustomConsumablesLoader(
         var alreadyExists = GetDictionaryValue(itemsDb, definition.Id) is not null;
         if (alreadyExists)
         {
-            logger.Warning($"[Tony] Custom consumable item id '{definition.Id}' already exists. Skipping clone creation, but still applying buffs/quests/spawns/trader data.");
+            YATMLogger.Log($"[Tony] Custom consumable item id '{definition.Id}' already exists. Skipping clone creation, but still applying buffs/quests/spawns/trader data.");
         }
         else
         {
@@ -134,7 +139,7 @@ public sealed class CustomConsumablesLoader(
                 var errors = result.Errors is null ? "unknown error" : string.Join("; ", result.Errors);
                 if (errors.Contains("already exists", StringComparison.OrdinalIgnoreCase))
                 {
-                    logger.Warning($"[Tony] CreateItemFromClone says '{definition.Id}' already exists. Continuing with buffs/quests/spawns/trader data. Details: {errors}");
+                    YATMLogger.Log($"[Tony] CreateItemFromClone says '{definition.Id}' already exists. Continuing with buffs/quests/spawns/trader data. Details: {errors}");
                 }
                 else
                 {
@@ -165,7 +170,10 @@ public sealed class CustomConsumablesLoader(
             AddCraft(tables, definition.Craft.Value);
         }
 
-        logger.Info($"[Tony] Loaded custom consumable {definition.Id} from {Path.GetFileName(file)}");
+        if (YATMLogger.IsRealDebugEnabled)
+        {
+            YATMLogger.LogRealDebug($"Loaded custom consumable {definition.Id} from {Path.GetFileName(file)}");
+        }
     }
 
     private TemplateItemProperties BuildOverrideProperties(object originItem, CustomConsumableDefinition definition)
@@ -246,7 +254,7 @@ public sealed class CustomConsumablesLoader(
         var buffDictionary = FindStimulatorBuffDictionary(tables);
         if (buffDictionary is null)
         {
-            logger.Warning($"[Tony] Could not find the stimulator buff dictionary. Checked Globals.Config/Globals.Configuration and DatabaseService.GetGlobals(). Stim buffs were not added for {definition.Id}");
+            YATMLogger.Log($"[Tony] Could not find the stimulator buff dictionary. Checked Globals.Config/Globals.Configuration and DatabaseService.GetGlobals(). Stim buffs were not added for {definition.Id}");
             return;
         }
 
@@ -287,14 +295,14 @@ public sealed class CustomConsumablesLoader(
 
         if (trader is null)
         {
-            logger.Warning($"[Tony] Trader '{traderDefinition.TraderId}' not found. Skipping trader offer for {definition.Id}");
+            YATMLogger.Log($"[Tony] Trader '{traderDefinition.TraderId}' not found. Skipping trader offer for {definition.Id}");
             return;
         }
 
         var assort = GetMember(trader, "Assort") ?? GetMember(trader, "assort");
         if (assort is null)
         {
-            logger.Warning($"[Tony] Trader '{traderDefinition.TraderId}' has no assort. Skipping trader offer for {definition.Id}");
+            YATMLogger.Log($"[Tony] Trader '{traderDefinition.TraderId}' has no assort. Skipping trader offer for {definition.Id}");
             return;
         }
 
@@ -304,7 +312,7 @@ public sealed class CustomConsumablesLoader(
 
         if (items is not IList itemList || barterScheme is null || loyalLevelItems is null)
         {
-            logger.Warning($"[Tony] Trader '{traderDefinition.TraderId}' assort shape was not recognized. Skipping trader offer for {definition.Id}");
+            YATMLogger.Log($"[Tony] Trader '{traderDefinition.TraderId}' assort shape was not recognized. Skipping trader offer for {definition.Id}");
             return;
         }
 
@@ -339,7 +347,7 @@ public sealed class CustomConsumablesLoader(
         }
         else
         {
-            logger.Warning($"[Tony] Trader offer item row already exists for {assortmentId}; updating barter/loyalty only.");
+            YATMLogger.Log($"[Tony] Trader offer item row already exists for {assortmentId}; updating barter/loyalty only.");
         }
 
         object barterData;
@@ -373,7 +381,7 @@ public sealed class CustomConsumablesLoader(
         var quests = GetPath(tables, "Templates.Quests") ?? GetMember(tables, "Quests") ?? GetMember(tables, "quests");
         if (quests is null)
         {
-            logger.Warning($"[Tony] Could not find quest database. Quest target injection skipped for {definition.Id}");
+            YATMLogger.Log($"[Tony] Could not find quest database. Quest target injection skipped for {definition.Id}");
             return;
         }
 
@@ -446,7 +454,7 @@ public sealed class CustomConsumablesLoader(
         var locations = GetMember(tables, "Locations") ?? GetMember(tables, "locations");
         if (locations is null)
         {
-            logger.Warning($"[Tony] Could not find locations database. Spawn injection skipped for {definition.Id}");
+            YATMLogger.Log($"[Tony] Could not find locations database. Spawn injection skipped for {definition.Id}");
             return;
         }
 
@@ -575,7 +583,7 @@ public sealed class CustomConsumablesLoader(
 
         if (recipes is not IList recipeList)
         {
-            logger.Warning("[Tony] Could not find hideout.production.recipes. Craft was skipped.");
+            YATMLogger.Log("[Tony] Could not find hideout.production.recipes. Craft was skipped.");
             return;
         }
 

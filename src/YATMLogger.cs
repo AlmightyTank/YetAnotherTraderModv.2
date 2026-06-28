@@ -10,6 +10,7 @@ public static class YATMLogger
     
     // [NEW] Global Debug Flag
     public static bool IsDebugEnabled { get; set; } = false;
+    public static bool IsRealDebugEnabled { get; set; } = false;
 
     public static void Init(string modPath)
     {
@@ -52,6 +53,21 @@ public static class YATMLogger
             File.AppendAllText(_logPath, formatted + "\n");
             // Also print to server console for immediate visibility if debug is ON
             Console.WriteLine($"[Tony-DEBUG] {message}");
+        }
+        catch { }
+    }
+
+    public static void LogRealDebug(string message)
+    {
+        if (!IsRealDebugEnabled) return;
+        if (!_initialized || _logPath == null) return;
+
+        try
+        {
+            var formatted = $"[REAL DEBUG] [{DateTime.Now:HH:mm:ss}] {message}";
+            File.AppendAllText(_logPath, formatted + "\n");
+            // Also print to server console for immediate visibility if debug is ON
+            Console.WriteLine($"[Tony-REAL DEBUG] {message}");
         }
         catch { }
     }

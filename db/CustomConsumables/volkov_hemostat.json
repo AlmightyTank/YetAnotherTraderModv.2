@@ -6,12 +6,20 @@
     "includeInSameQuestsAsOrigin": true,
     "addSpawnsInSamePlacesAsOrigin": true,
     "spawnWeightComparedToOrigin": 0.35,
-    "inheritOriginBuffs": true,
+    "inheritOriginBuffs": false,
 
     "overrideProperties": {
         "CanSellOnRagfair": true,
-        "BackgroundColor": "violet",
-        "StackMaxSize": 1
+        "BackgroundColor": "#453324",
+        "StackMaxSize": 1,
+        "effects_health": {},
+        "effects_damage": {
+            "Pain": {
+                "delay": 0,
+                "duration": 60,
+                "fadeOut": 15
+            }
+        }
     },
 
     "Buffs": [
@@ -25,11 +33,38 @@
             "SkillName": ""
         },
         {
+            "AbsoluteValue": true,
+            "BuffType": "RemoveAllBloodLosses",
+            "Chance": 1,
+            "Delay": 0,
+            "Duration": 240,
+            "SkillName": "",
+            "Value": 1
+        },
+        {
+            "BuffType": "SkillRate",
+            "SkillName": "Vitality",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "Value": 20,
+            "AbsoluteValue": true
+        },
+        {
+            "BuffType": "SkillRate",
+            "SkillName": "Health",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 180,
+            "Value": 20,
+            "AbsoluteValue": true
+        },
+        {
             "BuffType": "HydrationRate",
             "Chance": 1,
             "Delay": 30,
             "Duration": 300,
-            "Value": -0.6,
+            "Value": -0.4,
             "AbsoluteValue": true,
             "SkillName": ""
         },
@@ -59,29 +94,5 @@
             "shortName": "V-Hemo",
             "description": "A back-room injector mixed from Zagustin hemostatics and Propital-style regenerative compounds. It seals bleeding fast, dulls pain, and keeps the body moving long enough to leave the fight. The crash comes after."
         }
-    },
-
-    "trader": {
-        "traderId": "66a0f6b2c4d8e90123456789",
-        "loyaltyReq": 3,
-        "amountForSale": 4,
-        "buyRestrictionMax": 2,
-        "assortmentId": "6a3210dbd2999bc7b9bbab44",
-        "barterScheme": [
-            [
-                {
-                    "count": 1,
-                    "_tpl": "5c0e530286f7747fa1419862"
-                },
-                {
-                    "count": 1,
-                    "_tpl": "5c0e533786f7747fa23f4d47"
-                },
-                {
-                    "count": 2,
-                    "_tpl": "5d1b3a5d86f774252167ba22"
-                }
-            ]
-        ]
     }
 }
