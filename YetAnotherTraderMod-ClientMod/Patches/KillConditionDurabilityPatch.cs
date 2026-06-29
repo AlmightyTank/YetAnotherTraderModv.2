@@ -1,11 +1,11 @@
-using System.Collections.Generic;
-using System.Reflection;
 using EFT;
 using EFT.HealthSystem;
 using EFT.InventoryLogic;
 using EFT.Quests;
 using HarmonyLib;
 using SPT.Reflection.Patching;
+using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using YATMQuestConditions.Client.Models;
 using YATMQuestConditions.Client.Services;
@@ -56,12 +56,37 @@ namespace YATMQuestConditions.Client.Patches
             }
 
             var durability = WeaponDurabilityReader.TryReadDurability(weapon);
+
             if (!durability.HasValue)
             {
                 durability = 999f;
             }
 
-            Plugin.LogSource.LogInfo("[YATM Quest Conditions] Kill counter check. Weapon durability: " + durability.Value);
+            Plugin.LogSource.LogInfo(
+                "[YATM Quest Conditions] Kill counter check. Weapon durability: " + durability.Value
+            );
+
+            var durabilityRule = WeaponDurabilityRules.GetFirstActiveRule();
+
+            if (durabilityRule != null &&
+                !WeaponDurabilityCompare.Passes(
+                    durability.Value,
+                    durabilityRule.CompareMethod,
+                    durabilityRule.Value))
+            {
+                Plugin.LogSource.LogInfo(
+                    "[YATM Quest Conditions] Rejecting kill before TestConditions. " +
+                    "Durability=" + durability.Value +
+                    " rule=" + durabilityRule.CompareMethod +
+                    " " + durabilityRule.Value
+                );
+
+                // Important:
+                // Returning false here prevents the failed kill from ever entering
+                // ConditionKills / ConditionCounterManager, so it cannot be cached
+                // and counted later.
+                return false;
+            }
 
             __instance.ConditionalBook.TestConditions(1, new GStruct458[]
             {
@@ -73,8 +98,6 @@ namespace YATMQuestConditions.Client.Patches
                 new GStruct458(new object[] { typeof(ConditionTime) }).Test(GClass1891.PastTime),
                 new GStruct458(new object[] { typeof(ConditionHealthBuff) }).Test(buffs),
 
-                // YATM custom condition support.
-                // CounterCreator conditions that include ConditionweaponDurability now receive the actual weapon durability.
                 new GStruct458(new object[] { typeof(ConditionweaponDurability) }).Test(durability.Value)
             });
 

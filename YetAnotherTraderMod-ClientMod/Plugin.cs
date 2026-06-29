@@ -18,7 +18,6 @@ namespace YATMQuestConditions.Client
             new Patches.ConditionTypeResolverPatch().Enable();
             new Patches.ConditionTypeToKeyPatch().Enable();
             new Patches.ConditionCounterCreatorDurabilityPatch().Enable();
-            new Patches.WeaponDurabilityConditionEvaluatorPatch().Enable();
             new Patches.KillConditionDurabilityPatch().Enable();
 
             LogSource.LogInfo("[YATM Quest Conditions] Loaded.");

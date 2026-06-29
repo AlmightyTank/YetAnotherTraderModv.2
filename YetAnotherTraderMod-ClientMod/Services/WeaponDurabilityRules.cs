@@ -85,5 +85,18 @@ namespace YATMQuestConditions.Client.Services
             };
             return config;
         }
+
+        public static WeaponDurabilityRule GetFirstActiveRule()
+        {
+            foreach (var pair in Rules)
+            {
+                if (pair.Value != null && pair.Value.Enabled)
+                {
+                    return pair.Value;
+                }
+            }
+
+            return null;
+        }
     }
 }
