@@ -2877,5 +2877,125 @@
         ],
         "AlwaysBarter": false,
         "AlwaysInStock": false
+    },
+    {
+        "OfferId": "6a41407d82d8dd83f87b206c",
+        "TplId": "5ca20abf86f77418567a43f2",
+        "ItemName": "Dynaforce Triton M43-A chest harness (Black)",
+        "Price": 21827,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "57347d7224597744596b4e72",
+                    "ItemName": "Can of beef stew (Small)",
+                    "Count": 2
+                }
+            ]
+        ],
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
+    },
+    {
+        "OfferId": "6a41373a82d8dd83f87b2048",
+        "TplId": "6a41373a82d8dd83f87b2045",
+        "ItemName": "UNKNOWN_ITEM_6a41373a82d8dd83f87b2045",
+        "Price": 9600,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5e2af29386f7746d4159f077",
+                    "ItemName": "KEKTAPE duct tape",
+                    "Count": 1
+                }
+            ]
+        ],
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
+    },
+    {
+        "OfferId": "6a41373a82d8dd83f87b2047",
+        "TplId": "6a41373a82d8dd83f87b2046",
+        "ItemName": "UNKNOWN_ITEM_6a41373a82d8dd83f87b2046",
+        "Price": 28200,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "62a0a043cf4a99369e2624a5",
+                    "ItemName": "Bottle of OLOLO Multivitamins",
+                    "Count": 1
+                },
+                {
+                    "TplId": "5751435d24597720a27126d1",
+                    "ItemName": "Can of Max Energy energy drink",
+                    "Count": 1
+                }
+            ]
+        ],
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
+    },
+    {
+        "OfferId": "6a417b0582d8dd83f87b20f2",
+        "TplId": "6a417b0582d8dd83f87b20ef",
+        "ItemName": "UNKNOWN_ITEM_6a417b0582d8dd83f87b20ef",
+        "Price": 1650000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5d40407c86f774318526545a",
+                    "ItemName": "Bottle of Tarkovskaya vodka",
+                    "Count": 8
+                },
+                {
+                    "TplId": "57347d7224597744596b4e72",
+                    "ItemName": "Can of beef stew (Small)",
+                    "Count": 6
+                },
+                {
+                    "TplId": "5e2af29386f7746d4159f077",
+                    "ItemName": "KEKTAPE duct tape",
+                    "Count": 5
+                }
+            ]
+        ],
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
+    },
+    {
+        "OfferId": "6a417b0582d8dd83f87b20f1",
+        "TplId": "6a417b0582d8dd83f87b20f0",
+        "ItemName": "UNKNOWN_ITEM_6a417b0582d8dd83f87b20f0",
+        "Price": 1850000,
+        "Currency": "RUB",
+        "CashOnly": true,
+        "BarterScheme": [
+            [
+                {
+                    "TplId": "5751435d24597720a27126d1",
+                    "ItemName": "Can of Max Energy energy drink",
+                    "Count": 6
+                },
+                {
+                    "TplId": "5d403f9186f7743cac3f229b",
+                    "ItemName": "Bottle of Dan Jackiel whiskey",
+                    "Count": 6
+                },
+                {
+                    "TplId": "573476d324597737da2adc13",
+                    "ItemName": "Malboro Cigarettes",
+                    "Count": 8
+                }
+            ]
+        ],
+        "AlwaysBarter": false,
+        "AlwaysInStock": false
     }
 ]
