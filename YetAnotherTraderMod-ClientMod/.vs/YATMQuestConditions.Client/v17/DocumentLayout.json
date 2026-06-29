@@ -1,0 +1,368 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\patches\\weapondurabilityconditionevaluatorpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:patches\\weapondurabilityconditionevaluatorpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\patches\\conditioncountercreatordurabilitypatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:patches\\conditioncountercreatordurabilitypatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\models\\conditionweapondurability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:models\\conditionweapondurability.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\patches\\killconditiondurabilitypatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:patches\\killconditiondurabilitypatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:settings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\yatmquestconditions.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:yatmquestconditions.client.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\services\\weapondurabilityconditionevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:services\\weapondurabilityconditionevaluator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\patches\\conditiontyperesolverpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:patches\\conditiontyperesolverpatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:plugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\services\\weapondurabilityrules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:services\\weapondurabilityrules.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\services\\weapondurabilityreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:services\\weapondurabilityreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\services\\weapondurabilitycompare.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:services\\weapondurabilitycompare.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\services\\reflectionvaluereader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:services\\reflectionvaluereader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\services\\pluginpathservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:services\\pluginpathservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\services\\jsonfileutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:services\\jsonfileutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\patches\\conditiontypetokeypatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:patches\\conditiontypetokeypatch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\models\\weapondurabilityrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:models\\weapondurabilityrule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\models\\weapondurabilityconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:models\\weapondurabilityconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|d:\\github\\tony_origins\\yetanothertradermod-clientmod\\yatmquestconditions.client.csproj.backup.tmp||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{B9E7765B-1DCF-7E43-B3F1-CDA5B308B146}|YATMQuestConditions.Client.csproj|solutionrelative:yatmquestconditions.client.csproj.backup.tmp||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\obj\\Debug\\netstandard2.1\\YATMQuestConditions.Client.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:obj\\Debug\\netstandard2.1\\YATMQuestConditions.Client.AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeaponDurabilityConditionEvaluatorPatch.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Patches\\WeaponDurabilityConditionEvaluatorPatch.cs",
+              "RelativeDocumentMoniker": "Patches\\WeaponDurabilityConditionEvaluatorPatch.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Patches\\WeaponDurabilityConditionEvaluatorPatch.cs",
+              "RelativeToolTip": "Patches\\WeaponDurabilityConditionEvaluatorPatch.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAjwJMAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:58:32.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "settings.json",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\settings.json",
+              "RelativeDocumentMoniker": "settings.json",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\settings.json",
+              "RelativeToolTip": "settings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-29T02:57:39.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WeaponDurabilityConditionEvaluator.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Services\\WeaponDurabilityConditionEvaluator.cs",
+              "RelativeDocumentMoniker": "Services\\WeaponDurabilityConditionEvaluator.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Services\\WeaponDurabilityConditionEvaluator.cs",
+              "RelativeToolTip": "Services\\WeaponDurabilityConditionEvaluator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:49:33.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WeaponDurabilityRules.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Services\\WeaponDurabilityRules.cs",
+              "RelativeDocumentMoniker": "Services\\WeaponDurabilityRules.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Services\\WeaponDurabilityRules.cs",
+              "RelativeToolTip": "Services\\WeaponDurabilityRules.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:48:11.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Plugin.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Plugin.cs",
+              "RelativeDocumentMoniker": "Plugin.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Plugin.cs",
+              "RelativeToolTip": "Plugin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:35:48.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConditionweaponDurability.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Models\\ConditionweaponDurability.cs",
+              "RelativeDocumentMoniker": "Models\\ConditionweaponDurability.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Models\\ConditionweaponDurability.cs",
+              "RelativeToolTip": "Models\\ConditionweaponDurability.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:37:12.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConditionCounterCreatorDurabilityPatch.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Patches\\ConditionCounterCreatorDurabilityPatch.cs",
+              "RelativeDocumentMoniker": "Patches\\ConditionCounterCreatorDurabilityPatch.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Patches\\ConditionCounterCreatorDurabilityPatch.cs",
+              "RelativeToolTip": "Patches\\ConditionCounterCreatorDurabilityPatch.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAWwCIAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:37:32.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "YATMQuestConditions.Client.csproj",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\YATMQuestConditions.Client.csproj",
+              "RelativeDocumentMoniker": "YATMQuestConditions.Client.csproj",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\YATMQuestConditions.Client.csproj",
+              "RelativeToolTip": "YATMQuestConditions.Client.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvxEAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-06-29T00:57:25.014Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "KillConditionDurabilityPatch.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Patches\\KillConditionDurabilityPatch.cs",
+              "RelativeDocumentMoniker": "Patches\\KillConditionDurabilityPatch.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Patches\\KillConditionDurabilityPatch.cs",
+              "RelativeToolTip": "Patches\\KillConditionDurabilityPatch.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAArwD8AAAB7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:48:01.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WeaponDurabilityReader.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Services\\WeaponDurabilityReader.cs",
+              "RelativeDocumentMoniker": "Services\\WeaponDurabilityReader.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Services\\WeaponDurabilityReader.cs",
+              "RelativeToolTip": "Services\\WeaponDurabilityReader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:48:08.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "WeaponDurabilityCompare.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Services\\WeaponDurabilityCompare.cs",
+              "RelativeDocumentMoniker": "Services\\WeaponDurabilityCompare.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Services\\WeaponDurabilityCompare.cs",
+              "RelativeToolTip": "Services\\WeaponDurabilityCompare.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:48:07.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ReflectionValueReader.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Services\\ReflectionValueReader.cs",
+              "RelativeDocumentMoniker": "Services\\ReflectionValueReader.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Services\\ReflectionValueReader.cs",
+              "RelativeToolTip": "Services\\ReflectionValueReader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:48:06.937Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PluginPathService.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Services\\PluginPathService.cs",
+              "RelativeDocumentMoniker": "Services\\PluginPathService.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Services\\PluginPathService.cs",
+              "RelativeToolTip": "Services\\PluginPathService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:48:06.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ConditionTypeResolverPatch.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Patches\\ConditionTypeResolverPatch.cs",
+              "RelativeDocumentMoniker": "Patches\\ConditionTypeResolverPatch.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Patches\\ConditionTypeResolverPatch.cs",
+              "RelativeToolTip": "Patches\\ConditionTypeResolverPatch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:37:34.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ConditionTypeToKeyPatch.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Patches\\ConditionTypeToKeyPatch.cs",
+              "RelativeDocumentMoniker": "Patches\\ConditionTypeToKeyPatch.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Patches\\ConditionTypeToKeyPatch.cs",
+              "RelativeToolTip": "Patches\\ConditionTypeToKeyPatch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:47:41.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "WeaponDurabilityRule.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Models\\WeaponDurabilityRule.cs",
+              "RelativeDocumentMoniker": "Models\\WeaponDurabilityRule.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Models\\WeaponDurabilityRule.cs",
+              "RelativeToolTip": "Models\\WeaponDurabilityRule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:37:30.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "WeaponDurabilityConfig.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Models\\WeaponDurabilityConfig.cs",
+              "RelativeDocumentMoniker": "Models\\WeaponDurabilityConfig.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Models\\WeaponDurabilityConfig.cs",
+              "RelativeToolTip": "Models\\WeaponDurabilityConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:37:28.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "JsonFileUtil.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Services\\JsonFileUtil.cs",
+              "RelativeDocumentMoniker": "Services\\JsonFileUtil.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\Services\\JsonFileUtil.cs",
+              "RelativeToolTip": "Services\\JsonFileUtil.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T02:37:08.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "YATMQuestConditions.Client.csproj.Backup.tmp",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\YATMQuestConditions.Client.csproj.Backup.tmp",
+              "RelativeDocumentMoniker": "YATMQuestConditions.Client.csproj.Backup.tmp",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\YATMQuestConditions.Client.csproj.Backup.tmp",
+              "RelativeToolTip": "YATMQuestConditions.Client.csproj.Backup.tmp",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAgwE0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-06-29T01:47:52.763Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "YATMQuestConditions.Client.AssemblyInfo.cs",
+              "DocumentMoniker": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\obj\\Debug\\netstandard2.1\\YATMQuestConditions.Client.AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "obj\\Debug\\netstandard2.1\\YATMQuestConditions.Client.AssemblyInfo.cs",
+              "ToolTip": "D:\\Github\\Tony_Origins\\YetAnotherTraderMod-ClientMod\\obj\\Debug\\netstandard2.1\\YATMQuestConditions.Client.AssemblyInfo.cs",
+              "RelativeToolTip": "obj\\Debug\\netstandard2.1\\YATMQuestConditions.Client.AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T01:04:48.75Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
