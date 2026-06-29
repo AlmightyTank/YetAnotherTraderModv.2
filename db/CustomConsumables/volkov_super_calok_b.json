@@ -10,7 +10,6 @@
 
     "overrideProperties": {
         "CanSellOnRagfair": true,
-        "BackgroundColor": "#453324",
         "StackMaxSize": 1,
         "MaxHpResource": 10,
         "ExaminedByDefault": false,

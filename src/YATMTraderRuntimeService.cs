@@ -25,7 +25,6 @@ public sealed class YATMTraderRuntimeService(
     YATMUnlockService yatmUnlockService)
 {
     private const string DefaultTonyTraderId = "66a0f6b2c4d8e90123456789";
-    private const string ColorConverterApiDllName = "RaiRai.ColorConverterAPI.dll";
     private const int RestockPollThrottleSeconds = 5;
 
     private readonly TraderConfig _traderConfig = configServer.GetConfig<TraderConfig>();
@@ -83,8 +82,6 @@ public sealed class YATMTraderRuntimeService(
 
         YATMLogger.Init(pathToMod);
         YATMLogger.Log("Mod OnLoad started.");
-
-        RequireColorConverterApi(pathToMod);
 
         var traderBase = modHelper.GetJsonDataFromFile<TraderBase>(pathToMod, "db/CustomTrader/Tony/base.json");
         var assort = modHelper.GetJsonDataFromFile<TraderAssort>(pathToMod, "db/CustomTrader/Tony/assort.json");
@@ -1856,105 +1853,6 @@ public sealed class YATMTraderRuntimeService(
         return null;
     }
 
-    private void RequireColorConverterApi(string modPath)
-    {
-        var dllPath = FindColorConverterApiDll(modPath);
-        if (!string.IsNullOrWhiteSpace(dllPath))
-        {
-            YATMLogger.Log($"[ColorConverterAPI] Required dependency found: {dllPath}");
-            return;
-        }
-
-        var bepinexPath = ResolveBepInExPath(modPath);
-        var searchedPath = string.IsNullOrWhiteSpace(bepinexPath)
-            ? "BepInEx folder was not found"
-            : bepinexPath;
-
-        var message =
-            $"[ColorConverterAPI] Missing required dependency: {ColorConverterApiDllName}. " +
-            "Install RaiRai Color Converter API into BepInEx/plugins before loading Tony. " +
-            $"Searched: {searchedPath}";
-
-        YATMLogger.Log(message);
-        throw new System.IO.FileNotFoundException(message, ColorConverterApiDllName);
-    }
-
-    internal bool GetColorPlugin()
-    {
-        try
-        {
-            var modPath = string.IsNullOrWhiteSpace(_pathToMod)
-                ? modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly())
-                : _pathToMod;
-
-            return !string.IsNullOrWhiteSpace(FindColorConverterApiDll(modPath));
-        }
-        catch (Exception ex)
-        {
-            YATMLogger.LogDebug($"[ColorConverterAPI] Detection failed: {ex.Message}");
-            return false;
-        }
-    }
-
-    private static string? FindColorConverterApiDll(string modPath)
-    {
-        var bepinexPath = ResolveBepInExPath(modPath);
-        if (string.IsNullOrWhiteSpace(bepinexPath))
-        {
-            return null;
-        }
-
-        try
-        {
-            return System.IO.Directory
-                .EnumerateFiles(bepinexPath, ColorConverterApiDllName, System.IO.SearchOption.AllDirectories)
-                .FirstOrDefault();
-        }
-        catch
-        {
-            return null;
-        }
-    }
-
-    private static string? ResolveBepInExPath(string modPath)
-    {
-        if (string.IsNullOrWhiteSpace(modPath))
-        {
-            return null;
-        }
-
-        var current = new System.IO.DirectoryInfo(modPath);
-
-        // Walk upward from the resolved mod folder until the SPT root is found.
-        // This avoids hard-coding a fragile number of ".." segments.
-        for (var i = 0; i < 8 && current != null; i++)
-        {
-            var candidate = Path.Combine(current.FullName, "BepInEx");
-            if (System.IO.Directory.Exists(candidate))
-            {
-                return candidate;
-            }
-
-            current = current.Parent;
-        }
-
-        // Fallback for the common packed-server shape:
-        // <SPT>/user/mods/<mod>/... -> <SPT>/BepInEx.
-        var fallback = System.IO.Path.GetFullPath(System.IO.Path.Combine(modPath, @"..\..\..\BepInEx"));
-        if (System.IO.Directory.Exists(fallback))
-        {
-            return fallback;
-        }
-
-        // Fallback matching the path shape from the original helper the user supplied.
-        fallback = System.IO.Path.GetFullPath(System.IO.Path.Combine(modPath, @"..\..\..\..\BepInEx"));
-        if (System.IO.Directory.Exists(fallback))
-        {
-            return fallback;
-        }
-
-        return null;
-    }
 
     private static bool GetBoolSetting(object settings, string settingName, bool defaultValue)
     {

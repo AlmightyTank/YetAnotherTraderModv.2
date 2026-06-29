@@ -5,7 +5,6 @@
     "handbookParentId": "5b5f78e986f77447ed5636b1",
     "overrideProperties": {
         "ExaminedByDefault": true,
-        "BackgroundColor": "#292929",
         "Weight": 1,
         "Ergonomics": 55,
         "bFirerate": 700,
